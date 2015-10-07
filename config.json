@@ -1,0 +1,16 @@
+{
+    "theme": {
+        "name": "Broth (Boilerplate theme)",
+        "author": "The BentoBox Team",
+    },
+    "navs": [
+      {
+        "name": "Main Navigation",
+        "slug": "main"
+      },
+      {
+        "name": "Footer",
+        "slug": "footer"
+      }
+    ]
+}
