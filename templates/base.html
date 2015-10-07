@@ -36,18 +36,8 @@
   </nav>
   </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="one-half column">
-       <h4>{{ account.restaurant_name }}</h4>
-      </div>
-    </div>
-    {% for menu in boxes.menus.all %}
-      <div class="row">
-        <a href="{{ menu.url">{{ menu.name }}</a>
-      </div>
-    {% endfor %}
-  </div>
+  {% block content %}
+  {% endblock %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
