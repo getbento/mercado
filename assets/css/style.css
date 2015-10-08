@@ -1,0 +1,21 @@
+nav {
+	text-align: center;
+	padding: 2em;
+}
+
+
+nav a {
+	font-size: 1.2em;
+	margin:0 1em;
+}
+
+nav.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.center {
+	text-align: center;
+}

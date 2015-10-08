@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}News{% endblock %}
+
+{% block content %}
+<h3>News</h3>
+
+<div class="row">
+
+  {% for news in boxes.news.all %}
+  <div class="eight columns">
+    <h5>{{ news.name }}</h5>
+    <div class="row">
+      <div class="four columns">
+        {{ news.date|date("%B %d, %Y") }}
+      </div>
+      <div class="eight columns">
+      {{ news.content }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  {% if boxes.news.all|length == 0 %}
+  <em>Add news items to see news here</em>
+  {% endif %}
+
+</div>
+
+{% endblock %}

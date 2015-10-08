@@ -1,0 +1,32 @@
+/*
+This is an example of a custom box 
+It also shows you examples of
+all our custom field types by using one of each kind
+*/
+
+{
+	"name": "Tacos",
+	"fields": {
+		"type": "text",
+		"description": "wysiwyg",
+		"is_delicious": "boolean",
+		"how_delicious": {
+			"title": "How Delicious?",
+			"type": "dropdown",
+			"options": ["Choose one", "Very", "A little", "Not at all"]
+		},
+		"related_gallery": {
+			"type": "relationship",
+			"box": "galleries"
+		},
+		"custom_css": "code",
+		"background_color": "color",
+		"age": "number",
+		"ingredients": {
+			"type": "repeater",
+			"items": {
+				"name": "text",
+			}
+		},
+	}
+}

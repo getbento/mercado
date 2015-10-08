@@ -1,0 +1,16 @@
+{
+	"name": "Menus Page",
+	"fields": {
+		"prepared": {
+			"title": "Prepared By",
+			"type": "section",
+			"items": {
+				"image": "image",
+				"description": "wysiwyg"
+			}
+		}
+	},
+	"wireframe": [
+		"section-prepared"
+	]
+}
