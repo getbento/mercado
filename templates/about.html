@@ -2,11 +2,11 @@
 
 {% block content %}
 
-
+{% import 'forms.html' as forms with context %}
 <div clas="row">
   <h4>About our Restaurant</h4>
 
-  {% call email_form() %}
+  {% call forms.email_form() %}
   <h5>Contact Us</h5>
   
   <div class="twelve columns">
@@ -30,7 +30,7 @@
   <div class="twelve columns">
   <h5>Sign up for our newsletter</h5>
   
-  {% call newsletter_form() %}
+  {% call forms.newsletter_form() %}
       <label for="first_name">First Name</label>
     <input id="first_name" type="text" required name="first_name" />
 
