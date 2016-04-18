@@ -1,0 +1,1 @@
+../../../../../libs/bentoboxjs/bundle.js
