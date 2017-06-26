@@ -1,1 +1,2 @@
-Man will never fly.  Space travel is merely a dream.  All aspirin is alike.
+What the scientists have in their briefcases is terrifying.
+		-- Nikita Khruschev
