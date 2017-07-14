@@ -2,7 +2,627 @@
     "theme": {
         "name": "Broth (Boilerplate theme)",
         "author": "The BentoBox Team",
+        "fields": {
+            "colors": {
+                "title": "Colors",
+                "type": "section",
+                "items": {
+                    "primary_color": "color",
+                    "accent_color": "color",
+                    "divider_color": "color",
+                    "background_colors": {
+                        "type": "section",
+                        "items": {
+                            "main_content_background": "color",
+                            "main_content_background_image": "image",
+                            "newsletter_form_uses_alt_colors": "boolean",
+                            "reservations_form_uses_alt_colors": "boolean"
+                        }
+                    },
+                    "type_colors": {
+                        "type": "section",
+                        "items": {
+                            "body_type": "color",
+                            "H1": "color",
+                            "H2": "color",
+                            "H3": "color",
+                            "inline_text_link_color": "color",
+                            "link_hover_color": "color"
+                        }
+                    },
+                    "navigation": {
+                        "type": "section",
+                        "items": {
+                            "navigation_bar_background": "color",
+                            "nav_bar_font": "color",
+                            "nav_bar_hover": "color",
+                            "nav_bar_active": "color"
+                        }
+                    },
+                    "address_bar": {
+                        "type": "section",
+                        "items": {
+                            "address_bar_background_color": "color",
+                            "address_font_color": "color",
+                            "address_hover_color": "color"
+                        }
+                    },
+                    "buttons": {
+                        "type": "section",
+                        "items": {
+                            "main_button": "color",
+                            "main_button_font": "color",
+                            "main_button_background": "color",
+                            "main_button_stroke": "color",
+                            "main_button_hover_font": "color",
+                            "main_button_hover_stroke": "color",
+                            "alternate_button_font": "color",
+                            "alternate_button_background": "color",
+                            "alternate_button_stroke": "color",
+                            "alternate_button_hover_font": "color",
+                            "alternate_button_hover_background": "color",
+                            "alternate_button_hover_stroke": "color"
+                        }
+                    },
+                    "calls_to_action": {
+                        "type": "section",
+                        "items": {
+                            "primary_call_to_action_button_uses_alt_color": "boolean",
+                            "secondary_call_to_action_button_uses_alt_color": "boolean"
+                        }
+                    },
+                    "forms": {
+                        "type": "section",
+                        "items": {
+                            "main_form": "color",
+                            "alternate_form": "color",
+                            "main_form_field_stroke": "color",
+                            "main_form_field_background": "color",
+                            "alternate_form_field_stroke": "color",
+                            "alternate_form_field_background": "color"
+                        }
+                    },
+                    "footer": {
+                        "type": "section",
+                        "items": {
+                            "footer_background": "color",
+                            "footer_navigation_text": "color",
+                            "footer_navigation_text_hover": "color",
+                            "footer_navigation_text_active": "color"
+                        }
+                    },
+                    "powered_by_bento": {
+                        "type": "section",
+                        "items": {
+                            "powered_by_bento_text": "color",
+                            "powered_by_bento_text_hover": "color",
+                            "powered_by_bento_background": "color"
+                        }
+                    },
+                    "catering": {
+                        "type": "section",
+                        "items": {
+                            "catering_item_background": "color",
+                            "catering_item_stroke": "color"
+                        }
+                    }
+                }
+            },
+            "type_styles": {
+                "title": "Type Styles",
+                "type": "section",
+                "items": {
+                    "body_&_general_text_styles": {
+                        "type": "section",
+                        "items": {
+                            "font_family": {
+                                "type": "dropdown",
+                                "default": "custom",
+                                "options": ["raleway", "monserrat", "josefin_sans", "playfair_display", "arvo", "custom"]
+                            },
+                            "size": "text",
+                            "14px": "boolean",
+                            "weight": "text",
+                            "letter_spacing": "text",
+                            "line_height": "text"
+                        }
+                    },
+                    "H1_text_styles": {
+                        "type": "section",
+                        "items": {
+                            "font_family": {
+                                "type": "dropdown",
+                                "default": "custom",
+                                "options": ["raleway", "monserrat", "josefin_sans", "playfair_display", "arvo", "custom"]
+                            },
+                            "size": "text",
+                            "weight": "text",
+                            "uppercase": "boolean",
+                            "letter_spacing": "text"
+                        }
+                    },
+                    "H2_text_styles": {
+                        "type": "section",
+                        "items": {
+                            "same_as_h1": "boolean"
+                        }
+                    },
+                    "H3_text_styles": {
+                        "type": "section",
+                        "items": {
+                            "same_as_h1": "boolean"
+                        }
+                    },
+                    "inline_text_link_styles": {
+                        "type": "section",
+                        "items": {
+                            "underline": "boolean",
+                            "hover_underline": "color"
+                        }
+                    },
+                    "custom_fonts": {
+                        "title": "Custom Fonts",
+                        "type": "repeater",
+                        "items": {
+                            "fonttype": {
+                                "title": "Type",
+                                "type": "dropdown",
+                                "options": ["google", "typekit", {
+                                    "fontscom": "Fonts.com"
+                                }, "fontdeck", {
+                                    "selfhosted": "Self Hosted"
+                                }],
+                                "default": "google"
+                            },
+                            "googlefamilies": {
+                                "title": "Google Font Reference",
+                                "type": "text",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "google"
+                                    }
+                                },
+                                "helper": "Instructions: https://bentobox.zendesk.com/hc/en-us/articles/220056727"
+                            },
+                            "typekitid": {
+                                "title": "Typekit ID",
+                                "type": "text",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "typekit"
+                                    }
+                                },
+                                "helper": "For more information: http://help.getbento.com/hc/en-us/articles/225272828"
+                            },
+                            "fontdeckid": {
+                                "title": "Fontdeck ID",
+                                "type": "text",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "fontdeck"
+                                    }
+                                }
+                            },
+                            "fontscomid": {
+                                "title": "Fonts.com Project ID",
+                                "type": "text",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "fontscom"
+                                    }
+                                }
+                            },
+                            "selfhosted_name": {
+                                "title": "Font Family",
+                                "type": "text",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_eot": {
+                                "title": "EOT",
+                                "type": "file",
+                                "helper": "Optional. Browser Support: IE6-9",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_woff2": {
+                                "title": "WOFF2",
+                                "type": "file",
+                                "helper": "Optional. Browser Support: Chrome 36.0+, Firefox 35.0+, Opera 26.0+",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_woff": {
+                                "title": "WOFF",
+                                "type": "file",
+                                "helper": "Recommended. Browser Support: Chrome 5.0+, IE9+, Firefox 3.6+, Safari 5.1+, Opera 11.1+",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_ttf": {
+                                "title": "TTF",
+                                "type": "file",
+                                "helper": "Recommended. Browser Support: Chrome 4.0+, IE9+, Firefox, 4.5+, Safari 3.1+, Opera 10.0+, iOS, Android",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_otf": {
+                                "title": "OTF",
+                                "type": "file",
+                                "helper": "Optional. Browser Support: Chrome 4.0+, IE9+, Firefox, 4.5+, Safari 3.1+, Opera 10.0+",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_style": {
+                                "title": "Font Style",
+                                "type": "text",
+                                "helper": "Optional. Inaccurate values may cause the font to fail to load. If you are unsure, leave this blank.",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            },
+                            "selfhosted_weight": {
+                                "title": "Font Weight",
+                                "type": "text",
+                                "helper": "Optional. Inaccurate values may cause the font to fail to load. If you are unsure, leave this blank.",
+                                "display_logic": {
+                                    "fonttype": {
+                                        "value": "selfhosted"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "main_form_text_uppercase": "boolean",
+                    "alternate_form_text_uppercase": "boolean",
+                    "navigation": {
+                        "type": "section",
+                        "items": {
+                            "font_family": {
+                                "type": "dropdown",
+                                "default": "custom",
+                                "options": ["raleway", "monserrat", "josefin_sans", "playfair_display", "arvo", "custom"]
+                            },
+                            "custom_font": "text",
+                            "size": "text",
+                            "weight": "text",
+                            "uppercase": "boolean",
+                            "letter_spacing": "text"
+                        }
+                    },
+                    "buttons": {
+                        "type": "section",
+                        "items": {
+                            "font_family": {
+                                "type": "dropdown",
+                                "default": "custom",
+                                "options": ["raleway", "monserrat", "josefin_sans", "playfair_display", "arvo", "custom"]
+                            },
+                            "custom_font": "text",
+                            "font_size": "text",
+                            "font_weight": "text",
+                            "font_uppercase": "boolean",
+                            "letter_spacing": "text"
+                        }
+                    },
+                    "footer": {
+                        "type": "section",
+                        "items": {
+                            "font_family": {
+                                "type": "dropdown",
+                                "default": "custom",
+                                "options": ["raleway", "monserrat", "josefin_sans", "playfair_display", "arvo", "custom"]
+                            },
+                            "custom_font": "text",
+                            "size": "text",
+                            "weight": "text",
+                            "uppercase": "boolean",
+                            "letter_spacing": "text"
+                        }
+                    }
+                }
+            },
+            "layout_options": {
+                "title": "Layout Options",
+                "type": "section",
+                "items": {
+                    "navigation": {
+                        "type": "section",
+                        "items": {
+                            "make_sticky": "boolean",
+                            "background_image": "image",
+                            "add_shadow": "boolean",
+                            "display_address": "boolean",
+                            "display_phone_number": "boolean",
+                            "make_address_sticky": "boolean",
+                            "address_background_image": "image",
+                            "show_social_icons_in_desktop_address_bar": "boolean"
+                        }
+                    },
+                    "footer_styles": {
+                        "type": "section",
+                        "items": {
+                            "sticky": "boolean",
+                            "background_image": "image",
+                            "display_social_media": "boolean",
+                            "make_powered_by_bento_sticky": "boolean",
+                            "display_hospitality_footer": "boolean"
+                        }
+                    },
+                    "form_styles": {
+                        "type": "section",
+                        "items": {
+                            "main_field_stroke_weight": "text",
+                            "make_main_field_uppercase": "boolean",
+                            "alternate_field_stroke_weight": "text",
+                            "alternate_field_uppercase": "boolean"
+                        }
+                    },
+                    "map_settings": {
+                        "type": "section",
+                        "items": {
+                            "map_marker": "image",
+                            "map_styles": "code"
+                        }
+                    },
+                    "mobile": {
+                        "type": "section",
+                        "items": {
+                            "display_phone_number": "boolean"
+                        }
+                    },
+                    "menu_&_catering_settings": {
+                        "type": "section",
+                        "items": {
+                            "show_menu_prices_exactly_as_entered": "boolean",
+                            "catering_uses_uppercase_title": "boolean",
+                            "catering_stroke_weight": "text",
+                            "no_margin_around_catering_text": "boolean",
+                            "hide_catering_product_description": "boolean",
+                            "use_placeholder_image_in_menu_if_no_image_uploaded": "boolean"
+                        }
+                    },
+                    "flexible_content": {
+                        "type": "section",
+                        "items": {
+                            "featured_box_items_are_clickable": "boolean",
+                            "feature_box_tiems_max_to_display": "boolean",
+                            "split_overlay_background_color": "color",
+                            "split_overlay_background_texture": "image",
+                            "split_overlay_vertically_center_content": "boolean",
+                            "split_overlay_minimum_height": "text",
+                            "overlay_background": "color",
+                            "main_content_boxed": "boolean",
+                            "always_add_scroll_button_to_heros": "boolean",
+                            "display_location_name_on_location_pages": "boolean"
+                        }
+                    },
+                    "dividers": {
+                        "type": "section",
+                        "items": {
+                            "weight": "text",
+                            "double": "boolean"
+                        }
+                    },
+                    "grid_columns": {
+                        "title": "Grid Columns",
+                        "type": "section",
+                        "items": {
+                            "catering": {
+                                "title": "Catering",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "three"
+                            },
+                            "events": {
+                                "title": "Events",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "galleries": {
+                                "title": "Galleries",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "jobs": {
+                                "title": "Jobs",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "locations": {
+                                "title": "Locations",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "menus": {
+                                "title": "Menus",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "news": {
+                                "title": "News",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "press": {
+                                "title": "Press",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "products": {
+                                "title": "Products",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "team": {
+                                "title": "Team",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            },
+                            "venues": {
+                                "title": "Venues",
+                                "type": "dropdown",
+                                "options": [{
+                                    "two": "2 Columns"
+                                }, {
+                                    "three": "3 Columns"
+                                }, {
+                                    "four": "4 Columns"
+                                }],
+                                "default": "two"
+                            }
+                        }
+                    }
+                }
+            },
+            "logo_options": {
+                "name": "Logo Options",
+                "type": "section",
+                "items": {
+                    "primary_call_to_action": {
+                        "type": "section",
+                        "items": {
+                            "button_type": {
+                                "type": "dropdown",
+                                "default": "none",
+                                "options": ["none", "url", "file", "email_signup", "reservations", "online_ordering", "scroll_page"]
+                            },
+                            "button_label": "text",
+                            "online_ordering": "boolean",
+                            "mobile_position": {
+                                "type": "dropdown",
+                                "default": "none",
+                                "options": ["none", "in_top_navigation", "in_bottom_footer", "both"]
+                            }
+                        }
+                    },
+                    "secondary_call_to_action": {
+                        "type": "section",
+                        "items": {
+                            "button_type": {
+                                "type": "dropdown",
+                                "default": "none",
+                                "options": ["none", "url", "file", "email_signup", "reservations", "online_ordering", "scroll_page"]
+                            },
+                            "button_label": "text",
+                            "email_signup": "boolean",
+                            "mobile_position": {
+                                "type": "dropdown",
+                                "default": "none",
+                                "options": ["none", "in_top_navigation", "in_bottom_footer", "both"]
+                            },
+                            "fade_slider": "boolean"
+                        }
+                    },
+                    "button_styles": {
+                        "type": "section",
+                        "items": {
+                            "stroke_weight": "text"
+                        }
+                    }
+                }
+            },
+            "custom_styles": {
+                "name": "custom_styles",
+                "type": "section",
+                "items": {
+                    "CSS": "code",
+                    "JavaScript": "code",
+                    "bootstrap_variable_overrides": "code"
+                }
+            }
+        }
     },
+   
     "navs": [
       {
         "name": "Main Navigation",
