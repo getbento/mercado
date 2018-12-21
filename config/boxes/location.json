@@ -2,8 +2,48 @@
 	"engine": "location",
 	"has_categories": true,
 	"fields": {
-		"background_color": "color",
-		"latitude": "text",
-		"longitude": "text"
-	}
+	    "meta_title": "text",
+	    "meta_description": "text",
+
+		"logo": "image",
+
+	    "alert": {
+	      "type": "section",
+	      "items": {
+	        "enabled": "boolean",
+	        "title": "text",
+	        "text": "wysiwyg",
+	        "button_text": "text",
+	        "button_type": {
+	          "type": "dropdown",
+	          "options": ["URL", "File"]
+	        },
+	        "button_link": {
+	          "type": "text",
+	          "display_logic": {
+	            "alert.button_type": "URL"
+	          }
+	        },
+	        "new_window": {
+	          "type": "boolean",
+	          "title": "Open in a new window",
+	          "default": false,
+	          "display_logic": {
+	            "alert.button_type": "URL"
+	          }
+	        },
+	        "button_file": {
+	          "type": "file",
+	          "display_logic": {
+	            "alert.button_type": "File"
+	          }
+	        }
+	      }
+	    },
+	},
+
+  	"wireframe": [
+	    "section-alert",
+	    "engine",
+	]
 }
