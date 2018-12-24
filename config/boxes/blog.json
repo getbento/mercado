@@ -1,3 +1,4 @@
 {
-	"engine": "blog"
+	"engine": "blog",
+	"has_categories": true,
 }
