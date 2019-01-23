@@ -9,15 +9,12 @@
 		"map": "image",
 		"contact_info": "wysiwyg",
 		"color": "color",
-	},
-	"items":{
 		"menus": {
 			"type": "repeater",
 			"items":{
 				"name": "text",
 				"file": "file",
 			}
-		}
+		},
 	}
-	
 }
