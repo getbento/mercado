@@ -1,6 +1,5 @@
 {
 	"name": "Restaurant",
-  	"has_featured": false,
 	"fields": {
 		"description": "wysiwyg",
 		"logo": "image",
@@ -9,5 +8,16 @@
 		"short_description": "wysiwyg",
 		"map": "image",
 		"contact_info": "wysiwyg",
+		"color": "color",
+	},
+	"items":{
+		"menus": {
+			"type": "repeater",
+			"items":{
+				"name": "text",
+				"file": "file",
+			}
+		}
 	}
+	
 }
