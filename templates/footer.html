@@ -1,0 +1,15 @@
+<!-- START footer.html  -->
+<nav class="footer">
+    {% for item in navs.footer %}
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    {% endfor %}
+    {% if navs.footer|length == 0 %}
+      <em>Add nav items in the Pages/Nav sections of the admin to see your footer nav</em>
+    {% endif %}
+</nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</body>
+</html>
+
+<!-- END footer.html  -->

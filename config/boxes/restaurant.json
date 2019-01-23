@@ -1,5 +1,6 @@
 {
 	"name": "Restaurant",
+	"has_featured": false,
 	"fields": {
 		"description": "wysiwyg",
 		"logo": "image",
