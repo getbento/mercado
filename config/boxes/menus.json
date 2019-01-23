@@ -1,3 +1,12 @@
 {
-	"engine": "menu"
+	"engine": {
+		"type": "menu",
+		"config": {
+			"layouts": {
+				"two_columns": ["column_one", "column_two"]
+			}
+		}
+	},
+  	"has_locations": true,
+	"has_categories": true,
 }

@@ -1,0 +1,9 @@
+{
+	"name": "Stalls",
+  	"has_featured": true,
+	"fields": {
+		"description": "wysiwyg",
+		"thumbnail": "image",
+		"gallery": "gallery"
+	}
+}
