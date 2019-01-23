@@ -3,7 +3,10 @@
   	"has_featured": false,
 	"fields": {
 		"description": "wysiwyg",
-		"thumbnail": "image",
-		"gallery": "gallery"
+		"logo": "image",
+		"banner_image": "image",
+		"gallery": "gallery",
+		"short_description": "wysiwyg",
+
 	}
 }
