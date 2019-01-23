@@ -1,6 +1,6 @@
 {
     "theme": {
-        "name": "Broth (Boilerplate theme)",
+        "name": "Little Spain Mercado",
         "author": "The BentoBox Team",
         "fields": {
             "colors": {
@@ -369,15 +369,6 @@
                             "display_hospitality_footer": "boolean"
                         }
                     },
-                    "form_styles": {
-                        "type": "section",
-                        "items": {
-                            "main_field_stroke_weight": "text",
-                            "make_main_field_uppercase": "boolean",
-                            "alternate_field_stroke_weight": "text",
-                            "alternate_field_uppercase": "boolean"
-                        }
-                    },
                     "map_settings": {
                         "type": "section",
                         "items": {
@@ -385,97 +376,10 @@
                             "map_styles": "code"
                         }
                     },
-                    "mobile": {
-                        "type": "section",
-                        "items": {
-                            "display_phone_number": "boolean"
-                        }
-                    },
-                    "menu_&_catering_settings": {
-                        "type": "section",
-                        "items": {
-                            "show_menu_prices_exactly_as_entered": "boolean",
-                            "catering_uses_uppercase_title": "boolean",
-                            "catering_stroke_weight": "text",
-                            "no_margin_around_catering_text": "boolean",
-                            "hide_catering_product_description": "boolean",
-                            "use_placeholder_image_in_menu_if_no_image_uploaded": "boolean"
-                        }
-                    },
-                    "flexible_content": {
-                        "type": "section",
-                        "items": {
-                            "featured_box_items_are_clickable": "boolean",
-                            "feature_box_tiems_max_to_display": "boolean",
-                            "split_overlay_background_color": "color",
-                            "split_overlay_background_texture": "image",
-                            "split_overlay_vertically_center_content": "boolean",
-                            "split_overlay_minimum_height": "text",
-                            "overlay_background": "color",
-                            "main_content_boxed": "boolean",
-                            "always_add_scroll_button_to_heros": "boolean",
-                            "display_location_name_on_location_pages": "boolean"
-                        }
-                    },
-                    "dividers": {
-                        "type": "section",
-                        "items": {
-                            "weight": "text",
-                            "double": "boolean"
-                        }
-                    },
                     "grid_columns": {
                         "title": "Grid Columns",
                         "type": "section",
                         "items": {
-                            "catering": {
-                                "title": "Catering",
-                                "type": "dropdown",
-                                "options": [{
-                                    "two": "2 Columns"
-                                }, {
-                                    "three": "3 Columns"
-                                }, {
-                                    "four": "4 Columns"
-                                }],
-                                "default": "three"
-                            },
-                            "events": {
-                                "title": "Events",
-                                "type": "dropdown",
-                                "options": [{
-                                    "two": "2 Columns"
-                                }, {
-                                    "three": "3 Columns"
-                                }, {
-                                    "four": "4 Columns"
-                                }],
-                                "default": "two"
-                            },
-                            "galleries": {
-                                "title": "Galleries",
-                                "type": "dropdown",
-                                "options": [{
-                                    "two": "2 Columns"
-                                }, {
-                                    "three": "3 Columns"
-                                }, {
-                                    "four": "4 Columns"
-                                }],
-                                "default": "two"
-                            },
-                            "jobs": {
-                                "title": "Jobs",
-                                "type": "dropdown",
-                                "options": [{
-                                    "two": "2 Columns"
-                                }, {
-                                    "three": "3 Columns"
-                                }, {
-                                    "four": "4 Columns"
-                                }],
-                                "default": "two"
-                            },
                             "locations": {
                                 "title": "Locations",
                                 "type": "dropdown",
@@ -500,8 +404,8 @@
                                 }],
                                 "default": "two"
                             },
-                            "news": {
-                                "title": "News",
+                            "events": {
+                                "title": "Events",
                                 "type": "dropdown",
                                 "options": [{
                                     "two": "2 Columns"
@@ -512,32 +416,8 @@
                                 }],
                                 "default": "two"
                             },
-                            "press": {
-                                "title": "Press",
-                                "type": "dropdown",
-                                "options": [{
-                                    "two": "2 Columns"
-                                }, {
-                                    "three": "3 Columns"
-                                }, {
-                                    "four": "4 Columns"
-                                }],
-                                "default": "two"
-                            },
-                            "products": {
-                                "title": "Products",
-                                "type": "dropdown",
-                                "options": [{
-                                    "two": "2 Columns"
-                                }, {
-                                    "three": "3 Columns"
-                                }, {
-                                    "four": "4 Columns"
-                                }],
-                                "default": "two"
-                            },
-                            "team": {
-                                "title": "Team",
+                            "blog": {
+                                "title": "Blog",
                                 "type": "dropdown",
                                 "options": [{
                                     "two": "2 Columns"
@@ -564,60 +444,12 @@
                     }
                 }
             },
-            "logo_options": {
-                "name": "Logo Options",
-                "type": "section",
-                "items": {
-                    "primary_call_to_action": {
-                        "type": "section",
-                        "items": {
-                            "button_type": {
-                                "type": "dropdown",
-                                "default": "none",
-                                "options": ["none", "url", "file", "email_signup", "reservations", "online_ordering", "scroll_page"]
-                            },
-                            "button_label": "text",
-                            "online_ordering": "boolean",
-                            "mobile_position": {
-                                "type": "dropdown",
-                                "default": "none",
-                                "options": ["none", "in_top_navigation", "in_bottom_footer", "both"]
-                            }
-                        }
-                    },
-                    "secondary_call_to_action": {
-                        "type": "section",
-                        "items": {
-                            "button_type": {
-                                "type": "dropdown",
-                                "default": "none",
-                                "options": ["none", "url", "file", "email_signup", "reservations", "online_ordering", "scroll_page"]
-                            },
-                            "button_label": "text",
-                            "email_signup": "boolean",
-                            "mobile_position": {
-                                "type": "dropdown",
-                                "default": "none",
-                                "options": ["none", "in_top_navigation", "in_bottom_footer", "both"]
-                            },
-                            "fade_slider": "boolean"
-                        }
-                    },
-                    "button_styles": {
-                        "type": "section",
-                        "items": {
-                            "stroke_weight": "text"
-                        }
-                    }
-                }
-            },
             "custom_styles": {
                 "name": "custom_styles",
                 "type": "section",
                 "items": {
                     "CSS": "code",
-                    "JavaScript": "code",
-                    "bootstrap_variable_overrides": "code"
+                    "JavaScript": "code"
                 }
             }
         }
