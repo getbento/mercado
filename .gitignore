@@ -1,0 +1,21 @@
+# Urgh #
+################
+.DS_Store
+
+# Extras #
+################
+# we generate a few files for reference that we don't actually need for anything.
+*.gz
+*.log
+
+# BUILD SYSTEM FILES #
+################
+_sensei_src/bower_components
+_sensei_src/node_modules
+_sensei_src/src/assets/js/temp
+
+# DEV ONLY FILES #
+################
+assets/scss/main.css/venv
+
+venv

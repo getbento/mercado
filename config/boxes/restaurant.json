@@ -1,6 +1,6 @@
 {
-	"engine": "location",
-	"has_categories": false,
+	"engine": "restaurant",
+	"has_categories": true,
 	"fields": {
 	    "meta_title": "text",
 	    "meta_description": "text",
@@ -10,7 +10,6 @@
 	    "alert": {
 	      "type": "section",
 	      "items": {
-	        "enabled": "boolean",
 	        "title": "text",
 	        "text": "wysiwyg",
 	        "button_text": "text",
@@ -40,10 +39,40 @@
 	        }
 	      }
 	    },
+		"flexible": {
+      		"title": "Flexible Content",
+			"type": "section",
+			"items": {
+				"content": {
+					"type": "repeater",
+
+					"items": {
+		                "section_type": {
+		                  "type": "dropdown",
+		                  "options": ["Featured Box", "Instagram feed"]
+		                },
+		                "featured_boxes": {
+		                	"type": "section",
+		                	"items": {
+				                "box": {
+				                  "type": "dropdown",
+				                  "options": ["Location", "Menus", "Blog", "Events", "Private Events", "Stalls"]
+				                },
+		                      	"display_logic": {
+			                        "section_type": "Featured Box"
+		                      	}
+		                	}
+		                }
+					}
+
+				}
+			}
+		}
 	},
 
   	"wireframe": [
 	    "section-alert",
 	    "engine",
+		"section-flexible"
 	]
 }
