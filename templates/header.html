@@ -34,7 +34,7 @@
     <header>
       <nav>
       {% for item in navs.main %}
-      {{item}}
+      <!-- {{item}} -->
         <a href="{{ item.url }}">{{ item.name }}</a>
       {% endfor %}
       {% if navs.main|length == 0 %}
@@ -44,6 +44,5 @@
     </header>
     {% block content %}
     {% endblock %}
-</div>
 
 <!-- END header.html  -->
