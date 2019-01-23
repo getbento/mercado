@@ -7,6 +7,7 @@
 		"banner_image": "image",
 		"gallery": "gallery",
 		"short_description": "wysiwyg",
-
+		"map": "image",
+		"contact_info": "wysiwyg",
 	}
 }
