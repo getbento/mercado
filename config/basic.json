@@ -11,15 +11,24 @@
 					"items": {
 		                "section_type": {
 		                  "type": "dropdown",
-		                  "options": ["Content Box","Featured Box", "Instagram feed"]
+		                  "options": ["Content Box","Featured Box", "Full Width Header Box", "Instagram feed"]
 		                },
 										"content_box": {
+											"type": "section",
+											"items": {
+												"content": "wysiwyg",
+												"display_logic": {
+	                        "section_type": "Content Box"
+                      	}
+											}
+										},
+										"full_width_header_box": {
 											"type": "section",
 											"items": {
 												"image": "image",
 												"content": "wysiwyg",
 												"display_logic": {
-	                        "section_type": "Content Box"
+	                        "section_type": "Full Width Header Box"
                       	}
 											}
 										},
