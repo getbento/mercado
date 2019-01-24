@@ -2,11 +2,15 @@
  * Grid / Structure
  ***************************/
 /* Desktop */
+/* Mobile */
 /*
  * Font Stacks
  ***************************/
 /* Desktop */
 /* Mobile */
+/*
+ * Mixins / Interfaces
+ ***************************/
 /*
  * Colors
  ***************************/
@@ -57,22 +61,9 @@ body, html {
 
 /* line 11, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 body * {
-  font-size: 1.9rem;
-  font-weight: normal;
-  line-height: 2.4rem;
-  letter-spacing: normal;
-  text-transform: none;
   box-sizing: inherit; }
-  @media screen and (max-width: 767px) {
-    /* line 11, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
-    body * {
-      font-size: 1.5rem;
-      font-weight: normal;
-      line-height: 2.1rem;
-      letter-spacing: normal;
-      text-transform: none; } }
 
-/* line 16, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 15, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 h1 {
   font-size: 12rem;
   font-weight: bold;
@@ -80,7 +71,7 @@ h1 {
   letter-spacing: 0.15rem;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 16, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 15, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     h1 {
       font-size: 9rem;
       font-weight: bold;
@@ -88,7 +79,7 @@ h1 {
       letter-spacing: 0.135rem;
       text-transform: none; } }
 
-/* line 20, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 19, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 h2 {
   font-size: 10rem;
   font-weight: bold;
@@ -96,7 +87,7 @@ h2 {
   letter-spacing: 0.15rem;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 20, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 19, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     h2 {
       font-size: 8.6rem;
       font-weight: bold;
@@ -104,7 +95,7 @@ h2 {
       letter-spacing: 0.129rem;
       text-transform: none; } }
 
-/* line 24, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 23, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 h3 {
   font-size: 3.4rem;
   font-weight: bold;
@@ -112,7 +103,7 @@ h3 {
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 24, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 23, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     h3 {
       font-size: 2.9rem;
       font-weight: bold;
@@ -120,7 +111,7 @@ h3 {
       letter-spacing: normal;
       text-transform: none; } }
 
-/* line 28, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 27, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 h4 {
   font-size: 5rem;
   font-weight: bold;
@@ -128,7 +119,7 @@ h4 {
   letter-spacing: 0.083rem;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 28, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 27, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     h4 {
       font-size: 3.9rem;
       font-weight: bold;
@@ -136,7 +127,7 @@ h4 {
       letter-spacing: 0.065rem;
       text-transform: none; } }
 
-/* line 32, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 31, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 h5 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -144,7 +135,7 @@ h5 {
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 32, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 31, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     h5 {
       font-size: 1.7rem;
       font-weight: bold;
@@ -152,23 +143,23 @@ h5 {
       letter-spacing: normal;
       text-transform: none; } }
 
-/* line 36, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 35, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 h6 {
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 2rem;
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 36, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 35, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     h6 {
       font-size: 1.3rem;
-      font-weight: bold;
+      font-weight: normal;
       line-height: 2rem;
       letter-spacing: normal;
       text-transform: none; } }
 
-/* line 40, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 39, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 p {
   font-size: 1.9rem;
   font-weight: normal;
@@ -176,7 +167,7 @@ p {
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
-    /* line 40, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    /* line 39, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
     p {
       font-size: 1.5rem;
       font-weight: normal;
@@ -184,21 +175,21 @@ p {
       letter-spacing: normal;
       text-transform: none; } }
 
-/* line 44, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 43, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 ul, ol {
   list-style: none;
   padding: 0;
   margin: 0; }
-  /* line 48, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+  /* line 47, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
   ul li, ol li {
     padding: 0;
     margin: 0; }
 
-/* line 54, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 53, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 svg {
   fill: currentColor; }
 
-/* line 58, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+/* line 57, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -211,7 +202,7 @@ svg {
   width: 1px;
   word-wrap: normal !important;
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
-  /* line 70, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+  /* line 69, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
   .screen-reader-text:focus {
     background-color: #EA0029;
     clip: auto !important;
@@ -232,13 +223,22 @@ svg {
     width: auto;
     z-index: 100000; }
     @media screen and (max-width: 767px) {
-      /* line 70, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+      /* line 69, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
       .screen-reader-text:focus {
         font-size: 1.5rem;
         font-weight: normal;
         line-height: 2.1rem;
         letter-spacing: normal;
         text-transform: none; } }
+
+/* line 87, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+.content-margins {
+  max-width: 1024px;
+  margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    /* line 87, /Users/maya/Desktop/school/MAMP/mercado/build/css/_main.scss */
+    .content-margins {
+      max-width: 90%; } }
 
 /* line 3, /Users/maya/Desktop/school/MAMP/mercado/build/css/_header.scss */
 #masthead {
@@ -286,7 +286,7 @@ svg {
       /* line 44, /Users/maya/Desktop/school/MAMP/mercado/build/css/_header.scss */
       #site-navigation > ul > li a {
         font-size: 2.2rem;
-        font-weight: normal;
+        font-weight: lighter;
         line-height: 2.9rem;
         letter-spacing: normal;
         text-transform: uppercase;
@@ -298,7 +298,7 @@ svg {
           /* line 44, /Users/maya/Desktop/school/MAMP/mercado/build/css/_header.scss */
           #site-navigation > ul > li a {
             font-size: 2.2rem;
-            font-weight: normal;
+            font-weight: lighter;
             line-height: 2.9rem;
             letter-spacing: normal;
             text-transform: uppercase; } }
@@ -328,5 +328,139 @@ svg {
               /* line 68, /Users/maya/Desktop/school/MAMP/mercado/build/css/_header.scss */
               #site-navigation > ul > li.has-children:hover ul li a {
                 border-top: 2px solid #FFF065; }
+
+/*
+ * Newsletter Capture
+ ***************************/
+/*
+ * Logo Carousel
+ ***************************/
+/*
+ * Colophon
+ ***************************/
+/* line 14, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+#colophon {
+  background: #EA0029;
+  color: #FFFFFF;
+  padding: 64px 0 14px 0; }
+  /* line 18, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #colophon > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; }
+
+/* line 30, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+#tramp-stamp {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 2rem;
+  letter-spacing: normal;
+  text-transform: none;
+  text-transform: uppercase;
+  margin-top: 44px; }
+  @media screen and (max-width: 767px) {
+    /* line 30, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+    #tramp-stamp {
+      font-size: 1.3rem;
+      font-weight: normal;
+      line-height: 2rem;
+      letter-spacing: normal;
+      text-transform: none; } }
+  /* line 35, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #tramp-stamp a {
+    color: inherit; }
+    /* line 37, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+    #tramp-stamp a:hover {
+      color: #FFF065; }
+
+/* line 43, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+#colophon-logo {
+  display: block;
+  color: #FFF065;
+  width: auto;
+  height: auto;
+  max-width: 348px;
+  max-height: 84px; }
+  /* line 50, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #colophon-logo img {
+    width: auto;
+    height: auto; }
+  /* line 53, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #colophon-logo svg {
+    width: 348px;
+    max-height: 84px; }
+
+/* line 59, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+address.site-info {
+  font-style: normal;
+  font-size: 2.2rem;
+  font-weight: lighter;
+  line-height: 2.9rem;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  flex: 1 0 0;
+  margin: 0 20px; }
+  @media screen and (max-width: 767px) {
+    /* line 59, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+    address.site-info {
+      font-size: 2.2rem;
+      font-weight: lighter;
+      line-height: 2.9rem;
+      letter-spacing: normal;
+      text-transform: uppercase; } }
+  /* line 64, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  address.site-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: lighter;
+    line-height: 2.9rem;
+    letter-spacing: normal;
+    text-transform: uppercase; }
+    @media screen and (max-width: 767px) {
+      /* line 64, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+      address.site-info a {
+        font-size: 2.2rem;
+        font-weight: lighter;
+        line-height: 2.9rem;
+        letter-spacing: normal;
+        text-transform: uppercase; } }
+    /* line 68, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+    address.site-info a:hover {
+      color: #FFF065; }
+
+/* line 74, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+#footer-navigation {
+  flex: 0 0 261px; }
+  /* line 79, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #footer-navigation ul li a {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    line-height: 2.9rem;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white; }
+    @media screen and (max-width: 767px) {
+      /* line 79, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+      #footer-navigation ul li a {
+        font-size: 2.2rem;
+        font-weight: lighter;
+        line-height: 2.9rem;
+        letter-spacing: normal;
+        text-transform: uppercase; } }
+    /* line 83, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+    #footer-navigation ul li a:hover {
+      color: #FFF065; }
+  /* line 86, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #footer-navigation ul li:nth-of-type(2n -1) {
+    width: 174px;
+    float: left; }
+  /* line 89, /Users/maya/Desktop/school/MAMP/mercado/build/css/_footer.scss */
+  #footer-navigation ul li:nth-of-type(2n) {
+    width: 67px;
+    float: right; }
 
 /*# sourceMappingURL=style.css.map */

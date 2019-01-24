@@ -171,7 +171,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     /* H6 Components */
     @mixin h6-desktop-style {
       font-size: 1.4rem;
-      font-weight: bold;
+      font-weight: normal;
       line-height: 2rem;
       letter-spacing: normal;
       text-transform: none;
@@ -179,7 +179,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
 
     @mixin h6-mobile-style {
       font-size: 1.3rem;
-      font-weight: bold;
+      font-weight: normal;
       line-height: 2rem;
       letter-spacing: normal;
       text-transform: none;
@@ -229,7 +229,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     /* Nav Font Components */
     @mixin nav-font-desktop-style {
       font-size: 2.2rem;
-      font-weight: normal;
+      font-weight: lighter;
       line-height: 2.9rem;
       letter-spacing: normal;
       text-transform: uppercase;
@@ -237,7 +237,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
 
     @mixin nav-font-mobile-style {
       font-size: 2.2rem;
-      font-weight: normal;
+      font-weight: lighter;
       line-height: 2.9rem;
       letter-spacing: normal;
       text-transform: uppercase;
