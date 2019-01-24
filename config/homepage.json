@@ -1,0 +1,23 @@
+{
+  "name": "Homepage",
+  "fields":{
+    "home-gallery":{
+      "title": "Gallery",
+      "type": "section",
+      "items":{
+        "Gallery": "gallery",
+      }
+    },
+    "home-desc":{
+      "title": "Description",
+      "type": "section",
+      "items":{
+        "description": "wysiwyg"
+      }
+    },
+  },
+  "wireframe":[
+    "section-home-gallery",
+    "section-home-desc"
+  ]
+}
