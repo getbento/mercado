@@ -1,3 +1,7 @@
 {
-	"engine": "event"
+	"engine": "event",
+	"fields":{
+		"dek": "text",
+		"tickets_link": "text"
+	}
 }

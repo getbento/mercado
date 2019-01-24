@@ -1,0 +1,15 @@
+{
+	"name": "Events Landing",
+  "fields":{
+    "event_description":{
+      "title": "Events Landing Description",
+      "type": "section",
+      "items":{
+        "description": "wysiwyg"
+      }
+    }
+  },
+  "wireframe":[
+    "section-event_description"
+  ]
+}

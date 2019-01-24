@@ -8,6 +8,7 @@
 		"gallery": "gallery",
 		"short_description": "wysiwyg",
 		"map": "image",
+		"reservation_link": "text",
 		"contact_info": "wysiwyg",
 		"color": "color",
 		"menus": {

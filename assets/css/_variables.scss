@@ -2,14 +2,80 @@
  * Grid / Structure
  ***************************/
   /* Desktop */
-    $content_width_desktop : 850px;
-    $col_width_desktop : 52px;
+    $content_width_desktop : 1024px;
+    $col_no_desktop : 12;
     $gutter_width_desktop : 20px;
+    $col_width_desktop : ( $content_width_desktop - ( ( $col_no_desktop - 1 ) * $gutter_width_desktop ) ) / $col_no_desktop;
+    
+  /* Mobile */
+    $content_width_mobile : 100%;
+    $gutter_width_mobile : 32px;
+
+@mixin content-margins {
+  max-width: $content_width_desktop;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: ( $content_width_desktop + ( $gutter_width_mobile * 2 ) ) ) and (min-width: $desktop_min) {
+    margin-left: $gutter_width_mobile;
+    margin-right: $gutter_width_mobile;
+  } @media screen and (max-width: $mobile_max) {
+    max-width: $content_width_mobile;
+    margin-left: $gutter_width_mobile;
+    margin-right: $gutter_width_mobile;
+  }
+}
+
+@function columns( $col : 1, $extra_gutters : 0, $desktop : true ) {
+  @if $desktop == true {
+    @if $col == 0 {
+      @return $extra_gutters * $gutter_width_desktop;
+    }
+    @return (( $col_width_desktop * $col ) + ( $gutter_width_desktop * ( ( $col - 1 ) + $extra_gutters ) ));
+  } @else {
+    
+  }
+}
 
 /*
- * Font Stacks
+ * Breakpoints
  ***************************/
   /* Desktop */
     $desktop_min : 768px;
   /* Mobile */
     $mobile_max : 767px;
+
+/*
+ * Mixins / Interfaces
+ ***************************/
+%psuedo {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+%input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
