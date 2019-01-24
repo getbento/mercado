@@ -2,7 +2,11 @@
 	"name": "Events Landing",
   "fields":{
     "event_description":{
-      "description": "wysiwyg"
+      "title": "Event Description",
+      "type": "section",
+      "items":{
+        "description": "wysiwyg"
+      }
     }
   },
   "wireframe":[
