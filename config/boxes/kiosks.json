@@ -1,6 +1,6 @@
 {
 	"name": "Kiosks",
-  	"has_featured": false,
+	"has_featured": false,
 	"fields": {
 		"description": "wysiwyg",
 		"thumbnail_left": "image",
