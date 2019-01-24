@@ -1,0 +1,95 @@
+/*
+ * Newsletter Capture
+ ***************************/
+
+
+/*
+ * Logo Carousel
+ ***************************/
+
+
+/*
+ * Colophon
+ ***************************/
+#colophon {
+  background: $toro_red;
+  color: $white;
+  padding: 64px 0 14px 0;
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+#footer-branding {
+  
+}
+
+#tramp-stamp {
+  display: block;
+  @include h6-style;
+  text-transform: uppercase;
+  margin-top: 44px;
+  a {
+    color: inherit;
+    &:hover {
+      color: $oro_yellow;
+    }
+  }
+}
+
+#colophon-logo {
+  display: block;
+  color: $oro_yellow;
+  width: auto;
+  height: auto;
+  max-width: columns(4,1);
+  max-height: 84px;
+  img {
+    width: auto;
+    height: auto;
+  } svg {
+    width: columns(4,1);
+    max-height: 84px;
+  }
+}
+
+address.site-info {
+  font-style: normal;
+  @include nav-font-style;
+  flex: 1 0 0;
+  margin: 0 columns(0,1);
+  a {
+    color: white;
+    text-decoration: none;
+    @include nav-font-style;
+    &:hover {
+      color: $oro_yellow;
+    }
+  }
+}
+
+#footer-navigation {
+  flex: 0 0 columns(3,1);
+  ul {
+    
+    li {
+      a {
+        @include nav-font-style;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: $oro_yellow;
+        }
+      } &:nth-of-type( 2n -1 ) {
+        width: columns(2,1);
+        float: left;
+      } &:nth-of-type( 2n ) {
+        width: columns(1);
+        float: right;
+      }
+    }
+  }
+}
