@@ -1,0 +1,56 @@
+{
+	"name": "The Mercado",
+	"fields": {
+		"flexible": {
+      		"title": "Flexible Content",
+			"type": "section",
+			"items": {
+				"content": {
+					"type": "repeater",
+
+					"items": {
+		                "section_type": {
+		                  "type": "dropdown",
+		                  "options": ["Content Box","Featured Box", "Full Width Header Box", "Instagram feed"]
+		                },
+										"content_box": {
+											"type": "section",
+											"items": {
+												"content": "wysiwyg",
+												"display_logic": {
+	                        "section_type": "Content Box"
+                      	}
+											}
+										},
+										"full_width_header_box": {
+											"type": "section",
+											"items": {
+												"image": "image",
+												"content": "wysiwyg",
+												"display_logic": {
+	                        "section_type": "Full Width Header Box"
+                      	}
+											}
+										},
+		                "featured_boxes": {
+		                	"type": "section",
+		                	"items": {
+				                "box": {
+				                  "type": "dropdown",
+				                  "options": ["Location", "Menus", "Blog", "Events", "Private Events", "Stalls"]
+				                },
+                      	"display_logic": {
+	                        "section_type": "Featured Box"
+                      	}
+		                	}
+		                }
+					}
+
+				}
+			}
+		}
+	},
+	"wireframe": [
+		"section-flexible"
+	]
+}
