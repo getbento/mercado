@@ -9,7 +9,6 @@ body, html {
 }
 
 body * {
-  @include p-style;
   box-sizing: inherit;
 }
 
@@ -83,4 +82,8 @@ svg {
     width: auto;
     z-index: 100000;
   }
+}
+
+.content-margins {
+  @include content-margins;
 }

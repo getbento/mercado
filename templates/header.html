@@ -33,6 +33,7 @@
   <!-- <link rel="stylesheet" href="{{ static('css/normalize.css') }}">
   <link rel="stylesheet" href="{{ static('css/skeleton.css') }}"> -->
   <link rel="stylesheet" href="{{ static('css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -44,7 +45,7 @@
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
   <header id="masthead" class="site-header">
     <div class="site-branding">
-      <a href="#" id="masthead-logo">
+      <a href="#{{ account.site.url }}" id="masthead-logo">
         <svg>
           <use xlink:href="{{ static('img/symbols.svg#MLS_horizontal')}}"></use>
         </svg>

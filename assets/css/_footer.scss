@@ -1,0 +1,229 @@
+/*
+ * Newsletter Capture
+ ***************************/
+#newsletter-capture {
+  margin-bottom: 72px;
+  > div {
+    border: 2px solid $toro_red;
+    padding: 40px columns(1);
+    @media screen and (max-width: $mobile_max) {
+      padding: 56px 24px;
+    }
+  }
+}
+
+.newsletter-capture-title {
+  @include h4-style;
+  text-transform: uppercase;
+  color: $toro_red;
+  margin: 0;
+  margin-bottom: 16px;
+  @media screen and (max-width: $mobile_max) {
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.newsletter-capture-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  label {
+    flex: 1 0 0;
+    margin-right: 44px;
+  } button {
+    flex: 0 0 auto;
+  } @media screen and (max-width: $mobile_max) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    label, button {
+      flex: initial;
+      margin: 0;
+    } label {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.red-input {
+  @extend %input;
+  background: $toro_red;
+  color: $oro_yellow;
+  font-family: $domaine;
+  @include h3-style;
+  padding: 12px 24px;
+  width: 100%;
+  @include placeholder {
+    color: $oro_yellow;
+    font-family: $domaine;
+    @include h3-style;
+  }
+}
+
+.outline-button {
+  @extend %input;
+  @include button-font-style;
+  color: $toro_red;
+  border: 2px solid;
+  padding: 12px 64px;
+  &:hover {
+    background: $oro_yellow;
+  } &:active {
+    color: $oro_yellow;
+    background: $toro_red;
+  }
+}
+
+/*
+ * Logo Carousel
+ ***************************/
+#logo-carousel {
+  border-top: 2px solid $toro_red;
+}
+
+.partner-carousel {
+  position: relative;
+  .slick-arrow {
+    @extend %input;
+    height: 16px;
+    width: 12px;
+    background: url('../img/carousel-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: calc(50% - 8px);
+    cursor: pointer;
+    @media screen and (max-width: $mobile_max) {
+      width: 24px;
+      height: 16px;
+    }
+  } .slick-prev {
+    left: -48px;
+    @media screen and (max-width: $mobile_max) {
+      left: ($gutter_width_mobile * -1) + 8px;
+    }
+  } .slick-next {
+    right: -48px;
+    @include transform(scaleX(-1));
+    @media screen and (max-width: $mobile_max) {
+      right: ($gutter_width_mobile * -1) + 8px;
+    }
+  }
+}
+
+.partner-slide {
+  color: $toro_red;
+  padding: columns(0,1);
+  img, svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/*
+ * Colophon
+ ***************************/
+#colophon {
+  background: $toro_red;
+  color: $white;
+  padding: 64px 0 14px 0;
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: $mobile_max) {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+}
+
+#footer-branding {
+  
+}
+
+#colophon-logo {
+  display: block;
+  color: $oro_yellow;
+  width: auto;
+  height: auto;
+  max-width: columns(4,1);
+  max-height: 84px;
+  img {
+    width: auto;
+    height: auto;
+  } svg {
+    width: 100%;
+    height: auto;
+    max-width: columns(4,1);
+    max-height: 84px;
+  }
+}
+
+address.site-info {
+  font-style: normal;
+  @include nav-font-style;
+  flex: 1 0 0;
+  margin: 0 columns(0,1);
+  a {
+    color: white;
+    text-decoration: none;
+    @include nav-font-style;
+    &:hover {
+      color: $oro_yellow;
+    }
+  } @media screen and (max-width: $mobile_max) {
+    flex: initial;
+    margin: 0;
+  }
+}
+
+#footer-navigation {
+  flex: 0 0 columns(3,1);
+  ul {
+    
+    li {
+      a {
+        @include nav-font-style;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: $oro_yellow;
+        }
+      } &:nth-of-type( 2n -1 ) {
+        width: columns(2,1);
+        float: left;
+      } &:nth-of-type( 2n ) {
+        width: columns(1);
+        float: right;
+      }
+    }
+  } @media screen and (max-width: $mobile_max) {
+    flex: initial;
+  }
+}
+
+#tramp-stamp {
+  flex: 0 0 100%;
+  @include h6-style;
+  text-transform: uppercase;
+  margin-top: 44px;
+  a {
+    color: inherit;
+    &:hover {
+      color: $oro_yellow;
+    }
+  } @media screen and (max-width: $mobile_max) {
+    flex: initial;
+    margin-top: 24px;
+  }
+}
