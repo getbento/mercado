@@ -4,6 +4,17 @@
   <!-- Powered by BentoBox -->
   <!-- START header.html  -->
 
+  <!-- ```-::-````---```````.-----.````.-----````----`` -->
+  <!-- `dMMMMMMmo+MMMm`````-NMMmMMN:``/MMNMMM.`.hMMd-`` -->
+  <!-- `Md/--/dMMMMMMMd```.NMMMy-NMM+sMMd.NMM-+NMN+```` -->
+  <!-- `m````````/MMMMMy``mMMMMy``dMMMMy``NMMmMMd`````` -->
+  <!-- `m``````::oMMhyMMsdMmoMMy```hMMs```NMMoNMMo````` -->
+  <!-- `Mmo/:omMMNMMh`dMMMN.+MMy```yMM+```NMM.`hMMm-``` -->
+  <!-- `hNMMMMMh//MMh`.NMM:`+MMy```yMM+```NMM.``/NMMs`` -->
+  <!-- ```.--.````..````.````..`````..`````..`````...`` -->
+
+
+
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -19,8 +30,8 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{{ static('css/normalize.css') }}">
-  <link rel="stylesheet" href="{{ static('css/skeleton.css') }}">
+  <!-- <link rel="stylesheet" href="{{ static('css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ static('css/skeleton.css') }}"> -->
   <link rel="stylesheet" href="{{ static('css/style.css') }}">
 
   <!-- Favicon
@@ -30,18 +41,50 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <nav>
-      {% for item in navs.main %}
-      <!-- {{item}} -->
-        <a href="{{ item.url }}">{{ item.name }}</a>
-      {% endfor %}
-      {% if navs.main|length == 0 %}
-        <em>Add nav items in the Pages/Nav sections of the admin to get started</em>
-      {% endif %}
-      </nav>
-    </header>
+  <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+  <header id="masthead" class="site-header">
+    <div class="site-branding">
+      <a href="#" id="masthead-logo">
+        <svg>
+          <use xlink:href="{{ static('img/symbols.svg#MLS_horizontal')}}"></use>
+        </svg>
+      </a>
+    </div><!-- .site-branding -->
+    <nav id="site-navigation" class="menu">
+      <!-- Start navigation template
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <ul class="nav-menu">
+        {% for item in navs.main %}
+        <!-- {{item}} -->
+          {% if item.slug == 'restaurant' %}
+            <li class="nav-item has-children {% if item.url == current.url %}current_page{% endif %}">
+              <a href="{{ item.url }}">
+                {{ item.name }}
+              </a>
+              <ul class="nav-children">
+                {% for rests in boxes.restaurant.all %}
+                <li class="nav-item child">
+                  <a href="{{rests.url}}">
+                    {{rests.name}}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li class="nav-item {% if item.url == current.url %}current_page{% endif %}">
+              <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <!-- End navigation template
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    </nav><!-- #primary-menu -->
+  </header><!-- #masthead -->
+
+
+
     {% block content %}
     {% endblock %}
 

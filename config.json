@@ -1,7 +1,7 @@
 {
     "theme": {
         "name": "Little Spain Mercado",
-        "author": "The BentoBox Team",
+        "author": "CMYK",
         "fields": {
             "colors": {
                 "title": "Colors",
@@ -454,7 +454,7 @@
             }
         }
     },
-   
+
     "navs": [
       {
         "name": "Main Navigation",

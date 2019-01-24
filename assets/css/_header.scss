@@ -1,0 +1,81 @@
+$header_height_desktop : 106px;
+
+#masthead {
+  //position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $header_height_desktop;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background: white;
+  border-bottom: 2px solid $toro_red;
+}
+
+#masthead-logo {
+  flex: 0 0 auto;
+  margin-right: 32px;
+  display: block;
+  color: $toro_red;
+  height: 45px;
+  img, svg {
+    width: auto;
+    height: auto;
+    max-width: 212px;
+    max-height: 45px;
+  }
+}
+
+#site-navigation {
+  flex: 1 0 0;
+  > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $toro_red;
+    text-align: center;
+    > li {
+      padding: 0 16px;
+      margin: 0 -16px;
+      a {
+        @include nav-font-style;
+        color: inherit;
+        text-decoration: none;
+        padding: 12px 16px;
+        display: block;
+      } &.has-children {
+        position: relative;
+        ul {
+          display: none;
+        } &:hover {
+          background: $toro_red;
+          color: $white;
+          ul {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: auto;
+            background: $toro_red;
+            color: $white;
+            li {
+              padding: 0 16px;
+              a {
+                border-top: 2px solid $oro_yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#content {
+  //margin-top: $header_height_desktop;
+}

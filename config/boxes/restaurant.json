@@ -14,8 +14,8 @@
 			"type": "repeater",
 			"items":{
 				"name": "text",
-				"file": "file",
+				"file": "file"
 			}
-		},
+		}
 	}
 }
