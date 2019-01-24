@@ -17,7 +17,7 @@
 											"type": "section",
 											"items": {
 												"image": "image",
-												"content": "content",
+												"content": "wysiwyg",
 												"display_logic": {
 	                        "section_type": "Content Box"
                       	}
