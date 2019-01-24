@@ -1,0 +1,13 @@
+{
+	"name": "Kiosks",
+  	"has_featured": false,
+	"fields": {
+		"description": "wysiwyg",
+		"thumbnail_left": "image",
+		"thumbnail_right": "image",
+		"hover_text": "text",
+		"gallery": "gallery",
+		"map": "image",
+
+	}
+}

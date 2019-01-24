@@ -1,0 +1,15 @@
+{
+	"name": "Contact",
+  "fields":{
+    "address": "wysiwyg",
+    "phone_numer": "text",
+    "email_address": "text",
+    "hours": {
+      "type": "repeater",
+      "items":{
+        "hours": "text",
+        "day": "text"
+      }
+    }
+  }
+}

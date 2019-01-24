@@ -1,3 +1,9 @@
 {
-	"engine": "blog"
+	"engine": "blog",
+	"has_categories": true,
+	"fields":{
+		"author": "text",
+		"dek": "text"
+	}
+
 }
