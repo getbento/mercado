@@ -1,7 +1,16 @@
 {
 	"name": "The Mercado",
-	"fields": {
-		"header_content": "wysiwyg",
-		"image": "image"	
-	}
+	"fields":{
+		"mercado":{
+			"title": "Header Fields",
+			"type": "section",
+			"items":{
+				"header_content": "wysiwyg",
+				"image": "image"
+			}
+		}
+	},
+	"wireframe": [
+		"section-mercado"
+	]
 }

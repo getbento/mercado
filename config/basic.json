@@ -2,7 +2,7 @@
 	"name": "Basic Page",
 	"fields": {
 		"flexible": {
-      		"title": "Flexible Content",
+  		"title": "Flexible Content",
 			"type": "section",
 			"items": {
 				"content": {
