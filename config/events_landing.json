@@ -2,7 +2,7 @@
 	"name": "Events Landing",
   "fields":{
     "event_description":{
-      "title": "Event Description",
+      "title": "Events Landing Description",
       "type": "section",
       "items":{
         "description": "wysiwyg"
