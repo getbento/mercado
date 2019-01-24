@@ -3,6 +3,10 @@
 events_landing.html
 {{current}}
 
-{{boxes.events.all}}
+
+
+{% for post in boxes.events.all %}
+<a href="{{post.url}}">link</a>
+{% endfor %}
 
 {% include "footer.html" %}
