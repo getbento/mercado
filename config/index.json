@@ -22,13 +22,15 @@
                     "section_type": "Post Select"
                   }
                 },
-                "restaurant_box":{
+                "restaurant":{
                   "type": "section",
                   "items":{
-                    "type": "relationship",
-                    "box": "restaurant",
-                    "display_logic":{
-                      "box_type": "Restaurant"
+                    "restaurant_box":{
+                      "type": "relationship",
+                      "box": "restaurant",
+                      "display_logic":{
+                        "box_type": "Restaurant"
+                      }
                     }
                   }
                 }
