@@ -8,9 +8,9 @@ const DEV = process.env.NODE_ENV === 'development';
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'assets/dist'),
     filename: 'main.js',
-    publicPath: '/dist/'
+    publicPath: '/assets/dist/'
   },
   module: {
     rules: [
@@ -59,7 +59,7 @@ module.exports = {
   devtool: "source-map",
   plugins: [
     new AssetsPlugin({
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'assets/dist'),
       filename: 'assets.json',
     }),
     new ExtractTextPlugin(DEV ? 'style.css' : 'style-[hash:6].css'),
@@ -74,9 +74,9 @@ module.exports = {
         // through BrowserSync
         proxy: 'http://127.0.0.1:5000',
         files: [
-          '**/*.php',
+          '**/*.html',
           '**/*.css',
-          './dist/main.js'
+          './assets/dist/main.js'
         ],
       },
       // plugin options
