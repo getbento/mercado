@@ -1,7 +1,3 @@
 {
 	"engine": "press",
-	"fields":{
-		"name": "text",
-		"logo": "image",
-	}
 }
