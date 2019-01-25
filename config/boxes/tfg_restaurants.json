@@ -1,0 +1,8 @@
+{
+	"name": "Think Food Group Restaurants",
+	"has_featured": false,
+	"fields": {
+		"logo": "image",
+		"url": "text"
+	}
+}

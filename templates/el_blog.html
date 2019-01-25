@@ -4,7 +4,10 @@
 
 el_blog.html
 
-{{current}}
-
+<!-- {{current}} -->
+<!-- {{boxes.blog.all}} -->
+{% for post in boxes.blog.all %}
+<a href="{{post.url}}">link</a>
+{% endfor %}
 
 {% include "footer.html" %}

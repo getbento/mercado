@@ -1,0 +1,32 @@
+{
+	"name": "Shop",
+  "fields":{
+		"online-products":{
+			"title": "Online Products",
+			"type": "section",
+			"items":{
+        "products": {
+          "type": "repeater",
+          "items":{
+            "name": "text",
+            "image": "image",
+            "hover_text": "text",
+            "link": "text"
+          }
+        }
+			}
+		},
+    "gift-card":{
+			"title": "Gift Card Fields",
+			"type": "section",
+			"items":{
+        "content_box": "wysiwyg",
+        "image": "image"
+			}
+		}
+	},
+	"wireframe": [
+		"section-online-products",
+    "section-gift-card"
+	]
+}
