@@ -10,7 +10,8 @@
 		"map": "image",
 		"reservation_link": "text",
 		"contact_info": "wysiwyg",
-		"color": "color",
+		"primary_color": "color",
+		"secondary_color": "color",
 		"menus": {
 			"type": "repeater",
 			"items":{

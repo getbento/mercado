@@ -11,7 +11,7 @@
 					"items": {
 		                "section_type": {
 		                  "type": "dropdown",
-		                  "options": ["Content Box","Featured Box", "Full Width Header Box", "Gallery Box", "Wide Image"]
+		                  "options": ["Content Container","Featured Boxes", "Full Width Header Container", "Gallery Container", "Wide Image"]
 		                },
 										"content_box": {
 											"type": "section",
@@ -19,7 +19,7 @@
 												"content": "wysiwyg",
 												"subheader": "text",
 												"display_logic": {
-	                        "section_type": "Content Box"
+	                        "section_type": "Content Container"
                       	}
 											}
 										},
@@ -29,7 +29,7 @@
 												"image": "image",
 												"content": "wysiwyg",
 												"display_logic": {
-	                        "section_type": "Full Width Header Box"
+	                        "section_type": "Full Width Header Container"
                       	}
 											}
 										},
@@ -38,7 +38,7 @@
 											"items": {
 												"gallery": "gallery",
 												"display_logic": {
-	                        "section_type": "Gallery Box"
+	                        "section_type": "Gallery Container"
                       	}
 											}
 										},
@@ -60,7 +60,7 @@
 				                  "options": ["Location", "Menus", "Blog", "Events", "Private Events", "Stalls"]
 				                },
                       	"display_logic": {
-	                        "section_type": "Featured Box"
+	                        "section_type": "Featured Boxes"
                       	}
 		                	}
 		                }
