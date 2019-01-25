@@ -10,7 +10,7 @@
           "items":{
             "section_type":{
               "type": "dropdown",
-              "options": ["Post Slide", "Custom Slide"],
+              "options": ["Post", "Custom Slide"],
             },
             "post_slide":{
               "type": "section",
@@ -18,7 +18,7 @@
                 "type": "relationship",
                 "box": "blog",
                 "display_logic": {
-                  "section_type" : "Post Slide"
+                  "section_type" : "Post"
                 }
               }
             },

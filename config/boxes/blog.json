@@ -1,5 +1,6 @@
 {
 	"engine": "blog",
+	"name": "blog",
 	"has_categories": true,
 	"fields":{
 		"author": "text",
