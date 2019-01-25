@@ -7,63 +7,62 @@
 			"items": {
 				"content": {
 					"type": "repeater",
-
 					"items": {
-		                "section_type": {
+                "section_type": {
+                  "type": "dropdown",
+                  "options": ["Content Container","Featured Boxes", "Full Width Header Container", "Gallery Container", "Wide Image"]
+                },
+								"content_box": {
+									"type": "section",
+									"items": {
+										"content": "wysiwyg",
+										"subheader": "text",
+										"display_logic": {
+                      "section_type": "Content Container"
+                  	}
+									}
+								},
+								"full_width_header_box": {
+									"type": "section",
+									"items": {
+										"image": "image",
+										"content": "wysiwyg",
+										"display_logic": {
+                      "section_type": "Full Width Header Container"
+                  	}
+									}
+								},
+								"gallery_box": {
+									"type": "section",
+									"items": {
+										"gallery": "gallery",
+										"display_logic": {
+                      "section_type": "Gallery Container"
+                  	}
+									}
+								},
+								"wide_image": {
+									"type": "section",
+									"items": {
+										"image": "image",
+										"caption": "text",
+										"display_logic": {
+                      "section_type": "Wide Image"
+                  	}
+									}
+								},
+                "featured_boxes": {
+                	"type": "section",
+                	"items": {
+		                "box": {
 		                  "type": "dropdown",
-		                  "options": ["Content Container","Featured Boxes", "Full Width Header Container", "Gallery Container", "Wide Image"]
+		                  "options": ["Location", "Menus", "Blog", "Events", "Private Events", "Stalls"]
 		                },
-										"content_box": {
-											"type": "section",
-											"items": {
-												"content": "wysiwyg",
-												"subheader": "text",
-												"display_logic": {
-	                        "section_type": "Content Container"
-                      	}
-											}
-										},
-										"full_width_header_box": {
-											"type": "section",
-											"items": {
-												"image": "image",
-												"content": "wysiwyg",
-												"display_logic": {
-	                        "section_type": "Full Width Header Container"
-                      	}
-											}
-										},
-										"gallery_box": {
-											"type": "section",
-											"items": {
-												"gallery": "gallery",
-												"display_logic": {
-	                        "section_type": "Gallery Container"
-                      	}
-											}
-										},
-										"wide_image": {
-											"type": "section",
-											"items": {
-												"image": "image",
-												"caption": "text",
-												"display_logic": {
-	                        "section_type": "Wide Image"
-                      	}
-											}
-										},
-		                "featured_boxes": {
-		                	"type": "section",
-		                	"items": {
-				                "box": {
-				                  "type": "dropdown",
-				                  "options": ["Location", "Menus", "Blog", "Events", "Private Events", "Stalls"]
-				                },
-                      	"display_logic": {
-	                        "section_type": "Featured Boxes"
-                      	}
-		                	}
-		                }
+                  	"display_logic": {
+                      "section_type": "Featured Boxes"
+                  	}
+                	}
+                }
 					}
 
 				}

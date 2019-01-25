@@ -42,7 +42,9 @@
       "title": "Description",
       "type": "section",
       "items":{
-        "description": "wysiwyg"
+        "description": "wysiwyg",
+        "call_to_action": "text",
+        "link": "text"
       }
     },
   },
