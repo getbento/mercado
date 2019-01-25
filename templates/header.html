@@ -51,7 +51,23 @@
         </svg>
       </a>
     </div><!-- .site-branding -->
+    <a href="#site-navigation" id="skip-to-navigation-link" aria-expanded="true" aria-controls="site-navigation">
+      <svg>
+        <use xlink:href="{{ static('img/symbols.svg#hamburger-menu')}}"></use>
+      </svg>
+      <span class="screen-reader-text">Toggle Menu</span>
+    </a>
     <nav id="site-navigation" class="menu">
+      <div class="mobile-nav-header">
+        <a href="{{ account.site.url }}" class="mobile-nav-header-logo">
+          <svg>
+            <use xlink:href="{{ static('img/symbols.svg#MLS_square')}}"></use>
+          </svg>
+        </a>
+        <a href="#" class="mobile-nav-header-close" aria-expanded="true" aria-controls="site-navigation">
+          × <span class="screen-reader-text">Close Menu</span>
+        </a>
+      </div>
       <!-- Start navigation template
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <ul class="nav-menu">
@@ -59,10 +75,15 @@
         <!-- {{item}} -->
           {% if item.slug == 'restaurant' %}
             <li class="nav-item has-children {% if item.url == current.url %}current_page{% endif %}">
-              <a href="{{ item.url }}">
+              <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}">
                 {{ item.name }}
               </a>
-              <ul class="nav-children">
+              <ul class="nav-children" id="{{ item.slug }}-dropdown">
+                <li class="nav-item child dupe">
+                  <a href="{{ item.url }}">
+                    All
+                  </a>
+                </li>
                 {% for rests in boxes.restaurant.all %}
                 <li class="nav-item child">
                   <a href="{{rests.url}}">
@@ -88,5 +109,7 @@
 
     {% block content %}
     {% endblock %}
+<!-- #content open -->
+    <div id="content">
 
 <!-- END header.html  -->

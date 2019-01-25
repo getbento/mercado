@@ -9,6 +9,7 @@
     
   /* Mobile */
     $content_width_mobile : 100%;
+    $col_no_mobile : 12;
     $gutter_width_mobile : 32px;
 
 @mixin content-margins {
@@ -48,6 +49,12 @@
  * Mixins / Interfaces
  ***************************/
 %psuedo {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+@mixin psuedo {
   content: '';
   display: block;
   position: absolute;
