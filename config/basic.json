@@ -11,7 +11,7 @@
 					"items": {
 		                "section_type": {
 		                  "type": "dropdown",
-		                  "options": ["Content Box","Featured Box", "Full Width Header Box", "Gallery", "Wide Image"]
+		                  "options": ["Content Box","Featured Box", "Full Width Header Box", "Gallery Box", "Wide Image"]
 		                },
 										"content_box": {
 											"type": "section",
