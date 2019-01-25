@@ -16,6 +16,7 @@
               "type": "section",
               "items":{
                 "post": "relationship",
+                "box": ["blog", "event", "restaurant"],
                 "display_logic": {
                   "section_type" : "Post Slide"
                 }
