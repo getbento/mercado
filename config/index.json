@@ -14,8 +14,8 @@
             },
             "post_slide":{
               "type": "section",
-              "items":{
-                "Select Post": "relationship",
+              "select_post":{
+                "type": "relationship",
                 "box": "blog",
                 "display_logic": {
                   "section_type" : "Post Slide"
