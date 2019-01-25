@@ -13,10 +13,13 @@
               "options": ["Post Select", "Custom Slide"],
             },
             "post_slide":{
-              "type": "relationship",
-              "box": "Restaurant",
-              "display_logic": {
-                "section_type" : "Post Select"
+              "type": "section",
+              "items":{
+                "post": "relationship",
+                "box": "restaurant",
+                "display_logic": {
+                  "section_type" : "Post Select"
+                }
               }
             },
             "custom_slide":{
