@@ -10,15 +10,15 @@
           "items":{
             "section_type":{
               "type": "dropdown",
-              "options": ["Post Slide", "Custom Slide"],
+              "options": ["Post Select", "Custom Slide"],
             },
             "post_slide":{
               "type": "section",
               "items":{
                 "post": "relationship",
-                "box": "event",
+                "box": "restaurant",
                 "display_logic": {
-                  "section_type" : "Post Slide"
+                  "section_type" : "Post Select"
                 }
               }
             },

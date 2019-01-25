@@ -726,7 +726,6 @@ svg {
   .partner-carousel .slick-arrow {
     height: 16px;
     width: 12px;
-    background: url("../img/carousel-arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;

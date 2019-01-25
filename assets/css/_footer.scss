@@ -93,7 +93,7 @@
     @extend %input;
     height: 16px;
     width: 12px;
-    background: url('../img/carousel-arrow.svg');
+    // background: url('../img/carousel-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -195,7 +195,7 @@ address.site-info {
 #footer-navigation {
   flex: 0 0 columns(3,1);
   ul {
-    
+
     li {
       a {
         @include nav-font-style;
