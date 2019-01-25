@@ -1,6 +1,11 @@
 <!-- START footer.html  -->
 
-<!-- .container close -->
+<!-- #content close -->
+
+</div>
+
+{% include "newsletter_popup.html" %}
+
 <footer id="newsletter-capture" class="site-footer">
   <div class="content-margins">
     <h2 class="newsletter-capture-title">
@@ -46,24 +51,24 @@
         <a href="mailto:hola@littlespain.com">hola@littlespain.com</a>
         <br>
         222.222.2222
-      </address><!-- .site-info --> 
+      </address><!-- .site-info -->
       <nav id="footer-navigation" class="menu">
-      <ul class="footer-menu">
-        {% for item in navs.footer %}
-          <li class="nav-item">
-              <a href="{{ item.url }}">{{ item.name }}</a>
-          </li>
-        {% endfor %}
-        {% if navs.footer|length == 0 %}
-          <li>
-            <em>Add nav items in the Pages/Nav sections of the admin to see your footer nav</em>
-          </li>
-        {% endif %}
-      </ul>
-    </nav><!-- .footer-navigation -->
-    <div id="tramp-stamp">
-      Site made in collaboration with <a href="https://www.wearecmyk.com/" target="_blank">CMYK</a>.
-    </div>
+        <ul class="footer-menu">
+          {% for item in navs.footer %}
+            <li class="nav-item">
+                <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endfor %}
+          {% if navs.footer|length == 0 %}
+            <li>
+              <em>Add nav items in the Pages/Nav sections of the admin to see your footer nav</em>
+            </li>
+          {% endif %}
+        </ul>
+      </nav><!-- .footer-navigation -->
+      <div id="tramp-stamp">
+        Site made in collaboration with <a href="https://www.wearecmyk.com/" target="_blank">CMYK</a>.
+      </div>
     </div><!-- .content-margins -->
   </footer><!-- #colophon -->
 

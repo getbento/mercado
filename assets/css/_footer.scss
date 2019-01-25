@@ -9,6 +9,8 @@
     @media screen and (max-width: $mobile_max) {
       padding: 56px 24px;
     }
+  } @media screen and (max-width: $mobile_max) {
+    margin-bottom: 50px;
   }
 }
 
@@ -148,7 +150,9 @@
 }
 
 #footer-branding {
-
+  @media screen and (max-width: $mobile_max) {
+    margin-bottom: 32px;
+  }
 }
 
 #colophon-logo {
@@ -184,6 +188,7 @@ address.site-info {
   } @media screen and (max-width: $mobile_max) {
     flex: initial;
     margin: 0;
+    line-height: 4.4rem;
   }
 }
 
@@ -209,6 +214,13 @@ address.site-info {
     }
   } @media screen and (max-width: $mobile_max) {
     flex: initial;
+    ul {
+      li {
+        a {
+          line-height: 4.4rem;
+        }
+      }
+    }
   }
 }
 
