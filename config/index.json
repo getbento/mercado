@@ -20,15 +20,6 @@
                 "display_logic": {
                   "section_type": "Post Select"
                 },
-                "rest_type":{
-                  "Restaurant": {
-                    "type": "relationship",
-                    "box": "restaurant",
-                    "display_logic": {
-                      "section_type" : "Restaurant"
-                    }
-                  }
-                }
               }
             },
             "custom_slide":{
