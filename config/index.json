@@ -15,10 +15,12 @@
             "post_slide":{
               "type": "section",
               "items":{
-                "post": "relationship",
-                "box": "restaurant",
-                "display_logic": {
-                  "section_type" : "Post Select"
+                "post": {
+                  "type": "relationship",
+                  "box": "restaurant",
+                  "display_logic": {
+                    "section_type" : "Post Select"
+                  }
                 }
               }
             },
