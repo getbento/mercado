@@ -19,7 +19,7 @@
                 "options": ["Restaurant", "Blog", "Event", "Kiosks"],
                 "display_logic": {
                   "section_type": "Post Select"
-                },
+                }
               }
             },
             "custom_slide":{
