@@ -24,10 +24,13 @@
                 },
                 "restaurant_box":{
                   "type": "relationship",
-                  "box": "restaurant",
-                  "display_logic":{
-                    "box_type": "Restaurant"
+                  "items":{
+                    "box": "restaurant",
+                    "display_logic":{
+                      "box_type": "Restaurant"
+                    }
                   }
+
                 }
               }
             },
