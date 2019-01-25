@@ -16,7 +16,7 @@
               "type": "section",
               "items":{
                 "post": "relationship",
-                "box": "blog",
+                "box": "Restaurant",
                 "display_logic": {
                   "section_type" : "Post Select"
                 }
