@@ -15,11 +15,18 @@
             "post_slide":{
               "type": "section",
               "items":{
-                "post": {
-                  "type": "relationship",
-                  "box": "restaurant",
-                  "display_logic": {
-                    "section_type" : "Post Select"
+                "type": "dropdown",
+                "options": ["Restaurant", "Blog", "Event", "Kiosks"],
+                "display_logic": {
+                  "section_type": "Post Select"
+                },
+                "rest_type":{
+                  "Restaurant": {
+                    "type": "relationship",
+                    "box": "restaurant",
+                    "display_logic": {
+                      "section_type" : "Restaurant"
+                    }
                   }
                 }
               }
