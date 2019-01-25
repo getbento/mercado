@@ -64,10 +64,10 @@ $header_height_mobile : 58px;
           position: relative;
           ul {
             display: none;
-          } &:hover {
+          } &:hover, a:focus {
             background: $toro_red;
             color: $white;
-            ul {
+            ul, + ul {
               display: block;
               position: absolute;
               left: 0;

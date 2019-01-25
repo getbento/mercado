@@ -61,6 +61,27 @@ $(document).ready(function(){
       footerSlick( this );
     });
   }
+  
+  
+  /*
+   * Newsletter Popup
+   ***************************/
+  if ( getCookie('popupseen') === "" ) {
+    $('#newsletter-popup').addClass('opened');
+    window.location.href = "#newsletter-popup";
+    setCookie('popupseen', 'true', 30);
+    
+    $('#newsletter-popup-close').click(function(){
+      $('#newsletter-popup').removeClass('opened');
+    }).keyHook();
+  } else {
+    $('#newsletter-popup').remove();
+  }
+  
+  
+  
+  
+  
 }); // document ready end
 
 /*
@@ -108,7 +129,7 @@ $(window).resize(function(){
       $('.nav-item.has-children a').unbind('click');
     }
   }
-});
+}); // end window resize functions
 
 /*
  * Mobile Navigation - Toggle Function
@@ -170,3 +191,39 @@ function footerSlick( target ) {
     return this;
   }
 })( jQuery );
+
+
+/*
+ * Cookies
+ ***************************/
+  /* 
+   * Get cookie by key
+   * @param cname cookie key
+   */
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+  /*
+   * Set cookie 
+   * @param cname cookie key
+   * @param cvalue cookie value
+   * @param exdays num days until cookie expiration
+   */
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      var expires = "expires="+ d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }

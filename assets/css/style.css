@@ -346,11 +346,11 @@ svg {
           #site-navigation > ul > li.has-children ul {
             display: none; }
           /* line 67, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
-          #site-navigation > ul > li.has-children:hover {
+          #site-navigation > ul > li.has-children:hover, #site-navigation > ul > li.has-children a:focus {
             background: #EA0029;
             color: #FFFFFF; }
             /* line 70, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
-            #site-navigation > ul > li.has-children:hover ul {
+            #site-navigation > ul > li.has-children:hover ul, #site-navigation > ul > li.has-children:hover + ul, #site-navigation > ul > li.has-children a:focus ul, #site-navigation > ul > li.has-children a:focus + ul {
               display: block;
               position: absolute;
               left: 0;
@@ -360,17 +360,17 @@ svg {
               background: #EA0029;
               color: #FFFFFF; }
               /* line 79, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
-              #site-navigation > ul > li.has-children:hover ul li {
+              #site-navigation > ul > li.has-children:hover ul li, #site-navigation > ul > li.has-children:hover + ul li, #site-navigation > ul > li.has-children a:focus ul li, #site-navigation > ul > li.has-children a:focus + ul li {
                 padding: 0 16px; }
                 /* line 81, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
-                #site-navigation > ul > li.has-children:hover ul li a {
+                #site-navigation > ul > li.has-children:hover ul li a, #site-navigation > ul > li.has-children:hover + ul li a, #site-navigation > ul > li.has-children a:focus ul li a, #site-navigation > ul > li.has-children a:focus + ul li a {
                   border-top: 2px solid #FFF065; }
                 /* line 83, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
-                #site-navigation > ul > li.has-children:hover ul li.dupe {
+                #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe {
                   display: none; } }
               @media screen and (min-width: 768px) and (max-width: 767px) {
                 /* line 83, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
-                #site-navigation > ul > li.has-children:hover ul li.dupe {
+                #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe {
                   display: block; } }
   @media screen and (max-width: 767px) {
     /* line 46, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_header.scss */
@@ -925,5 +925,163 @@ address.site-info {
     #tramp-stamp {
       flex: initial;
       margin-top: 24px; } }
+
+/* line 1, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+#newsletter-popup {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 68px 0;
+  background: #EA0029;
+  color: white;
+  text-align: center;
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: transform 0.4s; }
+  /* line 15, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+  #newsletter-popup.opened, #newsletter-popup:target {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    transition: transform 0.4s opacity 0.4s; }
+  @media screen and (max-width: 767px) {
+    /* line 1, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup {
+      height: 100%;
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
+      /* line 23, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+      #newsletter-popup > .content-margins {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%; }
+      /* line 29, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+      #newsletter-popup.opened, #newsletter-popup:target {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0); } }
+
+/* line 35, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+#newsletter-popup-title {
+  font-size: 12rem;
+  font-weight: bold;
+  line-height: 9.5rem;
+  letter-spacing: 0.15rem;
+  text-transform: none;
+  text-transform: uppercase;
+  color: #FFF065;
+  margin: 0; }
+  @media screen and (max-width: 767px) {
+    /* line 35, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup-title {
+      font-size: 9rem;
+      font-weight: bold;
+      line-height: 7.5rem;
+      letter-spacing: 0.135rem;
+      text-transform: none; } }
+  @media screen and (max-width: 767px) {
+    /* line 35, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup-title {
+      text-transform: uppercase;
+      max-width: 240px; } }
+
+/* line 46, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+#newsletter-popup-blurb {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2.8rem;
+  letter-spacing: normal;
+  text-transform: none;
+  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+  margin: 40px auto 12px auto;
+  max-width: 850px; }
+  @media screen and (max-width: 767px) {
+    /* line 46, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup-blurb {
+      font-size: 1.7rem;
+      font-weight: bold;
+      line-height: 2.4rem;
+      letter-spacing: normal;
+      text-transform: none; } }
+  @media screen and (max-width: 767px) {
+    /* line 46, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup-blurb {
+      max-width: unset;
+      padding: 0 32px;
+      margin: 48px auto 48px auto; } }
+
+/* line 59, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+.red-input.inverted {
+  border: 2px solid #FFFFFF; }
+
+/* line 64, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+.outline-button.inverted {
+  border-color: #FFFFFF;
+  color: #FFFFFF; }
+  /* line 67, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+  .outline-button.inverted:hover {
+    color: #EA0029; }
+  /* line 69, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+  .outline-button.inverted:active {
+    background: #FFF065; }
+
+/* line 75, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+#newsletter-popup-capture {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: 810px;
+  margin: 0 auto; }
+  /* line 82, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+  #newsletter-popup-capture label {
+    flex: 1 0 0; }
+  /* line 84, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+  #newsletter-popup-capture button {
+    flex: 0 0 auto;
+    border-left: 0; }
+  @media screen and (max-width: 767px) {
+    /* line 75, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup-capture {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; }
+      /* line 91, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+      #newsletter-popup-capture label {
+        width: 100%;
+        flex: initial;
+        margin-bottom: 24px; }
+      /* line 95, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+      #newsletter-popup-capture button {
+        flex: initial;
+        border-left: 2px solid #FFFFFF; } }
+
+/* line 102, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+#newsletter-popup-close {
+  font-size: 5.6rem;
+  width: 22px;
+  height: 40px;
+  margin-right: 12px;
+  position: absolute;
+  right: 42px;
+  top: 42px;
+  color: #FFFFFF;
+  display: block;
+  text-decoration: none; }
+  @media screen and (max-width: 767px) {
+    /* line 102, /Users/paulhollywood/bentodev/sites/mercado/assets/css/_newsletter-popup.scss */
+    #newsletter-popup-close {
+      right: 24px;
+      top: 24px; } }
 
 /*# sourceMappingURL=style.css.map */
