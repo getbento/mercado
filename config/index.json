@@ -15,8 +15,8 @@
             "post_slide":{
               "type": "section",
               "items":{
-                "post": "relationship",
-                "box": "event",
+                "Select Post": "relationship",
+                "box": "blog",
                 "display_logic": {
                   "section_type" : "Post Slide"
                 }
