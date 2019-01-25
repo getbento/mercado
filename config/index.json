@@ -16,7 +16,7 @@
               "type": "section",
               "items":{
                 "post": "relationship",
-                "box": "events",
+                "box": "event",
                 "display_logic": {
                   "section_type" : "Post Slide"
                 }
