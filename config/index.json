@@ -15,7 +15,7 @@
             "post_slide":{
               "type": "section",
               "items":{
-                "type": "dropdown",
+                "box_type": "dropdown",
                 "options": ["Restaurant", "Blog", "Event", "Kiosks"],
                 "display_logic": {
                   "section_type": "Post Select"
