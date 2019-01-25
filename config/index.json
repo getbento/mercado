@@ -2,10 +2,40 @@
   "name": "Homepage",
   "fields":{
     "home-gallery":{
-      "title": "Gallery",
+      "title": "Carousel",
       "type": "section",
       "items":{
-        "Gallery": "gallery",
+        "slides": {
+          "type": "repeater",
+          "items":{
+            "section_type":{
+              "type": "dropdown",
+              "options": ["Post Slide", "Custom Slide"],
+            },
+            "post_slide":{
+              "type": "section",
+              "items":{
+                "post": "relationship",
+                "display_logic": {
+                  "section_type" : "Post Slide"
+                }
+              }
+            },
+            "custom_slide":{
+              "type": "section",
+              "items":{
+                "title": "text",
+                "image": "image",
+                "description": "wysiwyg",
+                "call_to_action": "text",
+                "link": "text",
+                "display_logic": {
+                  "section_type" : "Custom Slide"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "home-desc":{
