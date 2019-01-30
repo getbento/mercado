@@ -2,7 +2,7 @@
 	"name": "Bars",
 	"has_featured": false,
 	"fields": {
-		"dek": "wysiwyg",
+		"short_description": "wysiwyg",
 		"description": "wysiwyg",
 		"thumbnail_left": "image",
 		"thumbnail_right": "image",
