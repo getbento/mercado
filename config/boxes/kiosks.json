@@ -2,6 +2,7 @@
 	"name": "Kiosks",
 	"has_featured": false,
 	"fields": {
+		"short_description": "wysiwyg",
 		"description": "wysiwyg",
 		"thumbnail_left": "image",
 		"thumbnail_right": "image",
