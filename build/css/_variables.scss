@@ -6,15 +6,16 @@
     $col_no_desktop : 12;
     $gutter_width_desktop : 20px;
     $col_width_desktop : ( $content_width_desktop - ( ( $col_no_desktop - 1 ) * $gutter_width_desktop ) ) / $col_no_desktop;
-    
+
   /* Mobile */
     $content_width_mobile : 90%;
 
 @mixin content-margins {
   max-width: $content_width_desktop;
+  width: 90%;
   margin: 0 auto;
   @media screen and (max-width: $mobile_max) {
-    max-width: $content_width_mobile;
+    max-width: unset;
   }
 }
 
@@ -25,7 +26,7 @@
     }
     @return (( $col_width_desktop * $col ) + ( $gutter_width_desktop * ( ( $col - 1 ) + $extra_gutters ) ));
   } @else {
-    
+
   }
 }
 

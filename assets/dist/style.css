@@ -1,3 +1,38 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+.clear {
+  clear: both; }
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important; }
+
 /*
  * Grid / Structure
  ***************************/
@@ -652,5 +687,79 @@ address.site-info {
     #tramp-stamp {
       flex: initial;
       margin-top: 24px; } }
+
+.restaurant-single {
+  padding-top: 30px; }
+
+.restaurant-header {
+  margin-bottom: 30px; }
+  .restaurant-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+
+.restaurant-content {
+  border-width: 3px;
+  border-style: solid;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between; }
+  .restaurant-content .restaurant-single-info {
+    width: 33%;
+    border-right: inherit;
+    flex-direction: column; }
+    .restaurant-content .restaurant-single-info .restaurant-single-content {
+      padding: 10px 20px;
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      height: 70%; }
+      .restaurant-content .restaurant-single-info .restaurant-single-content p strong {
+        font-size: 45px;
+        font-weight: 800;
+        text-transform: uppercase; }
+    .restaurant-content .restaurant-single-info .rest-single-map {
+      height: 30%; }
+      .restaurant-content .restaurant-single-info .rest-single-map img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain; }
+  .restaurant-content .restaurant-single-info.rest-right-col {
+    width: 67%;
+    border: none;
+    display: flex;
+    flex-direction: column; }
+    .restaurant-content .restaurant-single-info.rest-right-col .rest-single-gallery {
+      padding: 10px;
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      position: relative;
+      height: 0;
+      padding-bottom: 98%; }
+    .restaurant-content .restaurant-single-info.rest-right-col .rest-contact {
+      padding: 30px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+.rest-single-join-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px;
+  margin-bottom: 50px; }
+  .rest-single-join-us .rest-single-join-us-content {
+    width: 50%; }
+    .rest-single-join-us .rest-single-join-us-content p {
+      text-transform: uppercase;
+      font-size: 40px;
+      line-height: 1.3em; }
+  .rest-single-join-us .rest-single-join-us-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .rest-single-join-us .rest-single-join-us-img img {
+      max-width: 200px;
+      height: auto; }
 
 /*# sourceMappingURL=style.css.map*/

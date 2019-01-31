@@ -1,7 +1,58 @@
 {% include "header.html" %}
 
-restaurant single
-{{current}}
+<!-- restaurant single -->
+<!-- {{current}} -->
+
+
+<article class="restaurant-single">
+  <div class="content-margins">
+
+    <section class="restaurant-header">
+      <img src="{{current.fields.banner_image.url}}" alt="">
+    </section>
+
+    <section class="restaurant-content" style='border-color: {{current.fields.primary_color}}'>
+      <div class="restaurant-single-info">
+        <div class="restaurant-single-content" style='border-color: {{current.fields.primary_color}}'>
+          {{current.fields.description}}
+        </div>
+        <div class="rest-single-map">
+          <!-- <img src="{{current.fields.map.url}}" alt=""> -->
+          <img src="{{current.fields.banner_image.url}}" alt="">
+
+        </div>
+      </div>
+      <div class="restaurant-single-info rest-right-col">
+        <div class="rest-single-gallery" style='border-color: {{current.fields.primary_color}}'>
+
+        </div>
+        <div class="rest-contact">
+          <div class="rest-contact-inner">{{current.fields.contact_info}}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="rest-single-menus">
+
+    </section> -->
+
+
+    <section class="rest-single-join-us" style='background-color: {{current.fields.secondary_color}};'>
+      <div class="rest-single-join-us-content">
+        <p>
+          ¡VAMOS! JOIN US FOR
+          YOUR NEXT PRIVATE
+          EVENT AT {{current.name}}
+          CONTACT US TO LEARN MORE.
+        </p>
+      </div>
+      <div class="rest-single-join-us-img">
+        <img src="{{current.fields.logo.url}}" alt="">
+      </div>
+    </section>
+
+  </div>
+</article>
 
 
 {% include "footer.html" %}

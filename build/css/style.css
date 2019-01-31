@@ -251,12 +251,13 @@ svg {
 
 .content-margins {
   max-width: 1024px;
+  width: 90%;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
   .content-margins {
-    max-width: 90%;
+    max-width: unset;
   }
 }
 
