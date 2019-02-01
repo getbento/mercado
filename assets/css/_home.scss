@@ -1,0 +1,31 @@
+.section-title-container{
+  position: relative;
+  border: 2px solid $toro_red;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+
+  &:before{
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+
+    z-index: -1;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: $oro_yellow transparent transparent transparent;
+  }
+  h2{
+    text-transform: uppercase;
+    font-weight: initial;
+    font-family: $knockout-bantam;
+    color: $toro_red;
+    font-size: 70px;
+
+  }
+}

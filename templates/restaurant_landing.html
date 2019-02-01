@@ -1,6 +1,6 @@
 {% include "header.html" %}
-restaurants landing page
-{{current}}
+
+<!-- restaurants landing page -->
 
 <section class="restaurant-landing">
   <div class="content-margins">
@@ -18,6 +18,28 @@ restaurants landing page
         <section class="rest-landing-single-title">
           <h2>{{rest.name}}</h2>
         </section>
+
+        <section class="rest-landing-img">
+          <img src="{{ rest.fields.gallery[0].image_url }}" alt="">
+        </section>
+
+        <section class="rest-landing-rest-info">
+          <div class="rest-landing-rest-info-cont">
+            {{rest.fields.short_description}}
+
+            <div class="rest-landing-rest-info-buttons">
+              <a href="{{rest.url}}" class="rest-landing-learn-more more-info">Learn More</a>
+              <a href="" class="rest-landing-reserve more-info">Reserve</a>
+            </div>
+
+          </div>
+          <div class="rest-landing-rest-img-cont"
+            style='background-color: {% if rest.fields.secondary_color %}{{rest.fields.secondary_color}}; {% else %}{{rest.fields.primary_color}}; {% endif %}'
+            >
+            <img src="{{rest.fields.logo.url}}" alt="">
+          </div>
+        </section>
+
       </article>
       {% endfor %}
     </div>

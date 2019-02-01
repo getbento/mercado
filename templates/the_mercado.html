@@ -1,10 +1,36 @@
 {% include "header.html" %}
 
+<!-- the mercado -->
 
+<section class="full-width-header">
+  <div class="full-width-header-content">
+    <div class="full-width-header-content-inner">
+      <h1>{{ current.name }}</h1>
+      {{current.fields.mercado.header_content}}
+    </div>
+  </div>
+  <div class="full-width-header-img">
+    <img src="{{current.fields.mercado.image.url}}" alt="">
+  </div>
+</section>
 
-the mercado
-{{current}}
+<section class="mercado-kiosks">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <h2>Kiosks</h2>
+    </div>
 
+    <div class="kiosk-grid">
+        {% for kiosk in boxes.kiosks %}
+        <article class="kiosk-box">
+          <a href="">
+            {{kiosk.name}}
+          </a>
+        </article>
+        {% endfor %}
+    </div>
 
+  </div>
+</section>
 
 {% include "footer.html" %}

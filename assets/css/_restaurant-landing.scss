@@ -9,28 +9,54 @@
   border: 2px solid $toro_red;
   margin-bottom: 30px;
   align-items: center;
+  @media (max-width: 767px){
+    border: 0px;
+  }
   h1{
     text-transform: uppercase;
     color: $toro_red;
     font-family: $knockout-lite;
     font-weight: initial;
     font-size: 85px;
+    white-space: nowrap;
+    @media (max-width: 1000px){
+      font-size: 60px;
+    }
+    @media (max-width: 767px){
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+      line-height: 1em;
+    }
+
   }
   img{
-    width: 150px;
-    height: 150px;
+    width: 15%;
+    height: auto;
+    @media (max-width: 767px){
+      display: none;
+    }
   }
 }
 
 .rest-landing-rest{
   border: 2px solid $toro_red;
   margin-bottom: 50px;
+  &:nth-child(even){
+    .rest-landing-rest-img-cont{
+      border-left: 0px !important;
+      border-right: 2px solid $toro_red;
+    }
+    .rest-landing-rest-info{
+      flex-direction: row-reverse;
+    }
+  }
   .rest-landing-single-title{
     background-color: $toro_red;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     h2{
       text-transform: uppercase;
       color: white;
@@ -38,6 +64,76 @@
       line-height: 1.4em;
       font-family: $knockout-bantam;
       font-weight: initial;
+    }
+  }
+  .rest-landing-img{
+    padding: 10px;
+    border-bottom: 2px solid $toro_red;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .rest-landing-rest-info{
+    display: flex;
+    .rest-landing-rest-info-cont{
+      width: 67%;
+      padding: 20px 30px;
+      h3{
+        line-height: 1.3em;
+        font-family: $domaine;
+        // font-weight: initial;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+    }
+    .rest-landing-rest-img-cont{
+      width: 33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 2px solid $toro_red;
+      img{
+        max-width: 150px;
+        height: auto;
+        margin: 50px 0;
+      }
+    }
+    @media (max-width: 767px){
+      flex-direction: column !important;
+      .rest-landing-rest-img-cont{
+        width: 100%;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 2px solid $toro_red;
+      }
+      .rest-landing-rest-info-cont{
+        width: 100%;
+
+      }
+    }
+  }
+}
+
+.rest-landing-rest-info-buttons{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  a.more-info{
+    color: $toro_red;
+    border: 2px solid $toro_red;
+    text-decoration: none;
+    font-family: $knockout-lite;
+    font-size: 20px;
+    margin: 0 10px;
+    &:hover{
+      transition: ease 250ms all;
+      color: white;
+      background-color: $toro_red;
+    }
+    @media (max-width: 850px){
+      padding: 10px 20px;
     }
   }
 }
