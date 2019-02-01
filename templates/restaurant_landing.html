@@ -1,8 +1,28 @@
 {% include "header.html" %}
-
-
-
 restaurants landing page
 {{current}}
+
+<section class="restaurant-landing">
+  <div class="content-margins">
+
+    <div class="restaurant-landing-header">
+      <img src="{{static('img/restaurant-landing/Left.png')}}" alt="">
+      <h1>Our Restaurants</h1>
+      <img src="{{static('img/restaurant-landing/Right.png')}}" alt="">
+    </div>
+
+
+    <div class="restaurant-landing-rests">
+      {% for rest in boxes.restaurant.all %}
+      <article class="rest-landing-rest rest-{{rest.slug}}">
+        <section class="rest-landing-single-title">
+          <h2>{{rest.name}}</h2>
+        </section>
+      </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
 
 {% include "footer.html" %}

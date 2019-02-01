@@ -18,10 +18,17 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1024px){
+    flex-direction: column;
+  }
   .restaurant-single-info{
     width: 33%;
     border-right: inherit;
     flex-direction: column;
+    @media (max-width: 1024px){
+      width: 100%;
+      border-right: 0px;
+    }
     .restaurant-single-content{
       padding: 10px 20px;
       border-bottom-width: 3px;
@@ -30,16 +37,37 @@
       height: 70%;
       p{
         strong{
-          font-size: 45px;
-          font-weight: 800;
+          font-size: 55px;
+          // font-weight: 900;
           text-transform: uppercase;
-
+          font-family: $knockout-bantam;
+          display: block;
+          padding: 20px 0 10px 0;
+        }
+      }
+      @media (max-width: 1024px){
+        height: auto;
+        padding: 40px 70px;
+        p strong{
+          display: inline-block;
+        }
+      }
+      @media(max-width: 767px){
+        padding: 20px;
+        p strong{
+          font-size: 50px;
+          padding: 20px 5px 10px 0;
         }
       }
     }
 
     .rest-single-map{
       height: 30%;
+      @media (max-width: 1024px){
+        height: auto;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+      }
       img{
         height: 100%;
         width: 100%;
@@ -52,6 +80,9 @@
     border: none;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1024px){
+      width: 100%;
+    }
     .rest-single-gallery{
       padding: 10px;
       border-bottom-width: 3px;
@@ -66,11 +97,67 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      .rest-contact-inner {
+        padding: 0 20px;
+        h4{
+          font-family: $knockout-bantam;
+          font-weight: initial;
+          line-height: 1em;
+        }
+      }
     }
   }
+
 }
 
-
+.rest-single-menus{
+  margin-bottom: 50px;
+  .rest-single-menu-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    h2{
+      text-transform: uppercase;
+      color: white;
+      font-size: 75px;
+      font-family: $knockout-bantam;
+      font-weight: initial;
+    }
+  }
+  .rest-single-menu-select{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    .rest-single-menu-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-transform: uppercase;
+      border-style: solid;
+      border-width: 2px;
+      height: 40px;
+      margin-right: 10px;
+      font-size: 18px;
+      font-family: $knockout-bantam;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      background-color: transparent;
+      &.active{
+        color: white;
+      }
+      &:last-child{
+        margin-right: 0px;
+      }
+    }
+  }
+  .rest-single-menu-cont{
+    height: 600px;
+    border-style: solid;
+    border-width: 2px;
+  }
+}
 
 
 .rest-single-join-us{
@@ -79,22 +166,85 @@
   align-items: center;
   padding: 40px 50px;
   margin-bottom: 50px;
+  @media (max-width: 920px){
+    flex-direction: column;
+    padding: 30px;
+  }
   .rest-single-join-us-content{
-    width: 50%;
+    width: 60%;
+    color: white;
+    @media (max-width: 920px){
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    h3{
+      font-size: 100px;
+      line-height: 0.9em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: initial;
+      font-family: $knockout-bantam;
+      @media (max-width: 767px){
+        font-size: 70px;
+      }
+    }
     p{
       text-transform: uppercase;
-      font-size: 40px;
+      font-size: 50px;
       line-height: 1.3em;
+      font-family: $knockout-bantam;
+      margin-bottom: 20px;
+      @media (max-width: 767px){
+        line-height: 1em;
+        font-size: 30px;
+      }
+    }
+    .more-info{
+      @media (max-width: 767px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
   .rest-single-join-us-img{
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     img{
-      max-width: 200px;
+      max-width: 250px;
       height: auto;
+    }
+    @media (max-width: 920px){
+      width: 100%;
+      img{
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+.rest-spanish-diner{
+  .rest-single-menus .rest-single-menu-select .rest-single-menu-title{
+    color: black;
+    &.active{
+      color: black;
+    }
+  }
+  .rest-single-menu-header{
+    h2{
+      color: black;
+    }
+  }
+  .rest-single-join-us{
+    .rest-single-join-us-content{
+      color: black;
+      .more-info{
+        border-color: black;
+        color: black;
+      }
     }
   }
 }

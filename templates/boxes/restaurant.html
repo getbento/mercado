@@ -4,7 +4,23 @@
 <!-- {{current}} -->
 
 
-<article class="restaurant-single">
+<style>
+  .restaurant-content .restaurant-single-content p strong{
+    color: {{current.fields.primary_color}};
+  }
+  .rest-contact-inner h4 strong{
+    color: {{current.fields.primary_color}};
+  }
+  .rest-contact-inner h4 a{
+    border-color: {{current.fields.primary_color}};
+    color: {{current.fields.primary_color}};
+  }
+  .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active{
+    background-color: {{current.fields.primary_color}};
+  }
+</style>
+
+<article class="restaurant-single rest-{{current.slug}}">
   <div class="content-margins">
 
     <section class="restaurant-header">
@@ -16,9 +32,8 @@
         <div class="restaurant-single-content" style='border-color: {{current.fields.primary_color}}'>
           {{current.fields.description}}
         </div>
-        <div class="rest-single-map">
+        <div class="rest-single-map" style='border-color: {{current.fields.primary_color}}'>
           <!-- <img src="{{current.fields.map.url}}" alt=""> -->
-          <img src="{{current.fields.banner_image.url}}" alt="">
 
         </div>
       </div>
@@ -32,19 +47,36 @@
       </div>
     </section>
 
-    <!-- <section class="rest-single-menus">
+    {% if current.fields.menus %}
+    <section class="rest-single-menus">
+      <div class="rest-single-menu-header" style='background-color: {{current.fields.primary_color}}'>
+        <h2>Menus</h2>
+      </div>
+      <div class="rest-single-menu-select" >
+        <div class="rest-single-menu-title" style='border-color: {{current.fields.primary_color}}'>Food</div>
+        <div class="rest-single-menu-title" style='border-color: {{current.fields.primary_color}}'>Drinks</div>
+        <div class="rest-single-menu-title" style='border-color: {{current.fields.primary_color}}'>Dessert</div>
+      </div>
+      <div class="rest-single-menu-cont" style='border-color: {{current.fields.primary_color}}'>
 
-    </section> -->
+      </div>
+    </section>
+    {% endif %}
 
 
-    <section class="rest-single-join-us" style='background-color: {{current.fields.secondary_color}};'>
+
+
+    <section class="rest-single-join-us"
+      style='background-color: {% if current.fields.secondary_color %}{{current.fields.secondary_color}}; {% else %}{{current.fields.primary_color}}; {% endif %}'
+      >
       <div class="rest-single-join-us-content">
+        <h3>¡VAMOS! JOIN US FOR
+        YOUR NEXT PRIVATE
+        EVENT AT {{current.name}}</h3>
         <p>
-          ¡VAMOS! JOIN US FOR
-          YOUR NEXT PRIVATE
-          EVENT AT {{current.name}}
           CONTACT US TO LEARN MORE.
         </p>
+        <a class="more-info">More Info</a>
       </div>
       <div class="rest-single-join-us-img">
         <img src="{{current.fields.logo.url}}" alt="">

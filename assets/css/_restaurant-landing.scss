@@ -1,0 +1,43 @@
+.restaurant-landing{
+  padding-top: 40px;
+}
+
+.restaurant-landing-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid $toro_red;
+  margin-bottom: 30px;
+  align-items: center;
+  h1{
+    text-transform: uppercase;
+    color: $toro_red;
+    font-family: $knockout-lite;
+    font-weight: initial;
+    font-size: 85px;
+  }
+  img{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.rest-landing-rest{
+  border: 2px solid $toro_red;
+  margin-bottom: 50px;
+  .rest-landing-single-title{
+    background-color: $toro_red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    h2{
+      text-transform: uppercase;
+      color: white;
+      font-size: 40px;
+      line-height: 1.4em;
+      font-family: $knockout-bantam;
+      font-weight: initial;
+    }
+  }
+}
