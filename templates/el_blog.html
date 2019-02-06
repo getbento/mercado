@@ -2,10 +2,35 @@
 
 
 
-el_blog.html
+<!-- el_blog.html -->
 
-<!-- {{current}} -->
-<!-- {{boxes.blog.all}} -->
+<section class="el-blog-landing">
+  <div class="content-margins">
+
+    <div class="page-landing-header">
+      <img src="{{static('img/el-blog-landing/Left.png')}}" alt="">
+      <h1>El Blog</h1>
+      <img src="{{static('img/el-blog-landing/Right.png')}}" alt="">
+    </div>
+
+
+  </div>
+</section>
+
+<section class="el-blog-articles">
+  <article class="el-blog-article">
+    <a href="{{boxes.blog.all[0].url}}">
+      <div class="article-img">
+        <img src="{{boxes.blog.all[0].fields.image.url}}" alt="">
+      </div>
+      <div class="article-info">
+
+      </div>
+    </a>
+  </article>
+
+</section>
+
 {% for post in boxes.blog.all %}
 <a href="{{post.url}}">link</a>
 {% endfor %}

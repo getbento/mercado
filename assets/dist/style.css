@@ -278,6 +278,39 @@ svg {
   color: white;
   display: inline-block; }
 
+.page-landing-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid #EA0029;
+  margin-bottom: 30px;
+  align-items: center; }
+  @media (max-width: 767px) {
+    .page-landing-header {
+      border: 0px; } }
+  .page-landing-header h1 {
+    text-transform: uppercase;
+    color: #EA0029;
+    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
+    font-weight: initial;
+    font-size: 85px;
+    white-space: nowrap; }
+    @media (max-width: 1000px) {
+      .page-landing-header h1 {
+        font-size: 60px; } }
+    @media (max-width: 767px) {
+      .page-landing-header h1 {
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+        line-height: 1em; } }
+  .page-landing-header img {
+    width: 15%;
+    height: auto; }
+    @media (max-width: 767px) {
+      .page-landing-header img {
+        display: none; } }
+
 #masthead {
   left: 0;
   top: 0;
@@ -1027,39 +1060,6 @@ address.site-info {
 .restaurant-landing {
   padding-top: 40px; }
 
-.restaurant-landing-header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border: 2px solid #EA0029;
-  margin-bottom: 30px;
-  align-items: center; }
-  @media (max-width: 767px) {
-    .restaurant-landing-header {
-      border: 0px; } }
-  .restaurant-landing-header h1 {
-    text-transform: uppercase;
-    color: #EA0029;
-    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
-    font-weight: initial;
-    font-size: 85px;
-    white-space: nowrap; }
-    @media (max-width: 1000px) {
-      .restaurant-landing-header h1 {
-        font-size: 60px; } }
-    @media (max-width: 767px) {
-      .restaurant-landing-header h1 {
-        width: 100%;
-        white-space: normal;
-        text-align: center;
-        line-height: 1em; } }
-  .restaurant-landing-header img {
-    width: 15%;
-    height: auto; }
-    @media (max-width: 767px) {
-      .restaurant-landing-header img {
-        display: none; } }
-
 .rest-landing-rest {
   border: 2px solid #EA0029;
   margin-bottom: 50px; }
@@ -1191,6 +1191,13 @@ address.site-info {
   justify-content: center;
   align-items: center;
   padding: 10px 0; }
+  .section-title-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; }
   .section-title-container:before {
     height: 100%;
     width: 100%;
@@ -1198,15 +1205,102 @@ address.site-info {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
-    border-style: solid;
-    border-width: 30px 30px 0 0;
-    border-color: #FFF065 transparent transparent transparent; }
+    z-index: -1; }
   .section-title-container h2 {
     text-transform: uppercase;
     font-weight: initial;
     font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
     color: #EA0029;
-    font-size: 70px; }
+    font-size: 90px; }
+
+.kiosk-grid, .bars-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .kiosk-grid .kiosk-box, .bars-grid .kiosk-box {
+    width: 32%;
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .kiosk-grid .kiosk-box, .bars-grid .kiosk-box {
+        width: 47%; } }
+    .kiosk-grid .kiosk-box a, .bars-grid .kiosk-box a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none; }
+      .kiosk-grid .kiosk-box a h6, .bars-grid .kiosk-box a h6 {
+        margin-top: 10px;
+        padding: 0 10px;
+        text-align: center;
+        font-size: 28px;
+        color: #EA0029;
+        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        font-weight: 800;
+        line-height: 1.2em; }
+        @media (max-width: 767px) {
+          .kiosk-grid .kiosk-box a h6, .bars-grid .kiosk-box a h6 {
+            font-size: 20px; } }
+    .kiosk-grid .kiosk-box .kiosk-box-img, .bars-grid .kiosk-box .kiosk-box-img {
+      position: relative; }
+      .kiosk-grid .kiosk-box .kiosk-box-img h4, .bars-grid .kiosk-box .kiosk-box-img h4 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 240, 101, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        text-align: center;
+        font-size: 38px;
+        color: #EA0029;
+        opacity: 0;
+        transition: ease 300ms all; }
+        @media (max-width: 767px) {
+          .kiosk-grid .kiosk-box .kiosk-box-img h4, .bars-grid .kiosk-box .kiosk-box-img h4 {
+            font-size: 20px; } }
+    .kiosk-grid .kiosk-box img, .bars-grid .kiosk-box img {
+      width: 100%;
+      height: auto; }
+    .kiosk-grid .kiosk-box:hover h4, .bars-grid .kiosk-box:hover h4 {
+      opacity: 1; }
+
+.ig-boxes {
+  display: flex; }
+  .ig-boxes .ig-box {
+    width: 20%;
+    border: 1px solid #EA0029;
+    padding-bottom: 19.8%;
+    position: relative; }
+    .ig-boxes .ig-box h5 {
+      color: #FFF065;
+      text-transform: uppercase;
+      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      font-weight: initial;
+      padding: 10px;
+      font-size: 45px;
+      line-height: 1.1em;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .ig-boxes .ig-box h5 a {
+        color: inherit;
+        font-family: inherit; }
+    .ig-boxes .ig-box.edge-box {
+      background-color: #EA0029; }
+
+.ig-feed {
+  margin-bottom: 30px; }
+
+.el-blog-landing {
+  padding-top: 40px; }
 
 /*# sourceMappingURL=style.css.map*/

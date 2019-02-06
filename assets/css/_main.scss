@@ -95,3 +95,41 @@ svg {
   color: white;
   display: inline-block;
 }
+
+
+.page-landing-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid $toro_red;
+  margin-bottom: 30px;
+  align-items: center;
+  @media (max-width: 767px){
+    border: 0px;
+  }
+  h1{
+    text-transform: uppercase;
+    color: $toro_red;
+    font-family: $knockout-lite;
+    font-weight: initial;
+    font-size: 85px;
+    white-space: nowrap;
+    @media (max-width: 1000px){
+      font-size: 60px;
+    }
+    @media (max-width: 767px){
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+      line-height: 1em;
+    }
+
+  }
+  img{
+    width: 15%;
+    height: auto;
+    @media (max-width: 767px){
+      display: none;
+    }
+  }
+}
