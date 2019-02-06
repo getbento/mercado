@@ -1,8 +1,24 @@
 {% include "header.html" %}
 
-single blog<br>
-blog.html
-{{current}}
+<!-- single blog<br> -->
+
+<section class="single-blog">
+  <div class="single-blog-img">
+    <img src="{{current.image.url}}" alt="{{current.image.alt_text}}">
+  </div>
+  <div class="single-blog-info">
+    <div class="single-blog-info-header">
+      <h1>{{current.name}}</h1>
+      <h4>{{current.fields.dek}}</h4>
+      <h6>By {{current.fields.author}}</h6>
+    </div>
+    <div class="single-blog-content">
+      {{current.content}}
+    </div>
+  </div>
+</section>
+
+
 
 
 {% include "footer.html" %}

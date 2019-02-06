@@ -1,0 +1,58 @@
+.single-blog{
+  display: flex;
+  margin-bottom: 50px;
+  height: calc(100vh - 106px);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  .single-blog-img{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 60%;
+    @media (max-width: 1200px){
+      width: 50%;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .single-blog-info{
+    width: 40%;
+    @media (max-width: 1200px){
+      width: 50%;
+    }
+    .single-blog-info-header{
+      background-color: $toro_red;
+      height: 100%;
+      width: 100%;
+      padding: 40px 10%;
+      h1{
+        text-transform: uppercase;
+        color: $oro_yellow;
+        font-family: $knockout-bantam;
+        font-weight: initial;
+        margin-bottom: 30px;
+      }
+      h4{
+        text-transform: uppercase;
+        font-family: $knockout-bantam;
+        font-weight: initial;
+        color: white;
+        margin-bottom: 30px;
+      }
+      h6{
+        font-family: $domaine;
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+    .single-blog-content{
+      max-width: 350px;
+      margin: 40px auto;
+    }
+  }
+}

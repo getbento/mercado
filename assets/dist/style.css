@@ -1303,4 +1303,53 @@ address.site-info {
 .el-blog-landing {
   padding-top: 40px; }
 
+.single-blog {
+  display: flex;
+  margin-bottom: 50px;
+  height: calc(100vh - 106px);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+  .single-blog .single-blog-img {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 60%; }
+    @media (max-width: 1200px) {
+      .single-blog .single-blog-img {
+        width: 50%; } }
+    .single-blog .single-blog-img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+  .single-blog .single-blog-info {
+    width: 40%; }
+    @media (max-width: 1200px) {
+      .single-blog .single-blog-info {
+        width: 50%; } }
+    .single-blog .single-blog-info .single-blog-info-header {
+      background-color: #EA0029;
+      height: 100%;
+      width: 100%;
+      padding: 40px 10%; }
+      .single-blog .single-blog-info .single-blog-info-header h1 {
+        text-transform: uppercase;
+        color: #FFF065;
+        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-weight: initial;
+        margin-bottom: 30px; }
+      .single-blog .single-blog-info .single-blog-info-header h4 {
+        text-transform: uppercase;
+        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-weight: initial;
+        color: white;
+        margin-bottom: 30px; }
+      .single-blog .single-blog-info .single-blog-info-header h6 {
+        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        color: white;
+        font-size: 25px;
+        font-weight: 600; }
+    .single-blog .single-blog-info .single-blog-content {
+      max-width: 350px;
+      margin: 40px auto; }
+
 /*# sourceMappingURL=style.css.map*/
