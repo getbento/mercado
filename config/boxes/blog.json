@@ -4,7 +4,8 @@
 	"has_categories": true,
 	"fields":{
 		"author": "text",
-		"dek": "text"
+		"dek": "text",
+		"hover_text": "text"
 	}
 
 }

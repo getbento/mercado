@@ -1,6 +1,21 @@
 {
 	"name": "Shop",
   "fields":{
+		"shop-products":{
+			"title": "Shop Little Spain",
+			"type": "section",
+			"items":{
+        "products": {
+          "type": "repeater",
+          "items":{
+            "name": "text",
+            "image": "image",
+            "hover_text": "text",
+            "link": "text"
+          }
+        }
+			}
+		},
 		"online-products":{
 			"title": "Online Products",
 			"type": "section",
@@ -20,12 +35,14 @@
 			"title": "Gift Card Fields",
 			"type": "section",
 			"items":{
+				"image": "image",
         "content_box": "wysiwyg",
-        "image": "image"
+				"link": "text",
 			}
 		}
 	},
 	"wireframe": [
+		"section-shop-products",
 		"section-online-products",
     "section-gift-card"
 	]

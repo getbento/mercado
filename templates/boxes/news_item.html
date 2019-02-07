@@ -2,23 +2,96 @@
 
 <!-- single blog<br> -->
 
-<section class="single-blog">
+<article class="single-blog">
   <div class="single-blog-img">
     <img src="{{current.image.url}}" alt="{{current.image.alt_text}}">
+    <div class="article-info-slide">
+      <h6>{{current.name}}</h6>
+      <span>Share Article: </span>
+      <div class="single-blog-social-container">
+        <a href="" class='social-fb'><img src="{{ static('img/Facebook_gray.png') }}" alt=""></a>
+        <a href="" class='social-twitter'><img src="{{ static('img/Twitter_gray.png') }}" alt=""></a>
+        <a href="" class='social-email'><img src="{{ static('img/Email_gray.png') }}" alt=""></a>
+      </div>
+    </div>
   </div>
   <div class="single-blog-info">
     <div class="single-blog-info-header">
-      <h1>{{current.name}}</h1>
-      <h4>{{current.fields.dek}}</h4>
-      <h6>By {{current.fields.author}}</h6>
+      <div class="">
+        <span>{{boxes.blog.by_slug[current.slug].categories[0].name}}</span>
+        <h1>{{current.name}}</h1>
+        <h4>{{current.fields.dek}}</h4>
+        <h6>By {{current.fields.author}}</h6>
+      </div>
+      <div class="single-blog-social">
+        <div class="single-blog-social-container">
+          <a href="" class='social-fb'><img src="{{ static('img/Facebook.png') }}" alt=""></a>
+          <a href="" class='social-twitter'><img src="{{ static('img/Twitter.png') }}" alt=""></a>
+          <a href="" class='social-email'><img src="{{ static('img/Email.png') }}" alt=""></a>
+        </div>
+        <div class="single-blog-scroll">
+          <span>Scroll</span>
+        </div>
+      </div>
     </div>
     <div class="single-blog-content">
       {{current.content}}
     </div>
   </div>
+</article>
+
+<section class="hay-mas">
+  <div class="content-margins">
+    <div class="hay-mas-header">
+      <h6>¡Hay Más!</h6><span>Check out everything the Mercado has to offer.</span>
+    </div>
+    <div class="hay-mas-links">
+      <div class="hay-mas-link">
+        <a href="{{boxes.kiosks.all[0].url}}">
+          <h6>Kiosks</h6>
+          <div class="hay-mas-link-icon">
+            <img src="{{boxes.kiosks.all[0].fields.thumbnail_left.url}}" alt="{{boxes.kiosks.all[0].fields.thumbnail_left.alt}}">
+            <span>{{boxes.kiosks.all[0].fields.hover_text}}</span>
+          </div>
+          <h4>{{boxes.kiosks.all[0].name}}</h4>
+        </a>
+      </div>
+
+      <div class="hay-mas-link">
+        <a href="{{boxes.events.all[0].url}}">
+          <h6>Happenings</h6>
+          <div class="hay-mas-link-icon with-padding">
+            <img src="{{boxes.events.all[0].image.url}}" alt="{{boxes.events.all[0].image.alt}}">
+            <span></span>
+          </div>
+          <h4>{{boxes.events.all[0].name}}</h4>
+        </a>
+      </div>
+
+      <div class="hay-mas-link">
+        <a href="{{boxes.blog.all[0].url}}">
+          <h6>Mercado Magazine</h6>
+          <div class="hay-mas-link-icon with-padding">
+            <img src="{{boxes.blog.all[0].image.url}}" alt="{{boxes.blog.all[0].image.alt}}">
+            <span></span>
+          </div>
+          <h4>{{boxes.blog.all[0].name}}</h4>
+        </a>
+      </div>
+
+      <div class="hay-mas-link">
+        <a href="{{pages.by_slug.shop.url}}">
+          <h6>Shop</h6>
+          <div class="hay-mas-link-icon">
+            <img src="{{pages.by_slug.shop.fields['online-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['online-products'].products[0].image.alt}}">
+            <span>{{pages.by_slug.shop.fields['online-products'].products[0].hover_text}}</span>
+          </div>
+          <h4>{{pages.by_slug.shop.fields['online-products'].products[0].name}}</h4>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
-
-
 
 
 {% include "footer.html" %}
