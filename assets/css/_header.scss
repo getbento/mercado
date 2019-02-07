@@ -62,6 +62,7 @@ $header_height_mobile : 58px;
           display: block;
         } &.has-children {
           position: relative;
+          z-index: 1;
           ul {
             display: none;
           } &:hover, a:focus {

@@ -1,7 +1,69 @@
 {% include "header.html" %}
 
-shop.html
-{{current}}
+<section class="shop-landing">
+  <div class="content-margins">
+    <div class="page-landing-header">
+      <img src="{{static('img/shop-landing/Left.png')}}" alt="">
+      <h1>Shop</h1>
+      <img src="{{static('img/shop-landing/Right.png')}}" alt="">
+    </div>
 
+  </div>
+</section>
+
+<section class="shop-little-spain">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>Shop Little Spain</h2>
+    </div>
+
+
+
+    <div class="shop-little-spain-shops kiosk-grid">
+
+{% for shop in current.fields['online-products'].products %}
+      <article class="kiosk-box">
+          <a href="">
+            <div class="kiosk-box-img">
+              <img src="{{shop.image.url}}" alt="shop.image.alt">
+              <h4>{{shop.hover_text}}</h4>
+            </div>
+            <h6>{{shop.name}}</h6>
+          </a>
+        </article>
+{% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+<section class="shop-little-spain-online">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>Shop Online</h2>
+    </div>
+
+
+
+    <div class="shop-little-spain-shops kiosk-grid">
+
+{% for shop in current.fields['online-products'].products %}
+      <article class="kiosk-box">
+          <a href="">
+            <div class="kiosk-box-img">
+              <img src="{{shop.image.url}}" alt="shop.image.alt">
+              <h4>{{shop.hover_text}}</h4>
+            </div>
+            <h6>{{shop.name}}</h6>
+          </a>
+        </article>
+{% endfor %}
+
+    </div>
+  </div>
+</section>
 
 {% include "footer.html" %}

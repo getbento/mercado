@@ -152,6 +152,24 @@ $(document).ready(function () {
   } else {
     $('#newsletter-popup').remove();
   }
+
+  /*
+   * Single Blog
+   ***************************/
+  $('.single-blog-scroll').click(function () {
+    $('.single-blog').animate({
+      scrollTop: $('.single-blog').height() + 'px'
+    }, 500);
+  });
+
+  $('.single-blog').scroll(function () {
+    console.log($('.single-blog').scrollTop());
+    if ($('.single-blog').scrollTop() > 200) {
+      $('.article-info-slide').addClass('active');
+    } else {
+      $('.article-info-slide').removeClass('active');
+    }
+  });
 }); // document ready end
 
 /*
