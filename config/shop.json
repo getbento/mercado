@@ -35,8 +35,9 @@
 			"title": "Gift Card Fields",
 			"type": "section",
 			"items":{
+				"image": "image",
         "content_box": "wysiwyg",
-        "image": "image"
+				"link": "text",
 			}
 		}
 	},
