@@ -20,7 +20,7 @@
         </section>
 
         <section class="rest-landing-img">
-          <img src="{{ rest.fields.gallery[0].image_url }}" alt="">
+          <img src="{{ rest.fields.gallery[0].image_url }}" alt="{{rest.fields.gallery[0].alt_text}}">
         </section>
 
         <section class="rest-landing-rest-info">
@@ -36,7 +36,7 @@
           <div class="rest-landing-rest-img-cont"
             style='background-color: {% if rest.fields.secondary_color %}{{rest.fields.secondary_color}}; {% else %}{{rest.fields.primary_color}}; {% endif %}'
             >
-            <img src="{{rest.fields.logo.url}}" alt="">
+            <img src="{{rest.fields.logo.url}}" alt="{{rest.fields.logo.alt}}">
           </div>
         </section>
 

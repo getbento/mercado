@@ -675,7 +675,11 @@ svg {
   text-transform: uppercase;
   color: #EA0029;
   border: 2px solid;
-  padding: 12px 64px; }
+  padding: 12px 64px;
+  text-decoration: none;
+  display: inline-block;
+  transition: ease 300ms all;
+  cursor: pointer; }
   @media screen and (max-width: 767px) {
     .outline-button {
       font-size: 2rem;
@@ -1212,7 +1216,12 @@ address.site-info {
     font-weight: initial;
     font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
     color: #EA0029;
-    font-size: 90px; }
+    font-size: 90px;
+    text-align: center; }
+
+@media (max-width: 767px) {
+  .shop-little-spain-shops .kiosk-box {
+    width: 100% !important; } }
 
 .kiosk-grid, .bars-grid {
   display: flex;
@@ -1607,5 +1616,87 @@ address.site-info {
 
 .shop-landing {
   padding-top: 40px; }
+
+.shop-now-button {
+  padding: 15px 50px;
+  border: 2px solid #EA0029;
+  text-transform: uppercase;
+  color: #EA0029;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  transition: ease 300ms all;
+  cursor: pointer; }
+  .shop-now-button:hover {
+    background-color: #EA0029;
+    color: white; }
+
+.gift-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px; }
+  @media (max-width: 767px) {
+    .gift-card-container {
+      flex-direction: column; } }
+  .gift-card-container .gift-card-img {
+    width: 55%;
+    padding: 10px;
+    border: 2px solid #EA0029; }
+    @media (max-width: 767px) {
+      .gift-card-container .gift-card-img {
+        width: 100%;
+        margin-bottom: 30px; } }
+    .gift-card-container .gift-card-img .gift-card-img-text {
+      background-color: #EA0029;
+      color: #FFF065;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
+      .gift-card-container .gift-card-img .gift-card-img-text span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        max-width: 200px;
+        margin: auto; }
+        @media (max-width: 1200px) {
+          .gift-card-container .gift-card-img .gift-card-img-text span {
+            font-size: 80px; } }
+        @media (max-width: 900px) {
+          .gift-card-container .gift-card-img .gift-card-img-text span {
+            font-size: 60px; } }
+  .gift-card-container .gift-card-info {
+    width: 45%;
+    padding: 20px 40px; }
+    @media (max-width: 767px) {
+      .gift-card-container .gift-card-info {
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        padding: 20px; } }
+    .gift-card-container .gift-card-info h4 {
+      color: #EA0029;
+      font-weight: initial;
+      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      margin-bottom: 20px; }
+    .gift-card-container .gift-card-info p {
+      margin-bottom: 15px; }
+  .gift-card-container .more-info {
+    color: #EA0029;
+    border: 2px solid #EA0029;
+    text-decoration: none;
+    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
+    font-size: 20px;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=style.css.map*/
