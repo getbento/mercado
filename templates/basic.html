@@ -2,8 +2,51 @@
 
 <!-- START base.html  -->
 
-basic.html
-{{current}}
+{% for field in current.fields.flexible.content %}
+
+
+
+{% if field.section_type == "Standard Content" %}
+
+{{field.section_type}}
+
+{% endif %}
+
+
+
+{% if field.section_type == "Full Width Header Container" %}
+
+{{field.section_type}}
+
+{% endif %}
+
+
+{% if field.section_type == "Gallery Container" %}
+
+{{field.section_type}}
+
+{% endif %}
+
+
+{% if field.section_type == "Full Screen Image" %}
+
+{{field.section_type}}
+
+{% endif %}
+
+{% if field.section_type == "Featured Boxes" %}
+
+{{field.section_type}}
+
+{% endif %}
+
+
+
+
+
+{% endfor %}
+
+
 
 <!-- END base.html  -->
 {% include "footer.html" %}

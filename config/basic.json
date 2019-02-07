@@ -10,15 +10,15 @@
 					"items": {
                 "section_type": {
                   "type": "dropdown",
-                  "options": ["Content Container","Featured Boxes", "Full Width Header Container", "Gallery Container", "Wide Image"]
+                  "options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image"]
                 },
-								"content_box": {
+						"content_box": {
 									"type": "section",
 									"items": {
 										"content": "wysiwyg",
 										"subheader": "text",
 										"display_logic": {
-                      "section_type": "Content Container"
+                      "section_type": "Standard Content"
                   	}
 									}
 								},
@@ -47,7 +47,7 @@
 										"image": "image",
 										"caption": "text",
 										"display_logic": {
-                      "section_type": "Wide Image"
+                      "section_type": "Full Screen Image"
                   	}
 									}
 								},
