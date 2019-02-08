@@ -70,6 +70,10 @@
   color: $toro_red;
   border: 2px solid;
   padding: 12px 64px;
+  text-decoration: none;
+  display: inline-block;
+  transition: ease 300ms all;
+  cursor: pointer;
   &:hover {
     background: $oro_yellow;
   } &:active {

@@ -38,6 +38,15 @@
     font-family: $knockout-bantam;
     color: $toro_red;
     font-size: 90px;
+    text-align: center;
 
+  }
+}
+
+.shop-little-spain-shops{
+  .kiosk-box{
+    @media (max-width: 767px){
+      width: 100% !important;
+    }
   }
 }
