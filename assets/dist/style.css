@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
@@ -110,98 +111,84 @@ body * {
 
 h1 {
   font-size: 12rem;
-  font-weight: bold;
   line-height: 9.5rem;
   letter-spacing: 0.15rem;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     h1 {
       font-size: 9rem;
-      font-weight: bold;
       line-height: 7.5rem;
       letter-spacing: 0.135rem;
       text-transform: none; } }
 
 h2 {
   font-size: 10rem;
-  font-weight: bold;
   line-height: 9rem;
   letter-spacing: 0.15rem;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     h2 {
       font-size: 8.6rem;
-      font-weight: bold;
       line-height: 7.2rem;
       letter-spacing: 0.129rem;
       text-transform: none; } }
 
 h3 {
   font-size: 3.4rem;
-  font-weight: bold;
   line-height: 5rem;
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     h3 {
       font-size: 2.9rem;
-      font-weight: bold;
       line-height: 4.5rem;
       letter-spacing: normal;
       text-transform: none; } }
 
 h4 {
   font-size: 5rem;
-  font-weight: bold;
   line-height: 4.3rem;
   letter-spacing: 0.083rem;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     h4 {
       font-size: 3.9rem;
-      font-weight: bold;
       line-height: 3.2rem;
       letter-spacing: 0.065rem;
       text-transform: none; } }
 
 h5 {
   font-size: 2.5rem;
-  font-weight: bold;
   line-height: 2.8rem;
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     h5 {
       font-size: 1.7rem;
-      font-weight: bold;
       line-height: 2.4rem;
       letter-spacing: normal;
       text-transform: none; } }
 
 h6 {
   font-size: 1.4rem;
-  font-weight: normal;
   line-height: 2rem;
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     h6 {
       font-size: 1.3rem;
-      font-weight: normal;
       line-height: 2rem;
       letter-spacing: normal;
       text-transform: none; } }
 
 p {
   font-size: 1.9rem;
-  font-weight: normal;
   line-height: 2.4rem;
   letter-spacing: normal;
   text-transform: none; }
   @media screen and (max-width: 767px) {
     p {
       font-size: 1.5rem;
-      font-weight: normal;
       line-height: 2.1rem;
       letter-spacing: normal;
       text-transform: none; } }
@@ -236,7 +223,6 @@ svg {
     color: white;
     display: block;
     font-size: 1.9rem;
-    font-weight: normal;
     line-height: 2.4rem;
     letter-spacing: normal;
     text-transform: none;
@@ -251,7 +237,6 @@ svg {
     @media screen and (max-width: 767px) {
       .screen-reader-text:focus {
         font-size: 1.5rem;
-        font-weight: normal;
         line-height: 2.1rem;
         letter-spacing: normal;
         text-transform: none; } }
@@ -362,7 +347,6 @@ svg {
         margin: 0 -16px; }
         #site-navigation > ul > li a {
           font-size: 2.2rem;
-          font-weight: lighter;
           line-height: 2.9rem;
           letter-spacing: normal;
           text-transform: uppercase;
@@ -373,7 +357,6 @@ svg {
       @media screen and (min-width: 768px) and (max-width: 767px) {
         #site-navigation > ul > li a {
           font-size: 2.2rem;
-          font-weight: lighter;
           line-height: 2.9rem;
           letter-spacing: normal;
           text-transform: uppercase; } }
@@ -435,7 +418,6 @@ svg {
             color: #FFFFFF;
             text-align: center;
             font-size: 2.2rem;
-            font-weight: lighter;
             line-height: 2.9rem;
             letter-spacing: normal;
             text-transform: uppercase;
@@ -444,7 +426,6 @@ svg {
         @media screen and (max-width: 767px) and (max-width: 767px) {
           #site-navigation.opened > ul > li {
             font-size: 2.2rem;
-            font-weight: lighter;
             line-height: 2.9rem;
             letter-spacing: normal;
             text-transform: uppercase; } }
@@ -530,7 +511,6 @@ svg {
 
 .newsletter-capture-title {
   font-size: 5rem;
-  font-weight: bold;
   line-height: 4.3rem;
   letter-spacing: 0.083rem;
   text-transform: none;
@@ -541,7 +521,6 @@ svg {
   @media screen and (max-width: 767px) {
     .newsletter-capture-title {
       font-size: 3.9rem;
-      font-weight: bold;
       line-height: 3.2rem;
       letter-spacing: 0.065rem;
       text-transform: none; } }
@@ -578,7 +557,6 @@ svg {
   color: #FFF065;
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
   font-size: 3.4rem;
-  font-weight: bold;
   line-height: 5rem;
   letter-spacing: normal;
   text-transform: none;
@@ -587,7 +565,6 @@ svg {
   @media screen and (max-width: 767px) {
     .red-input {
       font-size: 2.9rem;
-      font-weight: bold;
       line-height: 4.5rem;
       letter-spacing: normal;
       text-transform: none; } }
@@ -595,14 +572,12 @@ svg {
     color: #FFF065;
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 3.4rem;
-    font-weight: bold;
     line-height: 5rem;
     letter-spacing: normal;
     text-transform: none; }
     @media screen and (max-width: 767px) {
       .red-input.placeholder {
         font-size: 2.9rem;
-        font-weight: bold;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
@@ -610,14 +585,12 @@ svg {
     color: #FFF065;
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 3.4rem;
-    font-weight: bold;
     line-height: 5rem;
     letter-spacing: normal;
     text-transform: none; }
     @media screen and (max-width: 767px) {
       .red-input:-moz-placeholder {
         font-size: 2.9rem;
-        font-weight: bold;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
@@ -625,14 +598,12 @@ svg {
     color: #FFF065;
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 3.4rem;
-    font-weight: bold;
     line-height: 5rem;
     letter-spacing: normal;
     text-transform: none; }
     @media screen and (max-width: 767px) {
       .red-input::-moz-placeholder {
         font-size: 2.9rem;
-        font-weight: bold;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
@@ -640,14 +611,12 @@ svg {
     color: #FFF065;
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 3.4rem;
-    font-weight: bold;
     line-height: 5rem;
     letter-spacing: normal;
     text-transform: none; }
     @media screen and (max-width: 767px) {
       .red-input:-ms-input-placeholder {
         font-size: 2.9rem;
-        font-weight: bold;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
@@ -655,21 +624,18 @@ svg {
     color: #FFF065;
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 3.4rem;
-    font-weight: bold;
     line-height: 5rem;
     letter-spacing: normal;
     text-transform: none; }
     @media screen and (max-width: 767px) {
       .red-input::-webkit-input-placeholder {
         font-size: 2.9rem;
-        font-weight: bold;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
 
 .outline-button {
   font-size: 2rem;
-  font-weight: normal;
   line-height: 2.7rem;
   letter-spacing: 0.062rem;
   text-transform: uppercase;
@@ -679,7 +645,6 @@ svg {
   @media screen and (max-width: 767px) {
     .outline-button {
       font-size: 2rem;
-      font-weight: normal;
       line-height: 2.7rem;
       letter-spacing: 0.062rem;
       text-transform: uppercase; } }
@@ -770,7 +735,6 @@ svg {
 address.site-info {
   font-style: normal;
   font-size: 2.2rem;
-  font-weight: lighter;
   line-height: 2.9rem;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -779,7 +743,6 @@ address.site-info {
   @media screen and (max-width: 767px) {
     address.site-info {
       font-size: 2.2rem;
-      font-weight: lighter;
       line-height: 2.9rem;
       letter-spacing: normal;
       text-transform: uppercase; } }
@@ -787,14 +750,12 @@ address.site-info {
     color: white;
     text-decoration: none;
     font-size: 2.2rem;
-    font-weight: lighter;
     line-height: 2.9rem;
     letter-spacing: normal;
     text-transform: uppercase; }
     @media screen and (max-width: 767px) {
       address.site-info a {
         font-size: 2.2rem;
-        font-weight: lighter;
         line-height: 2.9rem;
         letter-spacing: normal;
         text-transform: uppercase; } }
@@ -809,7 +770,6 @@ address.site-info {
   flex: 0 0 261px; }
   #footer-navigation ul li a {
     font-size: 2.2rem;
-    font-weight: lighter;
     line-height: 2.9rem;
     letter-spacing: normal;
     text-transform: uppercase;
@@ -818,7 +778,6 @@ address.site-info {
     @media screen and (max-width: 767px) {
       #footer-navigation ul li a {
         font-size: 2.2rem;
-        font-weight: lighter;
         line-height: 2.9rem;
         letter-spacing: normal;
         text-transform: uppercase; } }
@@ -837,7 +796,6 @@ address.site-info {
 #tramp-stamp {
   flex: 0 0 100%;
   font-size: 1.4rem;
-  font-weight: normal;
   line-height: 2rem;
   letter-spacing: normal;
   text-transform: none;
@@ -846,7 +804,6 @@ address.site-info {
   @media screen and (max-width: 767px) {
     #tramp-stamp {
       font-size: 1.3rem;
-      font-weight: normal;
       line-height: 2rem;
       letter-spacing: normal;
       text-transform: none; } }
@@ -1607,5 +1564,133 @@ address.site-info {
 
 .shop-landing {
   padding-top: 40px; }
+
+@media screen and (max-width: 767px) {
+  .standard-page .full-width-header h1 {
+    font-size: 90px; }
+  .standard-page .full-width-header h2 {
+    font-size: 4rem !important; } }
+
+.standard-page .standard-content {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media screen and (max-width: 767px) {
+    .standard-page .standard-content {
+      max-width: auto;
+      width: 100%;
+      margin: 0px auto 50px auto;
+      padding: 0px 0px; } }
+  .standard-page .standard-content p {
+    margin-bottom: 20px;
+    letter-spacing: .5px;
+    -webkit-font-smoothing: antialiased; }
+  .standard-page .standard-content h1 {
+    font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #EA0029;
+    margin-bottom: 20px; }
+  .standard-page .standard-content h2 {
+    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #EA0029;
+    font-size: 50px;
+    letter-spacing: 0.83px;
+    line-height: 43px;
+    margin-bottom: 20px; }
+  .standard-page .standard-content h2.bioHeader {
+    font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+    font-size: 9rem !important; }
+  .standard-page .standard-content h3 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 20px; }
+  .standard-page .standard-content h4 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #EA0029;
+    letter-spacing: 0px; }
+  .standard-page .standard-content b, .standard-page .standard-content strong {
+    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif; }
+  .standard-page .standard-content em {
+    font-style: italic; }
+  .standard-page .standard-content hr {
+    background-color: #EA0029;
+    width: 100%;
+    margin: 60px 0px;
+    text-align: center;
+    border: 0px;
+    outline: 0px;
+    height: 4px; }
+  .standard-page .standard-content ul {
+    margin: 30px auto;
+    width: 50%; }
+    .standard-page .standard-content ul li {
+      font-size: 19px;
+      line-height: 24px;
+      padding-bottom: 19px;
+      list-style: none; }
+    .standard-page .standard-content ul li::before {
+      content: "\2022";
+      color: #EA0029;
+      margin-left: -1em;
+      width: 1em;
+      display: inline-block; }
+  .standard-page .standard-content img {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    border: 2px solid #EA0029; }
+    .standard-page .standard-content img.fr-fil, .standard-page .standard-content img.fr-fir {
+      width: 48% !important;
+      margin: 10px;
+      margin-top: 0px;
+      padding: 12px !important; }
+  .standard-page .standard-content img.fr-fil {
+    float: left;
+    margin-left: 0px; }
+  .standard-page .standard-content img.fr-fir {
+    float: right;
+    margin-right: 0px; }
+  @media screen and (max-width: 767px) {
+    .standard-page .standard-content h1 {
+      font-size: 90px; }
+    .standard-page .standard-content h2 {
+      font-size: 8rem !important; }
+    .standard-page .standard-content h3 {
+      font-size: 2.7rem !important; } }
+
+.standard-page .wide-content figure {
+  margin: 20px;
+  width: calc(100%-40px);
+  height: auto;
+  box-sizing: border-box;
+  border: 2px #EA0029 solid; }
+  .standard-page .wide-content figure img {
+    width: 100%;
+    padding: 20px 20px 5px 20px;
+    box-sizing: border-box; }
+  .standard-page .wide-content figure figcaption {
+    text-align: right;
+    right: 0px;
+    position: relative;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-right: 20px;
+    padding-bottom: 5px; }
+
+@media screen and (max-width: 767px) {
+  .standard-page .wide-content figure {
+    margin: 20px -2px;
+    width: calc(100%-40px);
+    height: auto;
+    box-sizing: border-box;
+    border: 2px #EA0029 solid; } }
 
 /*# sourceMappingURL=style.css.map*/
