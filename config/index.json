@@ -24,7 +24,18 @@
                 }
               }
             },
-
+            "blog":{
+              "type": "section",
+              "items":{
+                "blog_box":{
+                  "type": "relationship",
+                  "box": "blog",
+                  "display_logic":{
+                    "section_type": "Blog"
+                  }
+                }
+              }
+            },
             "custom_slide":{
               "type": "section",
               "items":{
