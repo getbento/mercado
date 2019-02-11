@@ -1189,6 +1189,172 @@ address.site-info {
   .shop-little-spain-shops .kiosk-box {
     width: 100% !important; } }
 
+.home-description {
+  margin-bottom: 50px; }
+  .home-description .home-desc-inner {
+    background-color: #EA0029;
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    color: white;
+    text-align: center;
+    padding: 20px 60px;
+    max-width: 80%;
+    margin: auto; }
+    @media (max-width: 1200px) {
+      .home-description .home-desc-inner {
+        max-width: unset; } }
+    @media (max-width: 767px) {
+      .home-description .home-desc-inner {
+        padding: 20px 40px; } }
+    .home-description .home-desc-inner h1 {
+      font-family: "Knockout 47 A", "Knockout 47 B";
+      margin-bottom: 20px; }
+    .home-description .home-desc-inner p {
+      margin-bottom: 20px; }
+    .home-description .home-desc-inner a {
+      display: inline-block;
+      margin: 20px 0;
+      font-family: "Knockout 30 A", "Knockout 30 B";
+      text-decoration: none; }
+
+.home-restaurants-container {
+  margin-bottom: 50px; }
+
+.home-restaurant-box {
+  border: 2px solid #EA0029;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between; }
+  .home-restaurant-box:nth-child(even) {
+    flex-direction: row-reverse; }
+  .home-restaurant-box .home-rest-img {
+    padding: 10px;
+    width: 75%; }
+    .home-restaurant-box .home-rest-img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+  .home-restaurant-box .home-rest-info {
+    width: 25%;
+    border-left: 2px solid #EA0029; }
+    .home-restaurant-box .home-rest-info .home-rest-name {
+      background-color: #EA0029;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 35px 50px;
+      margin-bottom: 15px; }
+      .home-restaurant-box .home-rest-info .home-rest-name h4 {
+        color: white;
+        text-transform: uppercase;
+        font-family: "Knockout 47 A", "Knockout 47 B"; }
+    .home-restaurant-box .home-rest-info .home-rest-caption {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 10px; }
+      .home-restaurant-box .home-rest-info .home-rest-caption p {
+        margin-bottom: 20px; }
+      .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
+        color: #EA0029;
+        text-decoration: none;
+        border: 2px solid #EA0029;
+        margin-bottom: 25px;
+        width: 150px;
+        padding: 15px 0; }
+  .home-restaurant-box:nth-child(even) .home-rest-info {
+    border-right: 2px solid #EA0029;
+    border-left: 0px; }
+
+.home-mercado-kiosks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .home-mercado-kiosks .home-mercado-kiosk {
+    width: 18.5%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .home-mercado-kiosks .home-mercado-kiosk a {
+      text-decoration: none; }
+      .home-mercado-kiosks .home-mercado-kiosk a:hover h6 {
+        opacity: 1; }
+    .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img {
+      margin-bottom: 15px;
+      position: relative; }
+      .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img h6 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 240, 101, 0.9);
+        color: #EA0029;
+        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        font-size: 25px;
+        text-align: center;
+        line-height: 1.2em;
+        font-weight: 900;
+        padding: 10px;
+        opacity: 0;
+        transition: 300ms ease all; }
+    .home-mercado-kiosks .home-mercado-kiosk img {
+      height: auto;
+      width: 100%; }
+    .home-mercado-kiosks .home-mercado-kiosk h5 {
+      color: #EA0029;
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.2em; }
+
+.home-happenings {
+  margin-bottom: 50px; }
+  .home-happenings .home-happenings-events {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .home-happenings .home-happenings-events .home-happenings-event {
+      width: 24%;
+      padding: 10px;
+      border: 2px solid #EA0029;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: black; }
+      .home-happenings .home-happenings-events .home-happenings-event .home-happenings-upper {
+        margin-bottom: 20px; }
+      .home-happenings .home-happenings-events .home-happenings-event h6 {
+        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        font-weight: 900;
+        margin-bottom: 10px; }
+      .home-happenings .home-happenings-events .home-happenings-event h3 {
+        text-transform: uppercase;
+        color: #EA0029;
+        font-family: "Knockout 67 A", "Knockout 67 B";
+        font-size: 40px;
+        line-height: 1em;
+        margin-bottom: 7px; }
+      .home-happenings .home-happenings-events .home-happenings-event .home-happenings-img {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative; }
+      .home-happenings .home-happenings-events .home-happenings-event img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%; }
+
 .kiosk-grid, .bars-grid {
   display: flex;
   justify-content: space-between;
@@ -1245,36 +1411,69 @@ address.site-info {
       opacity: 1; }
 
 .ig-boxes {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   .ig-boxes .ig-box {
     width: 20%;
     border: 1px solid #EA0029;
     padding-bottom: 19.8%;
     position: relative; }
-    .ig-boxes .ig-box h5 {
-      color: #FFF065;
-      text-transform: uppercase;
-      font-family: "Knockout 47 A", "Knockout 47 B";
-      font-weight: initial;
-      padding: 10px;
-      font-size: 45px;
-      line-height: 1.1em;
+    @media (max-width: 920px) {
+      .ig-boxes .ig-box {
+        width: 25%;
+        padding-bottom: 24.8%; }
+        .ig-boxes .ig-box:nth-last-child(2), .ig-boxes .ig-box:nth-last-child(3) {
+          display: none; } }
+    .ig-boxes .ig-box.edge-box {
+      background-color: #EA0029; }
+      .ig-boxes .ig-box.edge-box h5 {
+        color: #FFF065;
+        text-transform: uppercase;
+        font-family: "Knockout 47 A", "Knockout 47 B";
+        font-weight: initial;
+        padding: 10px;
+        font-size: 45px;
+        line-height: 1.1em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .ig-boxes .ig-box.edge-box h5 a {
+          color: inherit;
+          font-family: inherit; }
+    .ig-boxes .ig-box .ig-box-link {
       position: absolute;
       left: 0;
       top: 0;
-      height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .ig-boxes .ig-box h5 a {
-        color: inherit;
-        font-family: inherit; }
-    .ig-boxes .ig-box.edge-box {
-      background-color: #EA0029; }
+      height: 100%; }
+      .ig-boxes .ig-box .ig-box-link img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
 
 .ig-feed {
   margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .ig-feed .content-margins {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+      min-width: 100%;
+      overflow: scroll; }
+      .ig-feed .content-margins .ig-boxes {
+        flex-direction: row;
+        flex-wrap: nowrap; }
+        .ig-feed .content-margins .ig-boxes .ig-box {
+          min-width: 175px;
+          height: 175px;
+          padding-bottom: 0;
+          border-top: 2px solid #EA0029;
+          border-bottom: 2px solid #EA0029; } }
 
 .blog-landing {
   padding-top: 28px; }

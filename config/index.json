@@ -10,28 +10,52 @@
           "items":{
             "section_type":{
               "type": "dropdown",
-              "options": ["Post Select", "Custom Slide"],
+              "options": ["Blog", "Event","Kiosk","Restaurant", "Custom Slide"],
             },
-            "post_slide":{
+            "blog":{
               "type": "section",
               "items":{
-                "box_type":{
-                  "type": "dropdown",
-                  "options": ["Restaurant", "Blog", "Event", "Kiosks"],
-                  "display_logic": {
-                    "section_type": "Post Select"
+                "blog_box":{
+                  "type": "relationship",
+                  "box": "blog",
+                  "display_logic":{
+                    "section_type": "Blog"
                   }
-                },
-                "restaurant":{
-                  "type": "section",
-                  "items":{
-                    "restaurant_box":{
-                      "type": "relationship",
-                      "box": "restaurant",
-                      "display_logic":{
-                        "box_type": "Restaurant"
-                      }
-                    }
+                }
+              }
+            },
+            "events":{
+              "type": "section",
+              "items":{
+                "event_box":{
+                  "type": "relationship",
+                  "box": "events",
+                  "display_logic":{
+                    "section_type": "Event"
+                  }
+                }
+              }
+            },
+            "kiosk":{
+              "type": "section",
+              "items":{
+                "kiosk_box":{
+                  "type": "relationship",
+                  "box": "kiosks",
+                  "display_logic":{
+                    "section_type": "Kiosk"
+                  }
+                }
+              }
+            },
+            "restaurant":{
+              "type": "section",
+              "items":{
+                "restaurant_box":{
+                  "type": "relationship",
+                  "box": "restaurant",
+                  "display_logic":{
+                    "section_type": "Restaurant"
                   }
                 }
               }
