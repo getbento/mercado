@@ -12,18 +12,6 @@
               "type": "dropdown",
               "options": ["Blog", "Event","Kiosk","Restaurant", "Custom Slide"],
             },
-            "restaurant":{
-              "type": "section",
-              "items":{
-                "restaurant_box":{
-                  "type": "relationship",
-                  "box": "restaurant",
-                  "display_logic":{
-                    "section_type": "Restaurant"
-                  }
-                }
-              }
-            },
             "blog":{
               "type": "section",
               "items":{
@@ -36,6 +24,18 @@
                 }
               }
             },
+            "event":{
+              "type": "section",
+              "items":{
+                "event_box":{
+                  "type": "relationship",
+                  "box": "event",
+                  "display_logic":{
+                    "section_type": "Event"
+                  }
+                }
+              }
+            },
             "kiosk":{
               "type": "section",
               "items":{
@@ -44,6 +44,18 @@
                   "box": "kiosks",
                   "display_logic":{
                     "section_type": "Kiosk"
+                  }
+                }
+              }
+            },
+            "restaurant":{
+              "type": "section",
+              "items":{
+                "restaurant_box":{
+                  "type": "relationship",
+                  "box": "restaurant",
+                  "display_logic":{
+                    "section_type": "Restaurant"
                   }
                 }
               }
