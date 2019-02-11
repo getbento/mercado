@@ -1,0 +1,46 @@
+.press_features{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-bottom:80px;
+
+	.individual_press{
+		border:2px solid $toro-red;
+		justify-content: center;
+		padding:100px;
+		box-sizing: border-box;
+		width:100%;
+		height:451px;
+		text-align: center;
+
+		h3{
+			font-family:$domaine;
+			color:$mid_grey
+		}
+		img{
+			height:30px;
+		margin:10px;
+			}
+	}
+
+	a:nth-child(2){
+		background-color:$toro_red !important;
+
+		img{
+			filter: brightness(0) invert(1);
+		}
+		h3{
+			color:white;
+		}
+	}
+
+		@media screen and (max-width: $mobile_max) {
+.individual_press{
+padding:30px;
+height:auto;
+align-items: center;
+}
+
+		}
+
+}
