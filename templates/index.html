@@ -1,10 +1,94 @@
 {% include "header.html" %}
 
-index.html
+<!-- index.html -->
 
+<section class="home-description">
+  <div class="content-margins">
+    <div class="home-desc-inner">
+      {{pages.by_slug.home.fields['home-desc'].description}}
+      <a href="{{pages.by_slug.home.fields['home-desc'].link}}" class="more-info">{{pages.by_slug.home.fields['home-desc'].call_to_action}}</a>
+    </div>
+  </div>
+</section>
 
+<section class="home-restaurants-container">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>Restaurants</h2>
+    </div>
+    <div class="home-restaurants">
+      {% for rest in boxes.restaurant.all %}
+        <div class="home-restaurant-box">
+          <div class="home-rest-img">
+            <!-- <div class="home-rest-img-cont"> -->
+              <img src="{{rest.fields.gallery[0].image_url}}" alt="{{rest.fields.gallery[0].alt_text}}">
+            <!-- </div> -->
+          </div>
+          <div class="home-rest-info">
+            <div class="home-rest-name">
+              <h4>{{rest.name}}</h4>
+            </div>
+            <div class="home-rest-caption">
+              {{rest.fields.home_description}}
+              <a href="{{rest.url}}" class="more-info">Visit</a>
+              <a href="" class='more-info'>Reserve</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
+<section class="home-mercado">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>The Mercado</h2>
+    </div>
 
+    <div class="home-mercado-kiosks">
+      {% for kiosk in boxes.kiosks.all %}
+        <div class="home-mercado-kiosk">
+          <a href="{{kiosk.url}}">
+            <div class="home-mercado-kiosk-img">
+              <img src="{{kiosk.fields.thumbnail_left.url}}" alt="{{kiosk.fields.thumbnail_left.alt}}">
+              <h6>{{kiosk.fields.hover_text}}</h6>
+            </div>
+            <h5>{{kiosk.name}}</h5>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<section class="home-happenings">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>Happenings</h2>
+    </div>
+
+    <div class="home-happenings-events">
+      {% for event in boxes.events.all %}
+
+        <a href="{{event.url}}" class="home-happenings-event">
+          <div class='home-happenings-upper'>
+            <h6>{{event.starts|date('%B %d')}}</h6>
+            <h3>{{event.name}}</h3>
+            <p>{{event.fields.dek}}</p>
+          </div>
+          <div class="home-happenings-img">
+            <img src="{{event.image.url}}" alt="{{event.image.alt_text}}">
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
 <section class="ig-feed">
   <div class="content-margins">
