@@ -98,3 +98,27 @@
     margin: 0 10px;
   }
 }
+
+.shop-little-spain-shops{
+  .kiosk-box-img{
+    height: 0;
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &.kiosk-bordered-img{
+      img{
+        padding: 10px;
+        border: 2px solid $toro_red;
+      }
+    }
+  }
+}

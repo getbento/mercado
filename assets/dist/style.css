@@ -1346,6 +1346,41 @@ address.site-info {
         width: 100%;
         height: 100%; }
 
+.home-shop .kiosk-grid article.kiosk-box h6 {
+  font-family: "Knockout 49 A", "Knockout 49 B";
+  text-transform: uppercase;
+  font-size: 30px; }
+
+.home-shop .kiosk-grid article.kiosk-box .gift-card-img {
+  padding-bottom: 100%;
+  height: 0;
+  position: relative;
+  width: 100%; }
+  .home-shop .kiosk-grid article.kiosk-box .gift-card-img .gift-card-img-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #EA0029; }
+    .home-shop .kiosk-grid article.kiosk-box .gift-card-img .gift-card-img-text span {
+      background-color: #EA0029;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px 50px;
+      font-family: "Knockout 47 A", "Knockout 47 B";
+      color: #FFF065;
+      text-transform: uppercase;
+      font-size: 55px;
+      height: 100%;
+      width: 100%; }
+
 .kiosk-grid, .bars-grid {
   display: flex;
   justify-content: space-between;
@@ -2011,6 +2046,22 @@ address.site-info {
     font-family: "Knockout 49 A", "Knockout 49 B";
     font-size: 20px;
     margin: 0 10px; }
+
+.shop-little-spain-shops .kiosk-box-img {
+  height: 0;
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%; }
+  .shop-little-spain-shops .kiosk-box-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .shop-little-spain-shops .kiosk-box-img.kiosk-bordered-img img {
+    padding: 10px;
+    border: 2px solid #EA0029; }
 
 @media screen and (max-width: 767px) {
   .standard-page .full-width-header h1 {

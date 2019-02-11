@@ -11,7 +11,7 @@
   </div>
 </section>
 
-<section class="shop-little-spain">
+<section class="shop-little-spain" id="shop-little-spain">
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
@@ -39,7 +39,7 @@
 </section>
 
 
-<section class="shop-little-spain-online">
+<section class="shop-little-spain-online" id="shop-online">
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
@@ -53,7 +53,7 @@
 {% for shop in current.fields['online-products'].products %}
       <article class="kiosk-box">
           <a href="">
-            <div class="kiosk-box-img">
+            <div class="kiosk-box-img kiosk-bordered-img">
               <img src="{{shop.image.url}}" alt="shop.image.alt">
               <h4>{{shop.hover_text}}</h4>
             </div>
@@ -67,7 +67,7 @@
 </section>
 
 
-<section class="shop-little-gift-cards">
+<section class="shop-little-gift-cards" id="gift-cards">
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
