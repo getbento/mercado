@@ -103,7 +103,7 @@ body, html {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
-  font-family: "Knockout", Arial Narrow, Arial, sans-serif;
+  font-family: "Knockout 30 A", "Knockout 30 B";
   box-sizing: border-box; }
 
 body * {
@@ -276,7 +276,7 @@ svg {
   .page-landing-header h1 {
     text-transform: uppercase;
     color: #EA0029;
-    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
+    font-family: "Knockout 49 A", "Knockout 49 B";
     font-weight: initial;
     font-size: 85px;
     white-space: nowrap; }
@@ -641,7 +641,11 @@ svg {
   text-transform: uppercase;
   color: #EA0029;
   border: 2px solid;
-  padding: 12px 64px; }
+  padding: 12px 64px;
+  text-decoration: none;
+  display: inline-block;
+  transition: ease 300ms all;
+  cursor: pointer; }
   @media screen and (max-width: 767px) {
     .outline-button {
       font-size: 2rem;
@@ -851,7 +855,7 @@ address.site-info {
       .restaurant-content .restaurant-single-info .restaurant-single-content p strong {
         font-size: 55px;
         text-transform: uppercase;
-        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-family: "Knockout 47 A", "Knockout 47 B";
         display: block;
         padding: 20px 0 10px 0; }
       @media (max-width: 1024px) {
@@ -900,7 +904,7 @@ address.site-info {
       .restaurant-content .restaurant-single-info.rest-right-col .rest-contact .rest-contact-inner {
         padding: 0 20px; }
         .restaurant-content .restaurant-single-info.rest-right-col .rest-contact .rest-contact-inner h4 {
-          font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+          font-family: "Knockout 47 A", "Knockout 47 B";
           font-weight: initial;
           line-height: 1em; }
 
@@ -915,7 +919,7 @@ address.site-info {
       text-transform: uppercase;
       color: white;
       font-size: 75px;
-      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      font-family: "Knockout 47 A", "Knockout 47 B";
       font-weight: initial; }
   .rest-single-menus .rest-single-menu-select {
     display: flex;
@@ -932,7 +936,7 @@ address.site-info {
       height: 40px;
       margin-right: 10px;
       font-size: 18px;
-      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      font-family: "Knockout 47 A", "Knockout 47 B";
       letter-spacing: 0.03em;
       cursor: pointer;
       background-color: transparent; }
@@ -968,7 +972,7 @@ address.site-info {
       margin-bottom: 20px;
       text-transform: uppercase;
       font-weight: initial;
-      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif; }
+      font-family: "Knockout 47 A", "Knockout 47 B"; }
       @media (max-width: 767px) {
         .rest-single-join-us .rest-single-join-us-content h3 {
           font-size: 70px; } }
@@ -976,7 +980,7 @@ address.site-info {
       text-transform: uppercase;
       font-size: 50px;
       line-height: 1.3em;
-      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      font-family: "Knockout 47 A", "Knockout 47 B";
       margin-bottom: 20px; }
       @media (max-width: 767px) {
         .rest-single-join-us .rest-single-join-us-content p {
@@ -1037,7 +1041,7 @@ address.site-info {
       color: white;
       font-size: 40px;
       line-height: 1.4em;
-      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      font-family: "Knockout 47 A", "Knockout 47 B";
       font-weight: initial; }
   .rest-landing-rest .rest-landing-img {
     padding: 10px;
@@ -1084,7 +1088,7 @@ address.site-info {
     color: #EA0029;
     border: 2px solid #EA0029;
     text-decoration: none;
-    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
+    font-family: "Knockout 49 A", "Knockout 49 B";
     font-size: 20px;
     margin: 0 10px; }
     .rest-landing-rest-info-buttons a.more-info:hover {
@@ -1117,7 +1121,7 @@ address.site-info {
       width: 80%; }
       .full-width-header .full-width-header-content .full-width-header-content-inner h1 {
         text-transform: uppercase;
-        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-family: "Knockout 47 A", "Knockout 47 B";
         font-weight: initial;
         color: #FFF065;
         margin-bottom: 20px; }
@@ -1125,7 +1129,7 @@ address.site-info {
         color: white;
         margin-bottom: 20px; }
       .full-width-header .full-width-header-content .full-width-header-content-inner h2 {
-        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-family: "Knockout 47 A", "Knockout 47 B";
         font-weight: initial;
         color: #FFF065;
         font-size: 50px;
@@ -1167,9 +1171,14 @@ address.site-info {
   .section-title-container h2 {
     text-transform: uppercase;
     font-weight: initial;
-    font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+    font-family: "Knockout 47 A", "Knockout 47 B";
     color: #EA0029;
-    font-size: 90px; }
+    font-size: 90px;
+    text-align: center; }
+
+@media (max-width: 767px) {
+  .shop-little-spain-shops .kiosk-box {
+    width: 100% !important; } }
 
 .kiosk-grid, .bars-grid {
   display: flex;
@@ -1236,7 +1245,7 @@ address.site-info {
     .ig-boxes .ig-box h5 {
       color: #FFF065;
       text-transform: uppercase;
-      font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+      font-family: "Knockout 47 A", "Knockout 47 B";
       font-weight: initial;
       padding: 10px;
       font-size: 45px;
@@ -1258,8 +1267,165 @@ address.site-info {
 .ig-feed {
   margin-bottom: 30px; }
 
-.el-blog-landing {
-  padding-top: 40px; }
+.blog-landing {
+  padding-top: 28px; }
+
+.blog-articles-container {
+  margin-bottom: 50px;
+  /*row styles*/ }
+  .blog-articles-container .content-margins {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .blog-articles-container .content-margins a {
+      text-decoration: none; }
+  .blog-articles-container .blog-post__tag {
+    color: #474746;
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-weight: initial;
+    font-weight: 600;
+    font-size: 13px;
+    padding-top: 0.8em; }
+  .blog-articles-container .blog-post__title {
+    padding-top: 4px;
+    text-transform: uppercase;
+    color: #EA0029;
+    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-weight: initial;
+    line-height: 0.85em;
+    font-size: 6em; }
+  .blog-articles-container .blog-post__desc {
+    padding-top: 10px;
+    font-weight: initial;
+    color: #474746; }
+  .blog-articles-container .blog-post__more {
+    text-align: center; }
+    .blog-articles-container .blog-post__more button {
+      margin: 2em 0; }
+  @media screen and (max-width: 900px) {
+    .blog-articles-container .blog-posts__three .blog-post .image {
+      height: 45% !important; }
+    .blog-articles-container .blog-posts__three .blog-post .info {
+      height: 55% !important; }
+    .blog-articles-container .blog-post__title {
+      font-size: 5.3em;
+      line-height: 1em; } }
+  @media screen and (min-width: 767px) {
+    .blog-articles-container .blog-post:nth-child(1) {
+      border: 2px solid #EA0029;
+      display: flex;
+      height: calc(53vh);
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0px; }
+      .blog-articles-container .blog-post:nth-child(1) .image {
+        padding: 1.2em;
+        width: 62%;
+        height: 100%; }
+        .blog-articles-container .blog-post:nth-child(1) .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .blog-articles-container .blog-post:nth-child(1) .info {
+        padding: 1em 3.2em;
+        border-left: 2px solid #EA0029;
+        width: 38%;
+        height: 100%; }
+        .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+          font-size: 8.5em;
+          line-height: 1em; }
+        .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+          font-weight: initial;
+          text-transform: uppercase;
+          font-family: "Knockout 49 A", "Knockout 49 B";
+          line-height: 1em;
+          font-size: 5.75em;
+          padding-top: 16px; } }
+    @media screen and (min-width: 767px) and (max-width: 900px) {
+      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+        font-size: 8em;
+        line-height: 0.9em; }
+      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+        line-height: 1em;
+        font-size: 5.5em; } }
+    @media screen and (min-width: 767px) and (max-width: 800px) {
+      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+        font-size: 6.6em; }
+      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+        line-height: 1em;
+        font-size: 4.9em; } }
+  .blog-articles-container .blog-post:nth-child(2), .blog-articles-container .blog-post:nth-child(3) {
+    border: 2px solid #EA0029;
+    display: flex;
+    width: 48%;
+    padding: 1.2em;
+    margin-top: 28px;
+    height: calc(70vh); }
+    .blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
+      height: 67%;
+      width: 100%; }
+      .blog-articles-container .blog-post:nth-child(2) .image img, .blog-articles-container .blog-post:nth-child(3) .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    .blog-articles-container .blog-post:nth-child(2) .info, .blog-articles-container .blog-post:nth-child(3) .info {
+      height: 33%; }
+      .blog-articles-container .blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__tag {
+        padding-top: 1em; }
+      .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+        font-size: 7em; }
+      @media screen and (max-width: 900px) {
+        .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+          font-size: 5em; } }
+  .blog-articles-container .blog-post {
+    margin-top: 28px;
+    height: calc(60vh);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #EA0029;
+    display: flex;
+    width: 32%;
+    padding: 1.2em; }
+    .blog-articles-container .blog-post .image {
+      height: 60%;
+      width: 100%; }
+      .blog-articles-container .blog-post .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    .blog-articles-container .blog-post .info {
+      height: 40%; }
+  .blog-articles-container .blog-post:hover {
+    background-color: #EA0029; }
+    .blog-articles-container .blog-post:hover .blog-post__tag {
+      color: #FFFFFF; }
+    .blog-articles-container .blog-post:hover .blog-post__title {
+      color: #FFF065; }
+    .blog-articles-container .blog-post:hover .blog-post__desc {
+      color: #FFFFFF; }
+  @media screen and (max-width: 767px) {
+    .blog-articles-container .blog-post {
+      margin-top: 28px;
+      height: calc(60vh) !important;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100% !important;
+      border: 2px solid #EA0029;
+      display: flex;
+      padding: 1.2em; }
+      .blog-articles-container .blog-post .image {
+        height: 60% !important;
+        width: 100% !important; }
+        .blog-articles-container .blog-post .image img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+      .blog-articles-container .blog-post .info {
+        height: 40% !important; } }
 
 .single-blog {
   display: flex;
@@ -1328,12 +1494,12 @@ address.site-info {
       .single-blog .single-blog-info .single-blog-info-header h1 {
         text-transform: uppercase;
         color: #FFF065;
-        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-family: "Knockout 47 A", "Knockout 47 B";
         font-weight: initial;
         margin-bottom: 30px; }
       .single-blog .single-blog-info .single-blog-info-header h4 {
         text-transform: uppercase;
-        font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+        font-family: "Knockout 47 A", "Knockout 47 B";
         font-weight: initial;
         color: white;
         margin-bottom: 30px; }
@@ -1367,7 +1533,7 @@ address.site-info {
     text-transform: uppercase;
     font-size: 50px;
     font-weight: initial;
-    font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+    font-family: "Knockout 47 A", "Knockout 47 B";
     margin: 0 15px; }
     @media (max-width: 820px) {
       .hay-mas .hay-mas-header h6 {
@@ -1479,7 +1645,7 @@ address.site-info {
     cursor: pointer; }
     .single-blog-social .single-blog-scroll span {
       text-transform: uppercase;
-      font-family: "Knockout", Arial Narrow, Arial, sans-serif !important;
+      font-family: "Knockout 30 A", "Knockout 30 B" !important;
       font-weight: 100;
       display: block;
       position: relative;
@@ -1565,40 +1731,143 @@ address.site-info {
 .shop-landing {
   padding-top: 40px; }
 
-.standard-content {
-  margin: 15px 155px; }
-  .standard-content p {
+.shop-now-button {
+  padding: 15px 50px;
+  border: 2px solid #EA0029;
+  text-transform: uppercase;
+  color: #EA0029;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  transition: ease 300ms all;
+  cursor: pointer; }
+  .shop-now-button:hover {
+    background-color: #EA0029;
+    color: white; }
+
+.gift-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px; }
+  @media (max-width: 767px) {
+    .gift-card-container {
+      flex-direction: column; } }
+  .gift-card-container .gift-card-img {
+    width: 55%;
+    padding: 10px;
+    border: 2px solid #EA0029; }
+    @media (max-width: 767px) {
+      .gift-card-container .gift-card-img {
+        width: 100%;
+        margin-bottom: 30px; } }
+    .gift-card-container .gift-card-img .gift-card-img-text {
+      background-color: #EA0029;
+      color: #FFF065;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
+      .gift-card-container .gift-card-img .gift-card-img-text span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: "Knockout 47 A", "Knockout 47 B";
+        max-width: 200px;
+        margin: auto; }
+        @media (max-width: 1200px) {
+          .gift-card-container .gift-card-img .gift-card-img-text span {
+            font-size: 80px; } }
+        @media (max-width: 900px) {
+          .gift-card-container .gift-card-img .gift-card-img-text span {
+            font-size: 60px; } }
+  .gift-card-container .gift-card-info {
+    width: 45%;
+    padding: 20px 40px; }
+    @media (max-width: 767px) {
+      .gift-card-container .gift-card-info {
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+        padding: 20px; } }
+    .gift-card-container .gift-card-info h4 {
+      color: #EA0029;
+      font-weight: initial;
+      font-family: "Knockout 47 A", "Knockout 47 B";
+      margin-bottom: 20px; }
+    .gift-card-container .gift-card-info p {
+      margin-bottom: 15px; }
+  .gift-card-container .more-info {
+    color: #EA0029;
+    border: 2px solid #EA0029;
+    text-decoration: none;
+    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-size: 20px;
+    margin: 0 10px; }
+
+@media screen and (max-width: 767px) {
+  .standard-page .full-width-header h1 {
+    font-size: 90px; }
+  .standard-page .full-width-header h2 {
+    font-size: 4rem !important; } }
+
+.standard-page .standard-content {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media screen and (max-width: 767px) {
+    .standard-page .standard-content {
+      max-width: auto;
+      width: 100%;
+      margin: 0px auto 50px auto;
+      padding: 0px 0px; } }
+  .standard-page .standard-content p {
     margin-bottom: 20px;
     letter-spacing: .5px;
     -webkit-font-smoothing: antialiased; }
-  .standard-content h1 {
-    font-family: "Knockout-HTF47-Bantamweight", Arial Narrow, Arial, sans-serif;
+  .standard-page .standard-content h1 {
+    font-family: "Knockout 47 A", "Knockout 47 B";
     text-transform: uppercase;
-    color: #EA0029; }
-  .standard-content h2 {
-    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif;
+    color: #EA0029;
+    margin-bottom: 20px; }
+  .standard-page .standard-content h2 {
+    font-family: "Knockout 49 A", "Knockout 49 B";
     text-transform: uppercase;
     color: #EA0029;
     font-size: 50px;
     letter-spacing: 0.83px;
-    line-height: 43px; }
-  .standard-content h3 {
+    line-height: 43px;
+    margin-bottom: 20px; }
+  .standard-page .standard-content h2.bioHeader {
+    font-family: "Knockout 47 A", "Knockout 47 B";
+    font-size: 9rem !important; }
+  .standard-page .standard-content h3 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 34px;
     font-weight: bold;
-    line-height: 50px; }
-  .standard-content h4 {
+    line-height: 50px;
+    margin-bottom: 20px; }
+  .standard-page .standard-content h4 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 25px;
+    margin-bottom: 20px;
     font-weight: bold;
     line-height: 28px;
     color: #EA0029;
     letter-spacing: 0px; }
-  .standard-content b, .standard-content strong {
-    font-family: "Knockout-HTF49-Liteweight", Arial Narrow, Arial, sans-serif; }
-  .standard-content em {
+  .standard-page .standard-content b, .standard-page .standard-content strong {
+    font-family: "Knockout 49 A", "Knockout 49 B"; }
+  .standard-page .standard-content em {
     font-style: italic; }
-  .standard-content hr {
+  .standard-page .standard-content hr {
     background-color: #EA0029;
     width: 100%;
     margin: 60px 0px;
@@ -1606,32 +1875,56 @@ address.site-info {
     border: 0px;
     outline: 0px;
     height: 4px; }
-  .standard-content ul {
+  .standard-page .standard-content ul {
     margin: 30px auto;
     width: 50%; }
-    .standard-content ul li {
+    .standard-page .standard-content ul li {
       font-size: 19px;
       line-height: 24px;
       padding-bottom: 19px;
       list-style: none; }
-    .standard-content ul li::before {
+    .standard-page .standard-content ul li::before {
       content: "•";
       color: #EA0029;
       margin-left: -1em;
       width: 1em;
       display: inline-block; }
+  .standard-page .standard-content img {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    border: 2px solid #EA0029; }
+    .standard-page .standard-content img.fr-fil, .standard-page .standard-content img.fr-fir {
+      width: 48% !important;
+      margin: 10px;
+      margin-top: 0px;
+      padding: 12px !important; }
+  .standard-page .standard-content img.fr-fil {
+    float: left;
+    margin-left: 0px; }
+  .standard-page .standard-content img.fr-fir {
+    float: right;
+    margin-right: 0px; }
+  @media screen and (max-width: 767px) {
+    .standard-page .standard-content h1 {
+      font-size: 90px; }
+    .standard-page .standard-content h2 {
+      font-size: 8rem !important; }
+    .standard-page .standard-content h3 {
+      font-size: 2.7rem !important; } }
 
-.wide-content figure {
+.standard-page .wide-content figure {
   margin: 20px;
   width: calc(100%-40px);
   height: auto;
   box-sizing: border-box;
   border: 2px #EA0029 solid; }
-  .wide-content figure img {
+  .standard-page .wide-content figure img {
     width: 100%;
     padding: 20px 20px 5px 20px;
     box-sizing: border-box; }
-  .wide-content figure figcaption {
+  .standard-page .wide-content figure figcaption {
     text-align: right;
     right: 0px;
     position: relative;
@@ -1639,3 +1932,11 @@ address.site-info {
     text-transform: uppercase;
     padding-right: 20px;
     padding-bottom: 5px; }
+
+@media screen and (max-width: 767px) {
+  .standard-page .wide-content figure {
+    margin: 20px -2px;
+    width: calc(100%-40px);
+    height: auto;
+    box-sizing: border-box;
+    border: 2px #EA0029 solid; } }
