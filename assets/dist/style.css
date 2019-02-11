@@ -204,6 +204,9 @@ ul, ol {
 svg {
   fill: currentColor; }
 
+a {
+  text-decoration: none; }
+
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -276,7 +279,7 @@ svg {
   .page-landing-header h1 {
     text-transform: uppercase;
     color: #EA0029;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
     font-size: 85px;
     white-space: nowrap; }
@@ -289,6 +292,12 @@ svg {
         white-space: normal;
         text-align: center;
         line-height: 1em; } }
+  .page-landing-header h2 {
+    color: black;
+    font-family: "Knockout 67 A", "Knockout 67 B";
+    font-size: 6em;
+    line-height: .8em;
+    text-transform: uppercase; }
   .page-landing-header img {
     width: 15%;
     height: auto; }
@@ -1088,7 +1097,7 @@ address.site-info {
     color: #EA0029;
     border: 2px solid #EA0029;
     text-decoration: none;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     font-size: 20px;
     margin: 0 10px; }
     .rest-landing-rest-info-buttons a.more-info:hover {
@@ -1329,7 +1338,7 @@ address.site-info {
       .home-happenings .home-happenings-events .home-happenings-event h3 {
         text-transform: uppercase;
         color: #EA0029;
-        font-family: "Knockout 49 A", "Knockout 49 B";
+        font-family: "Knockout 67 A", "Knockout 67 B";
         font-size: 40px;
         line-height: 1em;
         margin-bottom: 7px; }
@@ -1347,7 +1356,7 @@ address.site-info {
         height: 100%; }
 
 .home-shop .kiosk-grid article.kiosk-box h6 {
-  font-family: "Knockout 49 A", "Knockout 49 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   text-transform: uppercase;
   font-size: 30px; }
 
@@ -1524,7 +1533,7 @@ address.site-info {
     padding-top: 4px;
     text-transform: uppercase;
     color: #EA0029;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
     line-height: 0.85em;
     font-size: 6em; }
@@ -1572,7 +1581,7 @@ address.site-info {
         .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
           font-weight: initial;
           text-transform: uppercase;
-          font-family: "Knockout 49 A", "Knockout 49 B";
+          font-family: "Knockout 67 A", "Knockout 67 B";
           line-height: 1em;
           font-size: 5.75em;
           padding-top: 16px; } }
@@ -2043,7 +2052,7 @@ address.site-info {
     color: #EA0029;
     border: 2px solid #EA0029;
     text-decoration: none;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     font-size: 20px;
     margin: 0 10px; }
 
@@ -2089,7 +2098,7 @@ address.site-info {
     color: #EA0029;
     margin-bottom: 20px; }
   .standard-page .standard-content h2 {
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     text-transform: uppercase;
     color: #EA0029;
     font-size: 50px;
@@ -2114,7 +2123,7 @@ address.site-info {
     color: #EA0029;
     letter-spacing: 0px; }
   .standard-page .standard-content b, .standard-page .standard-content strong {
-    font-family: "Knockout 49 A", "Knockout 49 B"; }
+    font-family: "Knockout 67 A", "Knockout 67 B"; }
   .standard-page .standard-content em {
     font-style: italic; }
   .standard-page .standard-content hr {
@@ -2190,5 +2199,86 @@ address.site-info {
     height: auto;
     box-sizing: border-box;
     border: 2px #EA0029 solid; } }
+
+.single-kiosk {
+  padding-top: 23px; }
+  .single-kiosk .page-landing-header img {
+    width: 130px;
+    margin: 15px; }
+  .single-kiosk .page-landing-header .kiosk_title {
+    width: 130px;
+    height: 130px;
+    float: right;
+    border: 2px solid black;
+    margin: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center; }
+  .single-kiosk .kiosk-details {
+    display: flex;
+    width: 100%;
+    border: 2px solid #EA0029;
+    margin-bottom: 70px; }
+    .single-kiosk .kiosk-details .kiosk-information {
+      width: 345px;
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid #EA0029; }
+      .single-kiosk .kiosk-details .kiosk-information .kiosk-description, .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
+        border-bottom: 2px solid #EA0029; }
+      .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
+        padding: 40px; }
+        .single-kiosk .kiosk-details .kiosk-information .kiosk-description strong {
+          color: #EA0029;
+          font-size: 6rem;
+          font-family: "Knockout 67 A", "Knockout 67 B";
+          text-transform: uppercase; }
+      .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
+        padding: 0px 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; }
+        .single-kiosk .kiosk-details .kiosk-information .kiosk-share h2 {
+          color: #EA0029;
+          font-size: 6rem;
+          font-family: "Knockout 67 A", "Knockout 67 B";
+          text-transform: uppercase; }
+        .single-kiosk .kiosk-details .kiosk-information .kiosk-share a img {
+          height: 25px;
+          width: 25px;
+          object-fit: contain; }
+
+.press_features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 80px; }
+  .press_features .individual_press {
+    border: 2px solid #EA0029;
+    justify-content: center;
+    padding: 100px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 451px;
+    text-align: center; }
+    .press_features .individual_press h3 {
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      color: #474746; }
+    .press_features .individual_press img {
+      height: 30px;
+      margin: 10px; }
+  .press_features a:nth-child(2) {
+    background-color: #EA0029 !important; }
+    .press_features a:nth-child(2) img {
+      filter: brightness(0) invert(1); }
+    .press_features a:nth-child(2) h3 {
+      color: white; }
+  @media screen and (max-width: 767px) {
+    .press_features .individual_press {
+      padding: 30px;
+      height: auto;
+      align-items: center; } }
 
 /*# sourceMappingURL=style.css.map*/
