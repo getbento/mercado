@@ -1,10 +1,20 @@
 /*
  * Font Stacks
  ***************************/
-$knockout : 'Knockout', Arial Narrow, Arial, sans-serif;
-$knockout-bantam : 'Knockout-HTF47-Bantamweight', Arial Narrow, Arial, sans-serif;
-$knockout-welter : 'Knockout-HTF50-Welterweight', Arial Narrow, Arial, sans-serif;
-$knockout-lite : 'Knockout-HTF49-Liteweight', Arial Narrow, Arial, sans-serif;
+// $knockout : 'Knockout', Arial Narrow, Arial, sans-serif;
+$knockout : "Knockout 30 A", "Knockout 30 B";
+
+// $knockout-bantam : 'Knockout-HTF47-Bantamweight', Arial Narrow, Arial, sans-serif;
+$knockout-bantam : "Knockout 47 A", "Knockout 47 B";
+
+// $knockout-welter : 'Knockout-HTF50-Welterweight', Arial Narrow, Arial, sans-serif;
+$knockout-welter : "Knockout 50 A", "Knockout 50 B";
+
+// $knockout-lite : 'Knockout-HTF49-Liteweight', Arial Narrow, Arial, sans-serif;
+$knockout-lite : "Knockout 49 A", "Knockout 49 B";
+
+
+
 $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
 
 /*
