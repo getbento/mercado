@@ -65,40 +65,88 @@
 
 .ig-boxes{
   display: flex;
+  flex-wrap: wrap;
   .ig-box{
     width: 20%;
     border: 1px solid $toro_red;
+
     padding-bottom: 19.8%;
     position: relative;
 
-    h5{
-      color: $oro_yellow;
-      text-transform: uppercase;
-      font-family: $knockout-bantam;
-      font-weight: initial;
-      padding: 10px;
-      font-size: 45px;
-      line-height: 1.1em;
+    @media (max-width: 920px){
+      width: 25%;
+      padding-bottom: 24.8%;
+      &:nth-last-child(2), &:nth-last-child(3){
+        display: none;
+      }
+    }
+
+
+    &.edge-box{
+      background-color: $toro_red;
+
+      h5{
+        color: $oro_yellow;
+        text-transform: uppercase;
+        font-family: $knockout-bantam;
+        font-weight: initial;
+        padding: 10px;
+        font-size: 45px;
+        line-height: 1.1em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+          color: inherit;
+          font-family: inherit;
+
+        }
+      }
+    }
+
+    .ig-box-link{
       position: absolute;
       left: 0;
       top: 0;
-      height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      a{
-        color: inherit;
-        font-family: inherit;
-
+      height: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     }
-    &.edge-box{
-      background-color: $toro_red;
-    }
+
+
   }
 }
 
 .ig-feed{
   margin-bottom: 30px;
+  @media (max-width: 767px){
+    .content-margins{
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 100%;
+      min-width: 100%;
+      overflow: scroll;
+      .ig-boxes{
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .ig-box{
+          min-width: 175px;
+          height: 175px;
+          padding-bottom: 0;
+          border-top: 2px solid $toro_red;
+          border-bottom: 2px solid $toro_red;
+        }
+      }
+    }
+  }
 }
