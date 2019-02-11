@@ -7,6 +7,7 @@
 		"banner_image": "image",
 		"gallery": "gallery",
 		"short_description": "wysiwyg",
+		"home_description": "wysiwyg",
 		"map": "image",
 		"reservation_link": "text",
 		"contact_info": "wysiwyg",
