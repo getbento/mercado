@@ -41,7 +41,7 @@
               "items":{
                 "kiosk_box":{
                   "type": "relationship",
-                  "box": "kiosk",
+                  "box": "kiosks",
                   "display_logic":{
                     "section_type": "Kiosk"
                   }
