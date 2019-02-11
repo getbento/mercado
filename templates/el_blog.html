@@ -1,38 +1,95 @@
 {% include "header.html" %}
 
 
-
 <!-- el_blog.html -->
 
-<section class="el-blog-landing">
+<section class="blog-landing">
   <div class="content-margins">
-
     <div class="page-landing-header">
       <img src="{{static('img/el-blog-landing/Left.png')}}" alt="">
       <h1>El Blog</h1>
       <img src="{{static('img/el-blog-landing/Right.png')}}" alt="">
     </div>
 
-
   </div>
 </section>
 
-<section class="el-blog-articles">
-  <article class="el-blog-article">
-    <a href="{{boxes.blog.all[0].url}}">
-      <div class="article-img">
-        <img src="{{boxes.blog.all[0].fields.image.url}}" alt="">
+<div class="blog-articles-container">
+  <div class="content-margins">
+      <div class="blog-posts__one">
+        <article class="blog-post">
+            <div class="image">
+              <img src="{{boxes.blog.all[0].image.url}}">
+            </div>
+            <div class="info">
+            <p class="blog-post__tag">{{boxes.blog.all[0].categories[0].name}}</p>
+            <h1 class="blog-post__title">{{boxes.blog.all[0].name}}</h1>
+            <h3 class="blog-post__desc">{{boxes.blog.all[0].fields.dek}}</h3>
+            </div>
+        </article>
       </div>
-      <div class="article-info">
 
+      <div class="blog-posts__two">
+        <div class="blog-post">
+          <article>
+              <div class="image">
+                <img src="{{boxes.blog.all[1].image.url}}">
+              </div>
+              <div class="info">
+                <p class="blog-post__tag">{{boxes.blog.all[1].categories[0].name}}</p>
+                <h1 class="blog-post__title">{{boxes.blog.all[1].name}}</h1>
+                <p class="blog-post__desc">{{boxes.blog.all[1].fields.dek}}</p>
+              </div>
+          </article>
+        </div>
+        <div class="blog-post">
+          <article>
+             <div class="image">
+                <img src="{{boxes.blog.all[2].image.url}}">
+              </div>
+              <div class="info">
+                <p class="blog-post__tag">{{boxes.blog.all[2].categories[0].name}}</p>
+                <h1 class="blog-post__title">{{boxes.blog.all[2].name}}</h1>
+                <p class="blog-post__desc">{{boxes.blog.all[2].fields.dek}}</p>
+              </div>
+          </article>
+        </div>
       </div>
-    </a>
-  </article>
 
-</section>
+        {% for post in boxes.blog.all[:12] %}
+         {% if loop.index > 3 %}
+          
+           {% if (loop.index - 1) is divisibleby(3) %}
 
-{% for post in boxes.blog.all %}
-<a href="{{post.url}}">link</a>
-{% endfor %}
+              <div class="blog-posts__three">
+            {% endif %}
+              <div class="blog-post">
+                  <article>
+                    <div class="image">
+                        <img src="{{ post.image.url }}">
+                      </div>
+                      <div class="info">
+                        <p class="blog-post__tag">{{ post.categories[0].name }}</p>
+                        <h1 class="blog-post__title">{{ post.title }}</h1>
+                        <p class="blog-post__desc">{{ post.fields.dek }}</p>
+                      </div>
+                  </article>
+                </div>
+            {% if (loop.index) is divisibleby(3) %}
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        <div class="blog-post__more">
+          <button class="outline-button" type="">Hay Más</button>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 {% include "footer.html" %}
