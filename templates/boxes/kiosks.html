@@ -1,9 +1,105 @@
 {% include "header.html" %}
-
+<div class='single-kiosk'>
 <!-- START base.html  -->
+<section class="kiosk-landing">
+  <div class="content-margins">
+    <div class="page-landing-header">
+      <img src="{{current.fields.thumbnail_left.url}}" alt="current.thumbnail_left.alt">
+      <h1>{{current.name}}</h1>
+      <div class='kiosk_title'>
+	      <h2>{{current.fields.hover_text}}</h2>
+      </div>
+    </div>
 
-kiosks.html
-{{current}}
+  </div>
+</section>
+
+<section class="kiosk-content">
+  <div class="content-margins">
+	  <div class="kiosk-details">
+	  <div class='kiosk-information'>
+		  <div class='kiosk-description'>
+			  		  {{current.fields.description}}
+		  </div>
+		  <div class='kiosk-map'></div>
+		  <div class='kiosk-share'>
+        <h2>Share:</h2>
+
+          <a href="" class='social-fb'><img src="{{ static('img/Facebook_red.png') }}" alt="Facebook Icon"></a>
+          <a href="" class='social-twitter'><img src="{{ static('img/Twitter_red.png') }}" alt="Twitter Icon"></a>
+          <a href="" class='social-email'><img src="{{ static('img/Email_red.png') }}" alt="Email Icon"></a>
+		  </div>
+
+
+
+	  </div>
+	  <div class='kiosk-gallery'>
+
+	  </div>
+	  </div>
+
+  </div>
+</section>
+
+
+<section class="hay-mas">
+  <div class="content-margins">
+    <div class="hay-mas-header">
+      <h6>¡Hay Más!</h6><span>Check out everything the Mercado has to offer.</span>
+    </div>
+    <div class="hay-mas-links">
+      <div class="hay-mas-link">
+        <a href="{{boxes.kiosks.all[0].url}}">
+          <h6>Kiosks</h6>
+          <div class="hay-mas-link-icon">
+            <img src="{{boxes.kiosks.all[0].fields.thumbnail_left.url}}" alt="{{boxes.kiosks.all[0].fields.thumbnail_left.alt}}">
+            <span>{{boxes.kiosks.all[0].fields.hover_text}}</span>
+          </div>
+          <h4>{{boxes.kiosks.all[0].name}}</h4>
+        </a>
+      </div>
+
+      <div class="hay-mas-link">
+        <a href="{{boxes.events.all[0].url}}">
+          <h6>Happenings</h6>
+          <div class="hay-mas-link-icon with-padding">
+            <img src="{{boxes.events.all[0].image.url}}" alt="{{boxes.events.all[0].image.alt}}">
+            <span></span>
+          </div>
+          <h4>{{boxes.events.all[0].name}}</h4>
+        </a>
+      </div>
+
+      <div class="hay-mas-link">
+        <a href="{{boxes.blog.all[0].url}}">
+          <h6>Mercado Magazine</h6>
+          <div class="hay-mas-link-icon with-padding">
+            <img src="{{boxes.blog.all[0].image.url}}" alt="{{boxes.blog.all[0].image.alt}}">
+            <span></span>
+          </div>
+          <h4>{{boxes.blog.all[0].name}}</h4>
+        </a>
+      </div>
+
+      <div class="hay-mas-link">
+        <a href="{{pages.by_slug.shop.url}}">
+          <h6>Shop</h6>
+          <div class="hay-mas-link-icon">
+            <img src="{{pages.by_slug.shop.fields['online-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['online-products'].products[0].image.alt}}">
+            <span>{{pages.by_slug.shop.fields['online-products'].products[0].hover_text}}</span>
+          </div>
+          <h4>{{pages.by_slug.shop.fields['online-products'].products[0].name}}</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</div>
+
 
 <!-- END base.html  -->
 {% include "footer.html" %}

@@ -1,0 +1,70 @@
+.single-kiosk{
+  padding-top: 23px;
+
+
+  .page-landing-header{
+	  img{
+		  width:130px;
+		  margin:15px;
+	  }
+	  .kiosk_title{
+		  width:130px;
+		  height:130px;
+		  float:right;
+		  border:2px solid black;
+		  margin:15px;
+		  display: flex;
+		  text-align: center;
+		  align-items: center
+	  }
+  }
+
+  .kiosk-details{
+	  display: flex;
+	  width:100%;
+	  border:2px solid $toro-red;
+	  margin-bottom:70px;
+
+	  .kiosk-gallery{
+	  }
+	  .kiosk-information{
+		  width:345px;
+		  display: flex;
+		  flex-direction: column;
+		  border-right:2px solid $toro-red;
+
+		  .kiosk-description, .kiosk-map, .kiosk-share{
+			  border-bottom:2px solid $toro-red;
+		  }
+
+		  .kiosk-description{
+			  padding:40px;
+			  strong{
+				  color:$toro-red;
+				  font-size:6rem;
+				  font-family: $knockout-lite;
+				  text-transform: uppercase;
+			  }
+		  }
+      .kiosk-share{
+        padding:0px 20px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+          color:$toro-red;
+				  font-size:6rem;
+				  font-family: $knockout-lite;
+				  text-transform: uppercase;
+        }
+        a img{
+          height:25px; width:25px;object-fit:contain;
+        }
+      }
+	  }
+  }
+
+
+}

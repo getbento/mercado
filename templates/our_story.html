@@ -1,5 +1,5 @@
 {% include "header.html" %}
-<article class='standard-page'>
+<article class='standard-page' id="standard-page">
 <!-- START our_story.html  -->
 <section class="standard-page-content">
 
@@ -58,12 +58,31 @@
 
 {% endif %}
 
-
-
-
-
 {% endfor %}
 
+</section>
+
+<section id='featured_press'>
+<div class='content-margins'>
+  <div class="section-title-container">
+    <img src="{{ static('img/yellow_triangle.png')}}" alt="triangle header">
+    <h2>What the Periodicos<br/>are saying</h2>
+  </div>
+  <div class='press_features'>
+    {% for press in boxes.press.all %}
+    <a href='' target="_blank">
+
+      <div class='individual_press'>
+
+      <img src='{{press.image.url}}' alt='{{press.source}} logo' />
+      <h3>"{{press.name}}"</h3>
+
+    </div>
+  </a>
+
+    {% endfor %}
+  </div>
+</div>
 </section>
 </article>
 <!-- END base.html  -->
