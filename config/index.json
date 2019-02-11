@@ -19,7 +19,7 @@
                   "type": "relationship",
                   "box": "restaurant",
                   "display_logic":{
-                    "box_type": "Restaurant"
+                    "section_type": "Restaurant"
                   }
                 }
               }
