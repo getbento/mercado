@@ -10,28 +10,16 @@
           "items":{
             "section_type":{
               "type": "dropdown",
-              "options": ["Post Select", "Custom Slide"],
+              "options": ["Blog", "Event","Kiosk","Restaurant", "Custom Slide"],
             },
-            "post_slide":{
+            "restaurant":{
               "type": "section",
               "items":{
-                "box_type":{
-                  "type": "dropdown",
-                  "options": ["Restaurant", "Blog", "Event", "Kiosks"],
-                  "display_logic": {
-                    "section_type": "Post Select"
-                  }
-                },
-                "restaurant":{
-                  "type": "section",
-                  "items":{
-                    "restaurant_box":{
-                      "type": "relationship",
-                      "box": "restaurant",
-                      "display_logic":{
-                        "box_type": "Restaurant"
-                      }
-                    }
+                "restaurant_box":{
+                  "type": "relationship",
+                  "box": "restaurant",
+                  "display_logic":{
+                    "box_type": "Restaurant"
                   }
                 }
               }
