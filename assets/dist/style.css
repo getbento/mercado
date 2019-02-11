@@ -1522,7 +1522,7 @@ address.site-info {
     .blog-articles-container .blog-post:nth-child(1) {
       border: 2px solid #EA0029;
       display: flex;
-      height: calc(53vh);
+      min-height: 380px;
       flex-direction: row;
       justify-content: flex-start;
       width: 100%;
@@ -1569,7 +1569,7 @@ address.site-info {
     width: 48%;
     padding: 1.2em;
     margin-top: 28px;
-    height: calc(70vh); }
+    min-height: 380px; }
     .blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
       height: 67%;
       width: 100%; }
@@ -1588,7 +1588,7 @@ address.site-info {
           font-size: 5em; } }
   .blog-articles-container .blog-post {
     margin-top: 28px;
-    height: calc(60vh);
+    min-height: 380px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -2229,5 +2229,64 @@ address.site-info {
       padding: 30px;
       height: auto;
       align-items: center; } }
+
+.events-landing {
+  margin: 23px 0px 20px 0px; }
+
+.events-description {
+  margin: 10px 0px 40px 0px; }
+  .events-description h3 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 50px; }
+  .events-description h4 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #EA0029;
+    letter-spacing: 0px; }
+
+.all-events {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px; }
+  .all-events .home-happenings-event {
+    width: 24%;
+    padding: 10px;
+    border: 2px solid #EA0029;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black; }
+    .all-events .home-happenings-event .home-happenings-upper {
+      margin-bottom: 20px; }
+    .all-events .home-happenings-event h6 {
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      font-weight: 900;
+      margin-bottom: 10px; }
+    .all-events .home-happenings-event h3 {
+      text-transform: uppercase;
+      color: #EA0029;
+      font-family: "Knockout 67 A", "Knockout 67 B";
+      font-size: 40px;
+      line-height: 1em;
+      margin-bottom: 7px; }
+    .all-events .home-happenings-event .home-happenings-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
+    .all-events .home-happenings-event img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
 
 /*# sourceMappingURL=style.css.map*/
