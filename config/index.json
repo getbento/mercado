@@ -24,12 +24,12 @@
                 }
               }
             },
-            "event":{
+            "events":{
               "type": "section",
               "items":{
                 "event_box":{
                   "type": "relationship",
-                  "box": "event",
+                  "box": "events",
                   "display_logic":{
                     "section_type": "Event"
                   }
