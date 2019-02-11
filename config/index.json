@@ -24,6 +24,42 @@
                 }
               }
             },
+            "blog":{
+              "type": "section",
+              "items":{
+                "blog_box":{
+                  "type": "relationship",
+                  "box": "blog",
+                  "display_logic":{
+                    "section_type": "Blog"
+                  }
+                }
+              }
+            },
+            "event":{
+              "type": "section",
+              "items":{
+                "event_box":{
+                  "type": "relationship",
+                  "box": "event",
+                  "display_logic":{
+                    "section_type": "Event"
+                  }
+                }
+              }
+            },
+            "event":{
+              "type": "section",
+              "items":{
+                "kiosk_box":{
+                  "type": "relationship",
+                  "box": "kiosk",
+                  "display_logic":{
+                    "section_type": "Kiosk"
+                  }
+                }
+              }
+            },
             "custom_slide":{
               "type": "section",
               "items":{
