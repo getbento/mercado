@@ -1,12 +1,12 @@
 {% include "header.html" %}
 
 events_landing.html
-{{current}}
+
 
 
 
 {% for post in boxes.events.all %}
-<a href="{{post.url}}">link</a>
+<a href="{{post.url}}">{{post.name}}</a>
 {% endfor %}
 
 {% include "footer.html" %}

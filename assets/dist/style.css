@@ -1224,11 +1224,23 @@ address.site-info {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 767px) {
+    .home-restaurant-box {
+      flex-direction: column; } }
   .home-restaurant-box:nth-child(even) {
     flex-direction: row-reverse; }
+    @media (max-width: 767px) {
+      .home-restaurant-box:nth-child(even) {
+        flex-direction: column; } }
   .home-restaurant-box .home-rest-img {
     padding: 10px;
     width: 75%; }
+    @media (max-width: 1200px) {
+      .home-restaurant-box .home-rest-img {
+        width: 66%; } }
+    @media (max-width: 767px) {
+      .home-restaurant-box .home-rest-img {
+        width: 100%; } }
     .home-restaurant-box .home-rest-img img {
       height: 100%;
       width: 100%;
@@ -1236,6 +1248,13 @@ address.site-info {
   .home-restaurant-box .home-rest-info {
     width: 25%;
     border-left: 2px solid #EA0029; }
+    @media (max-width: 1200px) {
+      .home-restaurant-box .home-rest-info {
+        width: 34%; } }
+    @media (max-width: 767px) {
+      .home-restaurant-box .home-rest-info {
+        width: 100%;
+        border: 0px; } }
     .home-restaurant-box .home-rest-info .home-rest-name {
       background-color: #EA0029;
       display: flex;
@@ -1256,16 +1275,38 @@ address.site-info {
       padding: 10px; }
       .home-restaurant-box .home-rest-info .home-rest-caption p {
         margin-bottom: 20px; }
+      .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
+        display: flex;
+        flex-direction: column; }
+        @media (max-width: 767px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
+            flex-direction: row; } }
+        @media (max-width: 500px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
+            flex-direction: column; } }
       .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
         color: #EA0029;
         text-decoration: none;
         border: 2px solid #EA0029;
         margin-bottom: 25px;
         width: 150px;
-        padding: 15px 0; }
+        padding: 15px 0;
+        transition: ease 300ms all; }
+        .home-restaurant-box .home-rest-info .home-rest-caption .more-info:hover {
+          color: white;
+          background-color: #EA0029; }
+        @media (max-width: 767px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
+            margin: 0 10px 25px 10px; } }
+        @media (max-width: 500px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
+            margin: 0 10px 15px 10px; } }
   .home-restaurant-box:nth-child(even) .home-rest-info {
     border-right: 2px solid #EA0029;
     border-left: 0px; }
+    @media (max-width: 767px) {
+      .home-restaurant-box:nth-child(even) .home-rest-info {
+        border: 0px; } }
 
 .home-mercado-kiosks {
   display: flex;
@@ -1277,6 +1318,12 @@ address.site-info {
     display: flex;
     align-items: center;
     flex-direction: column; }
+    @media (max-width: 920px) {
+      .home-mercado-kiosks .home-mercado-kiosk {
+        width: 23.5%; } }
+    @media (max-width: 767px) {
+      .home-mercado-kiosks .home-mercado-kiosk {
+        width: 48.5%; } }
     .home-mercado-kiosks .home-mercado-kiosk a {
       text-decoration: none; }
       .home-mercado-kiosks .home-mercado-kiosk a:hover h6 {
@@ -1316,44 +1363,69 @@ address.site-info {
 
 .home-happenings {
   margin-bottom: 50px; }
-  .home-happenings .home-happenings-events {
+
+.happenings-events {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; }
+  .happenings-events .happenings-event {
+    width: 24%;
+    padding: 10px;
+    border: 2px solid #EA0029;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    transition: 250ms ease background-color; }
+    .happenings-events .happenings-event .happenings-upper {
+      margin-bottom: 20px; }
+    .happenings-events .happenings-event h6 {
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      font-weight: 900;
+      margin-bottom: 10px; }
+    .happenings-events .happenings-event h3 {
+      text-transform: uppercase;
+      color: #EA0029;
+      font-family: "Knockout 67 A", "Knockout 67 B";
+      font-size: 40px;
+      line-height: 1em;
+      margin-bottom: 7px;
+      transition: 250ms ease all; }
+    .happenings-events .happenings-event:hover {
+      background-color: #EA0029;
+      color: white; }
+      .happenings-events .happenings-event:hover h3 {
+        color: #FFF065; }
+    .happenings-events .happenings-event .happenings-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
+    .happenings-events .happenings-event img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+
+@media (max-width: 667px) {
+  .home-happenings .happenings-events {
+    flex-wrap: wrap; } }
+
+@media (max-width: 1200px) {
+  .home-happenings .happenings-events .happenings-event {
+    width: 32%; }
+    .home-happenings .happenings-events .happenings-event:last-child {
+      display: none; } }
+
+@media (max-width: 667px) {
+  .home-happenings .happenings-events .happenings-event {
+    width: 100%;
     margin-bottom: 30px; }
-    .home-happenings .home-happenings-events .home-happenings-event {
-      width: 24%;
-      padding: 10px;
-      border: 2px solid #EA0029;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-decoration: none;
-      color: black; }
-      .home-happenings .home-happenings-events .home-happenings-event .home-happenings-upper {
-        margin-bottom: 20px; }
-      .home-happenings .home-happenings-events .home-happenings-event h6 {
-        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-        font-weight: 900;
-        margin-bottom: 10px; }
-      .home-happenings .home-happenings-events .home-happenings-event h3 {
-        text-transform: uppercase;
-        color: #EA0029;
-        font-family: "Knockout 67 A", "Knockout 67 B";
-        font-size: 40px;
-        line-height: 1em;
-        margin-bottom: 7px; }
-      .home-happenings .home-happenings-events .home-happenings-event .home-happenings-img {
-        width: 100%;
-        height: 0;
-        padding-bottom: 100%;
-        position: relative; }
-      .home-happenings .home-happenings-events .home-happenings-event img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        object-fit: cover;
-        width: 100%;
-        height: 100%; }
+    .home-happenings .happenings-events .happenings-event:last-child {
+      display: block; } }
 
 .home-shop .kiosk-grid article.kiosk-box h6 {
   font-family: "Knockout 67 A", "Knockout 67 B";
@@ -1389,6 +1461,14 @@ address.site-info {
       font-size: 55px;
       height: 100%;
       width: 100%; }
+
+.home-el-blog-posts.blog-articles-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.home-hero img {
+  width: 100vw; }
 
 .kiosk-grid, .bars-grid {
   display: flex;
@@ -1554,7 +1634,7 @@ address.site-info {
       font-size: 5.3em;
       line-height: 1em; } }
   @media screen and (min-width: 767px) {
-    .blog-articles-container .blog-post:nth-child(1) {
+    .blog-articles-container .blog-landing .blog-post:nth-child(1) {
       border: 2px solid #EA0029;
       display: flex;
       height: calc(53vh);
@@ -1562,23 +1642,23 @@ address.site-info {
       justify-content: flex-start;
       width: 100%;
       padding: 0px; }
-      .blog-articles-container .blog-post:nth-child(1) .image {
+      .blog-articles-container .blog-landing .blog-post:nth-child(1) .image {
         padding: 1.2em;
         width: 62%;
         height: 100%; }
-        .blog-articles-container .blog-post:nth-child(1) .image img {
+        .blog-articles-container .blog-landing .blog-post:nth-child(1) .image img {
           width: 100%;
           height: 100%;
           object-fit: cover; }
-      .blog-articles-container .blog-post:nth-child(1) .info {
+      .blog-articles-container .blog-landing .blog-post:nth-child(1) .info {
         padding: 1em 3.2em;
         border-left: 2px solid #EA0029;
         width: 38%;
         height: 100%; }
-        .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+        .blog-articles-container .blog-landing .blog-post:nth-child(1) .info .blog-post__title {
           font-size: 8.5em;
           line-height: 1em; }
-        .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+        .blog-articles-container .blog-landing .blog-post:nth-child(1) .info .blog-post__desc {
           font-weight: initial;
           text-transform: uppercase;
           font-family: "Knockout 67 A", "Knockout 67 B";
@@ -1586,40 +1666,40 @@ address.site-info {
           font-size: 5.75em;
           padding-top: 16px; } }
     @media screen and (min-width: 767px) and (max-width: 900px) {
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+      .blog-articles-container .blog-landing .blog-post:nth-child(1) .info .blog-post__title {
         font-size: 8em;
         line-height: 0.9em; }
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+      .blog-articles-container .blog-landing .blog-post:nth-child(1) .info .blog-post__desc {
         line-height: 1em;
         font-size: 5.5em; } }
     @media screen and (min-width: 767px) and (max-width: 800px) {
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+      .blog-articles-container .blog-landing .blog-post:nth-child(1) .info .blog-post__title {
         font-size: 6.6em; }
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+      .blog-articles-container .blog-landing .blog-post:nth-child(1) .info .blog-post__desc {
         line-height: 1em;
         font-size: 4.9em; } }
-  .blog-articles-container .blog-post:nth-child(2), .blog-articles-container .blog-post:nth-child(3) {
+  .blog-articles-container .blog-landing .blog-post:nth-child(2), .blog-articles-container .blog-landing .blog-post:nth-child(3) {
     border: 2px solid #EA0029;
     display: flex;
     width: 48%;
     padding: 1.2em;
     margin-top: 28px;
     height: calc(70vh); }
-    .blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
+    .blog-articles-container .blog-landing .blog-post:nth-child(2) .image, .blog-articles-container .blog-landing .blog-post:nth-child(3) .image {
       height: 67%;
       width: 100%; }
-      .blog-articles-container .blog-post:nth-child(2) .image img, .blog-articles-container .blog-post:nth-child(3) .image img {
+      .blog-articles-container .blog-landing .blog-post:nth-child(2) .image img, .blog-articles-container .blog-landing .blog-post:nth-child(3) .image img {
         height: 100%;
         width: 100%;
         object-fit: cover; }
-    .blog-articles-container .blog-post:nth-child(2) .info, .blog-articles-container .blog-post:nth-child(3) .info {
+    .blog-articles-container .blog-landing .blog-post:nth-child(2) .info, .blog-articles-container .blog-landing .blog-post:nth-child(3) .info {
       height: 33%; }
-      .blog-articles-container .blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__tag {
+      .blog-articles-container .blog-landing .blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-landing .blog-post:nth-child(3) .info .blog-post__tag {
         padding-top: 1em; }
-      .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+      .blog-articles-container .blog-landing .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-landing .blog-post:nth-child(3) .info .blog-post__title {
         font-size: 7em; }
       @media screen and (max-width: 900px) {
-        .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+        .blog-articles-container .blog-landing .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-landing .blog-post:nth-child(3) .info .blog-post__title {
           font-size: 5em; } }
   .blog-articles-container .blog-post {
     margin-top: 28px;
