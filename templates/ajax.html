@@ -1,1 +1,3 @@
-{{boxes.events.all|tojson}}
+{{ set arg = request.args.get('c') }}
+{{arg}}
+{{boxes.blog.by_category_slug[arg]|tojson}}

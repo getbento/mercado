@@ -124,9 +124,9 @@ $("#ajaxButton").on('click',function(){
 	var url = $(this).attr("url");
 
 	console.log("clicked AJAX BUTTON");
-	console.log(url);
+	console.log(url+"?c=culture");
 
-var jqxhr = $.get( url, function(data) {
+var jqxhr = $.get( url+"?c=culture", function(data) {
  console.log(data);
 });
 
