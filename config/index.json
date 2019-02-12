@@ -1,6 +1,13 @@
 {
   "name": "Homepage",
   "fields":{
+    "hero-image":{
+      "title": "Image",
+      "type": "section",
+      "items":{
+        "image": "image",
+      }
+    },
     "home-gallery":{
       "title": "Carousel",
       "type": "section",
