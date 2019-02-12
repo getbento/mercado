@@ -123,12 +123,11 @@ $(document).ready(function(){
 $("#ajaxButton").on('click',function(){
 	var url = $(this).attr("url");
 	//for dev only
-	//url="/ajax/";
+	url="/ajax/";
 
 	console.log("clicked AJAX BUTTON");
-	console.log(url+"?c=culture");
 
-var jqxhr = $.get( url+"?c=culture", function(data) {
+var jqxhr = $.get( url,{ c: "John", d: "2pm" }, function(data) {
  console.log(data);
 });
 
