@@ -1,3 +1,3 @@
-{{ set arg = request.args.get('c') }}
+{% set arg = request.args.get('c') %}
 {{arg}}
 {{boxes.blog.by_category_slug[arg]|tojson}}
