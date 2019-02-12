@@ -192,11 +192,13 @@ $(document).ready(function () {
 
   $("#ajaxButton").on('click', function () {
     var url = $(this).attr("url");
+    //for dev only
+    url = "/ajax/";
 
     console.log("clicked AJAX BUTTON");
     console.log(url + "?c=culture");
 
-    var jqxhr = $.get("http://localhost:3000/" + url + "?c=culture", function (data) {
+    var jqxhr = $.get(url + "?c=culture", function (data) {
       console.log(data);
     });
   });
