@@ -1,12 +1,9 @@
-{# ============================================================================
-================== DYNAMIC EXTEND =============================================
-============================================================================= #}
-{# If this is an ajax request, switch which layouts we extend. #}
-{% extends "events_content.html" if not current.request.is_ajax else "ajax.html" %}
+{% include "header.html" %}
 
 <section class="events-landing">
   <div class="content-margins">
-
+<button id="ajaxButton" url='{{current.url}}' >DO THE AJAX</button>
+{{current.request}}
     <div class="page-landing-header">
       <img src="{{static('img/happenings-landing/Left.png')}}" alt="">
       <h1>Happenings</h1>
@@ -28,15 +25,15 @@
     <div class='filter'>
 <h2> Filter </h2>
     </div>
-<div class='all-events happenings-events'>
+<div class='all-events'>
   {% for event in boxes.events.all %}
-    <a href="{{event.url}}" class="happenings-event">
-      <div class='happenings-upper'>
+    <a href="{{event.url}}" class="home-happenings-event">
+      <div class='home-happenings-upper'>
         <h6>{{event.starts|date('%B %d')}}</h6>
         <h3>{{event.name}}</h3>
         <p>{{event.fields.dek}}</p>
       </div>
-      <div class="happenings-img">
+      <div class="home-happenings-img">
         <img src="{{event.image.url}}" alt="{{event.image.alt_text}}">
       </div>
     </a>
@@ -44,7 +41,9 @@
 </div>
 </div>
 </section>
-
+<script>
+	window.events = {{ boxes.events.all|tojson }};
+	</script>
 
 
 {% include "footer.html" %}
