@@ -194,9 +194,9 @@ $(document).ready(function () {
     var url = $(this).attr("url");
 
     console.log("clicked AJAX BUTTON");
-    console.log(url);
+    console.log(url + "?c=culture");
 
-    var jqxhr = $.get(url, function (data) {
+    var jqxhr = $.get("http://localhost:3000/" + url + "?c=culture", function (data) {
       console.log(data);
     });
   });
