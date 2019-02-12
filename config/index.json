@@ -1,7 +1,7 @@
 {
   "name": "Homepage",
   "fields":{
-    "hero-image":{
+    "home-hero-image":{
       "title": "Image",
       "type": "section",
       "items":{
@@ -95,6 +95,7 @@
     },
   },
   "wireframe":[
+    "section-home-hero-image",
     "section-home-gallery",
     "section-home-desc"
   ]
