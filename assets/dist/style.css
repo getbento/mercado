@@ -1684,13 +1684,8 @@ address.site-info {
     width: 48%;
     padding: 1.2em;
     margin-top: 28px;
-<<<<<<< HEAD
-    height: calc(70vh); }
-    .blog-articles-container .blog-landing .blog-post:nth-child(2) .image, .blog-articles-container .blog-landing .blog-post:nth-child(3) .image {
-=======
     min-height: 380px; }
-    .blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
->>>>>>> b113076f48257e07a164dd1c326fd62052c010ca
+    .blog-articles-container .blog-landing .blog-post:nth-child(2) .image, .blog-articles-container .blog-landing .blog-post:nth-child(3) .image {
       height: 67%;
       width: 100%; }
       .blog-articles-container .blog-landing .blog-post:nth-child(2) .image img, .blog-articles-container .blog-landing .blog-post:nth-child(3) .image img {
