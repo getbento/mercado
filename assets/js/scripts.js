@@ -123,7 +123,7 @@ $(document).ready(function(){
 $("#ajaxButton").on('click',function(){
 	var url = $(this).attr("url");
 	//for dev only
-	url="/ajax/";
+	//url="/ajax/";
 
 	console.log("clicked AJAX BUTTON");
 
