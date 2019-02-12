@@ -2,7 +2,7 @@
   "name": "Homepage",
   "fields":{
     "home-hero-image":{
-      "title": "Image",
+      "title": "Hero Image",
       "type": "section",
       "items":{
         "image": "image",
