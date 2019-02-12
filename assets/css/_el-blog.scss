@@ -69,7 +69,8 @@ margin-bottom:50px;
 .blog-landing .blog-post:nth-child(1) {
 		border: 2px solid $toro_red;
 		display: flex;
-		height: calc(53vh);
+    min-height:380px;
+
 		flex-direction: row;
 		justify-content: flex-start;
 		width: 100%;
@@ -132,7 +133,7 @@ margin-bottom:50px;
 		width: 48%;
 		padding: 1.2em;
 			margin-top: 28px;
-	height: calc(70vh);
+      min-height:380px;
 		.image {
 			height: 67%;
 			width:100%;
@@ -160,10 +161,14 @@ margin-bottom:50px;
 	}
 
 
+<<<<<<< HEAD
 .blog-post {
+=======
+	.blog-post {
+>>>>>>> b113076f48257e07a164dd1c326fd62052c010ca
 
 	margin-top: 28px;
-	height: calc(60vh);
+  min-height:380px;
 	display: flex;
 			flex-wrap: nowrap;
 flex-direction: column;
