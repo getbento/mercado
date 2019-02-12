@@ -189,6 +189,18 @@ $(document).ready(function () {
       }
     });
   }
+
+  $("#ajaxButton").on('click', function () {
+    console.log("clicked AJAX BUTTON");
+    var url = $(this).attr("url");
+    console.log(url);
+    $.ajax({
+      url: "ajax.html",
+      cache: false
+    }).done(function (html) {
+      console.log(html);
+    });
+  });
 }); // document ready end
 
 /*

@@ -1,46 +1,6 @@
-{% include "header.html" %}
+{# ============================================================================
+================== DYNAMIC EXTEND =============================================
+============================================================================= #}
+{# If this is an ajax request, switch which layouts we extend. #}
+{% extends "events_content.html" if not current.request.is_ajax else "ajax.html" %}
 
-<section class="events-landing">
-  <div class="content-margins">
-
-    <div class="page-landing-header">
-      <img src="{{static('img/happenings-landing/Left.png')}}" alt="">
-      <h1>Happenings</h1>
-      <img src="{{static('img/happenings-landing/Right.png')}}" alt="">
-    </div>
-
-  </div>
-</section>
-
-<section class='events-description'>
-  <div class="content-margins">
-
-{{current.fields.event_description.description}}
-</div>
-</section>
-
-<section class='events-listing'>
-  <div class="content-margins">
-    <div class='filter'>
-<h2> Filter </h2>
-    </div>
-<div class='all-events'>
-  {% for event in boxes.events.all %}
-    <a href="{{event.url}}" class="home-happenings-event">
-      <div class='home-happenings-upper'>
-        <h6>{{event.starts|date('%B %d')}}</h6>
-        <h3>{{event.name}}</h3>
-        <p>{{event.fields.dek}}</p>
-      </div>
-      <div class="home-happenings-img">
-        <img src="{{event.image.url}}" alt="{{event.image.alt_text}}">
-      </div>
-    </a>
-  {% endfor %}
-</div>
-</div>
-</section>
-
-
-
-{% include "footer.html" %}
