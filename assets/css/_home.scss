@@ -285,7 +285,7 @@
     justify-content: space-between;
     text-decoration: none;
     color: black;
-    transition: 250ms ease background-color;
+    transition: 250ms ease background-color, 250ms ease color;
 
     .happenings-upper{
       margin-bottom: 20px;
@@ -390,6 +390,9 @@
             font-size: 55px;
             height: 100%;
             width: 100%;
+            @media (max-width: 920px) and (min-width: 768px){
+              font-size: 35px;
+            }
           }
         }
       }
@@ -408,5 +411,42 @@
   // margin-bottom: 50px;
   img{
     width: 100vw;
+  }
+}
+
+.home-slides{
+}
+.home-slide{
+  width: 100%;
+  height: 40vw;
+  position: relative;
+  .home-slide-info{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .content-margins{
+      position: relative;
+    }
+  }
+  .home-slide-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .home-slide-info-cont{
+    border: 2px solid $toro_red;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
   }
 }

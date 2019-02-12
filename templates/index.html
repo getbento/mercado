@@ -6,6 +6,94 @@
   <img src="{{pages.by_slug.home.fields['home-hero-image'].image.url}}" alt="{{pages.by_slug.home.fields['home-hero-image'].image.alt}}">
 </section>
 
+
+<section class="home-slides">
+
+  {% for slide in pages.by_slug.home.fields['home-gallery'].slides %}
+    {% if slide.section_type == 'Restaurant' %}
+      <article class="home-slide">
+        <div class="home-slide-img">
+          <img src="" alt="">
+        </div>
+        <div class="home-slide-info">
+          <div class="content-margins">
+            <div class="home-slide-info-cont">
+              {{slide.restaurant.restaurant_box.name}}
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+
+    {% if slide.section_type == 'Event' %}
+      <article class="home-slide">
+        <div class="home-slide-img">
+          <img src="{{slide.events.event_box.images[0].url}}" alt="slide.events.event_box.images[0].alt">
+        </div>
+        <div class="home-slide-info">
+          <div class="content-margins">
+            <div class="home-slide-info-cont">
+              {{slide.events.event_box.name}}
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+
+    {% if slide.section_type == 'Blog' %}
+      <article class="home-slide">
+        <div class="home-slide-img">
+          <img src="{{slide.blog.blog_box.image.url}}" alt="{{slide.blog.blog_box.image.alt}}">
+        </div>
+        <div class="home-slide-info">
+          <div class="content-margins">
+            <div class="home-slide-info-cont">
+              {{slide.blog.blog_box.name}}
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+
+    {% if slide.section_type == 'Kiosk' %}
+      <article class="home-slide">
+        <div class="home-slide-img">
+          <img src="" alt="">
+        </div>
+        <div class="home-slide-info">
+          <div class="content-margins">
+            <div class="home-slide-info-cont">
+              {{slide.kiosk.kiosk_box.name}}
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+
+    {% if slide.section_type == 'Custom Slide' %}
+      <article class="home-slide">
+        <div class="home-slide-img">
+          <img src="" alt="">
+        </div>
+        <div class="home-slide-info">
+          <div class="content-margins">
+            <div class="home-slide-info-cont">
+              <div>Custom Slide!</div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+
+
+
+
+  {% endfor %}
+
+</section>
+
+
 <section class="home-description">
   <div class="content-margins">
     <div class="home-desc-inner">
@@ -14,6 +102,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="home-restaurants-container">
   <div class="content-margins">
@@ -56,6 +146,7 @@
 
     <div class="home-mercado-kiosks">
       {% for kiosk in boxes.kiosks.all %}
+      {% if loop.index < 6 %}
         <div class="home-mercado-kiosk">
           <a href="{{kiosk.url}}">
             <div class="home-mercado-kiosk-img">
@@ -65,6 +156,7 @@
             <h5>{{kiosk.name}}</h5>
           </a>
         </div>
+      {% endif %}
       {% endfor %}
     </div>
 
@@ -80,7 +172,7 @@
 
     <div class="happenings-events">
       {% for event in boxes.events.all %}
-
+      {% if loop.index < 5 %}
         <a href="{{event.url}}" class="happenings-event">
           <div class='happenings-upper'>
             <h6>{{event.starts|date('%B %d')}}</h6>
@@ -91,6 +183,7 @@
             <img src="{{event.image.url}}" alt="{{event.image.alt_text}}">
           </div>
         </a>
+      {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -152,6 +245,8 @@
 
     <div class="home-el-blog-posts blog-articles-container">
       {% for post in boxes.blog.all %}
+      {% if loop.index < 4 %}
+
       <article class='blog-post'>
         <div class="image">
           <a href='{{post.url}}'>
@@ -166,6 +261,8 @@
           </a>
         </div>
       </article>
+
+      {% endif %}
       {% endfor %}
     </div>
   </div>

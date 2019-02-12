@@ -90,7 +90,7 @@ $(document).ready(function(){
    });
 
    $('.single-blog').scroll(function(){
-     console.log($('.single-blog').scrollTop());
+     // console.log($('.single-blog').scrollTop());
      if($('.single-blog').scrollTop() > 200){
        $('.article-info-slide').addClass('active');
      }else{
