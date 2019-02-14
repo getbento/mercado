@@ -415,6 +415,7 @@
 }
 
 .home-slides{
+  margin-bottom: 50px;
 }
 .home-slide{
   width: 100%;
@@ -448,5 +449,47 @@
     position: absolute;
     left: 0;
     bottom: 50px;
+    width: 300px;
+    h3{
+      border-bottom: 2px solid $toro_red;
+      background-color: $oro_yellow;
+      color: $toro_red;
+      text-transform: uppercase;
+      font-family: $knockout-bantam;
+      font-size: 50px;
+      font-weight: 700;
+      padding: 10px;
+    }
+    .home-slide-desc{
+      padding: 10px;
+      p{
+        font-weight: 100;
+        color: #474746;
+      }
+    }
+    .home-slide-buttons{
+      border-top: 2px solid $toro_red;
+      display: flex;
+      justify-content: space-between;
+
+      a{
+        text-transform: uppercase;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        border-right: 2px solid $toro_red;
+        color: $toro_red;
+        font-family: $knockout-bantam;
+        font-size: 24px;
+        transition: ease 250ms all;
+        &:hover{
+          color: white;
+          background-color: $toro_red;
+        }
+        &:last-child{
+          border-right: 0px;
+        }
+      }
+    }
   }
 }

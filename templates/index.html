@@ -13,12 +13,17 @@
     {% if slide.section_type == 'Restaurant' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="" alt="">
+          <img src="{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.gallery[0].image_url}}" alt="{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.gallery[0].image_alt}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
-              {{slide.restaurant.restaurant_box.name}}
+              <h3>{{slide.restaurant.restaurant_box.name}}</h3>
+
+              <div class="home-slide-desc">{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.home_description}}</div>
+              <div class="home-slide-buttons">
+                <a href="{{slide.restaurant.restaurant_box.url}}">More Info</a>
+              </div>
             </div>
           </div>
         </div>
@@ -33,7 +38,14 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
-              {{slide.events.event_box.name}}
+              <h3>{{slide.events.event_box.name}}</h3>
+              <div class="home-slide-desc"><p>{{slide.events.event_box.fields.dek}}</p></div>
+              <div class="home-slide-buttons">
+                <a href="{{slide.events.event_box.url}}">More Info</a>
+                {% if boxes.events.by_slug[slide.events.event_box.slug].fields.tickets_link %}
+                  <a href="{{boxes.events.by_slug[slide.events.event_box.slug].fields.tickets_link}}" target="_blank">Tickets</a>
+                {% endif %}
+              </div>
             </div>
           </div>
         </div>
@@ -48,7 +60,8 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
-              {{slide.blog.blog_box.name}}
+              <h3>{{slide.blog.blog_box.name}}</h3>
+              <div class="home-slide-desc"><p>{{slide.blog.blog_box.fields.dek}}</p></div>
             </div>
           </div>
         </div>
@@ -58,12 +71,16 @@
     {% if slide.section_type == 'Kiosk' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="" alt="">
+          <img src="{{boxes.kiosks.by_slug[slide.kiosk.kiosk_box.slug].fields.gallery[0].image_url}}" alt="{{boxes.kiosks.by_slug[slide.kiosk.kiosk_box.slug].fields.gallery[0].image_alt}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
-              {{slide.kiosk.kiosk_box.name}}
+              <h3>{{slide.kiosk.kiosk_box.name}}</h3>
+              <div class="home-slide-desc">{{slide.kiosk.kiosk_box.fields.short_description}}</div>
+              <div class="home-slide-buttons">
+                <a href="{{slide.kiosk.kiosk_box.url}}">More Info</a>
+              </div>
             </div>
           </div>
         </div>
@@ -73,13 +90,20 @@
     {% if slide.section_type == 'Custom Slide' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="" alt="">
+          <img src="{{slide.custom_slide.image.url}}" alt="{{slide.custom_slide.image.alt}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
-              <div>Custom Slide!</div>
-
+              <h3>{{slide.custom_slide.title}}</h3>
+              <div class="home-slide-desc">
+                {{slide.custom_slide.description}}
+              </div>
+              {% if slide.custom_slide.link %}
+              <div class="home-slide-buttons">
+                <a href="{{slide.custom_slide.link}}">{{slide.custom_slide.call_to_action}}</a>
+              </div>
+              {% endif %}
             </div>
           </div>
         </div>
