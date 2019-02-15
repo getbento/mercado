@@ -2544,11 +2544,17 @@ address.site-info {
     width: 100%;
     border: 2px solid #EA0029;
     margin-bottom: 70px; }
+    @media (max-width: 767px) {
+      .single-kiosk .kiosk-details {
+        flex-direction: column; } }
     .single-kiosk .kiosk-details .kiosk-gallery {
       width: 67%;
       border: none;
       display: flex;
       flex-direction: column; }
+      @media (max-width: 767px) {
+        .single-kiosk .kiosk-details .kiosk-gallery {
+          width: 100%; } }
       .single-kiosk .kiosk-details .kiosk-gallery svg .st0 {
         fill: none;
         stroke: #EA0029;
@@ -2559,18 +2565,27 @@ address.site-info {
         color: #EA0029; }
       .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
         border-color: #EA0029;
-        border-bottom-width: 2px;
         border-bottom-style: solid;
         position: relative; }
+        @media (max-width: 767px) {
+          .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
+            border-bottom: 0px; } }
     .single-kiosk .kiosk-details .kiosk-information {
       width: 345px;
       display: flex;
       flex-direction: column;
       border-right: 2px solid #EA0029; }
-      .single-kiosk .kiosk-details .kiosk-information .kiosk-description, .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
+      @media (max-width: 767px) {
+        .single-kiosk .kiosk-details .kiosk-information {
+          width: 100%;
+          border-right: 0px; } }
+      .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
         border-bottom: 2px solid #EA0029; }
       .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
         padding: 40px; }
+        @media (max-width: 767px) {
+          .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
+            border: 0px; } }
         .single-kiosk .kiosk-details .kiosk-information .kiosk-description strong {
           color: #EA0029;
           font-size: 6rem;
@@ -2594,6 +2609,25 @@ address.site-info {
           object-fit: contain; }
   .single-kiosk .rest-single-gallery-controls button:hover .st0 {
     stroke: white; }
+
+.mobile-kiosk-title {
+  display: none; }
+
+@media (max-width: 767px) {
+  .mobile-kiosk-title {
+    display: block;
+    text-align: center;
+    color: #EA0029;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: "Knockout 47 A", "Knockout 47 B"; }
+  .single-kiosk .kiosk-landing img {
+    display: block; }
+  .page-landing-header {
+    justify-content: center; }
+    .page-landing-header h1 {
+      display: none; } }
 
 .press_features {
   display: flex;
