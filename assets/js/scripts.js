@@ -105,7 +105,11 @@ $(document).ready(function(){
     ***************************/
 
     if($(('.ig-feed').length)){
-      jQuery.ajax({
+      $.ajax({
+        method: "GET",
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "jsonpcallback",
           url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.026aedc91bd040fe82e74b3d218a8e7a&count=8'
       }).done(function(data){
         if(data){
