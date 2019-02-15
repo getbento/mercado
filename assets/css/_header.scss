@@ -1,8 +1,10 @@
 $header_height_desktop : 106px;
 $header_height_mobile : 58px;
 $desktop_mid : 900px;
-
-
+/*D*/
+/*D*/
+/*JJ*/
+/*F*//*F*/
 #masthead {
   //position: fixed;
   left: 0;
@@ -16,7 +18,7 @@ $desktop_mid : 900px;
   padding: 0 30px;
   background: white;
   border-bottom: 2px solid $toro_red;
-  @media screen and (max-width: $mobile_max) {
+  @media screen and (max-width: 1030px) {
     height: $header_height_mobile;
     padding-left: $gutter_width_mobile;
     padding-right: 0;
@@ -35,7 +37,14 @@ $desktop_mid : 900px;
     height: auto;
     max-width: 212px;
     max-height: 45px;
-  } @media screen and (max-width: $mobile_max) {
+  } @media screen and (max-width: 1054px) {
+      height: 26px;
+      img, svg {
+        max-height: 26px;
+        max-width: 126px;
+      }
+    }
+    @media screen and (max-width: 1030px) {
     height: 26px;
     img, svg {
       max-height: 26px;
@@ -86,7 +95,7 @@ $desktop_mid : 900px;
                   border-top: 2px solid $oro_yellow;
                 } &.dupe {
                   display: none;
-                  @media screen and (max-width: $mobile_max) {
+                  @media screen and (max-width: 1030px) {
                     display: block;
                   }
                 }
@@ -95,12 +104,12 @@ $desktop_mid : 900px;
           }
         }
       }
-    } @media screen and (max-width: $mobile_max) {
+    } @media screen and (max-width: 1030px) {
       display: none ;
     }
   } > .mobile-nav-header {
     display: none;
-  } @media screen and (max-width: $mobile_max) {
+  } @media screen and (max-width: 1030px) {
     flex: 0 0 0;
     position: absolute;
     top: 0;
@@ -196,7 +205,7 @@ $desktop_mid : 900px;
 
 #skip-to-navigation-link {
   display: none;
-  @media screen and (max-width: $mobile_max) {
+  @media screen and (max-width: 1030px) {
     display: block;
     height: 58px;
     width: 58px;
