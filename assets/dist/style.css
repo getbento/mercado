@@ -1377,7 +1377,7 @@ address.site-info {
     justify-content: space-between;
     text-decoration: none;
     color: black;
-    transition: 250ms ease background-color; }
+    transition: 250ms ease background-color, 250ms ease color; }
     .happenings-events .happenings-event .happenings-upper {
       margin-bottom: 20px; }
     .happenings-events .happenings-event h6 {
@@ -1461,6 +1461,9 @@ address.site-info {
       font-size: 55px;
       height: 100%;
       width: 100%; }
+      @media (max-width: 920px) and (min-width: 768px) {
+        .home-shop .kiosk-grid article.kiosk-box .gift-card-img .gift-card-img-text span {
+          font-size: 35px; } }
 
 .home-el-blog-posts.blog-articles-container {
   display: flex;
@@ -1469,6 +1472,72 @@ address.site-info {
 
 .home-hero img {
   width: 100vw; }
+
+.home-slides {
+  margin-bottom: 50px; }
+
+.home-slide {
+  width: 100%;
+  height: 40vw;
+  position: relative; }
+  .home-slide .home-slide-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+    .home-slide .home-slide-info .content-margins {
+      position: relative; }
+  .home-slide .home-slide-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; }
+    .home-slide .home-slide-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .home-slide .home-slide-info-cont {
+    border: 2px solid #EA0029;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 300px; }
+    .home-slide .home-slide-info-cont h3 {
+      border-bottom: 2px solid #EA0029;
+      background-color: #FFF065;
+      color: #EA0029;
+      text-transform: uppercase;
+      font-family: "Knockout 47 A", "Knockout 47 B";
+      font-size: 50px;
+      font-weight: 700;
+      padding: 10px; }
+    .home-slide .home-slide-info-cont .home-slide-desc {
+      padding: 10px; }
+      .home-slide .home-slide-info-cont .home-slide-desc p {
+        font-weight: 100;
+        color: #474746; }
+    .home-slide .home-slide-info-cont .home-slide-buttons {
+      border-top: 2px solid #EA0029;
+      display: flex;
+      justify-content: space-between; }
+      .home-slide .home-slide-info-cont .home-slide-buttons a {
+        text-transform: uppercase;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        border-right: 2px solid #EA0029;
+        color: #EA0029;
+        font-family: "Knockout 47 A", "Knockout 47 B";
+        font-size: 24px;
+        transition: ease 250ms all; }
+        .home-slide .home-slide-info-cont .home-slide-buttons a:hover {
+          color: white;
+          background-color: #EA0029; }
+        .home-slide .home-slide-info-cont .home-slide-buttons a:last-child {
+          border-right: 0px; }
 
 .kiosk-grid, .bars-grid {
   display: flex;
