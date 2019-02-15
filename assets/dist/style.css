@@ -104,7 +104,8 @@ body, html {
   margin: 0;
   font-size: 62.5%;
   font-family: "Knockout 30 A", "Knockout 30 B";
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 body * {
   box-sizing: inherit; }
@@ -305,6 +306,11 @@ a {
       .page-landing-header img {
         display: none; } }
 
+/*D*/
+/*D*/
+/*JJ*/
+/*F*/
+/*F*/
 #masthead {
   left: 0;
   top: 0;
@@ -317,7 +323,7 @@ a {
   padding: 0 30px;
   background: white;
   border-bottom: 2px solid #EA0029; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1030px) {
     #masthead {
       height: 58px;
       padding-left: 32px;
@@ -334,7 +340,13 @@ a {
     height: auto;
     max-width: 212px;
     max-height: 45px; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1054px) {
+    #masthead-logo {
+      height: 26px; }
+      #masthead-logo img, #masthead-logo svg {
+        max-height: 26px;
+        max-width: 126px; } }
+  @media screen and (max-width: 1030px) {
     #masthead-logo {
       height: 26px; }
       #masthead-logo img, #masthead-logo svg {
@@ -393,15 +405,15 @@ a {
                   border-top: 2px solid #FFF065; }
                 #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe {
                   display: none; } }
-              @media screen and (min-width: 768px) and (max-width: 767px) {
+              @media screen and (min-width: 768px) and (max-width: 1030px) {
                 #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe {
                   display: block; } }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1030px) {
     #site-navigation > ul {
       display: none; } }
   #site-navigation > .mobile-nav-header {
     display: none; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1030px) {
     #site-navigation {
       flex: 0 0 0;
       position: absolute;
@@ -432,13 +444,13 @@ a {
             text-transform: uppercase;
             padding: 16px 0;
             border-bottom: 3px solid #FFF065; } }
-        @media screen and (max-width: 767px) and (max-width: 767px) {
+        @media screen and (max-width: 1030px) and (max-width: 767px) {
           #site-navigation.opened > ul > li {
             font-size: 2.2rem;
             line-height: 2.9rem;
             letter-spacing: normal;
             text-transform: uppercase; } }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1030px) {
             #site-navigation.opened > ul > li a {
               color: #FFFFFF;
               text-decoration: none; }
@@ -491,7 +503,7 @@ a {
 
 #skip-to-navigation-link {
   display: none; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1030px) {
     #skip-to-navigation-link {
       display: block;
       height: 58px;
@@ -2354,7 +2366,8 @@ address.site-info {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  flex-direction: row; }
+  margin: 0 !important;
+  padding: 0 5.2em; }
 
 .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
   width: 50%; }
