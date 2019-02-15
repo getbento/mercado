@@ -65,8 +65,7 @@ margin-bottom:50px;
 
 /*row styles*/
 @media screen and (min-width: $mobile_max) {
-
-.blog-landing .blog-post:nth-child(1) {
+.blog-post:nth-child(1) {
 		border: 2px solid $toro_red;
 		display: flex;
     min-height:380px;
@@ -127,7 +126,7 @@ margin-bottom:50px;
 
 }
 
-.blog-landing .blog-post:nth-child(2), .blog-landing .blog-post:nth-child(3){
+	.blog-post:nth-child(2),  .blog-post:nth-child(3){
 		border: 2px solid $toro_red;
 		display: flex;
 		width: 48%;
@@ -161,7 +160,7 @@ margin-bottom:50px;
 	}
 
 
-.blog-post {
+	.blog-post {
 
 	margin-top: 28px;
   min-height:380px;
