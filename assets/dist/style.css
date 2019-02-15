@@ -2349,6 +2349,88 @@ address.site-info {
     box-sizing: border-box;
     border: 2px #EA0029 solid; } }
 
+.contact-us-page-container .content-margins {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row; }
+
+.contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
+  width: 50%; }
+
+.contact-us-page-container .contact-info, .contact-us-page-container .hours {
+  height: 50vh; }
+
+.contact-us-page-container .contact__title {
+  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-weight: initial;
+  font-size: 14em;
+  padding-top: 0.3em;
+  color: #474746;
+  margin-bottom: 0.15em;
+  text-transform: uppercase; }
+
+.contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
+  text-transform: uppercase;
+  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-weight: initial;
+  color: #EA0029;
+  font-size: 4.8rem;
+  line-height: 0.95em;
+  letter-spacing: 1.5px; }
+
+.contact-us-page-container .info-red a {
+  text-decoration: underline; }
+
+.contact-us-page-container .info-grey {
+  text-transform: uppercase;
+  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-weight: initial;
+  color: #474746;
+  font-size: 4rem;
+  line-height: 0.95em;
+  letter-spacing: 1.4px; }
+
+.contact-us-page-container .address {
+  margin-bottom: 0.5em; }
+
+.contact-us-page-container .hours__info {
+  display: inline-block; }
+
+.contact-us-page-container .map-section {
+  width: 100%;
+  height: 61vh; }
+
+.contact-us-page-container #map-container {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #EA0029;
+  padding: 2em; }
+
+.contact-us-page-container #map {
+  width: 100%;
+  height: 100%; }
+
+@media screen and (max-width: 1024px) {
+  .contact-us-page-container .contact__left {
+    width: 40%; }
+  .contact-us-page-container .contact__right {
+    width: 60%; } }
+
+@media screen and (max-width: 767px) {
+  .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
+    width: 100%; }
+  .contact-us-page-container .contact-info, .contact-us-page-container .hours {
+    height: auto; }
+  .contact-us-page-container .contact-info, .contact-us-page-container .hours {
+    margin-bottom: 6em; }
+  .contact-us-page-container .map-section {
+    margin-bottom: 18em; } }
+
+/*body {
+	background-color: blue;
+}*/
 .single-kiosk {
   padding-top: 23px; }
   .single-kiosk .page-landing-header img {
