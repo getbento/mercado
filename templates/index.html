@@ -18,6 +18,17 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
+              <div class="home-slide-controls">
+                <button class="home-slide-prev" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Previous Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <button class="home-slide-next" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Next Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
+              </div>
               <h3>{{slide.restaurant.restaurant_box.name}}</h3>
 
               <div class="home-slide-desc">{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.home_description}}</div>
@@ -38,12 +49,23 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
+              <div class="home-slide-controls">
+                <button class="home-slide-prev" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Previous Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <button class="home-slide-next" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Next Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Next Image" class='hover-image'>
+                </button>
+                <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
+              </div>
               <h3>{{slide.events.event_box.name}}</h3>
               <div class="home-slide-desc"><p>{{slide.events.event_box.fields.dek}}</p></div>
               <div class="home-slide-buttons">
                 <a href="{{slide.events.event_box.url}}">More Info</a>
-                {% if boxes.events.by_slug[slide.events.event_box.slug].fields.tickets_link %}
-                  <a href="{{boxes.events.by_slug[slide.events.event_box.slug].fields.tickets_link}}" target="_blank">Tickets</a>
+                {% if boxes.events.by_slug[slide.events.event_box.slug].external_url %}
+                  <a href="{{boxes.events.by_slug[slide.events.event_box.slug].fields.external_url}}" target="_blank">Tickets</a>
                 {% endif %}
               </div>
             </div>
@@ -60,6 +82,17 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
+              <div class="home-slide-controls">
+                <button class="home-slide-prev" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Previous Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <button class="home-slide-next" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Next Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
+              </div>
               <h3>{{slide.blog.blog_box.name}}</h3>
               <div class="home-slide-desc"><p>{{slide.blog.blog_box.fields.dek}}</p></div>
             </div>
@@ -76,6 +109,17 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
+              <div class="home-slide-controls">
+                <button class="home-slide-prev" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Previous Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <button class="home-slide-next" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Next Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
+              </div>
               <h3>{{slide.kiosk.kiosk_box.name}}</h3>
               <div class="home-slide-desc">{{slide.kiosk.kiosk_box.fields.short_description}}</div>
               <div class="home-slide-buttons">
@@ -95,6 +139,17 @@
         <div class="home-slide-info">
           <div class="content-margins">
             <div class="home-slide-info-cont">
+              <div class="home-slide-controls">
+                <button class="home-slide-prev" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Previous Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <button class="home-slide-next" role='button'>
+                  <img src="{{ static('img/Arrow_Red.png')}}" alt="Next Image">
+                  <img src="{{ static('img/Arrow_White.png')}}" alt="Previous Image" class='hover-image'>
+                </button>
+                <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
+              </div>
               <h3>{{slide.custom_slide.title}}</h3>
               <div class="home-slide-desc">
                 {{slide.custom_slide.description}}

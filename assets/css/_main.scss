@@ -145,3 +145,10 @@ a{
     }
   }
 }
+
+.header-icon-right{
+  border-left: 2px solid $toro_red;
+}
+.header-icon-left{
+  border-right: 2px solid $toro_red;
+}

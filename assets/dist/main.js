@@ -142,14 +142,16 @@ $(document).ready(function () {
    * Newsletter Popup
    ***************************/
   if (getCookie('popupseen') === "") {
+    console.log('popup!');
     $('#newsletter-popup').addClass('opened');
-    window.location.href = "#newsletter-popup";
+    // window.location.href = "#newsletter-popup";
     setCookie('popupseen', 'true', 30);
 
     $('#newsletter-popup-close').click(function () {
       $('#newsletter-popup').removeClass('opened');
     }).keyHook();
   } else {
+    console.log('remove popup');
     $('#newsletter-popup').remove();
   }
 
@@ -209,6 +211,39 @@ $(document).ready(function () {
     var jqxhr = $.get(url, { boxes: boxes, filter: filter }, function (data) {
       console.log(data);
     });
+  });
+
+  /*
+   * Home Slick
+   ***************************/
+  $('.home-slides').on('init', function (slick) {
+    $('.home-slide-prev').click(function () {
+      $('.home-slides').slick('slickPrev');
+    });
+    $('.home-slide-next').click(function () {
+      $('.home-slides').slick('slickNext');
+    });
+  });
+
+  $('.home-slides').slick({
+    'arrows': false
+  });
+
+  /*
+   * Restaurant & Flex Content Slick
+   ***************************/
+  $('.rest-single-gallery, .content-gallery-inner').on('init', function (slick) {
+    $('.rest-slide-prev').click(function () {
+      $('.rest-single-gallery, .content-gallery-inner').slick('slickPrev');
+    });
+    $('.rest-slide-next').click(function () {
+      $('.rest-single-gallery, .content-gallery-inner').slick('slickNext');
+    });
+  });
+
+  $('.rest-single-gallery, .content-gallery-inner').slick({
+    'arrows': false,
+    'fade': true
   });
 }); // document ready end
 

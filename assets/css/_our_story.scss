@@ -45,3 +45,31 @@ align-items: center;
 		}
 
 }
+
+.content-gallery{
+	margin-bottom: 30px;
+	.content-gallery-inner{
+		border: 2px solid $toro_red;
+
+	}
+	.rest-single-gallery-img{
+		padding-bottom: 100%;
+	}
+	.rest-single-gallery-controls{
+		button{
+			.st0{
+				fill:none;
+		    stroke: $toro_red;
+		    stroke-width:5;
+		    stroke-miterlimit:10;
+		    transition: ease 250ms all;
+			}
+			&:hover{
+				.st0{
+					stroke:white;
+				}
+				// background-color: $toro_red;
+			}
+		}
+	}
+}

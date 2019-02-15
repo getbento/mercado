@@ -6,6 +6,7 @@
 	  img{
 		  width:130px;
 		  margin:15px;
+      border: 2px solid $toro_red;
 	  }
 	  .kiosk_title{
 		  width:130px;
@@ -26,6 +27,34 @@
 	  margin-bottom:70px;
 
 	  .kiosk-gallery{
+      width: 67%;
+      border: none;
+      display: flex;
+      flex-direction: column;
+
+      svg{
+        .st0{
+          fill:none;
+          stroke: $toro-red;
+          stroke-width:5;
+          stroke-miterlimit:10;
+          transition: ease 250ms all;
+        }
+      }
+
+      .rest-slide-current{
+        color: $toro-red;
+      }
+
+      .rest-single-gallery{
+        border-color: $toro_red;
+        // padding: 10px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        position: relative;
+        // height: 0;
+        // padding-bottom: 98%;
+      }
 	  }
 	  .kiosk-information{
 		  width:345px;
@@ -66,5 +95,14 @@
 	  }
   }
 
+  .rest-single-gallery-controls{
+    button{
+      &:hover{
+        .st0{
+          stroke: white;
+        }
+      }
+    }
+  }
 
 }

@@ -1,0 +1,30 @@
+.single-event{
+  &.single-blog .single-blog-info .single-blog-info-header{
+    .event-date{
+      margin-bottom: 0px;
+    }
+    .single-event-upper{
+      span{
+        font-family: $knockout-bantam;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-size: 40px;
+      }
+      h4{
+        font-family:$domaine;
+        text-transform: none;
+        font-size: 25px;
+      }
+      a{
+        color: $toro_red;
+        background-color: white;
+        transition: ease 250ms all;
+        &:hover{
+          background-color: $toro_red;
+          color: white;
+        }
+      }
+    }
+  }
+
+}
