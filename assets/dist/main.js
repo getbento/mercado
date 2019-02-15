@@ -356,7 +356,7 @@ function setCookie(cname, cvalue, exdays) {
 /* 2 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n@import \"happenings\";\n^\n      File to import not found or unreadable: /Users/chrislanger/bentodev/sites/mercado/assets/css/_happenings.scss.\n      in /Users/chrislanger/bentodev/sites/mercado/assets/css/style.scss (line 21, column 1)\n    at runLoaders (/Users/chrislanger/bentodev/sites/mercado/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/chrislanger/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/chrislanger/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/chrislanger/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/chrislanger/bentodev/sites/mercado/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/chrislanger/bentodev/sites/mercado/node_modules/neo-async/async.js:8077:18)\n    at options.error (/Users/chrislanger/bentodev/sites/mercado/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);
