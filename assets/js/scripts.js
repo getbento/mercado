@@ -154,7 +154,8 @@ $(document).ready(function(){
   //specific AJAX calls.
 
   $(".eventsFilter").on('click',function(){
-
+$(".active").removeClass("active");
+$(this).addClass("active");
   var filteredEvents = doAjax($(this).attr("box"), $(this).attr("filter"));
   $(".all-events a").each(function(i,stuff){
     var ele = $(this);
@@ -164,11 +165,16 @@ $(document).ready(function(){
     },100*i);
   });
 
-  $.each(filteredEvents,function(i,stuff){
-    console.log(i);
-  $(".all-events").append('<a href="{{event.url}}" class="home-happenings-event"><div class="home-happenings-upper"><h6>{{event.starts|date}}</h6><h3>{{event.name}}</h3><p>{{event.fields.dek}}</p></div><div class="home-happenings-img"><img src="{{event.image.url}}" alt="{{event.image.alt_text}}"></div></a>')
+  $.each(filteredEvents,function(i, ev){
+    console.log(ev);
+    var d = new Date(ev.starts);
+    var evstart = ev.starts_month+" "+d.getDate();
+  $(".all-events").append('<a href="'+ev.url+'" class="home-happenings-event"><div class="home-happenings-upper"><h6>'+evstart+'</h6><h3>'+ev.name+'</h3><p>'+ev.fields.dek+'</p></div><div class="home-happenings-img"><img src="'+ev.image.url+'" alt="'+ev.image.alt_text+'"></div></a>')
   });
+
   });
+
+
 
 
 

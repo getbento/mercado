@@ -23,9 +23,13 @@
 <section class='events-listing'>
   <div class="content-margins">
     <div class='filter'>
-<h2> Filter </h2>
-<button class="eventsFilter" url='{{current.url}}' box='events' filter='culture' >DO THE AJAX</button>
-{{current}}
+<h2>Filter</h2>
+{% for cats in boxes.events.categories %}
+{% if cats.slug != 'uncategorized' %}
+<button class="eventsFilter" url='{{current.url}}' box='events' filter='{{cats.slug}}' >{{cats.name}}</button>
+{% endif %}
+{% endfor %}
+
     </div>
 <div class='all-events'>
   {% for event in boxes.events.all %}

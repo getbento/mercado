@@ -2523,6 +2523,19 @@ address.site-info {
     color: #EA0029;
     letter-spacing: 0px; }
 
+.filter button {
+  padding: 10px 30px;
+  color: #EA0029;
+  text-transform: uppercase;
+  border: 2px solid #EA0029;
+  background-color: white;
+  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-size: 3rem; }
+
+.filter button.active {
+  background-color: #EA0029;
+  color: white; }
+
 .all-events {
   display: flex;
   justify-content: space-between;

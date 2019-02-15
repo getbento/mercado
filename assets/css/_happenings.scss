@@ -13,6 +13,25 @@ margin:23px 0px 20px 0px;
   }
 }
 
+
+.filter{
+button{
+  padding:10px 30px;
+  color:$toro-red;
+  text-transform: uppercase;
+  border:2px solid $toro-red;
+  background-color:white;
+  font-family: $knockout-bantam;
+  font-size:3rem;
+}
+button.active{
+  background-color:$toro-red;
+  color:white;
+}
+
+}
+
+
 .all-events{
     display: flex;
     justify-content: space-between;
