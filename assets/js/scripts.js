@@ -119,15 +119,20 @@ $(document).ready(function(){
 
       });
     }
-
+    /*
+     * Instagram AJAX
+     ***************************/
 $("#ajaxButton").on('click',function(){
 	var url = $(this).attr("url");
 	//for dev only
-	//url="/ajax/";
-
+  if (location.hostname === "localhost" ){
+	url="/ajax/";
+}
+  boxes = $(this).attr("boxes");
+  filter = $(this).attr("filter");
 	console.log("clicked AJAX BUTTON");
-
-var jqxhr = $.get( url,{ c: "John", d: "2pm" }, function(data) {
+console.log(url);
+var jqxhr = $.get( url,{ boxes: boxes, filter: filter }, function(data) {
  console.log(data);
 });
 

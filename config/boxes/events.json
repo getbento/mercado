@@ -1,5 +1,6 @@
 {
 	"engine": "event",
+	"has_categories": true,
 	"fields":{
 		"dek": "text",
 		"tickets_link": "text"
