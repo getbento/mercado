@@ -1224,11 +1224,23 @@ address.site-info {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 767px) {
+    .home-restaurant-box {
+      flex-direction: column; } }
   .home-restaurant-box:nth-child(even) {
     flex-direction: row-reverse; }
+    @media (max-width: 767px) {
+      .home-restaurant-box:nth-child(even) {
+        flex-direction: column; } }
   .home-restaurant-box .home-rest-img {
     padding: 10px;
     width: 75%; }
+    @media (max-width: 1200px) {
+      .home-restaurant-box .home-rest-img {
+        width: 66%; } }
+    @media (max-width: 767px) {
+      .home-restaurant-box .home-rest-img {
+        width: 100%; } }
     .home-restaurant-box .home-rest-img img {
       height: 100%;
       width: 100%;
@@ -1236,6 +1248,13 @@ address.site-info {
   .home-restaurant-box .home-rest-info {
     width: 25%;
     border-left: 2px solid #EA0029; }
+    @media (max-width: 1200px) {
+      .home-restaurant-box .home-rest-info {
+        width: 34%; } }
+    @media (max-width: 767px) {
+      .home-restaurant-box .home-rest-info {
+        width: 100%;
+        border: 0px; } }
     .home-restaurant-box .home-rest-info .home-rest-name {
       background-color: #EA0029;
       display: flex;
@@ -1256,16 +1275,38 @@ address.site-info {
       padding: 10px; }
       .home-restaurant-box .home-rest-info .home-rest-caption p {
         margin-bottom: 20px; }
+      .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
+        display: flex;
+        flex-direction: column; }
+        @media (max-width: 767px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
+            flex-direction: row; } }
+        @media (max-width: 500px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
+            flex-direction: column; } }
       .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
         color: #EA0029;
         text-decoration: none;
         border: 2px solid #EA0029;
         margin-bottom: 25px;
         width: 150px;
-        padding: 15px 0; }
+        padding: 15px 0;
+        transition: ease 300ms all; }
+        .home-restaurant-box .home-rest-info .home-rest-caption .more-info:hover {
+          color: white;
+          background-color: #EA0029; }
+        @media (max-width: 767px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
+            margin: 0 10px 25px 10px; } }
+        @media (max-width: 500px) {
+          .home-restaurant-box .home-rest-info .home-rest-caption .more-info {
+            margin: 0 10px 15px 10px; } }
   .home-restaurant-box:nth-child(even) .home-rest-info {
     border-right: 2px solid #EA0029;
     border-left: 0px; }
+    @media (max-width: 767px) {
+      .home-restaurant-box:nth-child(even) .home-rest-info {
+        border: 0px; } }
 
 .home-mercado-kiosks {
   display: flex;
@@ -1277,6 +1318,12 @@ address.site-info {
     display: flex;
     align-items: center;
     flex-direction: column; }
+    @media (max-width: 920px) {
+      .home-mercado-kiosks .home-mercado-kiosk {
+        width: 23.5%; } }
+    @media (max-width: 767px) {
+      .home-mercado-kiosks .home-mercado-kiosk {
+        width: 48.5%; } }
     .home-mercado-kiosks .home-mercado-kiosk a {
       text-decoration: none; }
       .home-mercado-kiosks .home-mercado-kiosk a:hover h6 {
@@ -1316,44 +1363,181 @@ address.site-info {
 
 .home-happenings {
   margin-bottom: 50px; }
-  .home-happenings .home-happenings-events {
+
+.happenings-events {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; }
+  .happenings-events .happenings-event {
+    width: 24%;
+    padding: 10px;
+    border: 2px solid #EA0029;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    transition: 250ms ease background-color, 250ms ease color; }
+    .happenings-events .happenings-event .happenings-upper {
+      margin-bottom: 20px; }
+    .happenings-events .happenings-event h6 {
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      font-weight: 900;
+      margin-bottom: 10px; }
+    .happenings-events .happenings-event h3 {
+      text-transform: uppercase;
+      color: #EA0029;
+      font-family: "Knockout 67 A", "Knockout 67 B";
+      font-size: 40px;
+      line-height: 1em;
+      margin-bottom: 7px;
+      transition: 250ms ease all; }
+    .happenings-events .happenings-event:hover {
+      background-color: #EA0029;
+      color: white; }
+      .happenings-events .happenings-event:hover h3 {
+        color: #FFF065; }
+    .happenings-events .happenings-event .happenings-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
+    .happenings-events .happenings-event img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+
+@media (max-width: 667px) {
+  .home-happenings .happenings-events {
+    flex-wrap: wrap; } }
+
+@media (max-width: 1200px) {
+  .home-happenings .happenings-events .happenings-event {
+    width: 32%; }
+    .home-happenings .happenings-events .happenings-event:last-child() {
+      display: none; } }
+
+@media (max-width: 667px) {
+  .home-happenings .happenings-events .happenings-event {
+    width: 100%;
     margin-bottom: 30px; }
-    .home-happenings .home-happenings-events .home-happenings-event {
-      width: 24%;
-      padding: 10px;
-      border: 2px solid #EA0029;
+    .home-happenings .happenings-events .happenings-event:last-child() {
+      display: block; } }
+
+.home-shop .kiosk-grid article.kiosk-box h6 {
+  font-family: "Knockout 67 A", "Knockout 67 B";
+  text-transform: uppercase;
+  font-size: 30px; }
+
+.home-shop .kiosk-grid article.kiosk-box .gift-card-img {
+  padding-bottom: 100%;
+  height: 0;
+  position: relative;
+  width: 100%; }
+  .home-shop .kiosk-grid article.kiosk-box .gift-card-img .gift-card-img-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #EA0029; }
+    .home-shop .kiosk-grid article.kiosk-box .gift-card-img .gift-card-img-text span {
+      background-color: #EA0029;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-decoration: none;
-      color: black; }
-      .home-happenings .home-happenings-events .home-happenings-event .home-happenings-upper {
-        margin-bottom: 20px; }
-      .home-happenings .home-happenings-events .home-happenings-event h6 {
-        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-        font-weight: 900;
-        margin-bottom: 10px; }
-      .home-happenings .home-happenings-events .home-happenings-event h3 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px 50px;
+      font-family: "Knockout 47 A", "Knockout 47 B";
+      color: #FFF065;
+      text-transform: uppercase;
+      font-size: 55px;
+      height: 100%;
+      width: 100%; }
+      @media (max-width: 920px) and (min-width: 768px) {
+        .home-shop .kiosk-grid article.kiosk-box .gift-card-img .gift-card-img-text span {
+          font-size: 35px; } }
+
+.home-el-blog-posts.blog-articles-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.home-hero img {
+  width: 100vw; }
+
+.home-slides {
+  margin-bottom: 50px; }
+
+.home-slide {
+  width: 100%;
+  height: 40vw;
+  position: relative; }
+  .home-slide .home-slide-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; }
+    .home-slide .home-slide-info .content-margins {
+      position: relative; }
+  .home-slide .home-slide-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; }
+    .home-slide .home-slide-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .home-slide .home-slide-info-cont {
+    border: 2px solid #EA0029;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    width: 300px; }
+    .home-slide .home-slide-info-cont h3 {
+      border-bottom: 2px solid #EA0029;
+      background-color: #FFF065;
+      color: #EA0029;
+      text-transform: uppercase;
+      font-family: "Knockout 47 A", "Knockout 47 B";
+      font-size: 50px;
+      font-weight: 700;
+      padding: 10px; }
+    .home-slide .home-slide-info-cont .home-slide-desc {
+      padding: 10px; }
+      .home-slide .home-slide-info-cont .home-slide-desc p {
+        font-weight: 100;
+        color: #474746; }
+    .home-slide .home-slide-info-cont .home-slide-buttons {
+      border-top: 2px solid #EA0029;
+      display: flex;
+      justify-content: space-between; }
+      .home-slide .home-slide-info-cont .home-slide-buttons a {
         text-transform: uppercase;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        border-right: 2px solid #EA0029;
         color: #EA0029;
-        font-family: "Knockout 67 A", "Knockout 67 B";
-        font-size: 40px;
-        line-height: 1em;
-        margin-bottom: 7px; }
-      .home-happenings .home-happenings-events .home-happenings-event .home-happenings-img {
-        width: 100%;
-        height: 0;
-        padding-bottom: 100%;
-        position: relative; }
-      .home-happenings .home-happenings-events .home-happenings-event img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        object-fit: cover;
-        width: 100%;
-        height: 100%; }
+        font-family: "Knockout 47 A", "Knockout 47 B";
+        font-size: 24px;
+        transition: ease 250ms all; }
+        .home-slide .home-slide-info-cont .home-slide-buttons a:hover {
+          color: white;
+          background-color: #EA0029; }
+        .home-slide .home-slide-info-cont .home-slide-buttons a:last-child {
+          border-right: 0px; }
 
 .kiosk-grid, .bars-grid {
   display: flex;
@@ -1522,7 +1706,7 @@ address.site-info {
     .blog-articles-container .blog-post:nth-child(1) {
       border: 2px solid #EA0029;
       display: flex;
-      height: calc(53vh);
+      min-height: 380px;
       flex-direction: row;
       justify-content: flex-start;
       width: 100%;
@@ -1569,7 +1753,7 @@ address.site-info {
     width: 48%;
     padding: 1.2em;
     margin-top: 28px;
-    height: calc(70vh); }
+    min-height: 380px; }
     .blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
       height: 67%;
       width: 100%; }
@@ -1588,7 +1772,7 @@ address.site-info {
           font-size: 5em; } }
   .blog-articles-container .blog-post {
     margin-top: 28px;
-    height: calc(60vh);
+    min-height: 380px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -2021,6 +2205,22 @@ address.site-info {
     font-size: 20px;
     margin: 0 10px; }
 
+.shop-little-spain-shops .kiosk-box-img {
+  height: 0;
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%; }
+  .shop-little-spain-shops .kiosk-box-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .shop-little-spain-shops .kiosk-box-img.kiosk-bordered-img img {
+    padding: 10px;
+    border: 2px solid #EA0029; }
+
 @media screen and (max-width: 767px) {
   .standard-page .full-width-header h1 {
     font-size: 90px; }
@@ -2229,3 +2429,125 @@ address.site-info {
       padding: 30px;
       height: auto;
       align-items: center; } }
+
+.events-landing {
+  margin: 23px 0px 20px 0px; }
+
+.events-description {
+  margin: 10px 0px 40px 0px; }
+  .events-description h3 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 50px; }
+  .events-description h4 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #EA0029;
+    letter-spacing: 0px; }
+
+.all-events {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px; }
+  .all-events .home-happenings-event {
+    width: 24%;
+    padding: 10px;
+    border: 2px solid #EA0029;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black; }
+    .all-events .home-happenings-event .home-happenings-upper {
+      margin-bottom: 20px; }
+    .all-events .home-happenings-event h6 {
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      font-weight: 900;
+      margin-bottom: 10px; }
+    .all-events .home-happenings-event h3 {
+      text-transform: uppercase;
+      color: #EA0029;
+      font-family: "Knockout 67 A", "Knockout 67 B";
+      font-size: 40px;
+      line-height: 1em;
+      margin-bottom: 7px; }
+    .all-events .home-happenings-event .home-happenings-img {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative; }
+    .all-events .home-happenings-event img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+
+.contact-us-page-container {
+  margin-bottom: 80px; }
+  .contact-us-page-container .content-margins {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
+    width: 50%; }
+  .contact-us-page-container .contact__title {
+    font-family: "Knockout 67 A", "Knockout 67 B";
+    font-weight: initial;
+    font-size: 14em;
+    padding-top: 0.3em;
+    color: #474746;
+    margin-bottom: 0.15em;
+    text-transform: uppercase; }
+  .contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
+    text-transform: uppercase;
+    font-family: "Knockout 67 A", "Knockout 67 B";
+    font-weight: initial;
+    color: #EA0029;
+    font-size: 4.8rem;
+    line-height: 0.95em;
+    letter-spacing: 1.5px; }
+  .contact-us-page-container .info-red a {
+    text-decoration: underline; }
+  .contact-us-page-container .info-grey {
+    text-transform: uppercase;
+    font-family: "Knockout 67 A", "Knockout 67 B";
+    font-weight: initial;
+    color: #474746;
+    font-size: 4rem;
+    line-height: 0.95em;
+    letter-spacing: 1.4px; }
+  .contact-us-page-container .address {
+    margin-bottom: 0.5em; }
+  .contact-us-page-container .hours__info {
+    display: inline-block; }
+  .contact-us-page-container .map-section {
+    width: 100%; }
+  .contact-us-page-container #map-container {
+    width: 100%;
+    height: 500px;
+    border: 3px solid #EA0029;
+    padding: 2em; }
+  .contact-us-page-container #map {
+    width: 100%;
+    height: 100%; }
+  @media screen and (max-width: 1024px) {
+    .contact-us-page-container .contact__left {
+      width: 40%; }
+    .contact-us-page-container .contact__right {
+      width: 60%; } }
+  @media screen and (max-width: 767px) {
+    .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
+      width: 100%; }
+    .contact-us-page-container .contact-info, .contact-us-page-container .hours {
+      height: auto; }
+    .contact-us-page-container .contact-info, .contact-us-page-container .hours {
+      margin-bottom: 6em; }
+    .contact-us-page-container .map-section {
+      margin-bottom: 18em; } }

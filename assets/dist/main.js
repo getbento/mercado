@@ -175,7 +175,8 @@ $(document).ready(function () {
    * Instagram AJAX
    ***************************/
 
-  if ($('.ig-feed'.length)) {
+  if ($('.ig-feed').length) {
+    console.log($('.ig-feed').length);
     $.ajax({
       method: "GET",
       dataType: "jsonp",
@@ -193,21 +194,43 @@ $(document).ready(function () {
       }
     });
   }
+
   /*
-   * Instagram AJAX
-   ***************************/
-  $("#ajaxButton").on('click', function () {
-    var url = $(this).attr("url");
-    //for dev only
-    if (location.hostname === "localhost") {
-      url = "/ajax/";
+     * fake AJAX
+     ***************************/
+  // requires that a variable be made with the box name in the last line of template
+  function doAjax(box, filter) {
+    var content = window[box];
+    if (filter != '') {
+      var filtered = [];
+      $.each(content, function (i, stuff) {
+        $.each(stuff.categories, function (i, cats) {
+          if (filter == cats.slug) {
+            filtered.push(stuff);
+          }
+        });
+      });
+      return filtered;
+    } else {
+      return content;
     }
-    boxes = $(this).attr("boxes");
-    filter = $(this).attr("filter");
-    console.log("clicked AJAX BUTTON");
-    console.log(url);
-    var jqxhr = $.get(url, { boxes: boxes, filter: filter }, function (data) {
-      console.log(data);
+  }
+
+  //specific AJAX calls.
+
+  $(".eventsFilter").on('click', function () {
+
+    var filteredEvents = doAjax($(this).attr("box"), $(this).attr("filter"));
+    $(".all-events a").each(function (i, stuff) {
+      var ele = $(this);
+      setTimeout(function () {
+        ele.fadeOut();
+      }, 100 * i);
+    });
+
+    $.each(filteredEvents, function (i, stuff) {
+      console.log(i);
+      $(".all-events").append('<a href="{{event.url}}" class="home-happenings-event"><div class="home-happenings-upper"><h6>{{event.starts|date}}</h6><h3>{{event.name}}</h3><p>{{event.fields.dek}}</p></div><div class="home-happenings-img"><img src="{{event.image.url}}" alt="{{event.image.alt_text}}"></div></a>');
     });
   });
 }); // document ready end
