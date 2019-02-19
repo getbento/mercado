@@ -7,10 +7,13 @@ body, html {
   font-family: $knockout;
   box-sizing: border-box;
   overflow-x: hidden;
+  -webkit-overflow-scrolling:touch !important;
+
 }
 
 body * {
   box-sizing: inherit;
+
 }
 
 h1 {

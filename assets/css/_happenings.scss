@@ -41,7 +41,6 @@ button.active{
   color:white;
 }
 h1{
-  @include h1-style;
 }
 h2{
   font-family:$knockout-feather;

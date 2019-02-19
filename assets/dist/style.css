@@ -105,7 +105,8 @@ body, html {
   font-size: 62.5%;
   font-family: "Knockout 30 A", "Knockout 30 B";
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch !important; }
 
 body * {
   box-sizing: inherit; }
@@ -524,6 +525,9 @@ a {
       #skip-to-navigation-link svg {
         width: 24px;
         height: 24px; } }
+
+#content {
+  -webkit-overflow-scrolling: touch; }
 
 /*
  * Newsletter Capture
@@ -2739,17 +2743,6 @@ address.site-info {
   .filter button.active {
     background-color: #EA0029;
     color: white; }
-  .filter h1 {
-    font-size: 12rem;
-    line-height: 9.5rem;
-    letter-spacing: 0.15rem;
-    text-transform: none; }
-    @media screen and (max-width: 767px) {
-      .filter h1 {
-        font-size: 9rem;
-        line-height: 7.5rem;
-        letter-spacing: 0.135rem;
-        text-transform: none; } }
   .filter h2 {
     font-family: "Knockout 68 A", "Knockout 68 B";
     text-transform: uppercase;
@@ -2906,7 +2899,9 @@ address.site-info {
   @media screen and (max-width: 767px) {
     #newsletter-popup-title {
       text-transform: uppercase;
-      max-width: 240px; } }
+      max-width: 240px;
+      font-size: 6rem;
+      line-height: 1em; } }
 
 #newsletter-popup-blurb {
   font-size: 2.5rem;

@@ -42,7 +42,8 @@
   margin: 0;
   @media screen and (max-width: $mobile_max) {
     text-transform: uppercase;
-    max-width: 240px;
+    max-width: 240px; font-size:6rem;
+    line-height: 1em;
   }
 }
 
