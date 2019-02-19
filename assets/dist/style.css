@@ -526,9 +526,6 @@ a {
         width: 24px;
         height: 24px; } }
 
-#content {
-  -webkit-overflow-scrolling: touch; }
-
 /*
  * Newsletter Capture
  ***************************/
