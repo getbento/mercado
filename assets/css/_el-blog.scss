@@ -1,5 +1,9 @@
 .blog-landing{
   padding-top: 28px;
+  .mobile-blog-title{
+    display: none;
+    @include h1-style;
+  }
 }
 
 .blog-articles-container{
@@ -231,5 +235,21 @@ flex-direction: column;
 	}
 
 	}
+
+}
+
+@media screen and (max-width: $mobile_max) {
+  .blog-landing{
+
+  .mobile-blog-title{
+    display:block !important;
+    text-transform: uppercase;
+    color:$toro-red;
+    text-align: center;
+  }
+  .page-landing-header{
+    display: none;
+  }
+}
 
 }

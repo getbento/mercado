@@ -13,20 +13,43 @@ margin:23px 0px 20px 0px;
   }
 }
 
-
+.mobile-happenings-title{
+  display: none;
+}
 .filter{
+  display: flex;
+  margin:20px 0px;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
 button{
-  padding:10px 30px;
+  width:125px;
+  height:65px;
   color:$toro-red;
   text-transform: uppercase;
   border:2px solid $toro-red;
   background-color:white;
   font-family: $knockout-bantam;
-  font-size:3rem;
+  font-size:2.5rem;
+  line-height: 1rem;
+cursor: pointer;
+  margin:0px 15px;
+
 }
 button.active{
   background-color:$toro-red;
   color:white;
+}
+h1{
+  @include h1-style;
+}
+h2{
+  font-family:$knockout-feather;
+  text-transform: uppercase;
+  color:$toro-red;
+  font-size:6rem;
+  line-height: .6em;
+  margin-right:10px;
 }
 
 }
@@ -34,13 +57,17 @@ button.active{
 
 .all-events{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    transition: 2s height ;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.09, 0.99);
+min-height:535px;
     .home-happenings-event{
       width: 24%;
       padding: 10px;
+      margin:10px 5px;
       border: 2px solid $toro_red;
       display: flex;
       flex-direction: column;
@@ -80,3 +107,44 @@ button.active{
       }
     }
   }
+
+
+@media screen and (max-width: $mobile_max) {
+  .mobile-happenings-title{
+    display: block;
+    color: $toro_red;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .page-landing-header{
+    display: none;
+  }
+  .events-description{
+  h3{
+    font-size:2.7rem !important;
+    line-height: 1.7em;
+    margin:20px 0px;
+  }
+}
+.all-events{
+  .home-happenings-event{
+    width: 100%;
+  }
+}
+.filter{
+
+  h2{
+    text-align: center;
+    font-size:4rem;
+    width:100%;
+    margin-bottom:15px;
+  }
+  button{
+    width:48%;
+    padding:1%;
+    margin:1%;
+
+  }
+}
+
+}
