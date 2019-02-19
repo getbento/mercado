@@ -116,6 +116,7 @@ body, html {
   font-family: "Knockout 30 A", "Knockout 30 B";
   box-sizing: border-box;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 body * {
@@ -127,6 +128,7 @@ h1 {
   line-height: 9.5rem;
   letter-spacing: 0.15rem;
   text-transform: none;
+  font-family: "Knockout 67 A", "Knockout 67 B";
 }
 
 @media screen and (max-width: 767px) {
@@ -344,7 +346,7 @@ a {
 .page-landing-header h1 {
   text-transform: uppercase;
   color: #EA0029;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
   font-size: 85px;
   white-space: nowrap;
@@ -367,7 +369,7 @@ a {
 
 .page-landing-header h2 {
   color: black;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-size: 6em;
   line-height: .8em;
   text-transform: uppercase;
@@ -1184,7 +1186,7 @@ address.site-info a:hover {
 .restaurant-content .restaurant-single-info .restaurant-single-content p strong {
   font-size: 55px;
   text-transform: uppercase;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   display: block;
   padding: 20px 0 10px 0;
 }
@@ -1258,7 +1260,7 @@ address.site-info a:hover {
 }
 
 .restaurant-content .restaurant-single-info.rest-right-col .rest-contact .rest-contact-inner h4 {
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
   line-height: 1em;
 }
@@ -1278,7 +1280,7 @@ address.site-info a:hover {
   text-transform: uppercase;
   color: white;
   font-size: 75px;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
 }
 
@@ -1299,7 +1301,7 @@ address.site-info a:hover {
   height: 40px;
   margin-right: 10px;
   font-size: 18px;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   letter-spacing: 0.03em;
   cursor: pointer;
   background-color: transparent;
@@ -1352,7 +1354,7 @@ address.site-info a:hover {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: initial;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
 }
 
 @media (max-width: 767px) {
@@ -1365,7 +1367,7 @@ address.site-info a:hover {
   text-transform: uppercase;
   font-size: 50px;
   line-height: 1.3em;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   margin-bottom: 20px;
 }
 
@@ -1522,7 +1524,7 @@ address.site-info a:hover {
   color: white;
   font-size: 40px;
   line-height: 1.4em;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
 }
 
@@ -1591,7 +1593,7 @@ address.site-info a:hover {
   color: #EA0029;
   border: 2px solid #EA0029;
   text-decoration: none;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-size: 20px;
   margin: 0 10px;
 }
@@ -1642,7 +1644,7 @@ address.site-info a:hover {
 
 .full-width-header .full-width-header-content .full-width-header-content-inner h1 {
   text-transform: uppercase;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
   color: #FFF065;
   margin-bottom: 20px;
@@ -1654,7 +1656,7 @@ address.site-info a:hover {
 }
 
 .full-width-header .full-width-header-content .full-width-header-content-inner h2 {
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
   color: #FFF065;
   font-size: 50px;
@@ -1710,7 +1712,7 @@ address.site-info a:hover {
 .section-title-container h2 {
   text-transform: uppercase;
   font-weight: initial;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   color: #EA0029;
   font-size: 90px;
   text-align: center;
@@ -1749,7 +1751,7 @@ address.site-info a:hover {
 }
 
 .home-description .home-desc-inner h1 {
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   margin-bottom: 20px;
 }
 
@@ -1845,7 +1847,7 @@ address.site-info a:hover {
 .home-restaurant-box .home-rest-info .home-rest-name h4 {
   color: white;
   text-transform: uppercase;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
 }
 
 .home-restaurant-box .home-rest-info .home-rest-caption {
@@ -2024,7 +2026,7 @@ address.site-info a:hover {
 .happenings-events .happenings-event h3 {
   text-transform: uppercase;
   color: #EA0029;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-size: 40px;
   line-height: 1em;
   margin-bottom: 7px;
@@ -2082,7 +2084,7 @@ address.site-info a:hover {
 }
 
 .home-shop .kiosk-grid article.kiosk-box h6 {
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   text-transform: uppercase;
   font-size: 30px;
 }
@@ -2114,7 +2116,7 @@ address.site-info a:hover {
   align-items: center;
   text-align: center;
   padding: 10px 50px;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   color: #FFF065;
   text-transform: uppercase;
   font-size: 55px;
@@ -2188,7 +2190,7 @@ address.site-info a:hover {
   background-color: #FFF065;
   color: #EA0029;
   text-transform: uppercase;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-size: 50px;
   font-weight: 700;
   padding: 10px;
@@ -2216,7 +2218,7 @@ address.site-info a:hover {
   text-align: center;
   border-right: 2px solid #EA0029;
   color: #EA0029;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-size: 24px;
   transition: ease 250ms all;
 }
@@ -2400,7 +2402,7 @@ address.site-info a:hover {
 .ig-boxes .ig-box.edge-box h5 {
   color: #FFF065;
   text-transform: uppercase;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
   padding: 10px;
   font-size: 45px;
@@ -2463,6 +2465,23 @@ address.site-info a:hover {
   padding-top: 28px;
 }
 
+.blog-landing .mobile-blog-title {
+  display: none;
+  font-size: 12rem;
+  line-height: 9.5rem;
+  letter-spacing: 0.15rem;
+  text-transform: none;
+}
+
+@media screen and (max-width: 767px) {
+  .blog-landing .mobile-blog-title {
+    font-size: 9rem;
+    line-height: 7.5rem;
+    letter-spacing: 0.135rem;
+    text-transform: none;
+  }
+}
+
 .blog-articles-container {
   margin-bottom: 50px;
   /*row styles*/
@@ -2491,7 +2510,7 @@ address.site-info a:hover {
   padding-top: 4px;
   text-transform: uppercase;
   color: #EA0029;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
   line-height: 0.85em;
   font-size: 6em;
@@ -2557,7 +2576,7 @@ address.site-info a:hover {
   .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
     font-weight: initial;
     text-transform: uppercase;
-    font-family: "Knockout 67 A", "Knockout 67 B";
+    font-family: "Knockout 49 A", "Knockout 49 B";
     line-height: 1em;
     font-size: 5.75em;
     padding-top: 16px;
@@ -2693,6 +2712,18 @@ address.site-info a:hover {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .blog-landing .mobile-blog-title {
+    display: block !important;
+    text-transform: uppercase;
+    color: #EA0029;
+    text-align: center;
+  }
+  .blog-landing .page-landing-header {
+    display: none;
+  }
+}
+
 .single-blog {
   display: flex;
   margin-bottom: 50px;
@@ -2796,14 +2827,14 @@ address.site-info a:hover {
 .single-blog .single-blog-info .single-blog-info-header h1 {
   text-transform: uppercase;
   color: #FFF065;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
   margin-bottom: 30px;
 }
 
 .single-blog .single-blog-info .single-blog-info-header h4 {
   text-transform: uppercase;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-weight: initial;
   color: white;
   margin-bottom: 30px;
@@ -2850,7 +2881,7 @@ address.site-info a:hover {
   text-transform: uppercase;
   font-size: 50px;
   font-weight: initial;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   margin: 0 15px;
 }
 
@@ -3193,7 +3224,7 @@ address.site-info a:hover {
   font-size: 100px;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   max-width: 200px;
   margin: auto;
 }
@@ -3227,7 +3258,7 @@ address.site-info a:hover {
 .gift-card-container .gift-card-info h4 {
   color: #EA0029;
   font-weight: initial;
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   margin-bottom: 20px;
 }
 
@@ -3239,7 +3270,7 @@ address.site-info a:hover {
   color: #EA0029;
   border: 2px solid #EA0029;
   text-decoration: none;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-size: 20px;
   margin: 0 10px;
 }
@@ -3296,14 +3327,14 @@ address.site-info a:hover {
 }
 
 .standard-page .standard-content h1 {
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   text-transform: uppercase;
   color: #EA0029;
   margin-bottom: 20px;
 }
 
 .standard-page .standard-content h2 {
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   text-transform: uppercase;
   color: #EA0029;
   font-size: 50px;
@@ -3313,7 +3344,7 @@ address.site-info a:hover {
 }
 
 .standard-page .standard-content h2.bioHeader {
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   font-size: 9rem !important;
 }
 
@@ -3336,7 +3367,7 @@ address.site-info a:hover {
 }
 
 .standard-page .standard-content b, .standard-page .standard-content strong {
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
 }
 
 .standard-page .standard-content em {
@@ -3459,7 +3490,7 @@ address.site-info a:hover {
 }
 
 .contact-us-page-container .contact__title {
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
   font-size: 14em;
   padding-top: 0.3em;
@@ -3470,7 +3501,7 @@ address.site-info a:hover {
 
 .contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
   text-transform: uppercase;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
   color: #EA0029;
   font-size: 4.8rem;
@@ -3484,7 +3515,7 @@ address.site-info a:hover {
 
 .contact-us-page-container .info-grey {
   text-transform: uppercase;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
   color: #474746;
   font-size: 4rem;
@@ -3568,11 +3599,23 @@ address.site-info a:hover {
   margin-bottom: 70px;
 }
 
+@media (max-width: 767px) {
+  .single-kiosk .kiosk-details {
+    flex-direction: column;
+  }
+}
+
 .single-kiosk .kiosk-details .kiosk-gallery {
   width: 67%;
   border: none;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .single-kiosk .kiosk-details .kiosk-gallery {
+    width: 100%;
+  }
 }
 
 .single-kiosk .kiosk-details .kiosk-gallery svg .st0 {
@@ -3589,9 +3632,14 @@ address.site-info a:hover {
 
 .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
   border-color: #EA0029;
-  border-bottom-width: 2px;
   border-bottom-style: solid;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
+    border-bottom: 0px;
+  }
 }
 
 .single-kiosk .kiosk-details .kiosk-information {
@@ -3601,7 +3649,14 @@ address.site-info a:hover {
   border-right: 2px solid #EA0029;
 }
 
-.single-kiosk .kiosk-details .kiosk-information .kiosk-description, .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
+@media (max-width: 767px) {
+  .single-kiosk .kiosk-details .kiosk-information {
+    width: 100%;
+    border-right: 0px;
+  }
+}
+
+.single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
   border-bottom: 2px solid #EA0029;
 }
 
@@ -3609,10 +3664,16 @@ address.site-info a:hover {
   padding: 40px;
 }
 
+@media (max-width: 767px) {
+  .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
+    border: 0px;
+  }
+}
+
 .single-kiosk .kiosk-details .kiosk-information .kiosk-description strong {
   color: #EA0029;
   font-size: 6rem;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   text-transform: uppercase;
 }
 
@@ -3628,7 +3689,7 @@ address.site-info a:hover {
 .single-kiosk .kiosk-details .kiosk-information .kiosk-share h2 {
   color: #EA0029;
   font-size: 6rem;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   text-transform: uppercase;
 }
 
@@ -3640,6 +3701,31 @@ address.site-info a:hover {
 
 .single-kiosk .rest-single-gallery-controls button:hover .st0 {
   stroke: white;
+}
+
+.mobile-kiosk-title {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-kiosk-title {
+    display: block;
+    text-align: center;
+    color: #EA0029;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: "Knockout 67 A", "Knockout 67 B";
+  }
+  .single-kiosk .kiosk-landing img {
+    display: block;
+  }
+  .page-landing-header {
+    justify-content: center;
+  }
+  .page-landing-header h1 {
+    display: none;
+  }
 }
 
 .press_features {
@@ -3737,17 +3823,61 @@ address.site-info a:hover {
   letter-spacing: 0px;
 }
 
+.mobile-happenings-title {
+  display: none;
+}
+
+.filter {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.filter button {
+  width: 125px;
+  height: 65px;
+  color: #EA0029;
+  text-transform: uppercase;
+  border: 2px solid #EA0029;
+  background-color: white;
+  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-size: 2.5rem;
+  line-height: 1rem;
+  cursor: pointer;
+  margin: 0px 15px;
+}
+
+.filter button.active {
+  background-color: #EA0029;
+  color: white;
+}
+
+.filter h2 {
+  font-family: "Knockout 68 A", "Knockout 68 B";
+  text-transform: uppercase;
+  color: #EA0029;
+  font-size: 6rem;
+  line-height: .6em;
+  margin-right: 10px;
+}
+
 .all-events {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  transition: 2s height;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.09, 0.99);
+  min-height: 535px;
 }
 
 .all-events .home-happenings-event {
   width: 24%;
   padding: 10px;
+  margin: 10px 5px;
   border: 2px solid #EA0029;
   display: flex;
   flex-direction: column;
@@ -3769,7 +3899,7 @@ address.site-info a:hover {
 .all-events .home-happenings-event h3 {
   text-transform: uppercase;
   color: #EA0029;
-  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-family: "Knockout 49 A", "Knockout 49 B";
   font-size: 40px;
   line-height: 1em;
   margin-bottom: 7px;
@@ -3791,12 +3921,43 @@ address.site-info a:hover {
   height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .mobile-happenings-title {
+    display: block;
+    color: #EA0029;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .page-landing-header {
+    display: none;
+  }
+  .events-description h3 {
+    font-size: 2.7rem !important;
+    line-height: 1.7em;
+    margin: 20px 0px;
+  }
+  .all-events .home-happenings-event {
+    width: 100%;
+  }
+  .filter h2 {
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .filter button {
+    width: 48%;
+    padding: 1%;
+    margin: 1%;
+  }
+}
+
 .single-event.single-blog .single-blog-info .single-blog-info-header .event-date {
   margin-bottom: 0px;
 }
 
 .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper span {
-  font-family: "Knockout 47 A", "Knockout 47 B";
+  font-family: "Knockout 67 A", "Knockout 67 B";
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-size: 40px;
@@ -3890,6 +4051,8 @@ address.site-info a:hover {
   #newsletter-popup-title {
     text-transform: uppercase;
     max-width: 240px;
+    font-size: 6rem;
+    line-height: 1em;
   }
 }
 
