@@ -3,6 +3,7 @@
 <section class="events-landing">
   <div class="content-margins">
 
+    <h1 class="mobile-happenings-title">Happenings</h1>
 
     <div class="page-landing-header">
       <img src="{{static('img/happenings-landing/Left.png')}}" alt="">
@@ -23,9 +24,13 @@
 <section class='events-listing'>
   <div class="content-margins">
     <div class='filter'>
-<h2> Filter </h2>
-<button class="eventsFilter" url='{{current.url}}' box='events' filter='culture' >DO THE AJAX</button>
-{{current}}
+<h2>Filter by</h2>
+{% for cats in boxes.events.categories %}
+{% if cats.slug != 'uncategorized' %}
+<button class="eventsFilter" url='{{current.url}}' box='events' filter='{{cats.slug}}' >{{cats.name}}</button>
+{% endif %}
+{% endfor %}
+
     </div>
 <div class='all-events'>
   {% for event in boxes.events.all %}
