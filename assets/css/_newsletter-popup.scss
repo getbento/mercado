@@ -1,0 +1,121 @@
+#newsletter-popup {
+  outline: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 68px 0;
+  background: $toro_red;
+  color: white;
+  text-align: center;
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+  @include transform(translateY(100%));
+  transition: transform 0.4s, opacity 0.4s;
+
+  &.opened, &:target {
+    opacity: 1;
+    pointer-events: auto;
+    @include transform(translateY(0));
+
+  }
+  @media screen and (max-width: $mobile_max) {
+    height: 100%;
+    @include transform(scale(1.05));
+    > .content-margins {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    } &.opened, &:target {
+      @include transform(translateY(0));
+    }
+  }
+}
+
+#newsletter-popup-title {
+  @include h1-style;
+  text-transform: uppercase;
+  color: $oro_yellow;
+  margin: 0;
+  @media screen and (max-width: $mobile_max) {
+    text-transform: uppercase;
+    max-width: 240px;
+  }
+}
+
+#newsletter-popup-blurb {
+  @include h5-style;
+  font-family: $domaine;
+  margin: 40px auto 12px auto;
+  max-width: columns(10);
+  @media screen and (max-width: $mobile_max) {
+    max-width: unset;
+    padding: 0 32px;
+    margin: 48px auto 48px auto;
+  }
+}
+
+.red-input {
+  &.inverted {
+    border: 2px solid $white;
+  }
+}
+.outline-button {
+  &.inverted {
+    border-color: $white;
+    color: $white;
+    &:hover {
+      color: $toro_red;
+    } &:active {
+      background: $oro_yellow;
+    }
+  }
+}
+
+#newsletter-popup-capture {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: columns(10,-2);
+  margin: 0 auto;
+  label {
+    flex: 1 0 0;
+  } button {
+    flex: 0 0 auto;
+    border-left: 0;
+  } @media screen and (max-width: $mobile_max) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    label {
+      width: 100%;
+      flex: initial;
+      margin-bottom: 24px;
+    } button {
+      flex: initial;
+      border-left: 2px solid $white;
+    }
+  }
+}
+
+#newsletter-popup-close {
+  font-size: 5.6rem;
+  width: 22px;
+  height: 40px;
+  margin-right: 12px;
+  position: absolute;
+  right: 42px;
+  top: 42px;
+  color: $white;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  @media screen and (max-width: $mobile_max) {
+    right: 24px;
+    top: 24px;
+  }
+}

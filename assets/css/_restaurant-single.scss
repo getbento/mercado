@@ -13,7 +13,7 @@
 }
 
 .restaurant-content{
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   margin-bottom: 50px;
   display: flex;
@@ -31,10 +31,13 @@
     }
     .restaurant-single-content{
       padding: 10px 20px;
-      border-bottom-width: 3px;
+      border-bottom-width: 2px;
       border-bottom-style: solid;
       // flex-grow: 1;
       height: 70%;
+      @media (max-width: 1024px){
+        border-bottom-width: 0px;
+      }
       p{
         strong{
           font-size: 55px;
@@ -84,12 +87,12 @@
       width: 100%;
     }
     .rest-single-gallery{
-      padding: 10px;
-      border-bottom-width: 3px;
+      // padding: 10px;
+      border-bottom-width: 2px;
       border-bottom-style: solid;
       position: relative;
-      height: 0;
-      padding-bottom: 98%;
+      // height: 0;
+      // padding-bottom: 98%;
     }
     .rest-contact{
       // height: 100%;
@@ -246,5 +249,69 @@
         color: black;
       }
     }
+  }
+}
+
+
+.rest-single-gallery-img{
+  // position: absolute;
+  width: 100%;
+  height: 0;
+  padding-bottom: 98%;
+  position: relative;
+  img.rest-single-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 10px;
+  }
+  .rest-single-gallery-controls{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    border-width: 2px;
+    border-style: solid;
+    align-items: center;
+    margin-right: 20px;
+    button{
+      display: none;
+      border: 0px;
+      background-color: white;
+      border-right: inherit;
+      svg{
+        height: 20px;
+      }
+      &.rest-slide-prev{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .rest-slide-current{
+      padding: 10px 20px;
+      font-family: $domaine;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      span{
+        font-family: $knockout;
+        color: black;
+        margin-left: 10px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.rest-single-gallery.slick-initialized .rest-single-gallery-controls, .content-gallery-inner.slick-initialized .rest-single-gallery-controls{
+  button{
+    display: block;
   }
 }

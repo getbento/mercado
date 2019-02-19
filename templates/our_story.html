@@ -35,7 +35,42 @@
 
 {% if field.section_type == "Gallery Container" %}
 
-{{field.section_type}}
+
+<section class="content-gallery">
+  <div class="content-margins">
+    <div class="content-gallery-inner">
+      {% for image in field.gallery_box.gallery %}
+      <div class="rest-single-gallery-img-cont">
+        <div class="rest-single-gallery-img">
+          <img src="{{image.image_url}}" alt="{{image.alt_text}}" class='rest-single-img'>
+          <div class="rest-single-gallery-controls home-slide-controls">
+            <button class="rest-slide-prev home-slide-prev" role='button'>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 25.9 45.2" style="enable-background:new 0 0 25.9 45.2;" xml:space="preserve">
+
+              <polyline class="st0" points="4.1,1.7 21.9,22.7 4.1,43.6 "/>
+              </svg>
+            </button>
+            <button class="rest-slide-next" role='button'>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 25.9 45.2" style="enable-background:new 0 0 25.9 45.2;" xml:space="preserve">
+              <polyline class="st0" points="4.1,1.7 21.9,22.7 4.1,43.6 "/>
+              </svg>
+            </button>
+            <div class="rest-slide-current">
+              {{loop.index}}/{{field.gallery_box.gallery|length}}
+              {% if image.alt_text %}
+                <span>{{image.alt_text}}</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 {% endif %}
 

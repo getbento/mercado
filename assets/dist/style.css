@@ -306,6 +306,12 @@ a {
       .page-landing-header img {
         display: none; } }
 
+.header-icon-right {
+  border-left: 2px solid #EA0029; }
+
+.header-icon-left {
+  border-right: 2px solid #EA0029; }
+
 /*D*/
 /*D*/
 /*JJ*/
@@ -852,7 +858,7 @@ address.site-info {
     object-fit: contain; }
 
 .restaurant-content {
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   margin-bottom: 50px;
   display: flex;
@@ -870,9 +876,12 @@ address.site-info {
         border-right: 0px; } }
     .restaurant-content .restaurant-single-info .restaurant-single-content {
       padding: 10px 20px;
-      border-bottom-width: 3px;
+      border-bottom-width: 2px;
       border-bottom-style: solid;
       height: 70%; }
+      @media (max-width: 1024px) {
+        .restaurant-content .restaurant-single-info .restaurant-single-content {
+          border-bottom-width: 0px; } }
       .restaurant-content .restaurant-single-info .restaurant-single-content p strong {
         font-size: 55px;
         text-transform: uppercase;
@@ -911,12 +920,9 @@ address.site-info {
       .restaurant-content .restaurant-single-info.rest-right-col {
         width: 100%; } }
     .restaurant-content .restaurant-single-info.rest-right-col .rest-single-gallery {
-      padding: 10px;
-      border-bottom-width: 3px;
+      border-bottom-width: 2px;
       border-bottom-style: solid;
-      position: relative;
-      height: 0;
-      padding-bottom: 98%; }
+      position: relative; }
     .restaurant-content .restaurant-single-info.rest-right-col .rest-contact {
       padding: 30px 0;
       display: flex;
@@ -1039,6 +1045,55 @@ address.site-info {
   .rest-spanish-diner .rest-single-join-us .rest-single-join-us-content .more-info {
     border-color: black;
     color: black; }
+
+.rest-single-gallery-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 98%;
+  position: relative; }
+  .rest-single-gallery-img img.rest-single-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 10px; }
+  .rest-single-gallery-img .rest-single-gallery-controls {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    border-width: 2px;
+    border-style: solid;
+    align-items: center;
+    margin-right: 20px; }
+    .rest-single-gallery-img .rest-single-gallery-controls button {
+      display: none;
+      border: 0px;
+      background-color: white;
+      border-right: inherit; }
+      .rest-single-gallery-img .rest-single-gallery-controls button svg {
+        height: 20px; }
+      .rest-single-gallery-img .rest-single-gallery-controls button.rest-slide-prev svg {
+        transform: rotate(180deg); }
+    .rest-single-gallery-img .rest-single-gallery-controls .rest-slide-current {
+      padding: 10px 20px;
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center; }
+      .rest-single-gallery-img .rest-single-gallery-controls .rest-slide-current span {
+        font-family: "Knockout 30 A", "Knockout 30 B";
+        color: black;
+        margin-left: 10px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 12px; }
+
+.rest-single-gallery.slick-initialized .rest-single-gallery-controls button, .content-gallery-inner.slick-initialized .rest-single-gallery-controls button {
+  display: block; }
 
 .restaurant-landing {
   padding-top: 40px; }
@@ -1490,7 +1545,7 @@ address.site-info {
 
 .home-slide {
   width: 100%;
-  height: 40vw;
+  height: 40vw !important;
   position: relative; }
   .home-slide .home-slide-info {
     position: absolute;
@@ -1551,6 +1606,49 @@ address.site-info {
         .home-slide .home-slide-info-cont .home-slide-buttons a:last-child {
           border-right: 0px; }
 
+.home-slides .home-slide-controls {
+  display: flex; }
+
+.home-slide-controls {
+  position: absolute;
+  bottom: 100%;
+  border: 2px solid #EA0029;
+  left: -2px;
+  background-color: white;
+  user-select: none;
+  display: none; }
+  .home-slide-controls button {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    border-right: 2px solid #EA0029;
+    cursor: pointer;
+    transition: ease 250ms background-color; }
+    .home-slide-controls button img {
+      height: 20px;
+      width: auto; }
+      .home-slide-controls button img.hover-image {
+        display: none; }
+    .home-slide-controls button:hover {
+      background-color: #EA0029; }
+      .home-slide-controls button:hover img {
+        display: none; }
+        .home-slide-controls button:hover img.hover-image {
+          display: block; }
+    .home-slide-controls button.home-slide-prev img {
+      transform: rotate(180deg); }
+  .home-slide-controls .home-slide-current {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    color: #EA0029;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600; }
+
 .kiosk-grid, .bars-grid {
   display: flex;
   justify-content: space-between;
@@ -1602,7 +1700,8 @@ address.site-info {
             font-size: 20px; } }
     .kiosk-grid .kiosk-box img, .bars-grid .kiosk-box img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      border: 2px solid #EA0029; }
     .kiosk-grid .kiosk-box:hover h4, .bars-grid .kiosk-box:hover h4 {
       opacity: 1; }
 
@@ -1996,7 +2095,8 @@ address.site-info {
         opacity: 0; }
       .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon img {
         width: 100%;
-        height: auto; }
+        height: auto;
+        border: 2px solid #EA0029; }
       .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon.with-padding {
         height: 0;
         padding-bottom: 100%;
@@ -2428,7 +2528,8 @@ address.site-info {
   padding-top: 23px; }
   .single-kiosk .page-landing-header img {
     width: 130px;
-    margin: 15px; }
+    margin: 15px;
+    border: 2px solid #EA0029; }
   .single-kiosk .page-landing-header .kiosk_title {
     width: 130px;
     height: 130px;
@@ -2443,15 +2544,48 @@ address.site-info {
     width: 100%;
     border: 2px solid #EA0029;
     margin-bottom: 70px; }
+    @media (max-width: 767px) {
+      .single-kiosk .kiosk-details {
+        flex-direction: column; } }
+    .single-kiosk .kiosk-details .kiosk-gallery {
+      width: 67%;
+      border: none;
+      display: flex;
+      flex-direction: column; }
+      @media (max-width: 767px) {
+        .single-kiosk .kiosk-details .kiosk-gallery {
+          width: 100%; } }
+      .single-kiosk .kiosk-details .kiosk-gallery svg .st0 {
+        fill: none;
+        stroke: #EA0029;
+        stroke-width: 5;
+        stroke-miterlimit: 10;
+        transition: ease 250ms all; }
+      .single-kiosk .kiosk-details .kiosk-gallery .rest-slide-current {
+        color: #EA0029; }
+      .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
+        border-color: #EA0029;
+        border-bottom-style: solid;
+        position: relative; }
+        @media (max-width: 767px) {
+          .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
+            border-bottom: 0px; } }
     .single-kiosk .kiosk-details .kiosk-information {
       width: 345px;
       display: flex;
       flex-direction: column;
       border-right: 2px solid #EA0029; }
-      .single-kiosk .kiosk-details .kiosk-information .kiosk-description, .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
+      @media (max-width: 767px) {
+        .single-kiosk .kiosk-details .kiosk-information {
+          width: 100%;
+          border-right: 0px; } }
+      .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
         border-bottom: 2px solid #EA0029; }
       .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
         padding: 40px; }
+        @media (max-width: 767px) {
+          .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
+            border: 0px; } }
         .single-kiosk .kiosk-details .kiosk-information .kiosk-description strong {
           color: #EA0029;
           font-size: 6rem;
@@ -2473,6 +2607,27 @@ address.site-info {
           height: 25px;
           width: 25px;
           object-fit: contain; }
+  .single-kiosk .rest-single-gallery-controls button:hover .st0 {
+    stroke: white; }
+
+.mobile-kiosk-title {
+  display: none; }
+
+@media (max-width: 767px) {
+  .mobile-kiosk-title {
+    display: block;
+    text-align: center;
+    color: #EA0029;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: "Knockout 47 A", "Knockout 47 B"; }
+  .single-kiosk .kiosk-landing img {
+    display: block; }
+  .page-landing-header {
+    justify-content: center; }
+    .page-landing-header h1 {
+      display: none; } }
 
 .press_features {
   display: flex;
@@ -2504,6 +2659,21 @@ address.site-info {
       padding: 30px;
       height: auto;
       align-items: center; } }
+
+.content-gallery {
+  margin-bottom: 30px; }
+  .content-gallery .content-gallery-inner {
+    border: 2px solid #EA0029; }
+  .content-gallery .rest-single-gallery-img {
+    padding-bottom: 100%; }
+  .content-gallery .rest-single-gallery-controls button .st0 {
+    fill: none;
+    stroke: #EA0029;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+    transition: ease 250ms all; }
+  .content-gallery .rest-single-gallery-controls button:hover .st0 {
+    stroke: white; }
 
 .events-landing {
   margin: 23px 0px 20px 0px; }
@@ -2577,67 +2747,158 @@ address.site-info {
       width: 100%;
       height: 100%; }
 
-.contact-us-page-container {
-  margin-bottom: 80px; }
-  .contact-us-page-container .content-margins {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-  .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
-    width: 50%; }
-  .contact-us-page-container .contact__title {
-    font-family: "Knockout 67 A", "Knockout 67 B";
-    font-weight: initial;
-    font-size: 14em;
-    padding-top: 0.3em;
-    color: #474746;
-    margin-bottom: 0.15em;
-    text-transform: uppercase; }
-  .contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
-    text-transform: uppercase;
-    font-family: "Knockout 67 A", "Knockout 67 B";
-    font-weight: initial;
-    color: #EA0029;
-    font-size: 4.8rem;
-    line-height: 0.95em;
-    letter-spacing: 1.5px; }
-  .contact-us-page-container .info-red a {
-    text-decoration: underline; }
-  .contact-us-page-container .info-grey {
-    text-transform: uppercase;
-    font-family: "Knockout 67 A", "Knockout 67 B";
-    font-weight: initial;
-    color: #474746;
-    font-size: 4rem;
-    line-height: 0.95em;
-    letter-spacing: 1.4px; }
-  .contact-us-page-container .address {
-    margin-bottom: 0.5em; }
-  .contact-us-page-container .hours__info {
-    display: inline-block; }
-  .contact-us-page-container .map-section {
-    width: 100%; }
-  .contact-us-page-container #map-container {
-    width: 100%;
-    height: 500px;
-    border: 3px solid #EA0029;
-    padding: 2em; }
-  .contact-us-page-container #map {
-    width: 100%;
-    height: 100%; }
-  @media screen and (max-width: 1024px) {
-    .contact-us-page-container .contact__left {
-      width: 40%; }
-    .contact-us-page-container .contact__right {
-      width: 60%; } }
+.single-event.single-blog .single-blog-info .single-blog-info-header .event-date {
+  margin-bottom: 0px; }
+
+.single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper span {
+  font-family: "Knockout 47 A", "Knockout 47 B";
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 40px; }
+
+.single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper h4 {
+  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+  text-transform: none;
+  font-size: 25px; }
+
+.single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
+  color: #EA0029;
+  background-color: white;
+  transition: ease 250ms all; }
+  .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a:hover {
+    background-color: #EA0029;
+    color: white; }
+
+#newsletter-popup {
+  outline: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 68px 0;
+  background: #EA0029;
+  color: white;
+  text-align: center;
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.4s; }
+  #newsletter-popup.opened, #newsletter-popup:target {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
   @media screen and (max-width: 767px) {
-    .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
-      width: 100%; }
-    .contact-us-page-container .contact-info, .contact-us-page-container .hours {
-      height: auto; }
-    .contact-us-page-container .contact-info, .contact-us-page-container .hours {
-      margin-bottom: 6em; }
-    .contact-us-page-container .map-section {
-      margin-bottom: 18em; } }
+    #newsletter-popup {
+      height: 100%;
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
+      #newsletter-popup > .content-margins {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%; }
+      #newsletter-popup.opened, #newsletter-popup:target {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0); } }
+
+#newsletter-popup-title {
+  font-size: 12rem;
+  line-height: 9.5rem;
+  letter-spacing: 0.15rem;
+  text-transform: none;
+  text-transform: uppercase;
+  color: #FFF065;
+  margin: 0; }
+  @media screen and (max-width: 767px) {
+    #newsletter-popup-title {
+      font-size: 9rem;
+      line-height: 7.5rem;
+      letter-spacing: 0.135rem;
+      text-transform: none; } }
+  @media screen and (max-width: 767px) {
+    #newsletter-popup-title {
+      text-transform: uppercase;
+      max-width: 240px; } }
+
+#newsletter-popup-blurb {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  letter-spacing: normal;
+  text-transform: none;
+  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+  margin: 40px auto 12px auto;
+  max-width: 850px; }
+  @media screen and (max-width: 767px) {
+    #newsletter-popup-blurb {
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      letter-spacing: normal;
+      text-transform: none; } }
+  @media screen and (max-width: 767px) {
+    #newsletter-popup-blurb {
+      max-width: unset;
+      padding: 0 32px;
+      margin: 48px auto 48px auto; } }
+
+.red-input.inverted {
+  border: 2px solid #FFFFFF; }
+
+.outline-button.inverted {
+  border-color: #FFFFFF;
+  color: #FFFFFF; }
+  .outline-button.inverted:hover {
+    color: #EA0029; }
+  .outline-button.inverted:active {
+    background: #FFF065; }
+
+#newsletter-popup-capture {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: 810px;
+  margin: 0 auto; }
+  #newsletter-popup-capture label {
+    flex: 1 0 0; }
+  #newsletter-popup-capture button {
+    flex: 0 0 auto;
+    border-left: 0; }
+  @media screen and (max-width: 767px) {
+    #newsletter-popup-capture {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; }
+      #newsletter-popup-capture label {
+        width: 100%;
+        flex: initial;
+        margin-bottom: 24px; }
+      #newsletter-popup-capture button {
+        flex: initial;
+        border-left: 2px solid #FFFFFF; } }
+
+#newsletter-popup-close {
+  font-size: 5.6rem;
+  width: 22px;
+  height: 40px;
+  margin-right: 12px;
+  position: absolute;
+  right: 42px;
+  top: 42px;
+  color: #FFFFFF;
+  display: block;
+  text-decoration: none;
+  cursor: pointer; }
+  @media screen and (max-width: 767px) {
+    #newsletter-popup-close {
+      right: 24px;
+      top: 24px; } }
 
 /*# sourceMappingURL=style.css.map*/

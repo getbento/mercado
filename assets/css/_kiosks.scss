@@ -6,6 +6,7 @@
 	  img{
 		  width:130px;
 		  margin:15px;
+      border: 2px solid $toro_red;
 	  }
 	  .kiosk_title{
 		  width:130px;
@@ -24,21 +25,66 @@
 	  width:100%;
 	  border:2px solid $toro-red;
 	  margin-bottom:70px;
+    @media (max-width: 767px){
+      flex-direction: column;
+    }
 
 	  .kiosk-gallery{
+      width: 67%;
+      @media (max-width: 767px){
+        width: 100%;
+      }
+      border: none;
+      display: flex;
+      flex-direction: column;
+
+      svg{
+        .st0{
+          fill:none;
+          stroke: $toro-red;
+          stroke-width:5;
+          stroke-miterlimit:10;
+          transition: ease 250ms all;
+        }
+      }
+
+      .rest-slide-current{
+        color: $toro-red;
+      }
+
+      .rest-single-gallery{
+        border-color: $toro_red;
+        // padding: 10px;
+        // border-bottom-width: 2px;
+        border-bottom-style: solid;
+        position: relative;
+        @media (max-width: 767px){
+          border-bottom: 0px;
+        }
+        // height: 0;
+        // padding-bottom: 98%;
+      }
 	  }
 	  .kiosk-information{
 		  width:345px;
+      @media (max-width: 767px){
+        width: 100%;
+        border-right: 0px;
+      }
 		  display: flex;
 		  flex-direction: column;
 		  border-right:2px solid $toro-red;
 
-		  .kiosk-description, .kiosk-map, .kiosk-share{
+		   .kiosk-map, .kiosk-share{
 			  border-bottom:2px solid $toro-red;
+
 		  }
 
 		  .kiosk-description{
 			  padding:40px;
+        @media (max-width: 767px){
+          border: 0px;
+        }
 			  strong{
 				  color:$toro-red;
 				  font-size:6rem;
@@ -66,5 +112,44 @@
 	  }
   }
 
+  .rest-single-gallery-controls{
+    button{
+      &:hover{
+        .st0{
+          stroke: white;
+        }
+      }
+    }
+  }
 
+}
+
+
+.mobile-kiosk-title{
+  display: none;
+}
+
+@media (max-width: 767px){
+  .mobile-kiosk-title{
+    display: block;
+    text-align: center;
+    color: $toro_red;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: $knockout-bantam;
+  }
+  .single-kiosk{
+    .kiosk-landing{
+      img{
+        display: block;
+      }
+    }
+  }
+  .page-landing-header{
+    justify-content: center;
+    h1{
+      display: none;
+    }
+  }
 }
