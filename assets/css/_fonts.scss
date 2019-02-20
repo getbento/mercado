@@ -16,8 +16,38 @@ $knockout-lite : "Knockout 49 A", "Knockout 49 B";
 $knockout-feather : "Knockout 68 A", "Knockout 68 B";
 
 
+@font-face {
+  font-family: 'Domaine';
+  src: url('../fonts/Domaine/DomaineDisplayWeb-Bold.eot');
+  src: url('../fonts/Domaine/DomaineDisplayWeb-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Domaine/DomaineDisplayWeb-Bold.woff2') format('woff2'),
+       url('../fonts/Domaine/DomaineDisplayWeb-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Domaine';
+  src: url('../fonts/Domaine/DomaineDisplayWeb-BoldItalic.eot');
+  src: url('../fonts/Domaine/DomaineDisplayWeb-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Domaine/DomaineDisplayWeb-BoldItalic.woff2') format('woff2'),
+       url('../fonts/Domaine/DomaineDisplayWeb-BoldItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+.Domaine {
+  font-family: 'Domaine';
+}
+
+.Domaine-italic {
+  font-family: 'Domaine';
+  font-style: italic;
+}
+
 
 $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
+
 
 /*
  * Font Styles
