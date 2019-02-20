@@ -10,15 +10,24 @@
     <p id="newsletter-popup-blurb">
       Subscribe and be the first to hear about everything Little Spain
     </p>
-    <form id="newsletter-popup-capture">
-      <label>
-        <span class="screen-reader-text">Your email: </span>
-        <input type="email" class="red-input inverted" placeholder="¡Your Email!">
-      </label>
-      <button class="outline-button inverted" type="submit">
-        Submit
-      </button>
-    </form>
+
+
+    <form action="https://app.e2ma.net/app2/audience/signup/1873742/1887124/?r=signup" id="signup" method="post" name="signup" class="newsletter-capture-form">
+      <input id="id_prev_member_email" name="prev_member_email" type="hidden">
+      <input id="id_source" name="source" type="hidden">
+      <input name="prev_member_email" type="hidden" value="">
+      <div class="form-fields__fields-wrapper">
+       <div class="field">
+        <div class="field-html ">
+         <input  id="id_email" type="email" class="red-input inverted" placeholder="¡Your Email!" name="email">
+        </div>
+       </div>
+      </div>
+
+      <div class="form-button">
+       <input id="form-submit-input" name="Submit" type="submit" value="Submit" class='outline-button inverted'>
+      </div>
+     </form>
   </div>
 </aside>
 <!-- END newsletter_popup.html -->

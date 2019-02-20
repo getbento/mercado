@@ -427,7 +427,7 @@ function setCookie(cname, cvalue, exdays) {
 /* 2 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleParseError: Module parse failed: Unexpected character '\u0000' (1:4)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)\n    at doBuild (/Users/pavaris/bentodev/sites/mercado/node_modules/webpack/lib/NormalModule.js:303:19)\n    at runLoaders (/Users/pavaris/bentodev/sites/mercado/node_modules/webpack/lib/NormalModule.js:209:11)\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:373:3\n    at iterateNormalLoaders (/Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:214:10)\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:205:4\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at process._tickCallback (internal/process/next_tick.js:150:11)");
 
 /***/ })
 /******/ ]);

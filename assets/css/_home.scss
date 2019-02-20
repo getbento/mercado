@@ -257,6 +257,7 @@
     img{
       height: auto;
       width: 100%;
+      border: 2px solid $toro_red;
     }
     h5{
       color: $toro_red;
@@ -412,6 +413,22 @@
   img{
     width: 100vw;
   }
+  .home-hero-mobile{
+    display: none;
+  }
+  @media (max-width: 767px){
+    position: relative;
+    // height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    .home-hero-mobile{
+      display: block;
+    }
+    .home-hero-image{
+      display: none;
+    }
+  }
+
 }
 
 .home-slides{
@@ -421,6 +438,15 @@
   width: 100%;
   height: 40vw !important;
   position: relative;
+  @media (max-width: 920px){
+    height: 60vw !important;
+  }
+  @media (max-width: 620px){
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
   .home-slide-info{
     position: absolute;
     left: 0;
@@ -428,6 +454,13 @@
     width: 100%;
     .content-margins{
       position: relative;
+    }
+    @media (max-width: 620px){
+      position: relative;
+      .content-margins{
+        width: 100%;
+        margin: 0px;
+      }
     }
   }
   .home-slide-img{
@@ -437,6 +470,14 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+
+  @media (max-width: 620px){
+    position: relative;
+    height: 90vw;
+    width: 100%;
+    object-fit: cover;
+  }
+
     img{
       width: 100%;
       height: 100%;
@@ -450,6 +491,11 @@
     left: 0;
     bottom: 50px;
     width: 300px;
+    @media (max-width: 620px){
+      position: relative;
+      width: 100%;
+      bottom: 0px;
+    }
     h3{
       border-bottom: 2px solid $toro_red;
       background-color: $oro_yellow;
@@ -517,7 +563,8 @@
     border-right: 2px solid $toro_red;
     cursor: pointer;
     transition: ease 250ms background-color;
-
+    background-color: white;
+    margin: 0px;
     img{
       height: 20px;
       width: auto;

@@ -34,28 +34,28 @@
 
 </head>
 
-<body>
+<body class="current-{{current.slug}}">
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
   <header id="masthead" class="site-header">
     <div class="site-branding">
-      <a href="{{ account.site.url }}" id="masthead-logo">
-        <svg>
-          <use xlink:href="{{ static('img/symbols.svg#MLS_horizontal')}}"></use>
-        </svg>
-      </a>
+      {% if(current.slug == 'home') %}
+        <h1 class='branding-header-logo'>
+      {% endif %}
+        <a href="{{ account.site.url }}" id="masthead-logo">
+          {% include "logo.html" %}
+        </a>
+      {% if(current.slug == 'home') %}
+        </h1>
+      {% endif %}
     </div><!-- .site-branding -->
     <a href="#site-navigation" id="skip-to-navigation-link" aria-expanded="true" aria-controls="site-navigation">
-      <svg>
-        <use xlink:href="{{ static('img/symbols.svg#hamburger-menu')}}"></use>
-      </svg>
+      {% include "hamburger.html" %}
       <span class="screen-reader-text">Toggle Menu</span>
     </a>
-    <nav id="site-navigation" class="menu">
+    <nav id="site-navigation" class="menu" aria-label="Main Site Navigation">
       <div class="mobile-nav-header">
         <a href="{{ account.site.url }}" class="mobile-nav-header-logo">
-          <svg>
-            <use xlink:href="{{ static('img/symbols.svg#MLS_square')}}"></use>
-          </svg>
+          {% include "logo.html" %}
         </a>
         <a href="#" class="mobile-nav-header-close" aria-expanded="true" aria-controls="site-navigation">
           × <span class="screen-reader-text">Close Menu</span>
@@ -65,7 +65,6 @@
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <ul class="nav-menu">
         {% for item in navs.main %}
-        <!-- {{item}} -->
           {% if item.slug == 'restaurant' %}
             <li class="nav-item has-children {% if item.url == current.url %}current_page{% endif %}">
               <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}">

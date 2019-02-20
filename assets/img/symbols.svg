@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="160px" height="35px"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-  <symbol id="MLS_horizontal" viewBox="0 0 160 35">
-    <title>Mercado Little Spain</title>
     <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
         <g id="desktop/nav/home" transform="translate(-30.000000, -36.000000)">
             <g id="H_LOGO_RED[5]">
@@ -29,5 +27,5 @@
             </g>
         </g>
     </g>
-  </symbol>
+
 </svg>
