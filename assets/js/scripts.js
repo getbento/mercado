@@ -207,6 +207,7 @@ setTimeout(function(){
 
       $('.home-slides').slick({
         'arrows': false,
+        'fade': true,
       });
 
 

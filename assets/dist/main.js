@@ -262,7 +262,8 @@ $(document).ready(function () {
   });
 
   $('.home-slides').slick({
-    'arrows': false
+    'arrows': false,
+    'fade': true
   });
 
   /*
