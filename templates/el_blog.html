@@ -24,17 +24,18 @@
 	 {% for post in boxes.blog.all %}
     <article class="blog-post">
       <div class="image">
-        <a href='{{post.url}}'>
+
           <img src="{{ post.image.url }}" alt='{{post.image.alt}}'>
-        </a>
+
       </div>
       <div class="info">
-        <a href='{{post.url}}'>
+
           <p class="blog-post__tag">{{ post.categories[0].name }}</p>
           <h1 class="blog-post__title">{{ post.title }}</h1>
           <p class="blog-post__desc">{{ post.fields.dek }}</p>
-        </a>
+
       </div>
+      <a href='{{post.url}}'></a>
     </article>
 
 

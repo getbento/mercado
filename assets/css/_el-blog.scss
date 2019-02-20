@@ -169,13 +169,21 @@ margin-bottom:50px;
 	margin-top: 28px;
   min-height:380px;
 	display: flex;
-			flex-wrap: nowrap;
-flex-direction: column;
+	flex-wrap: nowrap;
+  flex-direction: column;
 	width: 100%;
-		border: 2px solid $toro_red;
-		display: flex;
-		width: 32%;
-		padding: 1.2em;
+	border: 2px solid $toro_red;
+	display: flex;
+	width: 32%;
+	padding: 1.2em;
+  position: relative;
+  a{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+  }
 		.image {
 			height: 60%;
 			width:100%;
@@ -194,6 +202,10 @@ flex-direction: column;
 
 .blog-post:hover {
 	background-color: $toro_red;
+  // border-color: white;
+  // .info{
+  //   border-color: white;
+  // }
 	.blog-post__tag {
 		color: $white;
 	}

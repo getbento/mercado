@@ -47,6 +47,10 @@
       margin-bottom: 40px;
     }
   }
+  .form-fields__fields-wrapper{
+    width: 100%;
+    padding-right: 25px;
+  }
 }
 
 .red-input {
@@ -162,14 +166,11 @@
   height: auto;
   max-width: columns(4,1);
   max-height: 84px;
-  img {
-    width: auto;
-    height: auto;
-  } svg {
-    width: 100%;
-    height: auto;
-    max-width: columns(4,1);
-    max-height: 84px;
+   svg {
+     width: 300px;
+     path{
+       fill: $oro_yellow;
+     }
   }
 }
 
