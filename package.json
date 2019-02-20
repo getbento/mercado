@@ -11,6 +11,7 @@
     "browser-sync-webpack-plugin": "^2.0.1",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^3.0.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
