@@ -73,15 +73,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  ***************************/
 @font-face {
   font-family: 'Domaine';
-  src: url(/assets/dist/../fonts/DomaineDisplayWeb-Bold.eot);
-  src: url(/assets/dist/../fonts/DomaineDisplayWeb-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/dist/../fonts/DomaineDisplayWeb-Bold.woff2) format("woff2"), url(/assets/dist/../fonts/DomaineDisplayWeb-Bold.woff) format("woff");
+  src: url(/assets/dist/4aa1c68b333283103f42df22bed07761.eot);
+  src: url(/assets/dist/4aa1c68b333283103f42df22bed07761.eot?#iefix) format("embedded-opentype"), url(/assets/dist/12468cf44c189be5baa3d1585f7cc119.woff2) format("woff2"), url(/assets/dist/ccce1553e76b420d2c3c4ffc041012d6.woff) format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Domaine';
-  src: url(/assets/dist/../fonts/DomaineDisplayWeb-BoldItalic.eot);
-  src: url(/assets/dist/../fonts/DomaineDisplayWeb-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/assets/dist/../fonts/DomaineDisplayWeb-BoldItalic.woff2) format("woff2"), url(/assets/dist/../fonts/DomaineDisplayWeb-BoldItalic.woff) format("woff");
+  src: url(/assets/dist/eb0f5a3ac5f7a84dcbf3fe21ef746cd4.eot);
+  src: url(/assets/dist/eb0f5a3ac5f7a84dcbf3fe21ef746cd4.eot?#iefix) format("embedded-opentype"), url(/assets/dist/08f436b94c6002504f95906047128d16.woff2) format("woff2"), url(/assets/dist/ccb467df1dadbb991219eb6162c5a2ba.woff) format("woff");
   font-weight: 400;
   font-style: italic; }
 
