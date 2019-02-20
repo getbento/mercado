@@ -119,7 +119,7 @@ $(document).ready(function(){
           // console.log(data.data);
           data.data.forEach(function(elem){
             console.log(elem);
-            var igPost = `<div class="ig-box"><a href="` + elem.link + `" target="_blank" class="ig-box-link"><img src="` + elem.images.standard_resolution.url + `" alt="` + elem.caption.text + `"/> </a></div>`;
+            var igPost = '<div class="ig-box"><a href="' + elem.link + '" target="_blank" class="ig-box-link"><img src="' + elem.images.standard_resolution.url + '" alt="' + elem.caption.text + '"/> </a></div>';
             $(igPost).insertBefore('.edge-box-tail');
           });
         }
@@ -294,7 +294,7 @@ function toggleMenu( target ) {
  * Mobile Navigation - Subnav Toggle
  ***************************/
 function toggleSubnav( trigger ) {
-  let target = $(trigger).attr('aria-controls');
+  var target = $(trigger).attr('aria-controls');
   $('#'+target).slideToggle(300);
 }
 
