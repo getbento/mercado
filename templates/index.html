@@ -16,7 +16,7 @@
     {% if slide.section_type == 'Restaurant' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.gallery[0].image_url}}" alt="{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.gallery[0].image_alt}}">
+          <img src="{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.gallery[0].image_url}}" alt="{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.gallery[0].alt_text}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
@@ -47,7 +47,7 @@
     {% if slide.section_type == 'Event' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="{{slide.events.event_box.images[0].url}}" alt="slide.events.event_box.images[0].alt">
+          <img src="{{slide.events.event_box.images[0].url}}" alt="{{slide.events.event_box.images[0].alt_text}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
@@ -80,7 +80,7 @@
     {% if slide.section_type == 'Blog' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="{{slide.blog.blog_box.image.url}}" alt="{{slide.blog.blog_box.image.alt}}">
+          <img src="{{slide.blog.blog_box.image.url}}" alt="{{slide.blog.blog_box.image.alt_text}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
@@ -107,7 +107,7 @@
     {% if slide.section_type == 'Kiosk' %}
       <article class="home-slide">
         <div class="home-slide-img">
-          <img src="{{boxes.kiosks.by_slug[slide.kiosk.kiosk_box.slug].fields.gallery[0].image_url}}" alt="{{boxes.kiosks.by_slug[slide.kiosk.kiosk_box.slug].fields.gallery[0].image_alt}}">
+          <img src="{{boxes.kiosks.by_slug[slide.kiosk.kiosk_box.slug].fields.gallery[0].image_url}}" alt="{{boxes.kiosks.by_slug[slide.kiosk.kiosk_box.slug].fields.gallery[0].image_alt_text}}">
         </div>
         <div class="home-slide-info">
           <div class="content-margins">
@@ -232,7 +232,7 @@
         <div class="home-mercado-kiosk">
           <a href="{{kiosk.url}}">
             <div class="home-mercado-kiosk-img">
-              <img src="{{kiosk.fields.thumbnail_left.url}}" alt="{{kiosk.fields.thumbnail_left.alt}}">
+              <img src="{{kiosk.fields.thumbnail_left.url}}" alt="{{kiosk.fields.thumbnail_left.alt_text}}">
               <h6>{{kiosk.fields.hover_text}}</h6>
             </div>
             <h5>{{kiosk.name}}</h5>
@@ -262,7 +262,7 @@
             <p>{{event.fields.dek}}</p>
           </div>
           <div class="happenings-img">
-            <img src="{{event.image.url}}" alt="{{event.image.alt_text}}">
+            <img src="{{event.images[0].url}}" alt="{{event.images[0].alt_text}}">
           </div>
         </a>
       {% endif %}
@@ -284,7 +284,7 @@
           <a href="/shop/#shop-little-spain">
             <div class="kiosk-box-img">
 
-              <img src="{{pages.by_slug.shop.fields['shop-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['shop-products'].products[0].image.alt}}">
+              <img src="{{pages.by_slug.shop.fields['shop-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['shop-products'].products[0].image.alt_text}}">
 
             </div>
             <h6>Shop Little Spain</h6>
@@ -294,7 +294,7 @@
         <article class="kiosk-box">
           <a href="/shop/#shop-online">
             <div class="kiosk-box-img kiosk-bordered-img">
-              <img src="{{pages.by_slug.shop.fields['online-products'].products[0].image.url}}" alt="">
+              <img src="{{pages.by_slug.shop.fields['online-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['online-products'].products[0].image.alt_text}}">
 
             </div>
             <h6>Shop Online</h6>
@@ -331,9 +331,15 @@
 
       <article class='blog-post'>
         <div class="image">
+<<<<<<< HEAD
 
             <img src="{{ post.image.url }}" alt='{{post.image.alt}}'>
 
+=======
+          <a href='{{post.url}}'>
+            <img src="{{ post.image.url }}" alt='{{post.image.alt_text}}'>
+          </a>
+>>>>>>> 2e2f411cb5b96dcc82fc4aaafa98a266c84ac30f
         </div>
         <div class="info">
 
