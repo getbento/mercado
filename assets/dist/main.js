@@ -428,7 +428,7 @@ function setCookie(cname, cvalue, exdays) {
 /* 2 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \n  font-family: $knockout;\n              ^\n      Undefined variable: \"$knockout\".\n      in /Users/pavaris/bentodev/sites/mercado/assets/css/_main.scss (line 7, column 16)\n    at runLoaders (/Users/pavaris/bentodev/sites/mercado/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/pavaris/bentodev/sites/mercado/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/pavaris/bentodev/sites/mercado/node_modules/neo-async/async.js:8077:18)\n    at options.error (/Users/pavaris/bentodev/sites/mercado/node_modules/node-sass/lib/index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
