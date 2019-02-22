@@ -2572,8 +2572,10 @@ address.site-info {
     flex-wrap: wrap; }
   .contact-us-page-container .contact__left, .contact-us-page-container .contact__right {
     width: 50%; }
+  .contact-us-page-container .hours {
+    margin-top: 12px; }
   .contact-us-page-container .contact__title {
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
     font-size: 14em;
     padding-top: 0.3em;
@@ -2582,7 +2584,7 @@ address.site-info {
     text-transform: uppercase; }
   .contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
     text-transform: uppercase;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
     color: #EA0029;
     font-size: 4.8rem;

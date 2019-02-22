@@ -11,10 +11,11 @@
 	.contact__left, .contact__right {
 		width: 50%;
 	}
-	.contact-info, .hours {
+	.hours {
+		margin-top: 12px;
 	}
 	.contact__title {
-		font-family: $knockout-lite;
+		font-family: $knockout-bantam;
 	    font-weight: initial;
 	    font-size: 14em;
 	    padding-top: 0.3em;
@@ -25,7 +26,7 @@
 
 	.info-red, .info-red p, .info-red a {
 	    text-transform: uppercase;
-	   	font-family: $knockout-lite;
+	   	font-family: $knockout-bantam;
 	    font-weight: initial;
 	    color: $toro_red;
 	    font-size: 4.8rem;
