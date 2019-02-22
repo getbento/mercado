@@ -2471,13 +2471,15 @@ address.site-info {
     margin-bottom: 20px; }
   .standard-page .standard-content h2.bioHeader {
     font-family: "Knockout 67 A", "Knockout 67 B";
-    font-size: 9rem !important; }
+    font-size: 9rem !important;
+    line-height: 9rem !important; }
   .standard-page .standard-content h3 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 34px;
     font-weight: bold;
     line-height: 50px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #EA0029; }
   .standard-page .standard-content h4 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 25px;
@@ -2485,7 +2487,13 @@ address.site-info {
     font-weight: bold;
     line-height: 28px;
     color: #EA0029;
-    letter-spacing: 0px; }
+    letter-spacing: 0px;
+    padding: 0 120px;
+    margin: 56px 0; }
+    @media screen and (max-width: 767px) {
+      .standard-page .standard-content h4 {
+        padding: 0;
+        margin: 30px 0; } }
   .standard-page .standard-content b, .standard-page .standard-content strong {
     font-family: "Knockout 49 A", "Knockout 49 B"; }
   .standard-page .standard-content em {
@@ -2535,7 +2543,8 @@ address.site-info {
     .standard-page .standard-content h2 {
       font-size: 8rem !important; }
     .standard-page .standard-content h3 {
-      font-size: 2.7rem !important; } }
+      font-size: 2.9rem !important;
+      line-height: 4.5rem !important; } }
 
 .standard-page .wide-content figure {
   margin: 20px;
