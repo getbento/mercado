@@ -147,6 +147,9 @@
       letter-spacing: 0.03em;
       cursor: pointer;
       background-color: transparent;
+      h3{
+        text-transform: uppercase;
+      }
       &.active{
         color: white;
       }
@@ -156,9 +159,47 @@
     }
   }
   .rest-single-menu-cont{
-    height: 600px;
     border-style: solid;
     border-width: 2px;
+    border-top:none;
+    border-bottom:none;
+    display: none;
+
+    &.active{
+      display:block;
+    }
+.menu-section{
+
+    h4{
+      font-size:5em;
+      text-align: center;
+      width: 100%;
+      padding:20px 0px;
+      font-family: $domaine;
+border-left:none;
+border-right:none;
+    }
+
+    .allItems{
+      padding:40px 110px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .item{
+      width:50%;
+      box-sizing: border-box;
+      padding:10px;
+      display: flex;
+      flex-direction: row;
+      .itemdesc{
+        width:80%;
+      .itemName{
+        text-transform: uppercase;
+      }
+    }
+
+    }
+  }
   }
 }
 
