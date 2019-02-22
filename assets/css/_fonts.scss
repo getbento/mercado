@@ -258,6 +258,8 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
   }
     /* Nav Font Components */
     @mixin nav-font-desktop-style {
+      font-family: $knockout-feather;
+      font-weight: initial;
       font-size: 2.2rem;
       line-height: 2.9rem;
       letter-spacing: normal;
@@ -265,6 +267,8 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
 
     @mixin nav-font-mobile-style {
+      font-family: $knockout-feather;
+      font-weight: initial;
       font-size: 2.2rem;
       line-height: 2.9rem;
       letter-spacing: normal;

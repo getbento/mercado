@@ -378,6 +378,8 @@ a {
         padding: 0 16px;
         margin: 0 -16px; }
         #site-navigation > ul > li a {
+          font-family: "Knockout 68 A", "Knockout 68 B";
+          font-weight: initial;
           font-size: 2.2rem;
           line-height: 2.9rem;
           letter-spacing: normal;
@@ -388,6 +390,8 @@ a {
           display: block; } }
       @media screen and (min-width: 768px) and (max-width: 767px) {
         #site-navigation > ul > li a {
+          font-family: "Knockout 68 A", "Knockout 68 B";
+          font-weight: initial;
           font-size: 2.2rem;
           line-height: 2.9rem;
           letter-spacing: normal;
@@ -449,6 +453,8 @@ a {
           #site-navigation.opened > ul > li {
             color: #FFFFFF;
             text-align: center;
+            font-family: "Knockout 68 A", "Knockout 68 B";
+            font-weight: initial;
             font-size: 2.2rem;
             line-height: 2.9rem;
             letter-spacing: normal;
@@ -457,6 +463,8 @@ a {
             border-bottom: 3px solid #FFF065; } }
         @media screen and (max-width: 1030px) and (max-width: 767px) {
           #site-navigation.opened > ul > li {
+            font-family: "Knockout 68 A", "Knockout 68 B";
+            font-weight: initial;
             font-size: 2.2rem;
             line-height: 2.9rem;
             letter-spacing: normal;
@@ -790,16 +798,23 @@ a {
   display: block;
   color: #FFF065;
   width: auto;
-  height: auto;
-  max-width: 348px;
-  max-height: 84px; }
+  height: auto; }
   #colophon-logo svg {
-    width: 300px; }
+    height: 80px; }
     #colophon-logo svg path {
       fill: #FFF065; }
+  @media screen and (max-width: 767px) {
+    #colophon-logo {
+      max-width: 250px;
+      margin-bottom: 36px; }
+      #colophon-logo svg {
+        width: 100%;
+        height: auto; } }
 
 address.site-info {
   font-style: normal;
+  font-family: "Knockout 68 A", "Knockout 68 B";
+  font-weight: initial;
   font-size: 2.2rem;
   line-height: 2.9rem;
   letter-spacing: normal;
@@ -808,6 +823,8 @@ address.site-info {
   margin: 0 20px; }
   @media screen and (max-width: 767px) {
     address.site-info {
+      font-family: "Knockout 68 A", "Knockout 68 B";
+      font-weight: initial;
       font-size: 2.2rem;
       line-height: 2.9rem;
       letter-spacing: normal;
@@ -815,12 +832,16 @@ address.site-info {
   address.site-info a {
     color: white;
     text-decoration: none;
+    font-family: "Knockout 68 A", "Knockout 68 B";
+    font-weight: initial;
     font-size: 2.2rem;
     line-height: 2.9rem;
     letter-spacing: normal;
     text-transform: uppercase; }
     @media screen and (max-width: 767px) {
       address.site-info a {
+        font-family: "Knockout 68 A", "Knockout 68 B";
+        font-weight: initial;
         font-size: 2.2rem;
         line-height: 2.9rem;
         letter-spacing: normal;
@@ -830,11 +851,15 @@ address.site-info {
   @media screen and (max-width: 767px) {
     address.site-info {
       flex: initial;
-      margin: 0; } }
+      margin: 0;
+      line-height: 3.6rem;
+      margin-bottom: 36px; } }
 
 #footer-navigation {
   flex: 0 0 261px; }
   #footer-navigation ul li a {
+    font-family: "Knockout 68 A", "Knockout 68 B";
+    font-weight: initial;
     font-size: 2.2rem;
     line-height: 2.9rem;
     letter-spacing: normal;
@@ -843,6 +868,8 @@ address.site-info {
     color: white; }
     @media screen and (max-width: 767px) {
       #footer-navigation ul li a {
+        font-family: "Knockout 68 A", "Knockout 68 B";
+        font-weight: initial;
         font-size: 2.2rem;
         line-height: 2.9rem;
         letter-spacing: normal;
@@ -857,7 +884,8 @@ address.site-info {
     float: right; }
   @media screen and (max-width: 767px) {
     #footer-navigation {
-      flex: initial; } }
+      flex: initial;
+      line-height: 3.6rem; } }
 
 #tramp-stamp {
   flex: 0 0 100%;
@@ -874,13 +902,15 @@ address.site-info {
       letter-spacing: normal;
       text-transform: none; } }
   #tramp-stamp a {
-    color: inherit; }
+    color: inherit;
+    text-decoration: underline; }
     #tramp-stamp a:hover {
       color: #FFF065; }
   @media screen and (max-width: 767px) {
     #tramp-stamp {
       flex: initial;
-      margin-top: 24px; } }
+      margin-top: 24px;
+      text-transform: uppercase; } }
 
 .restaurant-single {
   padding-top: 30px; }
