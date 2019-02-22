@@ -13,7 +13,9 @@
 
     <section class="gallery-images">
       {% for image in current.fields.gallery_fields.images %}
-        <img src="{{image.image_url}}" alt="{{image.alt_text}}">
+        <div class="gallery-image-holder">
+          <img src="{{image.image_url}}" alt="{{image.alt_text}}">
+        </div>
       {% endfor %}
     </section>
 
