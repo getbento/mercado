@@ -2,21 +2,19 @@
   "name": "Gallery Page",
   "fields": {
     "gallery_fields":{
-      "title": "Gallery Fields" ,
-      "type": "section",
-      "items": {
-        "content": {
-          "left_header_image": "image",
-          "right_header_image": "image",
-          "images": {
-            "type": "repeater",
-            "items": {
-              "image": "image"
-            }
+			"title": "Gallery Fields",
+			"type": "section",
+			"items":{
+        "left_header_image": "image",
+        "right_header_image": "image",
+        "images": {
+          "type": "repeater",
+          "items":{
+            "image": "image",
           }
         }
-      }
-    }
+			}
+		}
   },
   "wireframe": [
 		"section-gallery_fields"
