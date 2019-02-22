@@ -314,6 +314,17 @@ $(document).ready(function () {
     'arrows': false,
     'fade': true
   });
+
+  /*
+   * Kiosk Single - Fit in Square
+   */
+  if ($('.kiosk_title').length > 0) {
+    $('.kiosk_title > h2').each(function () {
+      if ($(this).width() > $(this).parent().width()) {
+        $(this).addClass('shrink');
+      }
+    });
+  }
 }); // document ready end
 
 /*
@@ -378,6 +389,8 @@ function toggleMenu(target) {
  ***************************/
 function toggleSubnav(trigger) {
   var target = $(trigger).attr('aria-controls');
+  $(trigger).attr('aria-expanded', !($(trigger).attr('aria-expanded') === 'true'));
+  $(trigger).toggleClass('expanded');
   $('#' + target).slideToggle(300);
 }
 

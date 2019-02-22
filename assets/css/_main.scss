@@ -6,7 +6,7 @@ body, html {
   font-size: 62.5%;
   font-family: $knockout;
   box-sizing: border-box;
-  
+
   overflow-x: hidden;
   -webkit-overflow-scrolling:touch !important;
 
@@ -103,6 +103,7 @@ a{
   font-size: 20px;
   color: white;
   display: inline-block;
+  font-family: $knockout-feather !important;
 }
 
 
@@ -119,12 +120,12 @@ a{
   h1{
     text-transform: uppercase;
     color: $toro_red;
-    font-family: $knockout-lite;
+    font-family: $knockout-bantam;
     font-weight: initial;
-    font-size: 85px;
+    font-size: 120px;
     white-space: nowrap;
     @media (max-width: 1000px){
-      font-size: 60px;
+      font-size: 80px;
     }
     @media (max-width: 767px){
       width: 100%;
