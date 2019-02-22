@@ -2646,7 +2646,7 @@ address.site-info {
     margin-bottom: 70px; }
     @media (max-width: 767px) {
       .single-kiosk .kiosk-details {
-        flex-direction: column; } }
+        flex-direction: column-reverse; } }
     .single-kiosk .kiosk-details .kiosk-gallery {
       width: 67%;
       border: none;
@@ -2669,7 +2669,7 @@ address.site-info {
         position: relative; }
         @media (max-width: 767px) {
           .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
-            border-bottom: 0px; } }
+            border-bottom: 2px solid #EA0029; } }
     .single-kiosk .kiosk-details .kiosk-information {
       width: 345px;
       display: flex;
@@ -2698,6 +2698,9 @@ address.site-info {
         flex-direction: row;
         align-items: center;
         justify-content: space-between; }
+        @media screen and (max-width: 767px) {
+          .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
+            border: 0; } }
         .single-kiosk .kiosk-details .kiosk-information .kiosk-share h2 {
           color: #EA0029;
           font-size: 6rem;

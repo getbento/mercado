@@ -31,7 +31,7 @@
 	  border:2px solid $toro-red;
 	  margin-bottom:70px;
     @media (max-width: 767px){
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
 
 	  .kiosk-gallery{
@@ -64,7 +64,7 @@
         border-bottom-style: solid;
         position: relative;
         @media (max-width: 767px){
-          border-bottom: 0px;
+          border-bottom: 2px solid $toro_red;
         }
         // height: 0;
         // padding-bottom: 98%;
@@ -104,6 +104,9 @@
         flex-direction:row;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: $mobile_max) {
+          border: 0;
+        }
         h2{
           color:$toro-red;
 				  font-size:6rem;
