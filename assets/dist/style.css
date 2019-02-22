@@ -1932,7 +1932,8 @@ address.site-info {
       margin-right: 0;
       max-width: 100%;
       min-width: 100%;
-      overflow-y: scroll;
+      overflow-x: scroll;
+      overflow-y: hidden;
       -webkit-overflow-scrolling: touch; }
       .ig-feed .content-margins .ig-boxes {
         flex-direction: row;

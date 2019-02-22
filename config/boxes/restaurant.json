@@ -16,7 +16,7 @@
 		"menus": {
 			"type": "repeater",
 			"items":{
-				"restaurant":{
+				"menu":{
 		      "type": "relationship",
 		      "box": "menu",
 		    }
