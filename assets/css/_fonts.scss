@@ -56,6 +56,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
  ***************************/
   /* H1 */
   @mixin h1-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include h1-desktop-style;
       @if $responsive == true {
@@ -83,6 +84,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* H2 */
   @mixin h2-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include h2-desktop-style;
       @if $responsive == true {
@@ -110,6 +112,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* H3 */
   @mixin h3-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include h3-desktop-style;
       @if $responsive == true {
@@ -137,6 +140,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* H4 */
   @mixin h4-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include h4-desktop-style;
       @if $responsive == true {
@@ -164,6 +168,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* H5 */
   @mixin h5-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include h5-desktop-style;
       @if $responsive == true {
@@ -191,6 +196,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* H6 */
   @mixin h6-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include h6-desktop-style;
       @if $responsive == true {
@@ -218,6 +224,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* Paragraph */
   @mixin p-style( $responsive : true, $mobile : false ) {
+    color: #474746;
     @if $mobile == false {
       @include p-desktop-style;
       @if $responsive == true {
@@ -299,6 +306,8 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* Button Font */
   @mixin button-font-style( $responsive : true, $mobile : false ) {
+    font-family: $knockout-feather;
+    font-weight: 100 !important;
     @if $mobile == false {
       @include button-font-desktop-style;
       @if $responsive == true {

@@ -60,16 +60,18 @@
 
 .red-input {
   @extend %input;
+  @include h3-style;
+
   background: $toro_red;
   color: $oro_yellow;
   font-family: $domaine;
-  @include h3-style;
   padding: 12px 24px;
   width: 100%;
   @include placeholder {
+    @include h3-style;
+
     color: $oro_yellow;
     font-family: $domaine;
-    @include h3-style;
   }
 }
 
@@ -232,8 +234,10 @@ address.site-info {
   @include h6-style;
   text-transform: uppercase;
   margin-top: 44px;
+  color: white;
   a {
     color: inherit;
+    text-decoration: underline;
     &:hover {
       color: $oro_yellow;
     }

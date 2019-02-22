@@ -175,7 +175,7 @@
   }
   .rest-single-join-us-content{
     width: 60%;
-    color: white;
+
     @media (max-width: 920px){
       width: 100%;
       margin-bottom: 40px;
@@ -188,6 +188,7 @@
       text-transform: uppercase;
       font-weight: initial;
       font-family: $knockout-bantam;
+      color: white;
       @media (max-width: 767px){
         font-size: 70px;
       }
@@ -198,6 +199,7 @@
       line-height: 1.3em;
       font-family: $knockout-bantam;
       margin-bottom: 20px;
+      color: white;
       @media (max-width: 767px){
         line-height: 1em;
         font-size: 30px;
@@ -243,7 +245,9 @@
   }
   .rest-single-join-us{
     .rest-single-join-us-content{
-      color: black;
+      h3, p{
+        color: black;
+      }
       .more-info{
         border-color: black;
         color: black;

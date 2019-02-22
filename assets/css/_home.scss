@@ -76,6 +76,7 @@
     }
     p{
       margin-bottom: 20px;
+      color: white;
     }
     a{
       display: inline-block;
@@ -155,7 +156,7 @@
       h4{
         color: white;
         text-transform: uppercase;
-        font-family: $knockout-bantam;
+        font-family: $knockout-feather;
       }
     }
     .home-rest-caption{
@@ -551,7 +552,8 @@
       background-color: $oro_yellow;
       color: $toro_red;
       text-transform: uppercase;
-      font-family: $knockout-bantam;
+      font-family: $knockout-feather;
+      letter-spacing: 0.017em;
       font-size: 50px;
       font-weight: 700;
       padding: 10px;
