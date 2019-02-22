@@ -139,7 +139,18 @@
 .partner-slide {
   color: $toro_red;
   padding: columns(0,1);
+  position: relative;
+  a {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
   img, svg {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -176,13 +187,18 @@
   color: $oro_yellow;
   width: auto;
   height: auto;
-  max-width: columns(4,1);
-  max-height: 84px;
    svg {
-     width: 300px;
+     height: 80px;
      path{
        fill: $oro_yellow;
      }
+  } @media screen and (max-width: $mobile_max) {
+    max-width: 250px;
+    margin-bottom: 36px;
+    svg {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -201,6 +217,8 @@ address.site-info {
   } @media screen and (max-width: $mobile_max) {
     flex: initial;
     margin: 0;
+    line-height: 3.6rem;
+    margin-bottom: 36px;
   }
 }
 
@@ -226,6 +244,7 @@ address.site-info {
     }
   } @media screen and (max-width: $mobile_max) {
     flex: initial;
+    line-height: 3.6rem;
   }
 }
 
@@ -244,5 +263,6 @@ address.site-info {
   } @media screen and (max-width: $mobile_max) {
     flex: initial;
     margin-top: 24px;
+    text-transform: uppercase;
   }
 }

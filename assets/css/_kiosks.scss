@@ -16,7 +16,12 @@
 		  margin:15px;
 		  display: flex;
 		  text-align: center;
-		  align-items: center
+		  align-items: center;
+      h2.shrink {
+        @include h3-style;
+        text-transform: uppercase;
+        line-height: 3.4rem;
+      }
 	  }
   }
 
@@ -26,7 +31,7 @@
 	  border:2px solid $toro-red;
 	  margin-bottom:70px;
     @media (max-width: 767px){
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
 
 	  .kiosk-gallery{
@@ -59,7 +64,7 @@
         border-bottom-style: solid;
         position: relative;
         @media (max-width: 767px){
-          border-bottom: 0px;
+          border-bottom: 2px solid $toro_red;
         }
         // height: 0;
         // padding-bottom: 98%;
@@ -99,6 +104,9 @@
         flex-direction:row;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: $mobile_max) {
+          border: 0;
+        }
         h2{
           color:$toro-red;
 				  font-size:6rem;
@@ -139,10 +147,25 @@
     font-size: 60px;
     font-family: $knockout-bantam;
   }
+
   .single-kiosk{
     .kiosk-landing{
       img{
         display: block;
+      }
+    }
+    .page-landing-header {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      display: flex;
+      .kiosk_title {
+        float: unset;
+        h2 {
+          &.shrink {
+            text-transform: uppercase;
+            line-height: 2.9rem;
+          }
+        }
       }
     }
   }
