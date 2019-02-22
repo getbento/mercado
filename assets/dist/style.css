@@ -483,6 +483,10 @@ a {
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
                 transition: ease 300ms all; }
+              #site-navigation.opened > ul > li.has-children > a.expanded::before {
+                -webkit-transform: rotate(-135deg) translateY(-0.15em) translateX(-0.15em);
+                -ms-transform: rotate(-135deg) translateY(-0.15em) translateX(-0.15em);
+                transform: rotate(-135deg) translateY(-0.15em) translateX(-0.15em); }
             #site-navigation.opened > ul > li.has-children ul {
               display: none; }
             #site-navigation.opened > ul > li.has-children.expanded > a {

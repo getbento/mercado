@@ -357,6 +357,8 @@ function toggleMenu(target) {
  ***************************/
 function toggleSubnav(trigger) {
   var target = $(trigger).attr('aria-controls');
+  $(trigger).attr('aria-expanded', !($(trigger).attr('aria-expanded') === 'true'));
+  $(trigger).toggleClass('expanded');
   $('#' + target).slideToggle(300);
 }
 

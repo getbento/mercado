@@ -165,6 +165,10 @@ $desktop_mid : 900px;
                 // background-position: center center;
                 @include transform(rotate(45deg));
                 transition: ease 300ms all;
+              } &.expanded {
+                &::before {
+                  @include transform(rotate(-135deg) translateY(-0.15em) translateX(-0.15em));
+                }
               }
             } ul {
               display: none;
