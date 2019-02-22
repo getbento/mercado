@@ -1,3 +1,9 @@
 {
-  "engine": "menu"
+  "engine": "menu",
+  "fields":{
+    "restaurant":{
+      "type": "relationship",
+      "box": "restaurant",
+    }
+  }
 }

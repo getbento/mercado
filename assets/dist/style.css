@@ -3146,4 +3146,12 @@ address.site-info {
 .gallery-page {
   padding-top: 28px; }
 
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .gallery-images img:first-child, .gallery-images img:nth-child(2) {
+    width: 49%;
+    height: auto; }
+
 /*# sourceMappingURL=style.css.map*/

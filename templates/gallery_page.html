@@ -10,6 +10,13 @@
       <img src="{{static('img/gallery-images/Right.png')}}" alt="">
     </div>
 
+
+    <section class="gallery-images">
+      {% for image in current.fields.gallery_fields.images %}
+        <img src="{{image.image_url}}" alt="{{image.alt_text}}">
+      {% endfor %}
+    </section>
+
   </div>
 
 

@@ -1,3 +1,13 @@
 .gallery-page{
   padding-top: 28px;
 }
+
+.gallery-images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  img:first-child, img:nth-child(2){
+    width: 49%;
+    height: auto;
+  }
+}
