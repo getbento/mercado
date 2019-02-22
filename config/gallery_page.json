@@ -1,0 +1,15 @@
+{
+  "name": "Gallery Page",
+  "fields": {
+    "gallery_fields":{
+			"title": "Gallery Fields",
+			"type": "section",
+			"items":{
+        "images": "gallery"
+			}
+		}
+  },
+  "wireframe": [
+		"section-gallery_fields"
+	]
+}

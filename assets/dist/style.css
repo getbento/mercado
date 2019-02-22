@@ -352,9 +352,34 @@ a {
 @media (max-width: 767px) {
   .current-home #masthead {
     border-bottom: 0px;
-    background-color: transparent; }
+    height: auto;
+    background-color: transparent;
+    transition: ease 250ms all;
+    border-bottom: 2px solid transparent; }
+    .current-home #masthead #skip-to-navigation-link {
+      width: calc(25% + 8px);
+      height: 0;
+      padding-bottom: calc(25% + 8px);
+      position: relative;
+      transition: ease 250ms all; }
+      .current-home #masthead #skip-to-navigation-link svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; }
     .current-home #masthead .site-branding {
-      visibility: hidden; } }
+      opacity: 0;
+      transition: ease 250ms all; }
+    .current-home #masthead.logo-show {
+      background-color: white;
+      border-bottom: 2px solid #EA0029; }
+      .current-home #masthead.logo-show #skip-to-navigation-link {
+        width: 70px;
+        padding-bottom: 70px; }
+      .current-home #masthead.logo-show .site-branding {
+        opacity: 1; } }
 
 #masthead-logo {
   flex: 0 0 auto;
@@ -574,7 +599,8 @@ a {
   text-transform: uppercase;
   color: #EA0029;
   margin: 0;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  font-family: "Knockout 68 A", "Knockout 68 B"; }
   @media screen and (max-width: 767px) {
     .newsletter-capture-title {
       font-size: 3.9rem;
@@ -732,7 +758,7 @@ a {
   position: relative; }
   .partner-carousel .slick-arrow {
     height: 16px;
-    width: 12px;
+    width: 16px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -744,15 +770,18 @@ a {
         width: 24px;
         height: 16px; } }
   .partner-carousel .slick-prev {
-    left: -48px; }
+    left: -48px;
+    border-left: 3px solid #EA0029;
+    border-bottom: 3px solid #EA0029;
+    transform: rotate(45deg); }
     @media screen and (max-width: 767px) {
       .partner-carousel .slick-prev {
         left: -24px; } }
   .partner-carousel .slick-next {
     right: -48px;
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    transform: scaleX(-1); }
+    border-right: 3px solid #EA0029;
+    border-bottom: 3px solid #EA0029;
+    transform: rotate(-45deg); }
     @media screen and (max-width: 767px) {
       .partner-carousel .slick-next {
         right: -24px; } }
@@ -1317,6 +1346,9 @@ address.site-info {
     color: #EA0029;
     font-size: 90px;
     text-align: center; }
+    @media (max-width: 767px) {
+      .section-title-container h2 {
+        font-size: 86px; } }
 
 @media (max-width: 767px) {
   .shop-little-spain-shops .kiosk-box {
@@ -1407,7 +1439,9 @@ address.site-info {
       flex-direction: column;
       padding: 10px; }
       .home-restaurant-box .home-rest-info .home-rest-caption p {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        font-family: "Knockout 30 A", "Knockout 30 B";
+        font-weight: 100; }
       .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
         display: flex;
         flex-direction: column; }
@@ -1445,9 +1479,12 @@ address.site-info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media (max-width: 920px) {
+    .home-mercado-kiosks {
+      justify-content: space-around; } }
   .home-mercado-kiosks .home-mercado-kiosk {
     width: 18.5%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     flex-direction: column; }
@@ -1495,8 +1532,8 @@ address.site-info {
       font-weight: 900;
       line-height: 1.2em; }
 
-.home-happenings {
-  margin-bottom: 50px; }
+.home-happenings, .home-mercado, .home-shop, .home-el-blog {
+  margin-bottom: 40px; }
 
 .happenings-events {
   display: flex;
@@ -1516,8 +1553,10 @@ address.site-info {
       margin-bottom: 20px; }
     .happenings-events .happenings-event h6 {
       font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-      font-weight: 900;
-      margin-bottom: 10px; }
+      font-weight: 100;
+      margin-bottom: 10px;
+      color: #474746;
+      transition: 250ms ease all; }
     .happenings-events .happenings-event h3 {
       text-transform: uppercase;
       color: #EA0029;
@@ -1526,11 +1565,18 @@ address.site-info {
       line-height: 1em;
       margin-bottom: 7px;
       transition: 250ms ease all; }
+    .happenings-events .happenings-event p {
+      color: #474746;
+      transition: 250ms ease all; }
     .happenings-events .happenings-event:hover {
       background-color: #EA0029;
       color: white; }
       .happenings-events .happenings-event:hover h3 {
         color: #FFF065; }
+      .happenings-events .happenings-event:hover p {
+        color: white; }
+      .happenings-events .happenings-event:hover h6 {
+        color: white; }
     .happenings-events .happenings-event .happenings-img {
       width: 100%;
       height: 0;
@@ -1564,7 +1610,7 @@ address.site-info {
 .home-shop .kiosk-grid article.kiosk-box h6 {
   font-family: "Knockout 49 A", "Knockout 49 B";
   text-transform: uppercase;
-  font-size: 30px; }
+  font-size: 35px; }
 
 .home-shop .kiosk-grid article.kiosk-box .gift-card-img {
   padding-bottom: 100%;
@@ -1602,7 +1648,30 @@ address.site-info {
 .home-el-blog-posts.blog-articles-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .home-el-blog-posts.blog-articles-container {
+      flex-wrap: wrap; } }
+
+.single-blog-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #EA0029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px; }
+  .single-blog-arrow svg {
+    height: 25px; }
+    .single-blog-arrow svg path {
+      fill: white; }
+
+.blog-post:hover .single-blog-arrow {
+  background-color: white; }
+  .blog-post:hover .single-blog-arrow svg path {
+    fill: #EA0029; }
 
 .home-hero img {
   width: 100vw; }
@@ -1756,6 +1825,22 @@ address.site-info {
     font-size: 14px;
     font-weight: 600; }
 
+.home-see-more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; }
+  .home-see-more-button a.more-info {
+    border-color: #EA0029;
+    color: #EA0029;
+    font-family: "Knockout 68 A", "Knockout 68 B"; }
+    .home-see-more-button a.more-info:hover {
+      color: white;
+      background-color: #EA0029; }
+
+.home-shop-cont .kiosk-grid .kiosk-box {
+  margin-bottom: 20px; }
+
 .kiosk-grid, .bars-grid {
   display: flex;
   justify-content: space-between;
@@ -1866,7 +1951,8 @@ address.site-info {
       margin-right: 0;
       max-width: 100%;
       min-width: 100%;
-      overflow: scroll; }
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; }
       .ig-feed .content-margins .ig-boxes {
         flex-direction: row;
         flex-wrap: nowrap; }
@@ -1933,7 +2019,7 @@ address.site-info {
       font-size: 5.3em;
       line-height: 1em; } }
   @media screen and (min-width: 767px) {
-    .blog-articles-container .blog-post:nth-child(1) {
+    .blog-articles-container .blog-landing-post.blog-post:nth-child(1) {
       border: 2px solid #EA0029;
       display: flex;
       min-height: 380px;
@@ -1941,23 +2027,23 @@ address.site-info {
       justify-content: flex-start;
       width: 100%;
       padding: 0px; }
-      .blog-articles-container .blog-post:nth-child(1) .image {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .image {
         padding: 1.2em;
         width: 62%;
         height: 100%; }
-        .blog-articles-container .blog-post:nth-child(1) .image img {
+        .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .image img {
           width: 100%;
           height: 100%;
           object-fit: cover; }
-      .blog-articles-container .blog-post:nth-child(1) .info {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info {
         padding: 1em 3.2em;
         border-left: 2px solid #EA0029;
         width: 38%;
         height: 100%; }
-        .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+        .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
           font-size: 8.5em;
           line-height: 1em; }
-        .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+        .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
           font-weight: initial;
           text-transform: uppercase;
           font-family: "Knockout 49 A", "Knockout 49 B";
@@ -1965,40 +2051,40 @@ address.site-info {
           font-size: 5.75em;
           padding-top: 16px; } }
     @media screen and (min-width: 767px) and (max-width: 900px) {
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
         font-size: 8em;
         line-height: 0.9em; }
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
         line-height: 1em;
         font-size: 5.5em; } }
     @media screen and (min-width: 767px) and (max-width: 800px) {
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
         font-size: 6.6em; }
-      .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
         line-height: 1em;
         font-size: 4.9em; } }
-  .blog-articles-container .blog-post:nth-child(2), .blog-articles-container .blog-post:nth-child(3) {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(2), .blog-articles-container .blog-landing-post.blog-post:nth-child(3) {
     border: 2px solid #EA0029;
     display: flex;
     width: 48%;
     padding: 1.2em;
     margin-top: 28px;
     min-height: 380px; }
-    .blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
+    .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .image, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .image {
       height: 67%;
       width: 100%; }
-      .blog-articles-container .blog-post:nth-child(2) .image img, .blog-articles-container .blog-post:nth-child(3) .image img {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .image img, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .image img {
         height: 100%;
         width: 100%;
         object-fit: cover; }
-    .blog-articles-container .blog-post:nth-child(2) .info, .blog-articles-container .blog-post:nth-child(3) .info {
+    .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info {
       height: 33%; }
-      .blog-articles-container .blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__tag {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info .blog-post__tag {
         padding-top: 1em; }
-      .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info .blog-post__title {
         font-size: 7em; }
       @media screen and (max-width: 900px) {
-        .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+        .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info .blog-post__title {
           font-size: 5em; } }
   .blog-articles-container .blog-post {
     margin-top: 28px;
@@ -2017,7 +2103,8 @@ address.site-info {
       left: 0;
       top: 0;
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      z-index: 1; }
     .blog-articles-container .blog-post .image {
       height: 60%;
       width: 100%; }
@@ -2026,7 +2113,8 @@ address.site-info {
         width: 100%;
         object-fit: cover; }
     .blog-articles-container .blog-post .info {
-      height: 40%; }
+      height: 40%;
+      padding-bottom: 50px; }
   .blog-articles-container .blog-post:hover {
     background-color: #EA0029; }
     .blog-articles-container .blog-post:hover .blog-post__tag {
@@ -2613,15 +2701,20 @@ address.site-info {
     width: 50%; }
   .contact-us-page-container .hours {
     margin-top: 12px; }
+  .contact-us-page-container .contact__right {
+    padding-left: 30px; }
   .contact-us-page-container .contact__title {
     font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
-    font-size: 14em;
-    padding-top: 0.3em;
+    font-size: 12em;
+    padding: 0.3em 0;
     color: #474746;
     margin-bottom: 0.15em;
     text-transform: uppercase; }
-  .contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
+    @media (max-width: 767px) {
+      .contact-us-page-container .contact__title {
+        font-size: 10em; } }
+  .contact-us-page-container .info-red, .contact-us-page-container .contact-info p, .contact-us-page-container .contact-info a {
     text-transform: uppercase;
     font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
@@ -2629,6 +2722,10 @@ address.site-info {
     font-size: 4.8rem;
     line-height: 0.95em;
     letter-spacing: 1.5px; }
+  .contact-us-page-container .contact-info p {
+    margin-bottom: 0px; }
+  .contact-us-page-container .contact__email-num {
+    margin-top: 30px; }
   .contact-us-page-container .info-red a {
     text-decoration: underline; }
   .contact-us-page-container .info-grey {
@@ -2642,7 +2739,10 @@ address.site-info {
   .contact-us-page-container .address {
     margin-bottom: 0.5em; }
   .contact-us-page-container .hours__info {
-    display: inline-block; }
+    font-size: 4.3rem; }
+    .contact-us-page-container .hours__info span {
+      color: #474746;
+      white-space: nowrap; }
   .contact-us-page-container .map-section {
     width: 100%; }
   .contact-us-page-container #map-container {
@@ -2656,6 +2756,8 @@ address.site-info {
   @media screen and (max-width: 1024px) {
     .contact-us-page-container .contact__left {
       width: 40%; }
+      .contact-us-page-container .contact__left .hours__info {
+        margin-bottom: 20px; }
     .contact-us-page-container .contact__right {
       width: 60%; } }
   @media screen and (max-width: 767px) {
@@ -2975,7 +3077,8 @@ address.site-info {
 .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper h4 {
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
   text-transform: none;
-  font-size: 25px; }
+  font-size: 25px;
+  line-height: 1.3em; }
 
 .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
   color: #EA0029;
@@ -3032,7 +3135,8 @@ address.site-info {
   text-transform: none;
   text-transform: uppercase;
   color: #FFF065;
-  margin: 0; }
+  margin: 0;
+  font-family: "Knockout 68 A", "Knockout 68 B"; }
   @media screen and (max-width: 767px) {
     #newsletter-popup-title {
       font-size: 9rem;
@@ -3052,7 +3156,7 @@ address.site-info {
   letter-spacing: normal;
   text-transform: none;
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-  margin: 40px auto 12px auto;
+  margin: 35px auto;
   max-width: 850px; }
   @media screen and (max-width: 767px) {
     #newsletter-popup-blurb {
@@ -3118,5 +3222,53 @@ address.site-info {
     #newsletter-popup-close {
       right: 24px;
       top: 24px; } }
+
+.gallery-page {
+  padding-top: 28px; }
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .gallery-images .gallery-image-holder {
+    margin-bottom: 20px;
+    position: relative;
+    height: 0; }
+    .gallery-images .gallery-image-holder img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0; }
+  .gallery-images .gallery-image-holder:nth-child(1), .gallery-images .gallery-image-holder:nth-child(2) {
+    width: 49%;
+    padding-bottom: 29%; }
+  .gallery-images .gallery-image-holder:nth-child(3) {
+    width: 100%;
+    height: auto; }
+    .gallery-images .gallery-image-holder:nth-child(3) img {
+      position: relative; }
+  .gallery-images .gallery-image-holder:nth-child(4), .gallery-images .gallery-image-holder:nth-child(5), .gallery-images .gallery-image-holder:nth-child(6) {
+    width: 32%;
+    padding-bottom: 20%; }
+  .gallery-images .gallery-image-holder:nth-child(7) {
+    width: 100%;
+    height: auto; }
+  .gallery-images .gallery-image-holder:nth-child(1n+7), .gallery-images .gallery-image-holder:nth-child(2n+7) {
+    width: 49%;
+    padding-bottom: 29%; }
+  .gallery-images .gallery-image-holder:nth-child(3n+7) {
+    width: 100%;
+    height: auto; }
+    .gallery-images .gallery-image-holder:nth-child(3n+7) img {
+      position: relative; }
+  .gallery-images .gallery-image-holder:nth-child(4n+7), .gallery-images .gallery-image-holder:nth-child(5n+7), .gallery-images .gallery-image-holder:nth-child(6n+7) {
+    width: 32%;
+    padding-bottom: 20%; }
+  .gallery-images .gallery-image-holder:nth-child(7n) {
+    width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=style.css.map*/

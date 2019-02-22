@@ -40,6 +40,7 @@
   text-transform: uppercase;
   color: $oro_yellow;
   margin: 0;
+  font-family: $knockout-feather;
   @media screen and (max-width: $mobile_max) {
     text-transform: uppercase;
     max-width: 240px; font-size:6rem;
@@ -50,7 +51,7 @@
 #newsletter-popup-blurb {
   @include h5-style;
   font-family: $domaine;
-  margin: 40px auto 12px auto;
+  margin: 35px auto;
   max-width: columns(10);
   @media screen and (max-width: $mobile_max) {
     max-width: unset;

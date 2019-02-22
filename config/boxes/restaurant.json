@@ -16,8 +16,10 @@
 		"menus": {
 			"type": "repeater",
 			"items":{
-				"name": "text",
-				"file": "file"
+				"menu":{
+		      "type": "relationship",
+		      "box": "menu",
+		    }
 			}
 		}
 	}

@@ -81,6 +81,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*
  * Font Stacks
  ***************************/
+.Domaine {
+  font-family: 'Domaine';
+}
+
+.Domaine-italic {
+  font-family: 'Domaine';
+  font-style: italic;
+}
+
 /*
  * Font Styles
  *
@@ -411,6 +420,9 @@ a {
   padding: 0 30px;
   background: white;
   border-bottom: 2px solid #EA0029;
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1030px) {
@@ -421,39 +433,59 @@ a {
   }
 }
 
+#masthead .site-branding, #masthead #skip-to-navigation-link, #masthead #site-navigation {
+  pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+  .current-home #masthead {
+    border-bottom: 0px;
+    height: auto;
+    background-color: transparent;
+    transition: ease 250ms all;
+    border-bottom: 2px solid transparent;
+  }
+  .current-home #masthead #skip-to-navigation-link {
+    width: calc(25% + 8px);
+    height: 0;
+    padding-bottom: calc(25% + 8px);
+    position: relative;
+    transition: ease 250ms all;
+  }
+  .current-home #masthead #skip-to-navigation-link svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .current-home #masthead .site-branding {
+    opacity: 0;
+    transition: ease 250ms all;
+  }
+  .current-home #masthead.logo-show {
+    background-color: white;
+    border-bottom: 2px solid #EA0029;
+  }
+  .current-home #masthead.logo-show #skip-to-navigation-link {
+    width: 70px;
+    padding-bottom: 70px;
+  }
+  .current-home #masthead.logo-show .site-branding {
+    opacity: 1;
+  }
+}
+
 #masthead-logo {
   flex: 0 0 auto;
   margin-right: 32px;
   display: block;
   color: #EA0029;
-  height: 45px;
 }
 
-#masthead-logo img, #masthead-logo svg {
-  width: auto;
-  height: auto;
-  max-width: 212px;
-  max-height: 45px;
-}
-
-@media screen and (max-width: 1054px) {
-  #masthead-logo {
-    height: 26px;
-  }
-  #masthead-logo img, #masthead-logo svg {
-    max-height: 26px;
-    max-width: 126px;
-  }
-}
-
-@media screen and (max-width: 1030px) {
-  #masthead-logo {
-    height: 26px;
-  }
-  #masthead-logo img, #masthead-logo svg {
-    max-height: 26px;
-    max-width: 126px;
-  }
+#masthead-logo svg {
+  height: 40px;
 }
 
 #site-navigation {
@@ -502,11 +534,11 @@ a {
   #site-navigation > ul > li.has-children ul {
     display: none;
   }
-  #site-navigation > ul > li.has-children:hover, #site-navigation > ul > li.has-children a:focus {
+  #site-navigation > ul > li.has-children:hover, #site-navigation > ul > li.has-children a:focus, #site-navigation > ul > li.has-children:focus-within {
     background: #EA0029;
     color: #FFFFFF;
   }
-  #site-navigation > ul > li.has-children:hover ul, #site-navigation > ul > li.has-children:hover + ul, #site-navigation > ul > li.has-children a:focus ul, #site-navigation > ul > li.has-children a:focus + ul {
+  #site-navigation > ul > li.has-children:hover ul, #site-navigation > ul > li.has-children:hover + ul, #site-navigation > ul > li.has-children a:focus ul, #site-navigation > ul > li.has-children a:focus + ul, #site-navigation > ul > li.has-children:focus-within ul, #site-navigation > ul > li.has-children:focus-within + ul {
     display: block;
     position: absolute;
     left: 0;
@@ -516,19 +548,19 @@ a {
     background: #EA0029;
     color: #FFFFFF;
   }
-  #site-navigation > ul > li.has-children:hover ul li, #site-navigation > ul > li.has-children:hover + ul li, #site-navigation > ul > li.has-children a:focus ul li, #site-navigation > ul > li.has-children a:focus + ul li {
+  #site-navigation > ul > li.has-children:hover ul li, #site-navigation > ul > li.has-children:hover + ul li, #site-navigation > ul > li.has-children a:focus ul li, #site-navigation > ul > li.has-children a:focus + ul li, #site-navigation > ul > li.has-children:focus-within ul li, #site-navigation > ul > li.has-children:focus-within + ul li {
     padding: 0 16px;
   }
-  #site-navigation > ul > li.has-children:hover ul li a, #site-navigation > ul > li.has-children:hover + ul li a, #site-navigation > ul > li.has-children a:focus ul li a, #site-navigation > ul > li.has-children a:focus + ul li a {
+  #site-navigation > ul > li.has-children:hover ul li a, #site-navigation > ul > li.has-children:hover + ul li a, #site-navigation > ul > li.has-children a:focus ul li a, #site-navigation > ul > li.has-children a:focus + ul li a, #site-navigation > ul > li.has-children:focus-within ul li a, #site-navigation > ul > li.has-children:focus-within + ul li a {
     border-top: 2px solid #FFF065;
   }
-  #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe {
+  #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe, #site-navigation > ul > li.has-children:focus-within ul li.dupe, #site-navigation > ul > li.has-children:focus-within + ul li.dupe {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {
-  #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe {
+  #site-navigation > ul > li.has-children:hover ul li.dupe, #site-navigation > ul > li.has-children:hover + ul li.dupe, #site-navigation > ul > li.has-children a:focus ul li.dupe, #site-navigation > ul > li.has-children a:focus + ul li.dupe, #site-navigation > ul > li.has-children:focus-within ul li.dupe, #site-navigation > ul > li.has-children:focus-within + ul li.dupe {
     display: block;
   }
 }
@@ -642,8 +674,7 @@ a {
     color: #FFF065;
   }
   #site-navigation.opened > .mobile-nav-header .mobile-nav-header-logo svg {
-    width: 40px;
-    height: 40px;
+    height: 30px;
   }
   #site-navigation.opened > .mobile-nav-header .mobile-nav-header-close {
     font-size: 5.6rem;
@@ -675,6 +706,26 @@ a {
   }
 }
 
+#content {
+  margin-top: 106px;
+}
+
+@media (max-width: 1030px) {
+  #content {
+    margin-top: 58px;
+  }
+}
+
+@media (max-width: 767px) {
+  .current-home #content {
+    margin-top: 0px;
+  }
+}
+
+.branding-header-logo {
+  line-height: 0px;
+}
+
 /*
  * Newsletter Capture
  ***************************/
@@ -702,6 +753,7 @@ a {
   color: #EA0029;
   margin: 0;
   margin-bottom: 16px;
+  font-family: "Knockout 68 A", "Knockout 68 B";
 }
 
 @media screen and (max-width: 767px) {
@@ -750,6 +802,18 @@ a {
   .newsletter-capture-form label {
     width: 100%;
     margin-bottom: 40px;
+  }
+}
+
+.newsletter-capture-form .form-fields__fields-wrapper {
+  width: 100%;
+  padding-right: 25px;
+}
+
+@media (max-width: 767px) {
+  .newsletter-capture-form .form-fields__fields-wrapper {
+    padding-right: 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -909,7 +973,7 @@ a {
 
 .partner-carousel .slick-arrow {
   height: 16px;
-  width: 12px;
+  width: 16px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -927,6 +991,9 @@ a {
 
 .partner-carousel .slick-prev {
   left: -48px;
+  border-left: 3px solid #EA0029;
+  border-bottom: 3px solid #EA0029;
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -937,9 +1004,9 @@ a {
 
 .partner-carousel .slick-next {
   right: -48px;
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
+  border-right: 3px solid #EA0029;
+  border-bottom: 3px solid #EA0029;
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -993,16 +1060,12 @@ a {
   max-height: 84px;
 }
 
-#colophon-logo img {
-  width: auto;
-  height: auto;
+#colophon-logo svg {
+  width: 300px;
 }
 
-#colophon-logo svg {
-  width: 100%;
-  height: auto;
-  max-width: 348px;
-  max-height: 84px;
+#colophon-logo svg path {
+  fill: #FFF065;
 }
 
 address.site-info {
@@ -1719,6 +1782,12 @@ address.site-info a:hover {
 }
 
 @media (max-width: 767px) {
+  .section-title-container h2 {
+    font-size: 86px;
+  }
+}
+
+@media (max-width: 767px) {
   .shop-little-spain-shops .kiosk-box {
     width: 100% !important;
   }
@@ -1860,6 +1929,8 @@ address.site-info a:hover {
 
 .home-restaurant-box .home-rest-info .home-rest-caption p {
   margin-bottom: 20px;
+  font-family: "Knockout 30 A", "Knockout 30 B";
+  font-weight: 100;
 }
 
 .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
@@ -1923,9 +1994,15 @@ address.site-info a:hover {
   flex-wrap: wrap;
 }
 
+@media (max-width: 920px) {
+  .home-mercado-kiosks {
+    justify-content: space-around;
+  }
+}
+
 .home-mercado-kiosks .home-mercado-kiosk {
   width: 18.5%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1980,6 +2057,7 @@ address.site-info a:hover {
 .home-mercado-kiosks .home-mercado-kiosk img {
   height: auto;
   width: 100%;
+  border: 2px solid #EA0029;
 }
 
 .home-mercado-kiosks .home-mercado-kiosk h5 {
@@ -1991,8 +2069,8 @@ address.site-info a:hover {
   line-height: 1.2em;
 }
 
-.home-happenings {
-  margin-bottom: 50px;
+.home-happenings, .home-mercado, .home-shop, .home-el-blog {
+  margin-bottom: 40px;
 }
 
 .happenings-events {
@@ -2019,8 +2097,10 @@ address.site-info a:hover {
 
 .happenings-events .happenings-event h6 {
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-  font-weight: 900;
+  font-weight: 100;
   margin-bottom: 10px;
+  color: #474746;
+  transition: 250ms ease all;
 }
 
 .happenings-events .happenings-event h3 {
@@ -2033,6 +2113,11 @@ address.site-info a:hover {
   transition: 250ms ease all;
 }
 
+.happenings-events .happenings-event p {
+  color: #474746;
+  transition: 250ms ease all;
+}
+
 .happenings-events .happenings-event:hover {
   background-color: #EA0029;
   color: white;
@@ -2040,6 +2125,14 @@ address.site-info a:hover {
 
 .happenings-events .happenings-event:hover h3 {
   color: #FFF065;
+}
+
+.happenings-events .happenings-event:hover p {
+  color: white;
+}
+
+.happenings-events .happenings-event:hover h6 {
+  color: white;
 }
 
 .happenings-events .happenings-event .happenings-img {
@@ -2086,7 +2179,7 @@ address.site-info a:hover {
 .home-shop .kiosk-grid article.kiosk-box h6 {
   font-family: "Knockout 49 A", "Knockout 49 B";
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .home-shop .kiosk-grid article.kiosk-box .gift-card-img {
@@ -2133,11 +2226,63 @@ address.site-info a:hover {
 .home-el-blog-posts.blog-articles-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .home-el-blog-posts.blog-articles-container {
+    flex-wrap: wrap;
+  }
+}
+
+.single-blog-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #EA0029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+
+.single-blog-arrow svg {
+  height: 25px;
+}
+
+.single-blog-arrow svg path {
+  fill: white;
+}
+
+.blog-post:hover .single-blog-arrow {
+  background-color: white;
+}
+
+.blog-post:hover .single-blog-arrow svg path {
+  fill: #EA0029;
 }
 
 .home-hero img {
   width: 100vw;
+}
+
+.home-hero .home-hero-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .home-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .home-hero .home-hero-mobile {
+    display: block;
+  }
+  .home-hero .home-hero-image {
+    display: none;
+  }
 }
 
 .home-slides {
@@ -2148,6 +2293,20 @@ address.site-info a:hover {
   width: 100%;
   height: 40vw !important;
   position: relative;
+}
+
+@media (max-width: 920px) {
+  .home-slide {
+    height: 60vw !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-slide {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column;
+  }
 }
 
 .home-slide .home-slide-info {
@@ -2161,6 +2320,16 @@ address.site-info a:hover {
   position: relative;
 }
 
+@media (max-width: 620px) {
+  .home-slide .home-slide-info {
+    position: relative;
+  }
+  .home-slide .home-slide-info .content-margins {
+    width: 100%;
+    margin: 0px;
+  }
+}
+
 .home-slide .home-slide-img {
   position: absolute;
   left: 0;
@@ -2168,6 +2337,15 @@ address.site-info a:hover {
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+@media (max-width: 620px) {
+  .home-slide .home-slide-img {
+    position: relative;
+    height: 90vw;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .home-slide .home-slide-img img {
@@ -2183,6 +2361,14 @@ address.site-info a:hover {
   left: 0;
   bottom: 50px;
   width: 300px;
+}
+
+@media (max-width: 620px) {
+  .home-slide .home-slide-info-cont {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+  }
 }
 
 .home-slide .home-slide-info-cont h3 {
@@ -2255,6 +2441,8 @@ address.site-info a:hover {
   border-right: 2px solid #EA0029;
   cursor: pointer;
   transition: ease 250ms background-color;
+  background-color: white;
+  margin: 0px;
 }
 
 .home-slide-controls button img {
@@ -2291,6 +2479,28 @@ address.site-info a:hover {
   align-items: center;
   font-size: 14px;
   font-weight: 600;
+}
+
+.home-see-more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.home-see-more-button a.more-info {
+  border-color: #EA0029;
+  color: #EA0029;
+  font-family: "Knockout 68 A", "Knockout 68 B";
+}
+
+.home-see-more-button a.more-info:hover {
+  color: white;
+  background-color: #EA0029;
+}
+
+.home-shop-cont .kiosk-grid .kiosk-box {
+  margin-bottom: 20px;
 }
 
 .kiosk-grid, .bars-grid {
@@ -2446,7 +2656,8 @@ address.site-info a:hover {
     margin-right: 0;
     max-width: 100%;
     min-width: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   .ig-feed .content-margins .ig-boxes {
     flex-direction: row;
@@ -2544,7 +2755,7 @@ address.site-info a:hover {
 }
 
 @media screen and (min-width: 767px) {
-  .blog-articles-container .blog-post:nth-child(1) {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) {
     border: 2px solid #EA0029;
     display: flex;
     min-height: 380px;
@@ -2553,27 +2764,27 @@ address.site-info a:hover {
     width: 100%;
     padding: 0px;
   }
-  .blog-articles-container .blog-post:nth-child(1) .image {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .image {
     padding: 1.2em;
     width: 62%;
     height: 100%;
   }
-  .blog-articles-container .blog-post:nth-child(1) .image img {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .blog-articles-container .blog-post:nth-child(1) .info {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info {
     padding: 1em 3.2em;
     border-left: 2px solid #EA0029;
     width: 38%;
     height: 100%;
   }
-  .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
     font-size: 8.5em;
     line-height: 1em;
   }
-  .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
     font-weight: initial;
     text-transform: uppercase;
     font-family: "Knockout 49 A", "Knockout 49 B";
@@ -2584,27 +2795,27 @@ address.site-info a:hover {
 }
 
 @media screen and (min-width: 767px) and (max-width: 900px) {
-  .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
     font-size: 8em;
     line-height: 0.9em;
   }
-  .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
     line-height: 1em;
     font-size: 5.5em;
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 800px) {
-  .blog-articles-container .blog-post:nth-child(1) .info .blog-post__title {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
     font-size: 6.6em;
   }
-  .blog-articles-container .blog-post:nth-child(1) .info .blog-post__desc {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
     line-height: 1em;
     font-size: 4.9em;
   }
 }
 
-.blog-articles-container .blog-post:nth-child(2), .blog-articles-container .blog-post:nth-child(3) {
+.blog-articles-container .blog-landing-post.blog-post:nth-child(2), .blog-articles-container .blog-landing-post.blog-post:nth-child(3) {
   border: 2px solid #EA0029;
   display: flex;
   width: 48%;
@@ -2613,31 +2824,31 @@ address.site-info a:hover {
   min-height: 380px;
 }
 
-.blog-articles-container .blog-post:nth-child(2) .image, .blog-articles-container .blog-post:nth-child(3) .image {
+.blog-articles-container .blog-landing-post.blog-post:nth-child(2) .image, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .image {
   height: 67%;
   width: 100%;
 }
 
-.blog-articles-container .blog-post:nth-child(2) .image img, .blog-articles-container .blog-post:nth-child(3) .image img {
+.blog-articles-container .blog-landing-post.blog-post:nth-child(2) .image img, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.blog-articles-container .blog-post:nth-child(2) .info, .blog-articles-container .blog-post:nth-child(3) .info {
+.blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info {
   height: 33%;
 }
 
-.blog-articles-container .blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__tag {
+.blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info .blog-post__tag, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info .blog-post__tag {
   padding-top: 1em;
 }
 
-.blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+.blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info .blog-post__title {
   font-size: 7em;
 }
 
 @media screen and (max-width: 900px) {
-  .blog-articles-container .blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-post:nth-child(3) .info .blog-post__title {
+  .blog-articles-container .blog-landing-post.blog-post:nth-child(2) .info .blog-post__title, .blog-articles-container .blog-landing-post.blog-post:nth-child(3) .info .blog-post__title {
     font-size: 5em;
   }
 }
@@ -2653,6 +2864,16 @@ address.site-info a:hover {
   display: flex;
   width: 32%;
   padding: 1.2em;
+  position: relative;
+}
+
+.blog-articles-container .blog-post a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 .blog-articles-container .blog-post .image {
@@ -2668,6 +2889,7 @@ address.site-info a:hover {
 
 .blog-articles-container .blog-post .info {
   height: 40%;
+  padding-bottom: 50px;
 }
 
 .blog-articles-container .blog-post:hover {
@@ -3489,17 +3711,27 @@ address.site-info a:hover {
   width: 50%;
 }
 
+.contact-us-page-container .contact__right {
+  padding-left: 30px;
+}
+
 .contact-us-page-container .contact__title {
   font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
-  font-size: 14em;
-  padding-top: 0.3em;
+  font-size: 12em;
+  padding: 0.3em 0;
   color: #474746;
   margin-bottom: 0.15em;
   text-transform: uppercase;
 }
 
-.contact-us-page-container .info-red, .contact-us-page-container .info-red p, .contact-us-page-container .info-red a {
+@media (max-width: 767px) {
+  .contact-us-page-container .contact__title {
+    font-size: 10em;
+  }
+}
+
+.contact-us-page-container .info-red, .contact-us-page-container .contact-info p, .contact-us-page-container .contact-info a {
   text-transform: uppercase;
   font-family: "Knockout 49 A", "Knockout 49 B";
   font-weight: initial;
@@ -3507,6 +3739,14 @@ address.site-info a:hover {
   font-size: 4.8rem;
   line-height: 0.95em;
   letter-spacing: 1.5px;
+}
+
+.contact-us-page-container .contact-info p {
+  margin-bottom: 0px;
+}
+
+.contact-us-page-container .contact__email-num {
+  margin-top: 30px;
 }
 
 .contact-us-page-container .info-red a {
@@ -3528,7 +3768,12 @@ address.site-info a:hover {
 }
 
 .contact-us-page-container .hours__info {
-  display: inline-block;
+  font-size: 4.3rem;
+}
+
+.contact-us-page-container .hours__info span {
+  color: #474746;
+  white-space: nowrap;
 }
 
 .contact-us-page-container .map-section {
@@ -3538,7 +3783,7 @@ address.site-info a:hover {
 .contact-us-page-container #map-container {
   width: 100%;
   height: 500px;
-  border: 3px solid #EA0029;
+  border: 2px solid #EA0029;
   padding: 2em;
 }
 
@@ -3550,6 +3795,9 @@ address.site-info a:hover {
 @media screen and (max-width: 1024px) {
   .contact-us-page-container .contact__left {
     width: 40%;
+  }
+  .contact-us-page-container .contact__left .hours__info {
+    margin-bottom: 20px;
   }
   .contact-us-page-container .contact__right {
     width: 60%;
@@ -3967,6 +4215,7 @@ address.site-info a:hover {
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
   text-transform: none;
   font-size: 25px;
+  line-height: 1.3em;
 }
 
 .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
@@ -4036,6 +4285,7 @@ address.site-info a:hover {
   text-transform: uppercase;
   color: #FFF065;
   margin: 0;
+  font-family: "Knockout 68 A", "Knockout 68 B";
 }
 
 @media screen and (max-width: 767px) {
@@ -4062,7 +4312,7 @@ address.site-info a:hover {
   letter-spacing: normal;
   text-transform: none;
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-  margin: 40px auto 12px auto;
+  margin: 35px auto;
   max-width: 850px;
 }
 
@@ -4154,4 +4404,8 @@ address.site-info a:hover {
     right: 24px;
     top: 24px;
   }
+}
+
+.gallery-page {
+  margin-top: 40px;
 }

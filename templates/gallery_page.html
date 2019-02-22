@@ -1,0 +1,26 @@
+{% include "header.html" %}
+<article class='gallery-page'>
+  <div class="content-margins">
+
+    <h1 class="mobile-happenings-title">Gallery</h1>
+
+    <div class="page-landing-header">
+      <img src="{{static('img/gallery-images/Left.png')}}" alt="">
+      <h1>Gallery</h1>
+      <img src="{{static('img/gallery-images/Right.png')}}" alt="">
+    </div>
+
+
+    <section class="gallery-images">
+      {% for image in current.fields.gallery_fields.images %}
+        <div class="gallery-image-holder">
+          <img src="{{image.image_url}}" alt="{{image.alt_text}}">
+        </div>
+      {% endfor %}
+    </section>
+
+  </div>
+
+
+</article>
+{% include "footer.html" %}
