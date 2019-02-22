@@ -5,8 +5,6 @@
 			"title": "Gallery Fields",
 			"type": "section",
 			"items":{
-        "left_header_image": "image",
-        "right_header_image": "image",
         "images": {
           "type": "repeater",
           "items":{
