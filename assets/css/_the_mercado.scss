@@ -136,7 +136,8 @@
       margin-right: 0;
       max-width: 100%;
       min-width: 100%;
-      overflow: scroll;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       .ig-boxes{
         flex-direction: row;
         flex-wrap: nowrap;

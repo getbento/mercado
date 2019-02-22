@@ -1,0 +1,13 @@
+{
+  "name": "Gallery Page",
+  "fields": {
+    "left_header_image": "image",
+    "right_header_image": "image",
+    "images": {
+      "type": "repeater",
+      "items": {
+        "image": "image"
+      }
+    }
+  }
+}

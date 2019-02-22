@@ -167,6 +167,9 @@
       padding: 10px;
       p{
         margin-bottom: 20px;
+        font-family: $knockout;
+
+        font-weight: 100;
       }
       .home-rest-links{
         display: flex;
@@ -214,6 +217,9 @@
 .home-mercado-kiosks{
   display: flex;
   justify-content: space-between;
+  @media (max-width: 920px){
+    justify-content: space-around;
+  }
   flex-wrap: wrap;
   .home-mercado-kiosk{
     width: 18.5%;
@@ -296,8 +302,10 @@
     }
     h6{
       font-family: $domaine;
-      font-weight: 900;
+      font-weight: 100;
       margin-bottom: 10px;
+      	color: #474746;
+        transition: 250ms ease all;
     }
     h3{
       text-transform: uppercase;
@@ -308,11 +316,21 @@
       margin-bottom: 7px;
       transition: 250ms ease all;
     }
+    p{
+      	color: #474746;
+        transition: 250ms ease all;
+    }
     &:hover{
       background-color: $toro_red;
       color: white;
       h3{
         color: $oro_yellow;
+      }
+      p{
+        	color: white;
+      }
+      h6{
+        color: white;
       }
     }
     .happenings-img{
@@ -410,6 +428,9 @@
   justify-content: space-between;
   // flex-wrap: wrap;
   margin-bottom: 30px;
+  @media (max-width: 767px){
+    flex-wrap: wrap;
+  }
 
 }
 .single-blog-arrow{
@@ -637,6 +658,7 @@
   a.more-info{
     border-color: $toro_red;
     color: $toro_red;
+    font-family: $knockout-feather;
     &:hover{
       color: white;
       background-color: $toro_red;

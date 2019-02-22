@@ -136,7 +136,7 @@ $(document).ready(function () {
     console.log('home!');
     $('body').scroll(function () {
       let scrollTop = $('body').scrollTop();
-      console.log(scrollTop);
+      // console.log(scrollTop);
       if (scrollTop > 50) {
         $('#masthead').addClass('logo-show');
       } else {

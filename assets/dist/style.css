@@ -1393,7 +1393,9 @@ address.site-info {
       flex-direction: column;
       padding: 10px; }
       .home-restaurant-box .home-rest-info .home-rest-caption p {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        font-family: "Knockout 30 A", "Knockout 30 B";
+        font-weight: 100; }
       .home-restaurant-box .home-rest-info .home-rest-caption .home-rest-links {
         display: flex;
         flex-direction: column; }
@@ -1431,6 +1433,9 @@ address.site-info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media (max-width: 920px) {
+    .home-mercado-kiosks {
+      justify-content: space-around; } }
   .home-mercado-kiosks .home-mercado-kiosk {
     width: 18.5%;
     margin-bottom: 20px;
@@ -1502,8 +1507,10 @@ address.site-info {
       margin-bottom: 20px; }
     .happenings-events .happenings-event h6 {
       font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-      font-weight: 900;
-      margin-bottom: 10px; }
+      font-weight: 100;
+      margin-bottom: 10px;
+      color: #474746;
+      transition: 250ms ease all; }
     .happenings-events .happenings-event h3 {
       text-transform: uppercase;
       color: #EA0029;
@@ -1512,11 +1519,18 @@ address.site-info {
       line-height: 1em;
       margin-bottom: 7px;
       transition: 250ms ease all; }
+    .happenings-events .happenings-event p {
+      color: #474746;
+      transition: 250ms ease all; }
     .happenings-events .happenings-event:hover {
       background-color: #EA0029;
       color: white; }
       .happenings-events .happenings-event:hover h3 {
         color: #FFF065; }
+      .happenings-events .happenings-event:hover p {
+        color: white; }
+      .happenings-events .happenings-event:hover h6 {
+        color: white; }
     .happenings-events .happenings-event .happenings-img {
       width: 100%;
       height: 0;
@@ -1589,6 +1603,9 @@ address.site-info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .home-el-blog-posts.blog-articles-container {
+      flex-wrap: wrap; } }
 
 .single-blog-arrow {
   position: absolute;
@@ -1769,7 +1786,8 @@ address.site-info {
   margin-bottom: 40px; }
   .home-see-more-button a.more-info {
     border-color: #EA0029;
-    color: #EA0029; }
+    color: #EA0029;
+    font-family: "Knockout 68 A", "Knockout 68 B"; }
     .home-see-more-button a.more-info:hover {
       color: white;
       background-color: #EA0029; }
@@ -1887,7 +1905,8 @@ address.site-info {
       margin-right: 0;
       max-width: 100%;
       min-width: 100%;
-      overflow: scroll; }
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; }
       .ig-feed .content-margins .ig-boxes {
         flex-direction: row;
         flex-wrap: nowrap; }
