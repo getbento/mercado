@@ -5,17 +5,18 @@
       <div class="contact__left">
          <div class="contact-info">
             <h1 class="contact__title">contact us</h1>
-            <h3 class="info-red address">{{ current.fields.contact.address }}</h3>
-            <h3 class="info-red">{{ current.fields.contact.phone_numer }}</h3>
-            <h3 class="info-red"><a href="mailto:{{ current.fields.contact.email_address }}">Email Us</a></h3>
+            {{ current.fields.contact.address }}
+            <div class="contact__email-num">
+              <p class="info-red">{{ current.fields.contact.phone_numer }}</p>
+              <p class="info-red"><a href="mailto:{{ current.fields.contact.email_address }}">Email Us</a></p>
+            </div>
          </div>
          <div class="hours">
             <h1 class="contact__title">hours</h1>
             {% for h in current.fields.contact.hours %}
             <div>
-               <h3 class="info-red hours__info">{{ h.hours }}</h3>
-               <h3 class="info-red hours__info">&nbsp;</h3>
-               <h3 class="info-grey hours__info">{{ h.day }}</h3>
+               <h3 class="info-red hours__info">{{ h.hours }} <span>{{ h.day }}</span></h3>
+               <!-- <h3 class="info-grey hours__info"></h3> -->
             </div>
             {% endfor %}
          </div>
@@ -29,7 +30,6 @@
             </div>
          </div>
       </div>
-   </div>
    </div>
 </section>
 <span class="metadata-marker" style="display: none;" data-region_tag="script-body"></span>

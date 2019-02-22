@@ -69,7 +69,7 @@ margin-bottom:50px;
 
 /*row styles*/
 @media screen and (min-width: $mobile_max) {
-.blog-post:nth-child(1) {
+.blog-landing-post.blog-post:nth-child(1) {
 		border: 2px solid $toro_red;
 		display: flex;
     min-height:380px;
@@ -130,7 +130,7 @@ margin-bottom:50px;
 
 }
 
-	.blog-post:nth-child(2),  .blog-post:nth-child(3){
+	.blog-landing-post.blog-post:nth-child(2),  .blog-landing-post.blog-post:nth-child(3){
 		border: 2px solid $toro_red;
 		display: flex;
 		width: 48%;
@@ -183,6 +183,7 @@ margin-bottom:50px;
     top:0;
     height: 100%;
     width: 100%;
+    z-index: 1;
   }
 		.image {
 			height: 60%;
@@ -196,6 +197,7 @@ margin-bottom:50px;
 		}
 		.info {
 			height: 40%;
+      padding-bottom: 50px;
 		}
 	}
 

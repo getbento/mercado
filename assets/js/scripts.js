@@ -54,6 +54,22 @@ $(document).ready(function(){
   }
 
   /*
+   * Homepage Scroll
+   ***************************/
+  if($('body').hasClass('current-home')){
+    console.log('home!');
+      $('body').scroll(function(){
+        let scrollTop = $('body').scrollTop();
+        console.log(scrollTop);
+        if(scrollTop > 50){
+          $('#masthead').addClass('logo-show');
+        }else{
+          $('#masthead').removeClass('logo-show');
+        }
+      });
+  }
+
+  /*
    * Footer Carousel (see footerSlick)
    ***************************/
   if ( $('.partner-carousel').length ) {
@@ -93,7 +109,7 @@ $(document).ready(function(){
 
    $('.single-blog').scroll(function(){
      // console.log($('.single-blog').scrollTop());
-     if($('.single-blog').scrollTop() > 200){
+     if($('.single-blog').scrollTop() > 50){
        $('.article-info-slide').addClass('active');
      }else{
        $('.article-info-slide').removeClass('active');

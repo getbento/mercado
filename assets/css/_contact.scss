@@ -11,19 +11,23 @@
 	.contact__left, .contact__right {
 		width: 50%;
 	}
-	.contact-info, .hours {
+	.contact__right{
+		padding-left: 30px;
 	}
 	.contact__title {
 		font-family: $knockout-lite;
 	    font-weight: initial;
-	    font-size: 14em;
-	    padding-top: 0.3em;
+	    font-size: 12em;
+	    padding: 0.3em 0;
 	    color: $mid_grey;
 	    margin-bottom: 0.15em;
 	    text-transform: uppercase;
+			@media (max-width: 767px){
+				font-size: 10em;
+			}
 	}
 
-	.info-red, .info-red p, .info-red a {
+	.info-red, .contact-info p, .contact-info a {
 	    text-transform: uppercase;
 	   	font-family: $knockout-lite;
 	    font-weight: initial;
@@ -31,6 +35,12 @@
 	    font-size: 4.8rem;
 	    line-height: 0.95em;
 	    letter-spacing: 1.5px;
+	}
+	.contact-info p{
+		margin-bottom: 0px;
+	}
+	.contact__email-num{
+		margin-top: 30px;
 	}
 	.info-red a {
 		text-decoration: underline;
@@ -48,7 +58,14 @@
 		margin-bottom: 0.5em;
 	}
 	.hours__info {
-		display: inline-block;
+    font-size: 4.3rem;
+		// white-space: nowrap;
+
+		span{
+			color: #474746;
+			white-space: nowrap;
+		}
+
 	}
 	.map-section {
 		width: 100%;
@@ -67,7 +84,9 @@
 	@media screen and (max-width: 1024px) {
 		.contact__left {
 			width: 40%;
-
+			.hours__info{
+				margin-bottom: 20px;
+			}
 		}
 		.contact__right {
 			width: 60%;

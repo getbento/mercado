@@ -18,6 +18,7 @@
   color: $toro_red;
   margin: 0;
   margin-bottom: 16px;
+  font-family: $knockout-feather;
   @media screen and (max-width: $mobile_max) {
     margin-bottom: 40px;
     text-align: center;
@@ -102,7 +103,7 @@
   .slick-arrow {
     @extend %input;
     height: 16px;
-    width: 12px;
+    width: 16px;
     // background: url('../img/carousel-arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -116,12 +117,17 @@
     }
   } .slick-prev {
     left: -48px;
+    border-left: 3px solid $toro_red;
+    border-bottom: 3px solid $toro_red;
+    transform: rotate(45deg);
     @media screen and (max-width: $mobile_max) {
       left: ($gutter_width_mobile * -1) + 8px;
     }
   } .slick-next {
     right: -48px;
-    @include transform(scaleX(-1));
+    border-right: 3px solid $toro_red;
+    border-bottom: 3px solid $toro_red;
+    transform: rotate(-45deg);
     @media screen and (max-width: $mobile_max) {
       right: ($gutter_width_mobile * -1) + 8px;
     }
