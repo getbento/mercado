@@ -190,6 +190,24 @@ $(document).ready(function () {
   });
 
   /*
+   * Single Restaurant
+   ***************************/
+
+  $(".menu-button").on('click', function () {
+    console.log();
+    $(".menu-button").removeClass('active');
+    $(this).addClass("active");
+    var bt = $(this);
+    $(".full-menu.active").fadeOut('fast', function () {
+      $(this).removeClass('active');
+      console.log($(bt).attr('menu_attr'));
+      $(".menu-" + $(bt).attr('menu_attr')).fadeIn('fast', function () {
+        $(this).addClass('active');
+      });
+    });
+  });
+
+  /*
    * Instagram AJAX
    ***************************/
 
