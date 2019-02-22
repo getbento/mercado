@@ -2965,7 +2965,7 @@ address.site-info {
   background: #EA0029;
   color: white;
   text-align: center;
-  z-index: 9;
+  z-index: 20;
   opacity: 0;
   pointer-events: none;
   -webkit-transform: translateY(100%);
