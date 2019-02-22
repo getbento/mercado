@@ -16,7 +16,12 @@
 		  margin:15px;
 		  display: flex;
 		  text-align: center;
-		  align-items: center
+		  align-items: center;
+      h2.shrink {
+        @include h3-style;
+        text-transform: uppercase;
+        line-height: 3.4rem;
+      }
 	  }
   }
 
