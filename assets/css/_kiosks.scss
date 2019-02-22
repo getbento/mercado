@@ -147,10 +147,25 @@
     font-size: 60px;
     font-family: $knockout-bantam;
   }
+
   .single-kiosk{
     .kiosk-landing{
       img{
         display: block;
+      }
+    }
+    .page-landing-header {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      display: flex;
+      .kiosk_title {
+        float: unset;
+        h2 {
+          &.shrink {
+            text-transform: uppercase;
+            line-height: 2.9rem;
+          }
+        }
       }
     }
   }

@@ -2727,6 +2727,15 @@ address.site-info {
     font-family: "Knockout 67 A", "Knockout 67 B"; }
   .single-kiosk .kiosk-landing img {
     display: block; }
+  .single-kiosk .page-landing-header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex; }
+    .single-kiosk .page-landing-header .kiosk_title {
+      float: unset; }
+      .single-kiosk .page-landing-header .kiosk_title h2.shrink {
+        text-transform: uppercase;
+        line-height: 2.9rem; }
   .page-landing-header {
     justify-content: center; }
     .page-landing-header h1 {
