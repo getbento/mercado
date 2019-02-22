@@ -964,10 +964,28 @@ address.site-info {
       text-transform: uppercase; } }
 
 .restaurant-single {
-  padding-top: 30px; }
+  padding-top: 30px;
+  width: 100%; }
+  @media (max-width: 767px) {
+    .restaurant-single {
+      padding-top: 0px; } }
+
+.restaurant-header-mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .restaurant-header-mobile {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px; }
+      .restaurant-header-mobile img {
+        width: 100%;
+        height: auto; } }
 
 .restaurant-header {
   margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .restaurant-header {
+      display: none; } }
   .restaurant-header img {
     width: 100%;
     height: 100%;
@@ -991,7 +1009,7 @@ address.site-info {
         width: 100%;
         border-right: 0px; } }
     .restaurant-content .restaurant-single-info .restaurant-single-content {
-      padding: 10px 20px;
+      padding: 30px 35px;
       border-bottom-width: 2px;
       border-bottom-style: solid;
       height: 70%; }
@@ -1068,6 +1086,12 @@ address.site-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px; }
+    @media (max-width: 767px) {
+      .rest-single-menus .rest-single-menu-select {
+        width: 100%;
+        flex-direction: column; }
+        .rest-single-menus .rest-single-menu-select .menu-button {
+          margin: 7px 0px; } }
     .rest-single-menus .rest-single-menu-select .rest-single-menu-title {
       display: flex;
       justify-content: center;
@@ -1086,14 +1110,15 @@ address.site-info {
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title h3 {
         text-transform: uppercase; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active {
-        color: white; }
+        color: white !important; }
+        .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active h3 {
+          color: white; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title:last-child {
         margin-right: 0px; }
   .rest-single-menus .rest-single-menu-cont {
     border-style: solid;
     border-width: 2px;
     border-top: none;
-    border-bottom: none;
     display: none; }
     .rest-single-menus .rest-single-menu-cont.active {
       display: block; }
@@ -1109,14 +1134,20 @@ address.site-info {
       padding: 40px 110px;
       display: flex;
       flex-wrap: wrap; }
+      @media (max-width: 767px) {
+        .rest-single-menus .rest-single-menu-cont .menu-section .allItems {
+          padding: 20px 10px; } }
     .rest-single-menus .rest-single-menu-cont .menu-section .item {
       width: 50%;
       box-sizing: border-box;
       padding: 10px;
       display: flex;
       flex-direction: row; }
+      @media (max-width: 767px) {
+        .rest-single-menus .rest-single-menu-cont .menu-section .item {
+          width: 100%; } }
       .rest-single-menus .rest-single-menu-cont .menu-section .item .itemdesc {
-        width: 80%; }
+        width: 85%; }
         .rest-single-menus .rest-single-menu-cont .menu-section .item .itemdesc .itemName {
           text-transform: uppercase; }
 
