@@ -2162,6 +2162,8 @@ address.site-info {
         width: 100%; } }
     .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon {
       width: 100%;
+      height: 0;
+      padding-bottom: 100%;
       margin-bottom: 15px;
       position: relative; }
       .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon span {
@@ -2182,21 +2184,18 @@ address.site-info {
         opacity: 0; }
       .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         border: 2px solid #EA0029; }
-      .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon.with-padding {
-        height: 0;
-        padding-bottom: 100%;
-        position: relative; }
-        .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon.with-padding img {
-          border: 2px solid #EA0029;
-          position: absolute;
-          left: 0;
-          top: 0;
-          padding: 10px;
-          height: 100%;
-          width: 100%;
-          object-fit: cover; }
+      .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon.with-padding img {
+        border: 2px solid #EA0029;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
   .hay-mas .hay-mas-links h4 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-weight: 800;
