@@ -2393,7 +2393,7 @@ address.site-info {
       color: #EA0029;
       font-weight: initial;
       font-family: "Knockout 67 A", "Knockout 67 B";
-      margin-bottom: 20px; }
+      margin-bottom: 15px; }
     .gift-card-container .gift-card-info p {
       margin-bottom: 15px; }
   .gift-card-container .more-info {
@@ -2402,7 +2402,8 @@ address.site-info {
     text-decoration: none;
     font-family: "Knockout 49 A", "Knockout 49 B";
     font-size: 20px;
-    margin: 0 10px; }
+    margin: 0 10px;
+    margin-left: 0; }
 
 .shop-little-spain-shops .kiosk-box-img {
   height: 0;
