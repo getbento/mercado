@@ -116,6 +116,29 @@ $(document).ready(function(){
      }
    });
 
+   /*
+    * Single Restaurant
+    ***************************/
+
+    $(".menu-button").on('click',function(){
+      console.log();
+      $(".menu-button").removeClass('active');
+      $(this).addClass("active");
+      $(".full-menu.active").fadeOut('fast',function(){
+        $(this).removeClass('active');
+        $(".menu-"+$(this).attr('menu_attr')).fadeIn(
+          'fast',function(){
+            $(this).addClass('active');
+          }
+        );
+
+      })
+
+
+    });
+
+
+
 
 
    /*

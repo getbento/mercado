@@ -1,11 +1,9 @@
 {% include "header.html" %}
 
 <!-- restaurant single -->
-<!-- {{current}} -->
 
 
-<style>
-  .restaurant-content .restaurant-single-content p strong{
+<style type="text/css">  .restaurant-content .restaurant-single-content p strong{
     color: {{current.fields.primary_color}};
   }
   .rest-contact-inner h4 strong{
@@ -24,9 +22,7 @@
   .rest-single-gallery-controls .rest-slide-prev:hover .st0, .rest-single-gallery-controls .rest-slide-next:hover .st0{
     stroke: white;
   }
-</style>
 
-<style type="text/css">
   .st0{
     fill:none;
     stroke:{{current.fields.primary_color}};
@@ -34,6 +30,13 @@
     stroke-miterlimit:10;
     transition: ease 250ms all;
   }
+  .ccolor{
+    color:{{current.fields.primary_color}};
+  }
+  .bcolor{
+    border:2px solid {{current.fields.primary_color}};
+  }
+
 </style>
 
 <article class="restaurant-single rest-{{current.slug}}">
@@ -91,20 +94,47 @@
         </div>
       </div>
     </section>
-{{current.fields}}
     {% if current.fields.menus %}
     <section class="rest-single-menus">
       <div class="rest-single-menu-header" style='background-color: {{current.fields.primary_color}}'>
         <h2>Menus</h2>
       </div>
       <div class="rest-single-menu-select" >
-        <div class="rest-single-menu-title" style='border-color: {{current.fields.primary_color}}'>Food</div>
-        <div class="rest-single-menu-title" style='border-color: {{current.fields.primary_color}}'>Drinks</div>
-        <div class="rest-single-menu-title" style='border-color: {{current.fields.primary_color}}'>Dessert</div>
+      {% for individualmenu in current.fields.menus %}
+        <div class="{% if loop.index == 1%}active{% endif %} rest-single-menu-title  menu-button" menu_attr='{{individualmenu.menu.name}}' style='border-color: {{current.fields.primary_color}}'><h3>{{individualmenu.menu.name}}</h3></div>
+        {% endfor %}
       </div>
-      <div class="rest-single-menu-cont" style='border-color: {{current.fields.primary_color}}'>
+      {% for individualmenu in current.fields.menus %}
+      <section class="rest-single-menu-cont full-menu {% if loop.index == 1%}active{% endif %} menu-{{individualmenu.menu.name}}" style='border-color: {{current.fields.primary_color}}'>
+      {% for section in individualmenu.menu.sections %}
+      <section class='menu-section'>
+      <h4 class="bcolor">{{section.name}}</h4>
+      <div class='allItems'>
+      {% for item in section.menu_items %}
+
+      <div class='item'>
+      <div class='itemdesc'>
+      <p class='itemName ccolor'>{{item.name}}</p>
+      <p class='itemDescription'>{{item.description}}</p>
 
       </div>
+      {% for price in item.prices %}
+
+      <div class='itemprice ccolor'>
+        <p>${{price.price}}</p>
+      </div>
+      {% endfor %}
+      </div>
+      {% endfor %}
+</div>
+      </section>
+      {% endfor %}
+
+
+
+      </section>
+      {% endfor %}
+
     </section>
     {% endif %}
 

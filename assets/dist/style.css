@@ -1016,14 +1016,42 @@ address.site-info {
       letter-spacing: 0.03em;
       cursor: pointer;
       background-color: transparent; }
+      .rest-single-menus .rest-single-menu-select .rest-single-menu-title h3 {
+        text-transform: uppercase; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active {
         color: white; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title:last-child {
         margin-right: 0px; }
   .rest-single-menus .rest-single-menu-cont {
-    height: 600px;
     border-style: solid;
-    border-width: 2px; }
+    border-width: 2px;
+    border-top: none;
+    border-bottom: none;
+    display: none; }
+    .rest-single-menus .rest-single-menu-cont.active {
+      display: block; }
+    .rest-single-menus .rest-single-menu-cont .menu-section h4 {
+      font-size: 5em;
+      text-align: center;
+      width: 100%;
+      padding: 20px 0px;
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      border-left: none;
+      border-right: none; }
+    .rest-single-menus .rest-single-menu-cont .menu-section .allItems {
+      padding: 40px 110px;
+      display: flex;
+      flex-wrap: wrap; }
+    .rest-single-menus .rest-single-menu-cont .menu-section .item {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 10px;
+      display: flex;
+      flex-direction: row; }
+      .rest-single-menus .rest-single-menu-cont .menu-section .item .itemdesc {
+        width: 80%; }
+        .rest-single-menus .rest-single-menu-cont .menu-section .item .itemdesc .itemName {
+          text-transform: uppercase; }
 
 .rest-single-join-us {
   display: flex;
