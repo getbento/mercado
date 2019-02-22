@@ -2044,16 +2044,14 @@ address.site-info {
       .single-blog .single-blog-img {
         width: 100%;
         position: relative;
-        height: 45vw; } }
+        height: 70vw;
+        max-height: 45vh; } }
     .single-blog .single-blog-img img {
       height: 100%;
       width: 100%;
       object-fit: cover; }
   .single-blog .single-blog-info {
     width: 43%; }
-    .single-blog .single-blog-info h1 {
-      font-size: 10rem;
-      line-height: 0.8em; }
     .single-blog .single-blog-info h4 {
       font-size: 4rem;
       line-height: 0.9em; }
