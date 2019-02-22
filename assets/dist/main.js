@@ -119,11 +119,11 @@ $(document).ready(function () {
    * Mobile Navigation - Subnav
    ***************************/
   if (isMobile) {
-    $('.nav-item.has-children a').each(function () {
+    $('.nav-item.has-children > a').each(function () {
       mobileSubnav(this);
     });
 
-    $('.nav-item.has-children a').click(function (event) {
+    $('.nav-item.has-children > a').click(function (event) {
       event.preventDefault();
       toggleSubnav(this);
     });

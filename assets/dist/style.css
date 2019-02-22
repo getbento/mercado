@@ -399,7 +399,9 @@ a {
     height: 40px; }
 
 #site-navigation {
-  flex: 1 0 0; }
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
   @media screen and (min-width: 768px) {
     #site-navigation > ul {
       display: flex;
@@ -589,6 +591,14 @@ a {
 
 .branding-header-logo {
   line-height: 0px; }
+
+.nav-menu {
+  max-width: 1000px;
+  width: 100%; }
+
+.nav-item:hover {
+  background-color: #EA0029;
+  color: white; }
 
 /*
  * Newsletter Capture
@@ -2070,7 +2080,7 @@ address.site-info {
         width: 38%;
         height: 100%; }
         .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__title {
-          font-size: 8.5em;
+          font-size: 75px;
           line-height: 1em; }
         .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
           font-weight: initial;
@@ -2117,7 +2127,6 @@ address.site-info {
           font-size: 5em; } }
   .blog-articles-container .blog-post {
     margin-top: 28px;
-    min-height: 380px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -2155,7 +2164,6 @@ address.site-info {
   @media screen and (max-width: 767px) {
     .blog-articles-container .blog-post {
       margin-top: 28px;
-      height: calc(60vh) !important;
       display: flex;
       flex-wrap: nowrap;
       flex-direction: column;
@@ -2171,7 +2179,8 @@ address.site-info {
           width: 100%;
           object-fit: cover; }
       .blog-articles-container .blog-post .info {
-        height: 40% !important; } }
+        height: auto !important;
+        padding-bottom: 40px; } }
 
 @media screen and (max-width: 767px) {
   .blog-landing .mobile-blog-title {
@@ -3189,7 +3198,8 @@ address.site-info {
   text-transform: none;
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
   margin: 35px auto;
-  max-width: 850px; }
+  max-width: 850px;
+  color: white; }
   @media screen and (max-width: 767px) {
     #newsletter-popup-blurb {
       font-size: 1.7rem;

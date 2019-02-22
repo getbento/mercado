@@ -53,6 +53,7 @@
   font-family: $domaine;
   margin: 35px auto;
   max-width: columns(10);
+  color: white;
   @media screen and (max-width: $mobile_max) {
     max-width: unset;
     padding: 0 32px;
