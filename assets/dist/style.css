@@ -1394,9 +1394,10 @@ address.site-info {
     @media (max-width: 767px) {
       .home-description .home-desc-inner {
         padding: 20px 40px; } }
-    .home-description .home-desc-inner h1 {
+    .home-description .home-desc-inner h2 {
       font-family: "Knockout 67 A", "Knockout 67 B";
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      color: white; }
     .home-description .home-desc-inner p {
       margin-bottom: 20px;
       color: white; }
