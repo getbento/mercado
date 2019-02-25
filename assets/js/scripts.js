@@ -42,7 +42,7 @@ $(document).ready(function(){
   /*
    * Mobile Navigation - Subnav
    ***************************/
-  if ( isMobile ) {
+  if ( $(window).width() < 1030 ) {
     $('.nav-item.has-children > a').each(function(){
       mobileSubnav(this);
     });
@@ -58,8 +58,9 @@ $(document).ready(function(){
    ***************************/
   if($('body').hasClass('current-home')){
     console.log('home!');
-      $('body').scroll(function(){
-        let scrollTop = $('body').scrollTop();
+      $(window).scroll(function(){
+
+        let scrollTop = $(window).scrollTop();
         // console.log(scrollTop);
         if(scrollTop > 50){
           $('#masthead').addClass('logo-show');
@@ -196,26 +197,10 @@ $(document).ready(function(){
 
   //specific AJAX calls.
 
-//happenings page
   $(".eventsFilter").on('click',function(){
-    var all = false;
-    if($(this).hasClass("active")){
-      all = true;
-      $(".active").removeClass("active");
-
-    }else{
-      $(".active").removeClass("active");
-      $(this).addClass("active");
-      
-    }
-
-if(all == true){
-  var filteredEvents = doAjax($(this).attr("box"), '');
-
-}else{
+$(".active").removeClass("active");
+$(this).addClass("active");
   var filteredEvents = doAjax($(this).attr("box"), $(this).attr("filter"));
-
-}
   $(".all-events a").each(function(i,stuff){
     var ele = $(this);
 
@@ -310,8 +295,9 @@ $(window).resize(function(){
   /*
    * Mobile Navigation ARIA
    ***************************/
-  if ( isMobile ) {
+  if ( windowWidth < 1030 ) {
     // Overarching ARIA expanded
+    console.log('smaller menu!')
     $('#skip-to-navigation-link, .mobile-nav-header-close').attr('aria-expanded', isMenuOpen);
 
     // Subnav
@@ -353,7 +339,9 @@ function toggleMenu( target ) {
   isMenuOpen = !isMenuOpen;
 
   $('#skip-to-navigation-link, .mobile-nav-header-close').attr('aria-expanded', isMenuOpen);
+  $('#skip-to-navigation-link').toggleClass('opened')
   $('#site-navigation').toggleClass('opened');
+  $('body').toggleClass('hide-overflow');
 }
 
 /*
@@ -444,3 +432,12 @@ function footerSlick( target ) {
       var expires = "expires="+ d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
+
+
+// function restClick(e){
+//   console.log('lcik!');
+//   if($(window).width() < 1030){
+//     e.preventDefault();
+//     $('.nav-children').slideToggle();
+//   }
+// }

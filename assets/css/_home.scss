@@ -305,7 +305,7 @@
     h6{
       font-family: $domaine;
       font-weight: 100;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       	color: #474746;
         transition: 250ms ease all;
     }
@@ -662,6 +662,8 @@
     border-color: $toro_red;
     color: $toro_red;
     font-family: $knockout-feather;
+    transition: ease 250ms all;
+
     &:hover{
       color: white;
       background-color: $toro_red;

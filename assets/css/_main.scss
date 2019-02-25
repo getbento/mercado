@@ -1,6 +1,6 @@
 body, html {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   padding: 0;
   margin: 0;
   font-size: 62.5%;
@@ -44,6 +44,9 @@ h6 {
 
 p {
   @include p-style;
+  a{
+    text-decoration: underline;
+  }
 }
 
 ul, ol {
@@ -158,4 +161,8 @@ a{
 }
 .header-icon-left{
   border-right: 2px solid $toro_red;
+}
+
+.hide-overflow{
+  overflow: hidden;
 }

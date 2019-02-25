@@ -90,8 +90,9 @@
     font-family: $knockout-lite;
     font-size: 20px;
     margin: 0 10px;
+    transition: ease 250ms all;
+
     &:hover{
-      transition: ease 250ms all;
       color: white;
       background-color: $toro_red;
     }

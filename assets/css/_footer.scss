@@ -89,10 +89,11 @@
   padding: 12px 64px;
   text-decoration: none;
   display: inline-block;
-  transition: ease 300ms all;
+  transition: ease 250ms all;
   cursor: pointer;
   &:hover {
-    background: $oro_yellow;
+    background: $toro_red;
+    color: white;
   } &:active {
     color: $oro_yellow;
     background: $toro_red;
