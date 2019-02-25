@@ -67,7 +67,7 @@
       <ul class="nav-menu">
         {% for item in navs.main %}
           {% if item.slug == 'restaurant' %}
-            <li class="nav-item has-children {% if item.url == current.url %}current_page{% endif %}">
+            <li class="nav-item has-children {% if item.slug == current.box_type %}current_page{% endif %}">
               <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}">
                 {{ item.name }}
               </a>

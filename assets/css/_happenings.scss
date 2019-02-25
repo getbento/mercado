@@ -29,37 +29,7 @@ padding-top:30px;
   margin:20px 0px;
   justify-content:space-between;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  align-items: center;
-  button{
-    width:125px;
-    height:65px;
-    color:$toro-red;
-    text-transform: uppercase;
-    border:2px solid $toro-red;
-    background-color:white;
-    font-family: $knockout-bantam;
-    font-size:2.5rem;
-    line-height: 1rem;
-    cursor: pointer;
-    margin:0px 15px;
-    transition: ease 250ms all;
-  }
-  button.active, button:hover{
-    background-color:$toro-red;
-    color:white;
-  }
-  h1{
-  }
-  h2{
-    font-family:$knockout-feather;
-    text-transform: uppercase;
-    color:$toro-red;
-    font-size:6rem;
-    line-height: .6em;
-    margin-right:10px;
-  }
-=======
+
   align-items: flex-start;
 button{
   width:14%;
@@ -88,7 +58,7 @@ h2{
   line-height: .6em;
   margin-right:10px;
 }
->>>>>>> b17c03b79d7c1a138cfba9af9f884cdc197ea045
+
 
 }
 
