@@ -662,6 +662,8 @@
     border-color: $toro_red;
     color: $toro_red;
     font-family: $knockout-feather;
+    transition: ease 250ms all;
+
     &:hover{
       color: white;
       background-color: $toro_red;

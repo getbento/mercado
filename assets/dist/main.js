@@ -383,6 +383,7 @@ function toggleMenu(target) {
   isMenuOpen = !isMenuOpen;
 
   $('#skip-to-navigation-link, .mobile-nav-header-close').attr('aria-expanded', isMenuOpen);
+  $('#skip-to-navigation-link').toggleClass('opened');
   $('#site-navigation').toggleClass('opened');
 }
 
