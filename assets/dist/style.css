@@ -207,6 +207,8 @@ p {
       line-height: 2.1rem;
       letter-spacing: normal;
       text-transform: none; } }
+  p a {
+    text-decoration: underline; }
 
 ul, ol {
   list-style: none;
@@ -327,6 +329,9 @@ a {
 
 .header-icon-left {
   border-right: 2px solid #EA0029; }
+
+.hide-overflow {
+  overflow: hidden; }
 
 /*D*/
 /*D*/
