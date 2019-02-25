@@ -283,7 +283,7 @@ a {
   font-size: 20px;
   color: white;
   display: inline-block;
-  font-family: "Knockout 68 A", "Knockout 68 B" !important; }
+  font-family: "Knockout 48 A", "Knockout 48 B" !important; }
 
 .page-landing-header {
   display: flex;
@@ -313,7 +313,7 @@ a {
         line-height: 1em; } }
   .page-landing-header h2 {
     color: black;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     font-size: 6em;
     line-height: .8em;
     text-transform: uppercase; }
@@ -752,7 +752,8 @@ a {
   color: #FFF065;
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
   padding: 12px 24px;
-  width: 100%; }
+  width: 100%;
+  font-size: 20px; }
   @media screen and (max-width: 767px) {
     .red-input {
       font-size: 2.9rem;
@@ -766,13 +767,17 @@ a {
     letter-spacing: normal;
     text-transform: none;
     color: #FFF065;
-    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 20px; }
     @media screen and (max-width: 767px) {
       .red-input.placeholder {
         font-size: 2.9rem;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
+    @media screen and (max-width: 767px) {
+      .red-input.placeholder {
+        font-size: 18px !important; } }
   .red-input:-moz-placeholder {
     color: #474746;
     font-size: 3.4rem;
@@ -780,13 +785,17 @@ a {
     letter-spacing: normal;
     text-transform: none;
     color: #FFF065;
-    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 20px; }
     @media screen and (max-width: 767px) {
       .red-input:-moz-placeholder {
         font-size: 2.9rem;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
+    @media screen and (max-width: 767px) {
+      .red-input:-moz-placeholder {
+        font-size: 18px !important; } }
   .red-input::-moz-placeholder {
     color: #474746;
     font-size: 3.4rem;
@@ -794,13 +803,17 @@ a {
     letter-spacing: normal;
     text-transform: none;
     color: #FFF065;
-    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 20px; }
     @media screen and (max-width: 767px) {
       .red-input::-moz-placeholder {
         font-size: 2.9rem;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
+    @media screen and (max-width: 767px) {
+      .red-input::-moz-placeholder {
+        font-size: 18px !important; } }
   .red-input:-ms-input-placeholder {
     color: #474746;
     font-size: 3.4rem;
@@ -808,13 +821,17 @@ a {
     letter-spacing: normal;
     text-transform: none;
     color: #FFF065;
-    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 20px; }
     @media screen and (max-width: 767px) {
       .red-input:-ms-input-placeholder {
         font-size: 2.9rem;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
+    @media screen and (max-width: 767px) {
+      .red-input:-ms-input-placeholder {
+        font-size: 18px !important; } }
   .red-input::-webkit-input-placeholder {
     color: #474746;
     font-size: 3.4rem;
@@ -822,16 +839,20 @@ a {
     letter-spacing: normal;
     text-transform: none;
     color: #FFF065;
-    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 20px; }
     @media screen and (max-width: 767px) {
       .red-input::-webkit-input-placeholder {
         font-size: 2.9rem;
         line-height: 4.5rem;
         letter-spacing: normal;
         text-transform: none; } }
+    @media screen and (max-width: 767px) {
+      .red-input::-webkit-input-placeholder {
+        font-size: 18px !important; } }
 
 .outline-button {
-  font-family: "Knockout 68 A", "Knockout 68 B";
+  font-family: "Knockout 48 A", "Knockout 48 B";
   font-weight: 100 !important;
   font-size: 2rem;
   line-height: 2.7rem;
@@ -874,6 +895,10 @@ a {
     position: absolute;
     top: calc(50% - 8px);
     cursor: pointer; }
+    @media screen and (max-width: 767px) {
+      .partner-carousel .slick-arrow {
+        width: 16px;
+        height: 16px; } }
   .partner-carousel .slick-prev {
     left: -48px;
     border-left: 3px solid #EA0029;
@@ -1060,11 +1085,16 @@ address.site-info {
   @media (max-width: 767px) {
     .restaurant-header-mobile {
       width: 100%;
-      display: block;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
       margin-bottom: 30px; }
+      .restaurant-header-mobile h1 {
+        line-height: 0em; }
       .restaurant-header-mobile img {
         width: 100%;
-        height: auto; } }
+        object-fit: cover;
+        margin: 0px; } }
 
 .restaurant-header {
   margin-bottom: 30px; }
@@ -1106,7 +1136,7 @@ address.site-info {
         text-transform: uppercase;
         font-family: "Knockout 67 A", "Knockout 67 B";
         display: block;
-        padding: 20px 0 10px 0; }
+        padding: 20px 0 15px 0; }
       @media (max-width: 1024px) {
         .restaurant-content .restaurant-single-info .restaurant-single-content {
           height: auto;
@@ -1193,9 +1223,10 @@ address.site-info {
       cursor: pointer;
       background-color: transparent; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title h3 {
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        color: black; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active {
-        color: white !important; }
+        color: white; }
         .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active h3 {
           color: white; }
       .rest-single-menus .rest-single-menu-select .rest-single-menu-title:last-child {
@@ -1297,6 +1328,9 @@ address.site-info {
   color: black; }
   .rest-spanish-diner .rest-single-menus .rest-single-menu-select .rest-single-menu-title.active {
     color: black; }
+
+.rest-spanish-diner .active h3, .rest-spanish-diner .rest-single-menus .rest-single-menu-select .rest-single-menu-title h3 {
+  color: black !important; }
 
 .rest-spanish-diner .rest-single-menu-header h2 {
   color: black; }
@@ -1426,7 +1460,7 @@ address.site-info {
     color: #EA0029;
     border: 2px solid #EA0029;
     text-decoration: none;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     font-size: 20px;
     margin: 0 10px;
     transition: ease 250ms all; }
@@ -1730,7 +1764,7 @@ address.site-info {
     .happenings-events .happenings-event h3 {
       text-transform: uppercase;
       color: #EA0029;
-      font-family: "Knockout 49 A", "Knockout 49 B";
+      font-family: "Knockout 48 A", "Knockout 48 B";
       font-size: 40px;
       line-height: 1em;
       margin-bottom: 7px;
@@ -1778,7 +1812,7 @@ address.site-info {
       display: block; } }
 
 .home-shop .kiosk-grid article.kiosk-box h6 {
-  font-family: "Knockout 49 A", "Knockout 49 B";
+  font-family: "Knockout 48 A", "Knockout 48 B";
   text-transform: uppercase;
   font-size: 35px; }
 
@@ -2172,7 +2206,7 @@ address.site-info {
     padding-top: 4px;
     text-transform: uppercase;
     color: #EA0029;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     font-weight: initial;
     line-height: 0.85em;
     font-size: 6em; }
@@ -2201,6 +2235,10 @@ address.site-info {
       justify-content: flex-start;
       width: 100%;
       padding: 0px; }
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .blog-post__title {
+        font-family: "Knockout 67 A", "Knockout 67 B"; }
+      .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .blog-post__desc {
+        font-family: "Knockout 68 A", "Knockout 68 B"; }
       .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .image {
         padding: 1.2em;
         width: 62%;
@@ -2220,7 +2258,7 @@ address.site-info {
         .blog-articles-container .blog-landing-post.blog-post:nth-child(1) .info .blog-post__desc {
           font-weight: initial;
           text-transform: uppercase;
-          font-family: "Knockout 49 A", "Knockout 49 B";
+          font-family: "Knockout 48 A", "Knockout 48 B";
           line-height: 1em;
           font-size: 5.75em;
           padding-top: 16px; } }
@@ -2706,7 +2744,7 @@ address.site-info {
     color: #EA0029;
     border: 2px solid #EA0029;
     text-decoration: none;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     font-size: 20px;
     margin: 0 10px;
     margin-left: 0; }
@@ -2753,7 +2791,7 @@ address.site-info {
     color: #EA0029;
     margin-bottom: 20px; }
   .standard-page .standard-content h2 {
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     text-transform: uppercase;
     color: #EA0029;
     font-size: 50px;
@@ -2786,7 +2824,7 @@ address.site-info {
         padding: 0;
         margin: 30px 0; } }
   .standard-page .standard-content b, .standard-page .standard-content strong {
-    font-family: "Knockout 49 A", "Knockout 49 B"; }
+    font-family: "Knockout 48 A", "Knockout 48 B"; }
   .standard-page .standard-content em {
     font-style: italic; }
   .standard-page .standard-content hr {
@@ -2876,11 +2914,14 @@ address.site-info {
     margin-top: 12px; }
   .contact-us-page-container .contact__right {
     padding-left: 30px; }
+    @media (max-width: 767px) {
+      .contact-us-page-container .contact__right {
+        padding-left: 0px; } }
   .contact-us-page-container .contact__title {
     font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
     font-size: 12em;
-    padding: 0.3em 0;
+    padding: 15px 0px 0px 0px;
     color: #474746;
     margin-bottom: 0.15em;
     text-transform: uppercase; }
@@ -2903,7 +2944,7 @@ address.site-info {
     text-decoration: underline; }
   .contact-us-page-container .info-grey {
     text-transform: uppercase;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     font-weight: initial;
     color: #474746;
     font-size: 4rem;
@@ -3022,7 +3063,7 @@ address.site-info {
         .single-kiosk .kiosk-details .kiosk-information .kiosk-description strong {
           color: #EA0029;
           font-size: 6rem;
-          font-family: "Knockout 49 A", "Knockout 49 B";
+          font-family: "Knockout 48 A", "Knockout 48 B";
           text-transform: uppercase; }
       .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
         padding: 0px 20px;
@@ -3037,7 +3078,7 @@ address.site-info {
         .single-kiosk .kiosk-details .kiosk-information .kiosk-share h2 {
           color: #EA0029;
           font-size: 6rem;
-          font-family: "Knockout 49 A", "Knockout 49 B";
+          font-family: "Knockout 48 A", "Knockout 48 B";
           text-transform: uppercase; }
         .single-kiosk .kiosk-details .kiosk-information .kiosk-share a img {
           height: 25px;
@@ -3159,7 +3200,7 @@ address.site-info {
     text-transform: uppercase;
     border: 2px solid #EA0029;
     background-color: white;
-    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-family: "Knockout 48 A", "Knockout 48 B";
     font-size: 2rem;
     line-height: 1rem;
     cursor: pointer; }
@@ -3321,7 +3362,7 @@ address.site-info {
   text-transform: uppercase;
   color: #FFF065;
   margin: 0;
-  font-family: "Knockout 68 A", "Knockout 68 B"; }
+  font-family: "Knockout 67 A", "Knockout 67 B"; }
   @media screen and (max-width: 767px) {
     #newsletter-popup-title {
       font-size: 9rem;

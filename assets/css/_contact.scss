@@ -15,12 +15,16 @@
 		margin-top: 12px;
 }	.contact__right{
 		padding-left: 30px;
+		@media (max-width: 767px){
+			padding-left:0px;
+		}
+
 	}
 	.contact__title {
 		font-family: $knockout-bantam;
 	    font-weight: initial;
 	    font-size: 12em;
-	    padding: 0.3em 0;
+	    padding: 15px 0px 0px 0px;
 	    color: $mid_grey;
 	    margin-bottom: 0.15em;
 	    text-transform: uppercase;
