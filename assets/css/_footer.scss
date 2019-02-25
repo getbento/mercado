@@ -114,10 +114,7 @@
     position: absolute;
     top: calc(50% - 8px);
     cursor: pointer;
-    @media screen and (max-width: $mobile_max) {
-      width: 24px;
-      height: 16px;
-    }
+
   } .slick-prev {
     left: -48px;
     border-left: 3px solid $toro_red;

@@ -7,7 +7,11 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>{% block title %}{% endblock %} - {{ account.site.title }}</title>
+  {% if current.slug == 'home' %}
+  <title>{{ account.site.title }}</title>
+  {% else %}
+  <title>{{current.name}} - {{ account.site.title }}</title>
+  {% endif %}
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -68,7 +72,7 @@
         {% for item in navs.main %}
           {% if item.slug == 'restaurant' %}
             <li class="nav-item has-children {% if item.slug == current.box_type %}current_page{% endif %}">
-              <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}">
+              <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" onClick="restClick(event)" class='toggle-restaurants'>
                 {{ item.name }}
               </a>
               <ul class="nav-children" id="{{ item.slug }}-dropdown">
@@ -92,6 +96,11 @@
             </li>
           {% endif %}
         {% endfor %}
+        <li class="nav-item mobile-social-menu">
+          <a href="{{account.services.facebook.url}}" target="_blank" class='social-fb'><img src="{{ static('img/Facebook.png') }}" alt="Facebook Icon"></a>
+          <a href="{{account.services.twitter.url}}" target="_blank" class='social-twitter'><img src="{{ static('img/Twitter.png') }}" alt="Twitter Icon"></a>
+          <a href="{{account.services.instagram.url}}" target="_blank" class='social-email'><img src="{{ static('img/instagram.png') }}" alt="Email Icon"></a>
+        </li>
       </ul>
       <!-- End navigation template
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->

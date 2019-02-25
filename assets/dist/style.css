@@ -105,8 +105,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Button Font */
 /* Button Font Components */
 body, html {
-  width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   font-size: 62.5%;
@@ -401,7 +399,7 @@ a {
 #site-navigation {
   width: 100%;
   display: flex; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1030px) {
     #site-navigation > ul {
       display: flex;
       flex-direction: row;
@@ -426,7 +424,7 @@ a {
           font-family: "Knockout 68 A", "Knockout 68 B";
           letter-spacing: 0.016em;
           position: relative; } }
-      @media screen and (min-width: 768px) and (max-width: 767px) {
+      @media screen and (min-width: 1030px) and (max-width: 767px) {
         #site-navigation > ul > li a {
           font-family: "Knockout 68 A", "Knockout 68 B";
           font-weight: initial;
@@ -434,8 +432,8 @@ a {
           line-height: 2.9rem;
           letter-spacing: normal;
           text-transform: uppercase; } }
-  @media screen and (min-width: 768px) {
-          #site-navigation > ul > li a:before {
+  @media screen and (min-width: 1030px) {
+          #site-navigation > ul > li a:after {
             content: '';
             position: absolute;
             left: 0;
@@ -446,7 +444,7 @@ a {
             height: 2px;
             background-color: #EA0029;
             transition: ease 300ms all; }
-          #site-navigation > ul > li a:hover:before {
+          #site-navigation > ul > li a:hover:after {
             width: 100%; }
         #site-navigation > ul > li.has-children {
           position: relative;
@@ -469,10 +467,10 @@ a {
                 border-top: 2px solid #FFF065; }
               #site-navigation > ul > li.has-children ul li.dupe {
                 display: none; } }
-            @media screen and (min-width: 768px) and (max-width: 1030px) {
+            @media screen and (min-width: 1030px) and (max-width: 1030px) {
               #site-navigation > ul > li.has-children ul li.dupe {
                 display: block; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1030px) {
           #site-navigation > ul > li.has-children:hover, #site-navigation > ul > li.has-children a:focus, #site-navigation > ul > li.has-children:focus-within {
             background: #EA0029;
             color: #FFFFFF; }
@@ -653,14 +651,27 @@ a {
 
 .nav-item {
   transition: ease 250ms all; }
-  .nav-item.current_page a:before {
+  .nav-item.current_page a:after {
     width: 100% !important; }
 
 .nav-children .nav-item a {
   margin: 0px !important;
   padding: 12px 16px; }
-  .nav-children .nav-item a:before {
+  .nav-children .nav-item a:after {
     display: none; }
+
+.mobile-social-menu {
+  display: none;
+  border: 0px !important;
+  margin-top: 20px; }
+  .mobile-social-menu a {
+    margin: 0 10px; }
+  .mobile-social-menu img {
+    height: 20px;
+    width: auto; }
+  @media (max-width: 1030px) {
+    .mobile-social-menu {
+      display: block; } }
 
 /*
  * Newsletter Capture
@@ -858,10 +869,6 @@ a {
     position: absolute;
     top: calc(50% - 8px);
     cursor: pointer; }
-    @media screen and (max-width: 767px) {
-      .partner-carousel .slick-arrow {
-        width: 24px;
-        height: 16px; } }
   .partner-carousel .slick-prev {
     left: -48px;
     border-left: 3px solid #EA0029;
