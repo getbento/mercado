@@ -196,10 +196,25 @@ $(document).ready(function(){
 
   //specific AJAX calls.
 
+//happenings page
   $(".eventsFilter").on('click',function(){
-$(".active").removeClass("active");
-$(this).addClass("active");
+    var all = false;
+    if($(this).hasClass("active")){
+      all = true;
+      $(".active").removeClass("active");
+
+    }else{
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+    }
+
+if(all == true){
+  var filteredEvents = doAjax($(this).attr("box"), '');
+
+}else{
   var filteredEvents = doAjax($(this).attr("box"), $(this).attr("filter"));
+
+}
   $(".all-events a").each(function(i,stuff){
     var ele = $(this);
 
