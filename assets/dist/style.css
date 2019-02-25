@@ -3045,7 +3045,12 @@ address.site-info {
     stroke: white; }
 
 .events-landing {
-  margin: 23px 0px 20px 0px; }
+  margin: 23px 0px 20px 0px;
+  padding-top: 30px; }
+  .events-landing .page-landing-header img:nth-child(1) {
+    border-right: 2px solid #EA0029; }
+  .events-landing .page-landing-header img:nth-child(3) {
+    border-left: 2px solid #EA0029; }
 
 .events-description {
   margin: 10px 0px 40px 0px; }
@@ -3068,21 +3073,20 @@ address.site-info {
 .filter {
   display: flex;
   margin: 20px 0px;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start; }
   .filter button {
-    width: 125px;
+    width: 14%;
     height: 65px;
     color: #EA0029;
     text-transform: uppercase;
     border: 2px solid #EA0029;
     background-color: white;
-    font-family: "Knockout 67 A", "Knockout 67 B";
-    font-size: 2.5rem;
+    font-family: "Knockout 49 A", "Knockout 49 B";
+    font-size: 2rem;
     line-height: 1rem;
-    cursor: pointer;
-    margin: 0px 15px; }
+    cursor: pointer; }
   .filter button.active {
     background-color: #EA0029;
     color: white; }
@@ -3122,7 +3126,7 @@ address.site-info {
     .all-events .home-happenings-event h3 {
       text-transform: uppercase;
       color: #EA0029;
-      font-family: "Knockout 49 A", "Knockout 49 B";
+      font-family: "Knockout 68 A", "Knockout 68 B";
       font-size: 40px;
       line-height: 1em;
       margin-bottom: 7px; }
