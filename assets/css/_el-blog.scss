@@ -95,8 +95,8 @@ margin-bottom:50px;
 			width: 38%;
 			height:100%;
 			.blog-post__title {
-				font-size: 8.5em;
-    			line-height: 1em;
+				font-size: 75px;
+  			line-height: 1em;
 			}
 			.blog-post__desc {
 				font-weight: initial;
@@ -167,7 +167,7 @@ margin-bottom:50px;
 	.blog-post {
 
 	margin-top: 28px;
-  min-height:380px;
+  // min-height:380px;
 	display: flex;
 	flex-wrap: nowrap;
   flex-direction: column;
@@ -225,7 +225,7 @@ margin-bottom:50px;
 	.blog-post {
 
 	margin-top: 28px;
-	height: calc(60vh) !important;
+	// height: calc(60vh) !important;
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: column;
@@ -244,7 +244,8 @@ margin-bottom:50px;
 			}
 		}
 		.info {
-			height: 40% !important;
+			height: auto !important;
+      padding-bottom: 40px;
 		}
 	}
 

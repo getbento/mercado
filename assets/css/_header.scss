@@ -91,7 +91,9 @@ $desktop_mid : 900px;
 }
 
 #site-navigation {
-  flex: 1 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
   > ul {
     @media screen and (min-width: $desktop_min) {
       display: flex;
@@ -283,4 +285,16 @@ $desktop_mid : 900px;
 
 .branding-header-logo{
   line-height: 0px;
+}
+
+.nav-menu{
+  max-width: 1000px;
+  width: 100%;
+}
+
+.nav-item{
+  &:hover{
+    background-color: $toro_red;
+    color: white;
+  }
 }
