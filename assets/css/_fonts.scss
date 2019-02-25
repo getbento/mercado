@@ -1,17 +1,13 @@
 /*
  * Font Stacks
  ***************************/
-// $knockout : 'Knockout', Arial Narrow, Arial, sans-serif;
 $knockout : "Knockout 30 A", "Knockout 30 B";
 
-// $knockout-bantam : 'Knockout-HTF47-Bantamweight', Arial Narrow, Arial, sans-serif;
 $knockout-bantam : "Knockout 67 A", "Knockout 67 B";
 
-// $knockout-welter : 'Knockout-HTF50-Welterweight', Arial Narrow, Arial, sans-serif;
 $knockout-welter : "Knockout 50 A", "Knockout 50 B";
 
-// $knockout-lite : 'Knockout-HTF49-Liteweight', Arial Narrow, Arial, sans-serif;
-$knockout-lite : "Knockout 49 A", "Knockout 49 B";
+$knockout-lite : "Knockout 48 A", "Knockout 48 B";
 
 $knockout-feather : "Knockout 68 A", "Knockout 68 B";
 
@@ -310,7 +306,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     }
   /* Button Font */
   @mixin button-font-style( $responsive : true, $mobile : false ) {
-    font-family: $knockout-feather;
+    font-family: $knockout-lite;
     font-weight: 100 !important;
     @if $mobile == false {
       @include button-font-desktop-style;

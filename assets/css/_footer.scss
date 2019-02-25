@@ -67,11 +67,17 @@
   font-family: $domaine;
   padding: 12px 24px;
   width: 100%;
+  font-size:20px;
   @include placeholder {
     @include h3-style;
 
     color: $oro_yellow;
     font-family: $domaine;
+    font-size:20px;
+    @media screen and (max-width: 767px) {
+      font-size:18px !important;
+
+    }
   }
 }
 
@@ -114,7 +120,7 @@
     top: calc(50% - 8px);
     cursor: pointer;
     @media screen and (max-width: $mobile_max) {
-      width: 24px;
+      width: 16px;
       height: 16px;
     }
   } .slick-prev {
