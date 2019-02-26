@@ -661,7 +661,7 @@ a {
       height: 40px;
       margin-right: 12px; }
   #mobile-site-nav.opened {
-    transform: translateY(-100%);
+    transform: translateY(-100vh);
     background: #EA0029;
     pointer-events: auto; }
     #mobile-site-nav.opened .nav-menu li.nav-item {

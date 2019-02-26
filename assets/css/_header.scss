@@ -407,7 +407,7 @@ $desktop_mid : 900px;
            }
          }
      &.opened {
-       transform: translateY(-100%);
+       transform: translateY(-100vh);
        // opacity: 1;
       background: $toro_red;
       pointer-events: auto;
