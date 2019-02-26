@@ -328,6 +328,11 @@ $(document).ready(function () {
       }
     });
   }
+
+  $('#mobile-site-nav .nav-item.has-children a.restaurant-dropdown').unbind().click(function (event) {
+    event.preventDefault();
+    toggleSubnav(this);
+  });
 }); // document ready end
 
 /*
@@ -337,45 +342,6 @@ $(window).resize(function () {
   windowWidth = $(window).width();
   windowHeight = $(window).height();
   isMobile = windowWidth <= mobileBreakpoint;
-
-  /*
-   * Mobile Navigation ARIA
-   ***************************/
-  if (windowWidth < 1030) {
-    // Overarching ARIA expanded
-    console.log('smaller menu!');
-    $('#skip-to-navigation-link, .mobile-nav-header-close').attr('aria-expanded', isMenuOpen);
-
-    // Subnav
-    if ($('.nav-item.has-children a').length) {
-      $('.nav-item.has-children a').each(function () {
-        mobileSubnav(this);
-      });
-
-      $('.nav-item.has-children a').unbind();
-
-      $('.nav-item.has-children a').click(function (event) {
-        event.preventDefault();
-        toggleSubnav(this);
-      });
-    }
-  } else {
-    // Overarching ARIA expanded
-    $('#skip-to-navigation-link, .mobile-nav-header-close').attr('aria-expanded', true);
-    $('#site-navigation').removeClass('opened');
-    isMenuOpen = false;
-
-    // Subnav
-    $('.nav-item.has-children a').each(function () {
-      $(this).attr('href', $(this).data('url'));
-    });
-
-    $('.nav-children').attr('style', 'none');
-
-    if ($('.nav-item.has-children a').length) {
-      $('.nav-item.has-children a').unbind('click');
-    }
-  }
 }); // end window resize functions
 
 /*
@@ -386,7 +352,7 @@ function toggleMenu(target) {
 
   $('#skip-to-navigation-link, .mobile-nav-header-close').attr('aria-expanded', isMenuOpen);
   $('#skip-to-navigation-link').toggleClass('opened');
-  $('#site-navigation').toggleClass('opened');
+  $('#mobile-site-nav').toggleClass('opened');
   $('body').toggleClass('hide-overflow');
 }
 
@@ -394,10 +360,10 @@ function toggleMenu(target) {
  * Mobile Navigation - Subnav Toggle
  ***************************/
 function toggleSubnav(trigger) {
-  var target = $(trigger).attr('aria-controls');
+  var target = $(trigger);
   $(trigger).attr('aria-expanded', !($(trigger).attr('aria-expanded') === 'true'));
   $(trigger).toggleClass('expanded');
-  $('#' + target).slideToggle(300);
+  $(trigger).parent().find('.nav-children').slideToggle(300);
 }
 
 function mobileSubnav(trigger) {

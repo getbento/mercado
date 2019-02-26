@@ -57,15 +57,9 @@
       {% include "hamburger.html" %}
       <span class="screen-reader-text">Toggle Menu</span>
     </a>
+
     <nav id="site-navigation" class="menu" aria-label="Main Site Navigation">
-      <div class="mobile-nav-header">
-        <a href="{{ account.site.url }}" class="mobile-nav-header-logo">
-          {% include "logo_square.html" %}
-        </a>
-        <a href="#" class="mobile-nav-header-close" aria-expanded="true" aria-controls="site-navigation">
-          × <span class="screen-reader-text">Close Menu</span>
-        </a>
-      </div>
+
       <!-- Start navigation template
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <ul class="nav-menu">
@@ -105,6 +99,52 @@
       <!-- End navigation template
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     </nav><!-- #primary-menu -->
+
+    <nav id="mobile-site-nav" class="menu" aria-label="Main Site Navigation">
+      <div class="mobile-nav-header">
+        <a href="{{ account.site.url }}" class="mobile-nav-header-logo">
+          {% include "logo_square.html" %}
+        </a>
+        <a href="#" class="mobile-nav-header-close" aria-expanded="true" aria-controls="site-navigation">
+          × <span class="screen-reader-text">Close Menu</span>
+        </a>
+      </div>
+      <ul class="nav-menu">
+        {% for item in navs.main %}
+          {% if item.slug == 'restaurant' %}
+            <li class="nav-item has-children {% if item.slug == current.box_type %}current_page{% endif %}">
+              <a  aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" class='toggle-restaurants'>
+                {{ item.name }}
+              </a>
+              <ul class="nav-children" id="{{ item.slug }}-dropdown">
+                <li class="nav-item child dupe">
+                  <a href="{{ item.url }}">
+                    All
+                  </a>
+                </li>
+                {% for rests in boxes.restaurant.all %}
+                <li class="nav-item child">
+                  <a href="{{rests.url}}">
+                    {{rests.name}}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li class="nav-item {% if item.url == current.url %}current_page{% endif %}">
+              <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <li class="nav-item mobile-social-menu">
+          <a href="{{account.services.facebook.url}}" target="_blank" class='social-fb'><img src="{{ static('img/Facebook.png') }}" alt="Facebook Icon"></a>
+          <a href="{{account.services.twitter.url}}" target="_blank" class='social-twitter'><img src="{{ static('img/Twitter.png') }}" alt="Twitter Icon"></a>
+          <a href="{{account.services.instagram.url}}" target="_blank" class='social-email'><img src="{{ static('img/instagram.png') }}" alt="Email Icon"></a>
+        </li>
+      </ul>
+    </nav>
+
   </header><!-- #masthead -->
 
 <!-- #content open -->
