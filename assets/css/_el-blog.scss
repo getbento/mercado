@@ -78,7 +78,12 @@ margin-bottom:50px;
 		justify-content: flex-start;
 		width: 100%;
 		padding:0px;
-
+.blog-post__title{
+  font-family: $knockout-bantam;
+}
+.blog-post__desc{
+  font-family: $knockout-feather;
+}
 		.image {
 			padding: 1.2em;
 			width: 62%;
