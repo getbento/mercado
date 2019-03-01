@@ -8,9 +8,20 @@
 				"header_content": "wysiwyg",
 				"image": "image"
 			}
+		},
+		"seo":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
 		}
 	},
 	"wireframe": [
-		"section-mercado"
+		"section-mercado",
+		"section-seo"
 	]
 }

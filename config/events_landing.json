@@ -7,9 +7,20 @@
       "items":{
         "description": "wysiwyg"
       }
-    }
+    },
+		"seo":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
   },
   "wireframe":[
-    "section-event_description"
+    "section-event_description",
+    "section-seo",
   ]
 }

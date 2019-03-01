@@ -67,9 +67,20 @@
 
 				}
 			}
+		},
+		"seo":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
 		}
 	},
 	"wireframe": [
-		"section-flexible"
+		"section-flexible",
+		"section-seo"
 	]
 }

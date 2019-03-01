@@ -39,11 +39,22 @@
         "content_box": "wysiwyg",
 				"link": "text",
 			}
+		},
+		"seo":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
 		}
 	},
 	"wireframe": [
 		"section-shop-products",
 		"section-online-products",
-    "section-gift-card"
+    "section-gift-card",
+    "section-seo"
 	]
 }

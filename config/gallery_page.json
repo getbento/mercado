@@ -7,9 +7,20 @@
 			"items":{
         "images": "gallery"
 			}
+		},
+		"seo":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
 		}
   },
   "wireframe": [
-		"section-gallery_fields"
+		"section-gallery_fields",
+		"section-seo"
 	]
 }
