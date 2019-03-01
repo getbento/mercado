@@ -63,6 +63,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include h1-mobile-style;
     }
+    letter-spacing: 0.04em;
   }
     /* H1 components */
     @mixin h1-desktop-style {
@@ -91,6 +92,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include h2-mobile-style;
     }
+    letter-spacing: 0.04em;
   }
     /* H2 Components */
     @mixin h2-desktop-style {
@@ -119,6 +121,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include h3-mobile-style;
     }
+    letter-spacing: 0.04em;
   }
     /* H4 Components */
     @mixin h3-desktop-style {
@@ -147,6 +150,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include h4-mobile-style;
     }
+    letter-spacing: 0.04em;
   }
     /* H4 Components */
     @mixin h4-desktop-style {
@@ -175,6 +179,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include h5-mobile-style;
     }
+    letter-spacing: 0.04em;
   }
     /* H5 Components */
     @mixin h5-desktop-style {
@@ -203,6 +208,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include h6-mobile-style;
     }
+    letter-spacing: 0.04em;
   }
     /* H6 Components */
     @mixin h6-desktop-style {
@@ -231,6 +237,7 @@ $domaine : 'Domaine', Georgia, Times, Times New Roman, serif;
     } @else {
       @include p-mobile-style;
     }
+    // letter-spacing: 0.04em;
   }
     /* Paragraph Components */
     @mixin p-desktop-style {
