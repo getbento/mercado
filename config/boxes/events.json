@@ -3,5 +3,14 @@
 	"has_categories": true,
 	"fields":{
 		"dek": "text",
+		"SEO": {
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
 	}
 }

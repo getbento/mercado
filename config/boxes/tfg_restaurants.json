@@ -3,6 +3,15 @@
 	"has_featured": false,
 	"fields": {
 		"logo": "image",
-		"url": "text"
+		"url": "text",
+		"SEO": {
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
 	}
 }

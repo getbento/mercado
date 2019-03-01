@@ -5,7 +5,16 @@
 	"fields":{
 		"author": "text",
 		"dek": "text",
-		"hover_text": "text"
+		"hover_text": "text",
+		"SEO": {
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
 	}
 
 }

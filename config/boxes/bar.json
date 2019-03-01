@@ -9,7 +9,7 @@
 		"hover_text": "text",
 		"gallery": "gallery",
 		"map": "image",
-		"seo": {
+		"SEO": {
 			"type": "section",
 			"items": {
 				"title": "text",
