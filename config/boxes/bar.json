@@ -8,6 +8,15 @@
 		"thumbnail_right": "image",
 		"hover_text": "text",
 		"gallery": "gallery",
-		"map": "image"
+		"map": "image",
+		"seo": {
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
 	}
 }
