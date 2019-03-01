@@ -1,0 +1,18 @@
+{
+  "name": "El Blog",
+  "fields": {
+		"seo":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
+  },
+  "wireframe": [
+		"section-seo"
+	]
+}
