@@ -307,7 +307,7 @@ a {
     color: #e4002b;
     font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
-    font-size: 120px;
+    font-size: 110px;
     white-space: nowrap; }
     @media (max-width: 1000px) {
       .page-landing-header h1 {
@@ -1093,6 +1093,21 @@ address.site-info {
       flex: initial;
       margin-top: 24px;
       text-transform: uppercase; } }
+
+.newsletter-success-msg {
+  display: none; }
+
+#newsletter-popup.success {
+  border-top: 2px solid white; }
+  #newsletter-popup.success .newsletter-sign-up-form {
+    display: none; }
+  #newsletter-popup.success .newsletter-success-msg {
+    display: block; }
+    #newsletter-popup.success .newsletter-success-msg h3 {
+      color: white;
+      text-transform: uppercase;
+      font-size: 50px;
+      font-family: "Knockout 67 A", "Knockout 67 B"; }
 
 .restaurant-single {
   padding-top: 30px;
@@ -1920,12 +1935,12 @@ address.site-info {
 
 .home-slide {
   width: 100%;
-  height: 40vw !important;
+  height: 50vw !important;
   position: relative; }
   @media (max-width: 920px) {
     .home-slide {
       height: 60vw !important; } }
-  @media (max-width: 620px) {
+  @media (max-width: 767px) {
     .home-slide {
       height: auto !important;
       display: flex !important;
@@ -1934,12 +1949,15 @@ address.site-info {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     .home-slide .home-slide-info .content-margins {
-      position: relative; }
-    @media (max-width: 620px) {
+      position: relative;
+      height: 100%; }
+    @media (max-width: 767px) {
       .home-slide .home-slide-info {
-        position: relative; }
+        position: relative;
+        height: auto; }
         .home-slide .home-slide-info .content-margins {
           width: 100%;
           margin: 0px; } }
@@ -1950,7 +1968,7 @@ address.site-info {
     height: 100%;
     width: 100%;
     z-index: -1; }
-    @media (max-width: 620px) {
+    @media (max-width: 767px) {
       .home-slide .home-slide-img {
         position: relative;
         height: 90vw;
@@ -1965,13 +1983,29 @@ address.site-info {
     background-color: white;
     position: absolute;
     left: 0;
-    bottom: 50px;
-    width: 300px; }
-    @media (max-width: 620px) {
+    top: 60%;
+    width: 400px; }
+    @media (max-width: 767px) {
       .home-slide .home-slide-info-cont {
         position: relative;
         width: 100%;
-        bottom: 0px; } }
+        bottom: 0px;
+        top: auto; } }
+    @media (max-width: 920px) {
+      .home-slide .home-slide-info-cont {
+        top: 50%; } }
+    @media (min-width: 921px) {
+      .home-slide .home-slide-info-cont {
+        top: 23vw; } }
+    @media (min-width: 1000px) {
+      .home-slide .home-slide-info-cont {
+        top: 25vw; } }
+    @media (min-width: 1200px) {
+      .home-slide .home-slide-info-cont {
+        top: 30vw; } }
+    @media (min-width: 1600px) {
+      .home-slide .home-slide-info-cont {
+        top: 35vw; } }
     .home-slide .home-slide-info-cont h3 {
       border-bottom: 2px solid #e4002b;
       background-color: #fff166;
@@ -3018,6 +3052,7 @@ address.site-info {
     margin: 15px;
     border: 2px solid #e4002b; }
   .single-kiosk .page-landing-header .kiosk_title {
+    min-width: 130px;
     width: 130px;
     height: 130px;
     float: right;
@@ -3025,7 +3060,8 @@ address.site-info {
     margin: 15px;
     display: flex;
     text-align: center;
-    align-items: center; }
+    align-items: center;
+    padding: 8px; }
     .single-kiosk .page-landing-header .kiosk_title h2.shrink {
       color: #474746;
       font-size: 3.4rem;
@@ -3034,7 +3070,8 @@ address.site-info {
       text-transform: none;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      line-height: 3.4rem; }
+      line-height: 1.3em;
+      font-size: 24px; }
       @media screen and (max-width: 767px) {
         .single-kiosk .page-landing-header .kiosk_title h2.shrink {
           font-size: 2.9rem;

@@ -84,6 +84,24 @@
                 {% endfor %}
               </ul>
             </li>
+          {% elif item.slug == 'the-mercado' %}
+            <li class="nav-item has-children {% if item.slug == 'bars' or item.slug == 'kiosks' %}current_page{% endif %}">
+              <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" onClick="restClick(event)" class='toggle-restaurants'>
+                {{ item.name }}
+              </a>
+              <ul class="nav-children" id="{{ item.slug }}-dropdown">
+                <li class="nav-item child dupe">
+                  <a href="{{ item.url }}">
+                    All
+                  </a>
+                </li>
+
+                <li class="nav-item child">
+                  <a href="/kiosks">Kiosks</a>
+                  <a href="/bars">Bars</a>
+                </li>
+              </ul>
+            </li>
           {% else %}
             <li class="nav-item {% if item.url == current.url %}current_page{% endif %}">
               <a href="{{ item.url }}">{{ item.name }}</a>
@@ -111,9 +129,9 @@
       </div>
       <ul class="nav-menu">
         {% for item in navs.main %}
-          {% if item.slug == 'restaurant' %}
+          {% if item.slug == 'restaurants' %}
             <li class="nav-item has-children {% if item.slug == current.box_type %}current_page{% endif %}">
-              <a  aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" class='toggle-restaurants'>
+              <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" onClick="restClick(event)" class='toggle-restaurants'>
                 {{ item.name }}
               </a>
               <ul class="nav-children" id="{{ item.slug }}-dropdown">
@@ -129,6 +147,26 @@
                   </a>
                 </li>
                 {% endfor %}
+              </ul>
+            </li>
+          {% elif item.slug == 'the-mercado' %}
+            <li class="nav-item has-children {% if item.slug == 'bars' or item.slug == 'kiosks' %}current_page{% endif %}">
+              <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" onClick="restClick(event)" class='toggle-restaurants'>
+                {{ item.name }}
+              </a>
+              <ul class="nav-children" id="{{ item.slug }}-dropdown">
+                <li class="nav-item child dupe">
+                  <a href="{{ item.url }}">
+                    All
+                  </a>
+                </li>
+
+                <li class="nav-item child">
+                  <a href="/kiosks">Kiosks</a>
+                </li>
+                <li class="nav-item child">
+                  <a href="/bars">Bars</a>
+                </li>
               </ul>
             </li>
           {% else %}

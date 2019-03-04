@@ -83,6 +83,11 @@ $(document).ready(function(){
   /*
    * Newsletter Popup
    ***************************/
+   $('#newsletter-popup-close').click(function(){
+     $('#newsletter-popup').removeClass('opened');
+   }).keyHook();
+
+
   if ( getCookie('popupseen') === "" ) {
     console.log('popup!');
     $('#newsletter-popup').addClass('opened');
@@ -94,7 +99,7 @@ $(document).ready(function(){
     }).keyHook();
   } else {
     console.log('remove popup');
-    $('#newsletter-popup').remove();
+    // $('#newsletter-popup').remove();
   }
 
 
@@ -286,6 +291,13 @@ setTimeout(function(){
           toggleSubnav(this);
         });
 
+
+
+        if(window.location.search == "?email=true"){
+          $('#newsletter-popup').addClass('opened success');
+          setCookie('popupseen', 'true', 30);
+
+        }
 
 }); // document ready end
 

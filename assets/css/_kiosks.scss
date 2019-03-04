@@ -9,7 +9,8 @@
       border: 2px solid $toro_red;
 	  }
 	  .kiosk_title{
-		  width:130px;
+		  min-width:130px;
+      width: 130px;
 		  height:130px;
 		  float:right;
 		  border:2px solid black;
@@ -17,10 +18,12 @@
 		  display: flex;
 		  text-align: center;
 		  align-items: center;
+      padding: 8px;
       h2.shrink {
         @include h3-style;
         text-transform: uppercase;
-        line-height: 3.4rem;
+        line-height: 1.3em;
+        font-size: 24px;
       }
 	  }
   }

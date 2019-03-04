@@ -5,14 +5,42 @@
 <section class="full-width-header">
   <div class="full-width-header-content">
     <div class="full-width-header-content-inner">
-      <h1>{{ current.name }}</h1>
-      {{current.fields.mercado.header_content}}
+      <h1>The Mercado</h1>
+      {{pages.by_slug['the-mercado'].fields.mercado.header_content}}
     </div>
   </div>
   <div class="full-width-header-img">
-    <img src="{{current.fields.mercado.image.url}}" alt="{{current.fields.mercado.image.alt_text}}">
+    <img src="{{pages.by_slug['the-mercado'].fields.mercado.image.url}}" alt="{{pages.by_slug['the-mercado'].fields.mercado.image.alt_text}}">
   </div>
 </section>
+
+{% if current.name == "Bars" %}
+<section class="mercado-bars">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>Bars</h2>
+    </div>
+
+    <div class="bars-grid">
+        {% for bar in boxes.bar.all %}
+        <article class="kiosk-box">
+          <a href="{{bar.url}}">
+            <div class="kiosk-box-img">
+              <img src="{{bar.fields.thumbnail_left.url}}" alt="{{bar.fields.thumbnail_left.alt_text}}">
+              <h4>{{bar.fields.hover_text}}</h4>
+            </div>
+            <h6>{{bar.name}}</h6>
+          </a>
+        </article>
+        {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% endif %}
+
 
 <section class="mercado-kiosks">
   <div class="content-margins">
@@ -38,6 +66,7 @@
   </div>
 </section>
 
+{% if current.name != "Bars" %}
 <section class="mercado-bars">
   <div class="content-margins">
     <div class="section-title-container">
@@ -61,7 +90,7 @@
 
   </div>
 </section>
-
+{% endif %}
 
 <section class="ig-feed">
   <div class="content-margins">

@@ -273,3 +273,23 @@ address.site-info {
     text-transform: uppercase;
   }
 }
+
+.newsletter-success-msg{
+  display: none;
+}
+
+#newsletter-popup.success{
+  border-top: 2px solid white;
+  .newsletter-sign-up-form{
+    display: none;
+  }
+  .newsletter-success-msg{
+    display: block;
+    h3{
+      color: white;
+      text-transform: uppercase;
+      font-size: 50px;
+      font-family: $knockout-bantam;
+    }
+  }
+}
