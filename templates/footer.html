@@ -78,22 +78,27 @@
         222.222.2222
       </address><!-- .site-info -->
       <nav id="footer-navigation" class="menu" aria-label="Footer Navigation">
-      <ul class="footer-menu">
-        {% for item in navs.footer %}
-          <li class="nav-item">
-              <a href="{{ item.url }}">{{ item.name }}</a>
+        <ul class="footer-menu">
+          {% for item in navs.footer %}
+            <li class="nav-item">
+                <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+          {% endfor %}
+          {% if navs.footer|length == 0 %}
+            <li>
+              <em>Add nav items in the Pages/Nav sections of the admin to see your footer nav</em>
+            </li>
+          {% endif %}
+          <li class='footer-social-menu'>
+            <a href="{{account.services.facebook.url}}" target="_blank" class='social-fb'><img src="{{ static('img/Facebook.png') }}" alt="Facebook Icon"></a>
+            <a href="{{account.services.twitter.url}}" target="_blank" class='social-twitter'><img src="{{ static('img/Twitter.png') }}" alt="Twitter Icon"></a>
+            <a href="{{account.services.instagram.url}}" target="_blank" class='social-email'><img src="{{ static('img/instagram.png') }}" alt="Email Icon"></a>
           </li>
-        {% endfor %}
-        {% if navs.footer|length == 0 %}
-          <li>
-            <em>Add nav items in the Pages/Nav sections of the admin to see your footer nav</em>
-          </li>
-        {% endif %}
-      </ul>
-    </nav><!-- .footer-navigation -->
-    <div id="tramp-stamp">
-      Site made in collaboration with <a href="https://www.wearecmyk.com/" target="_blank">CMYK</a>.
-    </div>
+        </ul>
+      </nav><!-- .footer-navigation -->
+      <div id="tramp-stamp">
+        Site made in collaboration with <a href="https://www.wearecmyk.com/" target="_blank">CMYK</a>.
+      </div>
     </div><!-- .content-margins -->
   </footer><!-- #colophon -->
 

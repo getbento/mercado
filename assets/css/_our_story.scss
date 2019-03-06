@@ -11,7 +11,7 @@ margin-bottom:80px;
 		padding:100px;
 		box-sizing: border-box;
 		width:100%;
-		height:451px;
+		// height:451px;
 		text-align: center;
 
 		h3{
@@ -24,7 +24,7 @@ margin-bottom:80px;
 			}
 	}
 
-	a:nth-child(2){
+	a:nth-child(even){
 		background-color:$toro_red !important;
 
 		img{

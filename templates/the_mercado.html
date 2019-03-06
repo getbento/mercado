@@ -28,7 +28,11 @@
           <a href="{{bar.url}}">
             <div class="kiosk-box-img">
               <img src="{{bar.fields.thumbnail_left.url}}" alt="{{bar.fields.thumbnail_left.alt_text}}">
-              <h4>{{bar.fields.hover_text}}</h4>
+              <div class="kiosk-bar-hover-img">
+                <img src="{{bar.fields.gallery[0].image_url}}" alt="">
+                <div class="img-fade"></div>
+                <h4>{{bar.fields.hover_text}}</h4>
+              </div>
             </div>
             <h6>{{bar.name}}</h6>
           </a>
@@ -55,7 +59,11 @@
           <a href="{{kiosk.url}}">
             <div class="kiosk-box-img">
               <img src="{{kiosk.fields.thumbnail_left.url}}" alt="{{kiosk.fields.thumbnail_left.alt_text}}">
-              <h4>{{kiosk.fields.hover_text}}</h4>
+              <div class="kiosk-bar-hover-img">
+                <img src="{{kiosk.fields.gallery[0].image_url}}" alt="">
+                <div class="img-fade"></div>
+                <h4>{{kiosk.fields.hover_text}}</h4>
+              </div>
             </div>
             <h6>{{kiosk.name}}</h6>
           </a>
@@ -80,7 +88,11 @@
           <a href="{{bar.url}}">
             <div class="kiosk-box-img">
               <img src="{{bar.fields.thumbnail_left.url}}" alt="{{bar.fields.thumbnail_left.alt_text}}">
-              <h4>{{bar.fields.hover_text}}</h4>
+              <div class="kiosk-bar-hover-img">
+                <img src="{{bar.fields.gallery[0].image_url}}" alt="">
+                <div class="img-fade"></div>
+                <h4>{{bar.fields.hover_text}}</h4>
+              </div>
             </div>
             <h6>{{bar.name}}</h6>
           </a>

@@ -1109,6 +1109,14 @@ address.site-info {
       font-size: 50px;
       font-family: "Knockout 67 A", "Knockout 67 B"; }
 
+.footer-social-menu {
+  margin-top: 10px; }
+  .footer-social-menu a {
+    margin-right: 20px; }
+  .footer-social-menu img {
+    height: 20px;
+    width: auto; }
+
 .restaurant-single {
   padding-top: 30px;
   width: 100%; }
@@ -1736,12 +1744,12 @@ address.site-info {
         width: 48.5%; } }
     .home-mercado-kiosks .home-mercado-kiosk a {
       text-decoration: none; }
-      .home-mercado-kiosks .home-mercado-kiosk a:hover h6 {
+      .home-mercado-kiosks .home-mercado-kiosk a:hover .kiosk-bar-hover-img {
         opacity: 1; }
     .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img {
       margin-bottom: 15px;
       position: relative; }
-      .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img h6 {
+      .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img .kiosk-bar-hover-img {
         position: absolute;
         left: 0;
         top: 0;
@@ -1750,8 +1758,6 @@ address.site-info {
         align-items: center;
         height: 100%;
         width: 100%;
-        background-color: rgba(255, 240, 101, 0.9);
-        color: #e4002b;
         font-family: "Domaine", Georgia, Times, Times New Roman, serif;
         font-size: 25px;
         text-align: center;
@@ -1760,6 +1766,28 @@ address.site-info {
         padding: 10px;
         opacity: 0;
         transition: 300ms ease all; }
+        .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img .kiosk-bar-hover-img .img-fade {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-color: rgba(0, 0, 0, 0.3); }
+        .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img .kiosk-bar-hover-img img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 0px;
+          z-index: 0; }
+      .home-mercado-kiosks .home-mercado-kiosk .home-mercado-kiosk-img h6 {
+        color: #fff166;
+        position: relative;
+        z-index: 2;
+        font-size: 20px; }
     .home-mercado-kiosks .home-mercado-kiosk img {
       height: auto;
       width: 100%;
@@ -2131,32 +2159,56 @@ address.site-info {
           .kiosk-grid .kiosk-box a h6, .bars-grid .kiosk-box a h6 {
             font-size: 20px; } }
     .kiosk-grid .kiosk-box .kiosk-box-img, .bars-grid .kiosk-box .kiosk-box-img {
+      margin-bottom: 15px;
       position: relative; }
-      .kiosk-grid .kiosk-box .kiosk-box-img h4, .bars-grid .kiosk-box .kiosk-box-img h4 {
+      .kiosk-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img, .bars-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img {
         position: absolute;
         left: 0;
         top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(255, 240, 101, 0.9);
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        height: 100%;
+        width: 100%;
         font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        font-size: 25px;
         text-align: center;
-        font-size: 38px;
-        color: #e4002b;
+        line-height: 1.2em;
+        font-weight: 900;
+        padding: 10px;
         opacity: 0;
-        transition: ease 300ms all; }
-        @media (max-width: 767px) {
-          .kiosk-grid .kiosk-box .kiosk-box-img h4, .bars-grid .kiosk-box .kiosk-box-img h4 {
-            font-size: 20px; } }
+        transition: 300ms ease all; }
+        .kiosk-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img .img-fade, .bars-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img .img-fade {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background-color: rgba(0, 0, 0, 0.3); }
+        .kiosk-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img h4, .bars-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img h4 {
+          position: relative;
+          z-index: 2;
+          color: #fff166; }
+        .kiosk-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img img, .bars-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 0px;
+          z-index: 0; }
+      .kiosk-grid .kiosk-box .kiosk-box-img h6, .bars-grid .kiosk-box .kiosk-box-img h6 {
+        color: #fff166;
+        position: relative;
+        z-index: 2;
+        font-size: 20px; }
     .kiosk-grid .kiosk-box img, .bars-grid .kiosk-box img {
       width: 100%;
       height: auto;
       border: 2px solid #e4002b; }
-    .kiosk-grid .kiosk-box:hover h4, .bars-grid .kiosk-box:hover h4 {
+    .kiosk-grid .kiosk-box:hover .kiosk-bar-hover-img, .bars-grid .kiosk-box:hover .kiosk-bar-hover-img {
       opacity: 1; }
 
 .ig-boxes {
@@ -2826,6 +2878,26 @@ address.site-info {
     padding: 10px;
     border: 2px solid #e4002b; }
 
+.current-shop .kiosk-box a:hover h4 {
+  opacity: 1; }
+
+.current-shop .kiosk-box-img h4 {
+  transition: ease 250ms all;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff166;
+  color: #e4002b;
+  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+  text-align: center; }
+
 @media screen and (max-width: 767px) {
   .standard-page .full-width-header h1 {
     font-size: 90px; }
@@ -3191,7 +3263,6 @@ address.site-info {
     padding: 100px;
     box-sizing: border-box;
     width: 100%;
-    height: 451px;
     text-align: center; }
     .press_features .individual_press h3 {
       font-family: "Domaine", Georgia, Times, Times New Roman, serif;
@@ -3199,11 +3270,11 @@ address.site-info {
     .press_features .individual_press img {
       height: 30px;
       margin: 10px; }
-  .press_features a:nth-child(2) {
+  .press_features a:nth-child(even) {
     background-color: #e4002b !important; }
-    .press_features a:nth-child(2) img {
+    .press_features a:nth-child(even) img {
       filter: brightness(0) invert(1); }
-    .press_features a:nth-child(2) h3 {
+    .press_features a:nth-child(even) h3 {
       color: white; }
   @media screen and (max-width: 767px) {
     .press_features .individual_press {
