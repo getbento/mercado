@@ -38,9 +38,24 @@
 
   <!-- FACEBOOK SHARE -->
   <meta property="og:url"                content="{{current.request.absolute_url}}" />
-  <meta property="og:title"              content="{{current.meta_title}}" />
-  <meta property="og:description"        content="{{current.meta_description}}" />
-  <meta property="og:image"              content="{{current.fields.seo.image.url}}" />
+
+  {% if current.meta_title %}
+    <meta property="og:title"              content="{{current.meta_title}}" />
+  {% endif %}
+  {% if current.fields.SEO.title %}
+    <meta property="og:title"              content="{{current.fields.SEO.title}}" />
+  {% else %}
+    <meta property="og:title"              content="{{current.name}}" />
+  {% endif %}
+
+  {% if current.meta_description %}
+    <meta property="og:description"        content="{{current.meta_description}}" />
+  {% endif %}
+  {% if current.fields.SEO.description %}
+    <meta property="og:description"        content="{{current.fields.SEO.description}}" />
+  {% endif %}
+
+  <meta property="og:image"              content="{{current.fields.SEO.image.url}}" />
 
 </head>
 
