@@ -33,9 +33,15 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" href="{{ static('img/icon.png') }}">
+  <link rel="icon" href="{{account.site.favicon}}">
 
 
+  <!-- FACEBOOK SHARE -->
+  <meta property="og:url"                content="{{current.request.absolute_url}}" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="{{current.meta_title}}" />
+  <meta property="og:description"        content="{{current.meta_description}}" />
+  <meta property="og:image"              content="" />
 
 </head>
 
