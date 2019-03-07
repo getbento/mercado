@@ -60,6 +60,9 @@
           position: relative;
           z-index: 2;
           color: $oro_yellow;
+          @media (max-width: 1050px){
+            font-size: 25px;
+          }
         }
         img{
           position: absolute;

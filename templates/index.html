@@ -34,7 +34,9 @@
               </div>
               <h3>{{slide.restaurant.restaurant_box.name}}</h3>
 
-              <div class="home-slide-desc">{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.home_description}}</div>
+              <div class="home-slide-desc">
+                <p>{{boxes.restaurant.by_slug[slide.restaurant.restaurant_box.slug].fields.home_description}}</p>
+              </div>
               <div class="home-slide-buttons">
                 <a href="{{slide.restaurant.restaurant_box.url}}">More Info</a>
               </div>
@@ -64,7 +66,9 @@
                 <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
               </div>
               <h3>{{slide.events.event_box.name}}</h3>
-              <div class="home-slide-desc"><p>{{slide.events.event_box.fields.dek}}</p></div>
+              <div class="home-slide-desc">
+                <p>{{slide.events.event_box.fields.dek}}</p>
+              </div>
               <div class="home-slide-buttons">
                 <a href="{{slide.events.event_box.url}}">More Info</a>
                 {% if boxes.events.by_slug[slide.events.event_box.slug].external_url %}
@@ -97,7 +101,9 @@
                 <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
               </div>
               <h3>{{slide.blog.blog_box.name}}</h3>
-              <div class="home-slide-desc"><p>{{slide.blog.blog_box.fields.dek}}</p></div>
+              <div class="home-slide-desc">
+                <p>{{slide.blog.blog_box.fields.dek}}</p>
+              </div>
               <div class="home-slide-buttons">
                 <a href="{{slide.blog.blog_box.url}}">Read More</a>
               </div>
@@ -127,7 +133,9 @@
                 <div class="home-slide-current">{{loop.index}}/{{pages.by_slug.home.fields['home-gallery'].slides|length}}</div>
               </div>
               <h3>{{slide.kiosk.kiosk_box.name}}</h3>
-              <div class="home-slide-desc">{{slide.kiosk.kiosk_box.fields.short_description}}</div>
+              <div class="home-slide-desc">
+                <p>{{slide.kiosk.kiosk_box.fields.short_description}}</p>
+              </div>
               <div class="home-slide-buttons">
                 <a href="{{slide.kiosk.kiosk_box.url}}">More Info</a>
               </div>
@@ -158,7 +166,7 @@
               </div>
               <h3>{{slide.custom_slide.title}}</h3>
               <div class="home-slide-desc">
-                {{slide.custom_slide.description}}
+                <p>{{slide.custom_slide.description}}</p>
               </div>
               {% if slide.custom_slide.link %}
               <div class="home-slide-buttons">
@@ -209,7 +217,7 @@
               <h4>{{rest.name}}</h4>
             </div>
             <div class="home-rest-caption">
-              {{rest.fields.home_description}}
+              <p>{{rest.fields.home_description}}</p>
               <div class="home-rest-links">
                 <a href="{{rest.url}}" class="more-info">Visit</a>
                 <a href="" class='more-info'>Reserve</a>

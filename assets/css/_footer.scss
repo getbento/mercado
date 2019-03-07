@@ -125,7 +125,7 @@
       height: 16px;
     }
   } .slick-prev {
-    left: -48px;
+    left: -2%;
     border-left: 3px solid $toro_red;
     border-bottom: 3px solid $toro_red;
     transform: rotate(45deg);
@@ -133,7 +133,7 @@
       left: ($gutter_width_mobile * -1) + 8px;
     }
   } .slick-next {
-    right: -48px;
+    right: -2%;
     border-right: 3px solid $toro_red;
     border-bottom: 3px solid $toro_red;
     transform: rotate(-45deg);
@@ -214,6 +214,7 @@ address.site-info {
   @include nav-font-style;
   flex: 1 0 0;
   margin: 0 columns(0,1);
+  letter-spacing: 0.03em !important;
   a {
     color: white;
     text-decoration: none;
@@ -221,11 +222,13 @@ address.site-info {
     &:hover {
       color: $oro_yellow;
     }
-  } @media screen and (max-width: $mobile_max) {
+  }
+  @media screen and (max-width: $mobile_max) {
     flex: initial;
     margin: 0;
     line-height: 3.6rem;
     margin-bottom: 36px;
+
   }
 }
 
@@ -238,6 +241,8 @@ address.site-info {
         @include nav-font-style;
         text-decoration: none;
         color: white;
+        letter-spacing: 0.03em !important;
+        transition: ease 250ms all;
         &:hover {
           color: $oro_yellow;
         }
@@ -249,9 +254,17 @@ address.site-info {
         float: right;
       }
     }
-  } @media screen and (max-width: $mobile_max) {
+  }
+  @media screen and (max-width: $mobile_max) {
     flex: initial;
     line-height: 3.6rem;
+    .footer-menu{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: space-between;
+      max-height: 150px;
+    }
   }
 }
 

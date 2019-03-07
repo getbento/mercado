@@ -93,15 +93,20 @@ margin:0px;
 
     .rest-single-map{
       height: 30%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @media (max-width: 1024px){
         height: auto;
         border-bottom-width: 2px;
+        border-top: 2px solid;
         border-bottom-style: solid;
       }
       img{
-        height: 100%;
+        height: auto;
         width: 100%;
-        object-fit: contain;
+        // object-fit: contain;
       }
     }
   }

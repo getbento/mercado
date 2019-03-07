@@ -64,6 +64,9 @@
       {% if current.fields.dek %}
         <meta property="og:description"        content="{{current.fields.dek}}" />
         <meta name="twitter:description" content="{{current.fields.dek}}">
+      {% elif current.meta_description %}
+        <meta property="og:description"        content="{{current.meta_description}}" />
+        <meta name="twitter:description" content="{{current.meta_description}}">
       {% else %}
         <meta property="og:description"        content="{{account.site.meta_description}}" />
         <meta name="twitter:description" content="{{account.site.meta_description}}">
@@ -121,7 +124,7 @@
       <ul class="nav-menu">
         {% for item in navs.main %}
           {% if item.slug == 'restaurants' %}
-            <li class="nav-item has-children {% if item.slug == current.box_type %}current_page{% endif %}">
+            <li class="nav-item has-children {% if current.box_type == 'restaurant'  or item.slug == current.slug %}current_page{% endif %}">
               <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" onClick="restClick(event)" class='toggle-restaurants'>
                 {{ item.name }}
               </a>
@@ -141,7 +144,7 @@
               </ul>
             </li>
           {% elif item.slug == 'the-mercado' %}
-            <li class="nav-item has-children {% if item.slug == 'bars' or item.slug == 'kiosks' %}current_page{% endif %}">
+            <li class="nav-item has-children {% if current.slug == 'bars' or current.slug == 'kiosks' or current.slug == 'the-mercado' %}current_page{% endif %}">
               <a href="{{ item.url }}" aria-controls="{{ item.slug }}-dropdown" aria-expanded="false" data-url="{{ item.url }}" onClick="restClick(event)" class='toggle-restaurants'>
                 {{ item.name }}
               </a>
@@ -154,6 +157,8 @@
 
                 <li class="nav-item child">
                   <a href="/kiosks">Kiosks</a>
+                </li>
+                <li class="nav-item child">
                   <a href="/bars">Bars</a>
                 </li>
               </ul>

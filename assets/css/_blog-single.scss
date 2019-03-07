@@ -187,6 +187,9 @@
           transition: ease 300ms all;
           opacity: 0;
           text-align: center;
+          @media (max-width: 1050px){
+            font-size: 25px;
+          }
         }
 
         img{

@@ -18,6 +18,7 @@
 		  display: flex;
 		  text-align: center;
 		  align-items: center;
+      justify-content: center;
       padding: 8px;
       h2.shrink {
         @include h3-style;
@@ -33,13 +34,13 @@
 	  width:100%;
 	  border:2px solid $toro-red;
 	  margin-bottom:70px;
-    @media (max-width: 767px){
+    @media (max-width: 1024px){
       flex-direction: column-reverse;
     }
 
 	  .kiosk-gallery{
       width: 67%;
-      @media (max-width: 767px){
+      @media (max-width: 1024px){
         width: 100%;
       }
       border: none;
@@ -66,7 +67,7 @@
         // border-bottom-width: 2px;
         border-bottom-style: solid;
         position: relative;
-        @media (max-width: 767px){
+        @media (max-width: 1024px){
           border-bottom: 2px solid $toro_red;
         }
         // height: 0;
@@ -74,23 +75,34 @@
       }
 	  }
 	  .kiosk-information{
-		  width:345px;
-      @media (max-width: 767px){
+		  width:33%;
+      @media (max-width: 1024px){
         width: 100%;
         border-right: 0px;
       }
 		  display: flex;
 		  flex-direction: column;
+      justify-content: space-between;
 		  border-right:2px solid $toro-red;
 
 		   .kiosk-map, .kiosk-share{
-			  border-bottom:2px solid $toro-red;
-
+			  border-top:2px solid $toro-red;
 		  }
+      .kiosk-map{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
 
 		  .kiosk-description{
 			  padding:40px;
-        @media (max-width: 767px){
+        @media (max-width: 1024px){
           border: 0px;
         }
 			  strong{
@@ -108,7 +120,7 @@
         align-items: center;
         justify-content: space-between;
         @media screen and (max-width: $mobile_max) {
-          border: 0;
+          // border: 0;
         }
         h2{
           color:$toro-red;
@@ -140,7 +152,7 @@
   display: none;
 }
 
-@media (max-width: 767px){
+@media (max-width: 1024px){
   .mobile-kiosk-title{
     display: block;
     text-align: center;
@@ -149,6 +161,7 @@
     text-transform: uppercase;
     font-size: 60px;
     font-family: $knockout-bantam;
+
   }
 
   .single-kiosk{

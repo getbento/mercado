@@ -554,9 +554,18 @@ a {
 
 .nav-children .nav-item a {
   margin: 0px !important;
-  padding: 12px 16px; }
+  padding: 12px 16px;
+  transition: ease 250ms all; }
   .nav-children .nav-item a:after {
     display: none; }
+
+@media (min-width: 1051px) {
+  .nav-children .nav-item.child:hover a {
+    background-color: white;
+    color: #e4002b !important; }
+  .nav-children .nav-item.child a:focus {
+    background: white !important;
+    color: #e4002b !important; } }
 
 .mobile-social-menu {
   display: none;
@@ -920,7 +929,7 @@ a {
         width: 16px;
         height: 16px; } }
   .partner-carousel .slick-prev {
-    left: -48px;
+    left: -2%;
     border-left: 3px solid #e4002b;
     border-bottom: 3px solid #e4002b;
     transform: rotate(45deg); }
@@ -928,7 +937,7 @@ a {
       .partner-carousel .slick-prev {
         left: -24px; } }
   .partner-carousel .slick-next {
-    right: -48px;
+    right: -2%;
     border-right: 3px solid #e4002b;
     border-bottom: 3px solid #e4002b;
     transform: rotate(-45deg); }
@@ -999,7 +1008,8 @@ address.site-info {
   letter-spacing: normal;
   text-transform: uppercase;
   flex: 1 0 0;
-  margin: 0 20px; }
+  margin: 0 20px;
+  letter-spacing: 0.03em !important; }
   @media screen and (max-width: 767px) {
     address.site-info {
       font-family: "Knockout 68 A", "Knockout 68 B";
@@ -1044,7 +1054,9 @@ address.site-info {
     letter-spacing: normal;
     text-transform: uppercase;
     text-decoration: none;
-    color: white; }
+    color: white;
+    letter-spacing: 0.03em !important;
+    transition: ease 250ms all; }
     @media screen and (max-width: 767px) {
       #footer-navigation ul li a {
         font-family: "Knockout 68 A", "Knockout 68 B";
@@ -1064,7 +1076,13 @@ address.site-info {
   @media screen and (max-width: 767px) {
     #footer-navigation {
       flex: initial;
-      line-height: 3.6rem; } }
+      line-height: 3.6rem; }
+      #footer-navigation .footer-menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: space-between;
+        max-height: 150px; } }
 
 #tramp-stamp {
   flex: 0 0 100%;
@@ -1194,16 +1212,20 @@ address.site-info {
             font-size: 50px;
             padding: 20px 5px 10px 0; } }
     .restaurant-content .restaurant-single-info .rest-single-map {
-      height: 30%; }
+      height: 30%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
       @media (max-width: 1024px) {
         .restaurant-content .restaurant-single-info .rest-single-map {
           height: auto;
           border-bottom-width: 2px;
+          border-top: 2px solid;
           border-bottom-style: solid; } }
       .restaurant-content .restaurant-single-info .rest-single-map img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain; }
+        height: auto;
+        width: 100%; }
   .restaurant-content .restaurant-single-info.rest-right-col {
     width: 67%;
     border: none;
@@ -2190,6 +2212,9 @@ address.site-info {
           position: relative;
           z-index: 2;
           color: #fff166; }
+          @media (max-width: 1050px) {
+            .kiosk-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img h4, .bars-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img h4 {
+              font-size: 25px; } }
         .kiosk-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img img, .bars-grid .kiosk-box .kiosk-box-img .kiosk-bar-hover-img img {
           position: absolute;
           left: 0;
@@ -2638,6 +2663,9 @@ address.site-info {
         transition: ease 300ms all;
         opacity: 0;
         text-align: center; }
+        @media (max-width: 1050px) {
+          .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon span {
+            font-size: 25px; } }
       .hay-mas .hay-mas-links .hay-mas-link .hay-mas-link-icon img {
         width: 100%;
         height: 100%;
@@ -3135,6 +3163,7 @@ address.site-info {
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
     padding: 8px; }
     .single-kiosk .page-landing-header .kiosk_title h2.shrink {
       color: #474746;
@@ -3157,7 +3186,7 @@ address.site-info {
     width: 100%;
     border: 2px solid #e4002b;
     margin-bottom: 70px; }
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       .single-kiosk .kiosk-details {
         flex-direction: column-reverse; } }
     .single-kiosk .kiosk-details .kiosk-gallery {
@@ -3165,7 +3194,7 @@ address.site-info {
       border: none;
       display: flex;
       flex-direction: column; }
-      @media (max-width: 767px) {
+      @media (max-width: 1024px) {
         .single-kiosk .kiosk-details .kiosk-gallery {
           width: 100%; } }
       .single-kiosk .kiosk-details .kiosk-gallery svg .st0 {
@@ -3180,23 +3209,33 @@ address.site-info {
         border-color: #e4002b;
         border-bottom-style: solid;
         position: relative; }
-        @media (max-width: 767px) {
+        @media (max-width: 1024px) {
           .single-kiosk .kiosk-details .kiosk-gallery .rest-single-gallery {
             border-bottom: 2px solid #e4002b; } }
     .single-kiosk .kiosk-details .kiosk-information {
-      width: 345px;
+      width: 33%;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       border-right: 2px solid #e4002b; }
-      @media (max-width: 767px) {
+      @media (max-width: 1024px) {
         .single-kiosk .kiosk-details .kiosk-information {
           width: 100%;
           border-right: 0px; } }
       .single-kiosk .kiosk-details .kiosk-information .kiosk-map, .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
-        border-bottom: 2px solid #e4002b; }
+        border-top: 2px solid #e4002b; }
+      .single-kiosk .kiosk-details .kiosk-information .kiosk-map {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1; }
+        .single-kiosk .kiosk-details .kiosk-information .kiosk-map img {
+          width: 100%;
+          height: auto; }
       .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
         padding: 40px; }
-        @media (max-width: 767px) {
+        @media (max-width: 1024px) {
           .single-kiosk .kiosk-details .kiosk-information .kiosk-description {
             border: 0px; } }
         .single-kiosk .kiosk-details .kiosk-information .kiosk-description strong {
@@ -3211,9 +3250,6 @@ address.site-info {
         flex-direction: row;
         align-items: center;
         justify-content: space-between; }
-        @media screen and (max-width: 767px) {
-          .single-kiosk .kiosk-details .kiosk-information .kiosk-share {
-            border: 0; } }
         .single-kiosk .kiosk-details .kiosk-information .kiosk-share h2 {
           color: #e4002b;
           font-size: 6rem;
@@ -3229,7 +3265,7 @@ address.site-info {
 .mobile-kiosk-title {
   display: none; }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .mobile-kiosk-title {
     display: block;
     text-align: center;
