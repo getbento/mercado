@@ -2680,7 +2680,7 @@ address.site-info {
     align-items: center;
     border: 2px solid white;
     padding: 5px; }
-    .single-blog-social .single-blog-social-container a {
+    .single-blog-social .single-blog-social-container div {
       margin: 10px 25px; }
     .single-blog-social .single-blog-social-container img {
       height: 20px;
@@ -2768,13 +2768,13 @@ address.site-info {
     .article-info-slide .single-blog-social-container img {
       height: 20px;
       width: auto; }
-    .article-info-slide .single-blog-social-container a {
+    .article-info-slide .single-blog-social-container div {
       margin-right: 24px; }
-      .article-info-slide .single-blog-social-container a:last-child {
+      .article-info-slide .single-blog-social-container div:last-child {
         margin-right: 0px; }
-      .article-info-slide .single-blog-social-container a.social-twitter img {
+      .article-info-slide .single-blog-social-container div.social-twitter img {
         height: 16px; }
-      .article-info-slide .single-blog-social-container a.social-email img {
+      .article-info-slide .single-blog-social-container div.social-email img {
         height: 16px; }
 
 .shop-landing {
