@@ -26,12 +26,12 @@
 
     <div class="shop-little-spain-shops kiosk-grid">
 
-{% for shop in current.fields['shop-products'].products %}
+{% for shop in boxes.shop.all %}
       <article class="kiosk-box">
-          <a href="" target="_blank">
+          <a href="{{shop.url}}">
             <div class="kiosk-box-img">
-              <img src="{{shop.image.url}}" alt="{{shop.image.alt_text}}">
-              <h4>{{shop.hover_text}}</h4>
+              <img src="{{shop.fields.thumnail_left.url}}" alt="{{shop.fields.thumnail_left.alt_text}}">
+              <h4>{{shop.fields.hover_text}}</h4>
             </div>
             <h6>{{shop.name}}</h6>
           </a>
