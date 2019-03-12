@@ -470,10 +470,12 @@
   align-items: center;
   height: 50px;
   width: 50px;
+  transition: ease 250ms all;
   svg{
     height: 25px;
     path{
       fill: white;
+      transition: ease 250ms all;
     }
   }
 }

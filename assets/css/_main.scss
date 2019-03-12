@@ -123,7 +123,7 @@ a{
   }
   h1{
     text-transform: uppercase;
-    color: $toro_red;
+    color: $mid_grey;
     font-family: $knockout-bantam;
     font-weight: initial;
     font-size: 110px;
@@ -149,20 +149,36 @@ a{
 
   }
   img{
-    width: 15%;
+    width: 100%;
     height: auto;
     @media (max-width: 767px){
       display: none;
     }
   }
+  .page-header-icon-left,.page-header-icon-right{
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    @media (max-width: 767px){
+      display: none;
+    }
+  }
+  .page-header-icon-left{
+    border-right: 2px solid $toro_red;
+  }
+  .page-header-icon-right{
+    border-left: 2px solid $toro_red;
+  }
 }
 
-.header-icon-right{
-  border-left: 2px solid $toro_red;
-}
-.header-icon-left{
-  border-right: 2px solid $toro_red;
-}
+
+
+// .header-icon-right{
+//   border-left: 2px solid $toro_red;
+// }
+// .header-icon-left{
+//   border-right: 2px solid $toro_red;
+// }
 
 .hide-overflow{
   overflow: hidden;

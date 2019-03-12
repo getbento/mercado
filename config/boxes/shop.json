@@ -1,0 +1,22 @@
+{
+	"name": "Shop",
+	"has_featured": false,
+	"fields": {
+		"short_description": "wysiwyg",
+		"description": "wysiwyg",
+		"thumbnail_left": "image",
+		"thumbnail_right": "image",
+		"hover_text": "text",
+		"gallery": "gallery",
+		"map": "image",
+		"SEO": {
+			"type": "section",
+			"items": {
+				"title": "text",
+				"description": "text",
+				"keywords": "text",
+				"image": "image"
+			}
+		}
+	}
+}

@@ -134,11 +134,11 @@ h2{
 @media screen and (max-width: $mobile_max) {
   .mobile-happenings-title{
     display: block;
-    color: $toro_red;
+    color: $mid_grey;
     text-transform: uppercase;
     text-align: center;
   }
-  .page-landing-header{
+  .events-landing .page-landing-header{
     display: none;
   }
   .events-description{

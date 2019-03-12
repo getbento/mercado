@@ -3,24 +3,35 @@
 
 
   .page-landing-header{
+    .kiosk-icon{
+      height: 150px;
+      padding: 15px;
+      border-right: 2px solid $toro_red;
+    }
 	  img{
-		  width:130px;
-		  margin:15px;
-      border: 2px solid $toro_red;
+      height: 100%;
+      width: auto;
 	  }
 	  .kiosk_title{
-		  min-width:130px;
-      width: 130px;
-		  height:130px;
-		  float:right;
-		  border:2px solid black;
-		  margin:15px;
+		  min-width:150px;
+      width: 150px;
+		  height:150px;
+		  // float:right;
+		  padding:15px;
+      // height: 100%;
 		  display: flex;
 		  text-align: center;
 		  align-items: center;
       justify-content: center;
-      padding: 8px;
+      border-left:2px solid $toro-red;
       h2.shrink {
+        border:2px solid $mid_grey;
+        height: 100%;
+        width: 100%;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include h3-style;
         text-transform: uppercase;
         line-height: 1.3em;
@@ -153,6 +164,9 @@
 }
 
 @media (max-width: 1024px){
+  .kiosk-landing{
+
+  }
   .mobile-kiosk-title{
     display: block;
     text-align: center;
@@ -174,8 +188,13 @@
       flex-direction: row;
       flex-wrap: nowrap;
       display: flex;
+      border: 0px;
+      .kiosk-icon{
+        border: 0px;
+      }
       .kiosk_title {
         float: unset;
+        border: 0px;
         h2 {
           &.shrink {
             text-transform: uppercase;
@@ -184,11 +203,12 @@
         }
       }
     }
-  }
-  .page-landing-header{
-    justify-content: center;
-    h1{
-      display: none;
+    .page-landing-header{
+      justify-content: center;
+      h1{
+        display: none;
+      }
     }
   }
+
 }

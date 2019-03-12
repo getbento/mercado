@@ -304,7 +304,7 @@ a {
       border: 0px; } }
   .page-landing-header h1 {
     text-transform: uppercase;
-    color: #e4002b;
+    color: #474746;
     font-family: "Knockout 67 A", "Knockout 67 B";
     font-weight: initial;
     font-size: 110px;
@@ -325,17 +325,22 @@ a {
     line-height: .8em;
     text-transform: uppercase; }
   .page-landing-header img {
-    width: 15%;
+    width: 100%;
     height: auto; }
     @media (max-width: 767px) {
       .page-landing-header img {
         display: none; } }
-
-.header-icon-right {
-  border-left: 2px solid #e4002b; }
-
-.header-icon-left {
-  border-right: 2px solid #e4002b; }
+  .page-landing-header .page-header-icon-left, .page-landing-header .page-header-icon-right {
+    width: 150px;
+    height: 150px;
+    padding: 15px; }
+    @media (max-width: 767px) {
+      .page-landing-header .page-header-icon-left, .page-landing-header .page-header-icon-right {
+        display: none; } }
+  .page-landing-header .page-header-icon-left {
+    border-right: 2px solid #e4002b; }
+  .page-landing-header .page-header-icon-right {
+    border-left: 2px solid #e4002b; }
 
 .hide-overflow {
   overflow: hidden; }
@@ -1953,11 +1958,13 @@ address.site-info {
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 50px; }
+  width: 50px;
+  transition: ease 250ms all; }
   .single-blog-arrow svg {
     height: 25px; }
     .single-blog-arrow svg path {
-      fill: white; }
+      fill: white;
+      transition: ease 250ms all; }
 
 .blog-post:hover .single-blog-arrow {
   background-color: white; }
@@ -2335,7 +2342,8 @@ address.site-info {
     font-weight: initial;
     font-weight: 600;
     font-size: 13px;
-    padding-top: 0.8em; }
+    padding-top: 0.8em;
+    transition: ease 250ms all; }
   .blog-articles-container .blog-post__title {
     padding-top: 4px;
     text-transform: uppercase;
@@ -2343,7 +2351,8 @@ address.site-info {
     font-family: "Knockout 48 A", "Knockout 48 B";
     font-weight: initial;
     line-height: 0.85em;
-    font-size: 6em; }
+    font-size: 6em;
+    transition: ease 250ms all; }
   .blog-articles-container .blog-post__desc {
     padding-top: 10px;
     font-weight: initial;
@@ -2442,7 +2451,8 @@ address.site-info {
     display: flex;
     width: 32%;
     padding: 1.2em;
-    position: relative; }
+    position: relative;
+    transition: 250ms all ease; }
     .blog-articles-container .blog-post a {
       position: absolute;
       left: 0;
@@ -3149,23 +3159,31 @@ address.site-info {
 
 .single-kiosk {
   padding-top: 23px; }
+  .single-kiosk .page-landing-header .kiosk-icon {
+    height: 150px;
+    padding: 15px;
+    border-right: 2px solid #e4002b; }
   .single-kiosk .page-landing-header img {
-    width: 130px;
-    margin: 15px;
-    border: 2px solid #e4002b; }
+    height: 100%;
+    width: auto; }
   .single-kiosk .page-landing-header .kiosk_title {
-    min-width: 130px;
-    width: 130px;
-    height: 130px;
-    float: right;
-    border: 2px solid black;
-    margin: 15px;
+    min-width: 150px;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding: 8px; }
+    border-left: 2px solid #e4002b; }
     .single-kiosk .page-landing-header .kiosk_title h2.shrink {
+      border: 2px solid #474746;
+      height: 100%;
+      width: 100%;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: #474746;
       font-size: 3.4rem;
       line-height: 5rem;
@@ -3279,15 +3297,19 @@ address.site-info {
   .single-kiosk .page-landing-header {
     flex-direction: row;
     flex-wrap: nowrap;
-    display: flex; }
+    display: flex;
+    border: 0px; }
+    .single-kiosk .page-landing-header .kiosk-icon {
+      border: 0px; }
     .single-kiosk .page-landing-header .kiosk_title {
-      float: unset; }
+      float: unset;
+      border: 0px; }
       .single-kiosk .page-landing-header .kiosk_title h2.shrink {
         text-transform: uppercase;
         line-height: 2.9rem; }
-  .page-landing-header {
+  .single-kiosk .page-landing-header {
     justify-content: center; }
-    .page-landing-header h1 {
+    .single-kiosk .page-landing-header h1 {
       display: none; } }
 
 .press_features {
@@ -3334,6 +3356,10 @@ address.site-info {
     transition: ease 250ms all; }
   .content-gallery .rest-single-gallery-controls button:hover .st0 {
     stroke: white; }
+
+#featured_press {
+  padding-top: 120px;
+  margin-top: -120px; }
 
 .events-landing {
   margin: 23px 0px 20px 0px;
@@ -3443,10 +3469,10 @@ address.site-info {
 @media screen and (max-width: 767px) {
   .mobile-happenings-title {
     display: block;
-    color: #e4002b;
+    color: #474746;
     text-transform: uppercase;
     text-align: center; }
-  .page-landing-header {
+  .events-landing .page-landing-header {
     display: none; }
   .events-description h3 {
     font-size: 2.7rem !important;

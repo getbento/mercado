@@ -25,6 +25,7 @@ margin-bottom:50px;
 	font-weight: 600;
 	font-size: 13px;
 	padding-top: 0.8em;
+  transition: ease 250ms all;
 }
 .blog-post__title {
   	padding-top: 4px;
@@ -34,6 +35,7 @@ margin-bottom:50px;
     font-weight: initial;
     line-height: 0.85em;
     font-size: 6em;
+    transition: ease 250ms all;
 }
 .blog-post__desc {
 	padding-top: 10px;
@@ -182,6 +184,7 @@ margin-bottom:50px;
 	width: 32%;
 	padding: 1.2em;
   position: relative;
+  transition: 250ms all ease;
   a{
     position: absolute;
     left: 0;
@@ -260,16 +263,15 @@ margin-bottom:50px;
 
 @media screen and (max-width: $mobile_max) {
   .blog-landing{
-
-  .mobile-blog-title{
-    display:block !important;
-    text-transform: uppercase;
-    color:$toro-red;
-    text-align: center;
+    .mobile-blog-title{
+      display:block !important;
+      text-transform: uppercase;
+      color:$toro-red;
+      text-align: center;
+    }
+    .page-landing-header{
+      display: none;
+    }
   }
-  .page-landing-header{
-    display: none;
-  }
-}
 
 }
