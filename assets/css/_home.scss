@@ -733,9 +733,21 @@
 
 
 .more-info.coming-soon{
-  color: rgba(228, 0, 43, 0.5) !important;
+  color: rgba(228, 0, 43, 0.7) !important;
   &:hover{
     background-color: white !important;
-    color: rgba(228, 0, 43, 0.5) !important
+    color: rgba(228, 0, 43, 0.7) !important
+  }
+}
+
+.home-gift-card{
+  span{
+    transition: ease 250ms all;
+  }
+  &:hover{
+    .gift-card-img-text span{
+      color: $toro_red !important;
+      background-color: $oro_yellow !important;  
+    }
   }
 }

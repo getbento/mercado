@@ -98,6 +98,10 @@
 .ig-boxes{
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid $toro_red;
+  @media(max-width: 767px){
+    border: 0px;
+  }
   .ig-box{
     width: 20%;
     border: 1px solid $toro_red;

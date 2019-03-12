@@ -11,6 +11,7 @@
 		"map": "image",
 		"reservation_link": "text",
 		"contact_info": "wysiwyg",
+		"more_info_box": "wysiwyg",
 		"primary_color": "color",
 		"secondary_color": "color",
 		"menus": {

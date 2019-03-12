@@ -2164,10 +2164,17 @@ address.site-info {
   margin-bottom: 20px; }
 
 .more-info.coming-soon {
-  color: rgba(228, 0, 43, 0.5) !important; }
+  color: rgba(228, 0, 43, 0.7) !important; }
   .more-info.coming-soon:hover {
     background-color: white !important;
-    color: rgba(228, 0, 43, 0.5) !important; }
+    color: rgba(228, 0, 43, 0.7) !important; }
+
+.home-gift-card span {
+  transition: ease 250ms all; }
+
+.home-gift-card:hover .gift-card-img-text span {
+  color: #e4002b !important;
+  background-color: #fff166 !important; }
 
 .kiosk-grid, .bars-grid {
   display: flex;
@@ -2254,7 +2261,11 @@ address.site-info {
 
 .ig-boxes {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  border: 1px solid #e4002b; }
+  @media (max-width: 767px) {
+    .ig-boxes {
+      border: 0px; } }
   .ig-boxes .ig-box {
     width: 20%;
     border: 1px solid #e4002b;
