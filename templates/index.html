@@ -220,7 +220,11 @@
               <p>{{rest.fields.home_description}}</p>
               <div class="home-rest-links">
                 <a href="{{rest.url}}" class="more-info">Visit</a>
-                <a href="" class='more-info'>Reserve</a>
+                {% if reservation_link %}
+                  <a href="" class='more-info'>Reserve</a>
+                {% else %}
+                  <a class='more-info coming-soon'>¡Coming soon!</a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -243,7 +247,7 @@
         <div class="home-mercado-kiosk">
           <a href="{{kiosk.url}}">
             <div class="home-mercado-kiosk-img">
-              <img src="{{kiosk.fields.thumbnail_left.url}}" alt="{{kiosk.fields.thumbnail_left.alt_text}}">
+              <img src="{{kiosk.fields.global_icon.url}}" alt="{{kiosk.fields.global_icon.alt_text}}">
               <div class="kiosk-bar-hover-img">
                 <img src="{{kiosk.fields.gallery[0].image_url}}" alt="">
                 <div class="img-fade"></div>

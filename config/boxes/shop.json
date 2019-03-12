@@ -4,8 +4,8 @@
 	"fields": {
 		"short_description": "wysiwyg",
 		"description": "wysiwyg",
-		"thumbnail_left": "image",
-		"thumbnail_right": "image",
+		"page_icon": "image",
+		"global_icon": "image",
 		"hover_text": "text",
 		"gallery": "gallery",
 		"map": "image",

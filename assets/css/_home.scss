@@ -1,3 +1,7 @@
+.home-hero-image{
+  margin-top: -2px;
+}
+
 .section-title-container{
   position: relative;
   border: 2px solid $toro_red;
@@ -724,5 +728,14 @@
 .home-shop-cont .kiosk-grid{
   .kiosk-box{
     margin-bottom: 20px;
+  }
+}
+
+
+.more-info.coming-soon{
+  color: rgba(228, 0, 43, 0.5) !important;
+  &:hover{
+    background-color: white !important;
+    color: rgba(228, 0, 43, 0.5) !important
   }
 }

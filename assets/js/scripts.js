@@ -255,6 +255,9 @@ setTimeout(function(){
       $('.home-slides').slick({
         'arrows': false,
         'fade': true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
       });
 
 

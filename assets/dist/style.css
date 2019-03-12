@@ -319,7 +319,7 @@ a {
         text-align: center;
         line-height: 1em; } }
   .page-landing-header h2 {
-    color: black;
+    color: #474746;
     font-family: "Knockout 48 A", "Knockout 48 B";
     font-size: 6em;
     line-height: .8em;
@@ -1589,6 +1589,9 @@ address.site-info {
       object-fit: cover;
       display: block; }
 
+.home-hero-image {
+  margin-top: -2px; }
+
 .section-title-container {
   position: relative;
   border: 2px solid #e4002b;
@@ -2160,6 +2163,12 @@ address.site-info {
 .home-shop-cont .kiosk-grid .kiosk-box {
   margin-bottom: 20px; }
 
+.more-info.coming-soon {
+  color: rgba(228, 0, 43, 0.5) !important; }
+  .more-info.coming-soon:hover {
+    background-color: white !important;
+    color: rgba(228, 0, 43, 0.5) !important; }
+
 .kiosk-grid, .bars-grid {
   display: flex;
   justify-content: space-between;
@@ -2309,6 +2318,12 @@ address.site-info {
           padding-bottom: 0;
           border-top: 2px solid #e4002b;
           border-bottom: 2px solid #e4002b; } }
+
+.mls-mercado-map-img {
+  margin-bottom: 30px; }
+  .mls-mercado-map-img img {
+    width: 100%;
+    height: auto; }
 
 .blog-landing {
   padding-top: 28px; }
