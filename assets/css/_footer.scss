@@ -318,3 +318,72 @@ address.site-info {
 
   }
 }
+
+.field{
+  margin-bottom: 20px;
+}
+
+.fields-one-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .field{
+    width: 49%;
+  }
+  @media(max-width: 767px){
+    flex-direction: column;
+    .field{
+      width: 100%;
+    }
+  }
+}
+
+.form-required{
+  margin-bottom: 20px;
+}
+.emmaFormLabelBold, .emmaFormLabelSmall{
+  display: none;
+}
+
+.form-button{
+  display: flex;
+  justify-content: center;
+}
+
+.select-fields{
+  display: flex;
+  .red-input{
+    height: 100%;
+  }
+}
+
+.birthday-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto !important;
+  // background-color: $toro_red;
+  // padding: 10px;
+  // color: $oro_yellow;
+
+}
+
+.emmaRequiredLabel{
+  font-size: 15px;
+}
+
+.zip-birth{
+  @media(max-width: 767px){
+    flex-direction: column;
+    .field{
+      width: 100%;
+    }
+    .birthday-label{
+      font-size: 20px;
+      display: inline-block;
+    }
+    select{
+      font-size: 20px;
+    }
+  }
+}

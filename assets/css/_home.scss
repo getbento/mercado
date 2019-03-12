@@ -619,6 +619,9 @@
         font-weight: 100;
         color: #474746;
       }
+      a{
+        color: inherit;
+      }
     }
     .home-slide-buttons{
       border-top: 2px solid $toro_red;
@@ -747,7 +750,7 @@
   &:hover{
     .gift-card-img-text span{
       color: $toro_red !important;
-      background-color: $oro_yellow !important;  
+      background-color: $oro_yellow !important;
     }
   }
 }

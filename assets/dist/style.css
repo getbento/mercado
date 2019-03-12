@@ -1140,6 +1140,56 @@ address.site-info {
     height: 20px;
     width: auto; }
 
+.field {
+  margin-bottom: 20px; }
+
+.fields-one-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .fields-one-line .field {
+    width: 49%; }
+  @media (max-width: 767px) {
+    .fields-one-line {
+      flex-direction: column; }
+      .fields-one-line .field {
+        width: 100%; } }
+
+.form-required {
+  margin-bottom: 20px; }
+
+.emmaFormLabelBold, .emmaFormLabelSmall {
+  display: none; }
+
+.form-button {
+  display: flex;
+  justify-content: center; }
+
+.select-fields {
+  display: flex; }
+  .select-fields .red-input {
+    height: 100%; }
+
+.birthday-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto !important; }
+
+.emmaRequiredLabel {
+  font-size: 15px; }
+
+@media (max-width: 767px) {
+  .zip-birth {
+    flex-direction: column; }
+    .zip-birth .field {
+      width: 100%; }
+    .zip-birth .birthday-label {
+      font-size: 20px;
+      display: inline-block; }
+    .zip-birth select {
+      font-size: 20px; } }
+
 .restaurant-single {
   padding-top: 30px;
   width: 100%; }
@@ -2087,6 +2137,8 @@ address.site-info {
       .home-slide .home-slide-info-cont .home-slide-desc p {
         font-weight: 100;
         color: #474746; }
+      .home-slide .home-slide-info-cont .home-slide-desc a {
+        color: inherit; }
     .home-slide .home-slide-info-cont .home-slide-buttons {
       border-top: 2px solid #e4002b;
       display: flex;
@@ -3555,7 +3607,7 @@ address.site-info {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 68px 0;
+  padding: 33px 0;
   background: #e4002b;
   color: white;
   text-align: center;
@@ -3588,6 +3640,8 @@ address.site-info {
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0); } }
+  #newsletter-popup .red-input {
+    padding: 5px 24px !important; }
 
 #newsletter-popup-title {
   color: #474746;
@@ -3599,7 +3653,9 @@ address.site-info {
   text-transform: uppercase;
   color: #fff166;
   margin: 0;
-  font-family: "Knockout 67 A", "Knockout 67 B"; }
+  font-family: "Knockout 67 A", "Knockout 67 B";
+  font-size: 70px;
+  line-height: 1em; }
   @media screen and (max-width: 767px) {
     #newsletter-popup-title {
       font-size: 9rem;
@@ -3621,7 +3677,7 @@ address.site-info {
   text-transform: none;
   letter-spacing: 0.04em;
   font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-  margin: 35px auto;
+  margin: 10px auto 15px auto;
   max-width: 850px;
   color: white; }
   @media screen and (max-width: 767px) {
@@ -3635,6 +3691,16 @@ address.site-info {
       max-width: unset;
       padding: 0 32px;
       margin: 48px auto 48px auto; } }
+
+#newsletter-popup .red-input {
+  border: 2px solid #FFFFFF !important; }
+
+#newsletter-popup .outline-button {
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important; }
+  #newsletter-popup .outline-button:hover {
+    color: #e4002b !important;
+    background-color: white !important; }
 
 .red-input.inverted {
   border: 2px solid #FFFFFF; }
