@@ -62,6 +62,9 @@ margin:0px;
       border-bottom-style: solid;
       // flex-grow: 1;
       height: 70%;
+      a{
+        text-decoration: underline;
+      }
       @media (max-width: 1024px){
         border-bottom-width: 0px;
       }
@@ -138,6 +141,9 @@ margin:0px;
           font-family: $knockout-bantam;
           font-weight: initial;
           line-height: 1em;
+        }
+        a{
+          text-decoration: underline;
         }
       }
     }

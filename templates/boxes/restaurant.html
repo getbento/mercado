@@ -152,13 +152,10 @@
       style='background-color: {% if current.fields.secondary_color %}{{current.fields.secondary_color}}; {% else %}{{current.fields.primary_color}}; {% endif %}'
       >
       <div class="rest-single-join-us-content">
-        <h3>¡VAMOS! JOIN US FOR
-        YOUR NEXT PRIVATE
-        EVENT AT {{current.name}}</h3>
-        <p>
-          CONTACT US TO LEARN MORE.
-        </p>
-        <a class="more-info">More Info</a>
+        {{current.fields.more_info_box}}
+        {% if current.fields.more_info_link and current.fields.more_info_CTA %}
+          <a href='{{current.fields.more_info_link}}' class="more-info" target="_blank">{{current.fields.more_info_CTA}}</a>
+        {% endif %}
       </div>
       <div class="rest-single-join-us-img">
         <img src="{{current.fields.logo.url}}" alt="{{current.fields.logo.alt_text}}">

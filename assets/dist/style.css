@@ -1195,6 +1195,8 @@ address.site-info {
       border-bottom-width: 2px;
       border-bottom-style: solid;
       height: 70%; }
+      .restaurant-content .restaurant-single-info .restaurant-single-content a {
+        text-decoration: underline; }
       @media (max-width: 1024px) {
         .restaurant-content .restaurant-single-info .restaurant-single-content {
           border-bottom-width: 0px; } }
@@ -1254,6 +1256,8 @@ address.site-info {
           font-family: "Knockout 67 A", "Knockout 67 B";
           font-weight: initial;
           line-height: 1em; }
+        .restaurant-content .restaurant-single-info.rest-right-col .rest-contact .rest-contact-inner a {
+          text-decoration: underline; }
 
 .rest-single-menus {
   margin-bottom: 50px; }
@@ -1578,6 +1582,8 @@ address.site-info {
         font-size: 50px;
         text-transform: uppercase;
         line-height: 1em; }
+      .full-width-header .full-width-header-content .full-width-header-content-inner a {
+        text-decoration: underline; }
   .full-width-header .full-width-header-img {
     width: 50%; }
     @media (max-width: 860px) {
@@ -2617,6 +2623,8 @@ address.site-info {
     .single-blog .single-blog-info .single-blog-content {
       max-width: 350px;
       margin: 40px auto; }
+      .single-blog .single-blog-info .single-blog-content a {
+        text-decoration: underline; }
       @media (max-width: 985px) {
         .single-blog .single-blog-info .single-blog-content {
           max-width: 1024px;
@@ -2980,6 +2988,8 @@ address.site-info {
       width: 100%;
       margin: 0px auto 50px auto;
       padding: 0px 0px; } }
+  .standard-page .standard-content a {
+    text-decoration: underline; }
   .standard-page .standard-content p {
     margin-bottom: 20px;
     letter-spacing: .5px;

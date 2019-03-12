@@ -92,6 +92,9 @@
     .single-blog-content{
       max-width: 350px;
       margin: 40px auto;
+      a{
+        text-decoration: underline;
+      }
 
       @media (max-width: 985px){
         max-width: 1024px;
