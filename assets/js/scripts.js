@@ -85,12 +85,14 @@ $(document).ready(function(){
    ***************************/
    $('#newsletter-popup-close').click(function(){
      $('#newsletter-popup').removeClass('opened');
+     $('body').removeClass('overflow-hide');
    }).keyHook();
 
 
   if ( getCookie('popupseen') === "" ) {
     console.log('popup!');
     $('#newsletter-popup').addClass('opened');
+    $('body').addClass('overflow-hide');
     // window.location.href = "#newsletter-popup";
     setCookie('popupseen', 'true', 30);
 

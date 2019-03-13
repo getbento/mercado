@@ -22,13 +22,14 @@
   }
   @media screen and (max-width: $mobile_max) {
     height: 100%;
+    overflow-y: scroll;
     @include transform(scale(1.05));
     > .content-margins {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      // height: 100%;
     } &.opened, &:target {
       @include transform(translateY(0));
     }
@@ -48,7 +49,8 @@
   line-height: 1em;
   @media screen and (max-width: $mobile_max) {
     text-transform: uppercase;
-    max-width: 240px; font-size:6rem;
+    // max-width: 240px;
+    font-size:6rem;
     line-height: 1em;
   }
 }
@@ -62,7 +64,7 @@
   @media screen and (max-width: $mobile_max) {
     max-width: unset;
     padding: 0 32px;
-    margin: 48px auto 48px auto;
+    margin: 15px auto ;
   }
 }
 
@@ -79,7 +81,20 @@
     }
 
   }
+  .form-fields__fields-wrapper{
+    input{
+      font-size: 20px;
+
+    }
+  }
+  @media(max-width: 767px){
+    .field{
+      margin-bottom: 10px;
+    }
+  }
+
 }
+
 
 .red-input {
   &.inverted {
@@ -137,7 +152,8 @@
   text-decoration: none;
   cursor: pointer;
   @media screen and (max-width: $mobile_max) {
-    right: 24px;
-    top: 24px;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
   }
 }

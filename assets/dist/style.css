@@ -3163,6 +3163,10 @@ address.site-info {
     box-sizing: border-box;
     border: 2px #e4002b solid; } }
 
+.overflow-hide {
+  overflow: hidden;
+  height: 100vh; }
+
 .contact-us-page-container {
   margin-bottom: 80px; }
   .contact-us-page-container .content-margins {
@@ -3264,7 +3268,7 @@ address.site-info {
     align-items: center;
     justify-content: center;
     border-left: 2px solid #e4002b; }
-    .single-kiosk .page-landing-header .kiosk_title h2.shrink {
+    .single-kiosk .page-landing-header .kiosk_title h2 {
       border: 2px solid #474746;
       height: 100%;
       width: 100%;
@@ -3282,7 +3286,7 @@ address.site-info {
       line-height: 1.3em;
       font-size: 24px; }
       @media screen and (max-width: 767px) {
-        .single-kiosk .page-landing-header .kiosk_title h2.shrink {
+        .single-kiosk .page-landing-header .kiosk_title h2 {
           font-size: 2.9rem;
           line-height: 4.5rem;
           letter-spacing: normal;
@@ -3627,15 +3631,10 @@ address.site-info {
   @media screen and (max-width: 767px) {
     #newsletter-popup {
       height: 100%;
+      overflow-y: scroll;
       -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
       transform: scale(1.05); }
-      #newsletter-popup > .content-margins {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%; }
       #newsletter-popup.opened, #newsletter-popup:target {
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -3665,7 +3664,6 @@ address.site-info {
   @media screen and (max-width: 767px) {
     #newsletter-popup-title {
       text-transform: uppercase;
-      max-width: 240px;
       font-size: 6rem;
       line-height: 1em; } }
 
@@ -3690,7 +3688,7 @@ address.site-info {
     #newsletter-popup-blurb {
       max-width: unset;
       padding: 0 32px;
-      margin: 48px auto 48px auto; } }
+      margin: 15px auto; } }
 
 #newsletter-popup .red-input {
   border: 2px solid #FFFFFF !important; }
@@ -3701,6 +3699,13 @@ address.site-info {
   #newsletter-popup .outline-button:hover {
     color: #e4002b !important;
     background-color: white !important; }
+
+#newsletter-popup .form-fields__fields-wrapper input {
+  font-size: 20px; }
+
+@media (max-width: 767px) {
+  #newsletter-popup .field {
+    margin-bottom: 10px; } }
 
 .red-input.inverted {
   border: 2px solid #FFFFFF; }
@@ -3751,8 +3756,9 @@ address.site-info {
   cursor: pointer; }
   @media screen and (max-width: 767px) {
     #newsletter-popup-close {
-      right: 24px;
-      top: 24px; } }
+      right: 10px;
+      top: 10px;
+      font-size: 30px; } }
 
 .gallery-page {
   padding-top: 28px; }
