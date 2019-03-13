@@ -125,33 +125,33 @@
   }
 }
 
-.current-shop{
-  .kiosk-box{
-    a{
-      &:hover{
-        h4{
-          opacity: 1;
-        }
-      }
-    }
-  }
-  .kiosk-box-img{
-    h4{
-      transition: ease 250ms all;
-      opacity: 0;
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      background-color: $oro_yellow;
-      color: $toro_red;
-      font-family: $domaine;
-      text-align: center;
-    }
-  }
-}
+// .current-shop{
+//   .kiosk-box{
+//     a{
+//       &:hover{
+//         h4{
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
+//   .kiosk-box-img{
+//     h4{
+//       transition: ease 250ms all;
+//       opacity: 0;
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//       height: 100%;
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       padding: 10px;
+//       background-color: $oro_yellow;
+//       color: $toro_red;
+//       font-family: $domaine;
+//       text-align: center;
+//     }
+//   }
+// }

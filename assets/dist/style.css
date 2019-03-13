@@ -334,6 +334,8 @@ a {
     width: 150px;
     height: 150px;
     padding: 15px; }
+    .page-landing-header .page-header-icon-left img, .page-landing-header .page-header-icon-right img {
+      border: 2px solid #e4002b; }
     @media (max-width: 767px) {
       .page-landing-header .page-header-icon-left, .page-landing-header .page-header-icon-right {
         display: none; } }
@@ -3003,26 +3005,6 @@ address.site-info {
   .shop-little-spain-shops .kiosk-box-img.kiosk-bordered-img img {
     padding: 10px;
     border: 2px solid #e4002b; }
-
-.current-shop .kiosk-box a:hover h4 {
-  opacity: 1; }
-
-.current-shop .kiosk-box-img h4 {
-  transition: ease 250ms all;
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff166;
-  color: #e4002b;
-  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-  text-align: center; }
 
 @media screen and (max-width: 767px) {
   .standard-page .full-width-header h1 {

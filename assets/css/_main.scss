@@ -159,6 +159,9 @@ a{
     width: 150px;
     height: 150px;
     padding: 15px;
+    img{
+      border: 2px solid $toro_red;
+    }
     @media (max-width: 767px){
       display: none;
     }

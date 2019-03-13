@@ -27,11 +27,15 @@
     <div class="shop-little-spain-shops kiosk-grid">
 
 {% for shop in boxes.shop.all %}
-      <article class="kiosk-box">
+        <article class="kiosk-box">
           <a href="{{shop.url}}">
             <div class="kiosk-box-img">
-              <img src="{{shop.fields.thumbnail_left.url}}" alt="{{shop.fields.thumbnail_left.alt_text}}">
-              <h4>{{shop.fields.hover_text}}</h4>
+              <img src="{{shop.fields.global_icon.url}}" alt="{{shop.fields.global_icon.alt_text}}">
+              <div class="kiosk-bar-hover-img">
+                <img src="{{shop.fields.gallery[0].image_url}}" alt="">
+                <div class="img-fade"></div>
+                <h4>{{shop.fields.hover_text}}</h4>
+              </div>
             </div>
             <h6>{{shop.name}}</h6>
           </a>
