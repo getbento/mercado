@@ -304,17 +304,24 @@
     </div>
 
     <div class="home-shop-cont">
-      <div class="shop-little-spain-shops kiosk-grid">
-        <article class="kiosk-box">
+      <div class="shop-little-spain-shops kiosk-grid home-mercado-kiosks">
+        <div class="home-mercado-kiosk kiosk-box">
           <a href="/shop/#shop-little-spain">
-            <div class="kiosk-box-img">
+            <div class="home-mercado-kiosk-img">
 
-              <img src="{{pages.by_slug.shop.fields['shop-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['shop-products'].products[0].image.alt_text}}">
+<img src="{{boxes.shop.all[0].fields.global_icon.url}}" alt="{{boxes.shop.all[0].fields.global_icon.alt}}" />
 
+              <div class="kiosk-bar-hover-img">
+                <img src="{{boxes.shop.all[0].fields.gallery[0].image_url}}" alt="">
+                <div class="img-fade"></div>
+                <h6>Shop Little Spain</h6>
+              </div>
             </div>
             <h6>Shop Little Spain</h6>
           </a>
-        </article>
+        </div>
+
+
 
         <!-- <article class="kiosk-box">
           <a href="/shop/#shop-online">

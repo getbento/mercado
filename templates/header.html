@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{account.services.google_analytics.tracking_code}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{account.services.google_analytics.tracking_code}}');
+  </script>
+
+
   <!-- Powered by BentoBox -->
   <!-- START header.html  -->
 
@@ -8,9 +20,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   {% if current.slug == 'home' %}
-  <title>{{ account.site.title }}</title>
+    <title>{{ account.site.title }}</title>
+  {% elif current.meta_title %}
+    <title>{{current.meta_title}}</title>
   {% else %}
-  <title>{{current.name}} - {{ account.site.title }}</title>
+    <title>{{current.name}} - {{ account.site.title }}</title>
   {% endif %}
 
   <!-- Mobile Specific Metas
@@ -102,11 +116,11 @@
   	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
   	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
   	document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  	fbq('init', '383329729065117'); // Insert your pixel ID here.
+  	fbq('init', '{{account.services.facebook_pixel.id}}'); // Insert your pixel ID here.
   	fbq('track', 'PageView');
 	</script>
 	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=383329729065117&ev=PageView&noscript=1"
+	src="https://www.facebook.com/tr?id={{account.services.facebook_pixel.id}}&ev=PageView&noscript=1"
 	/>
   </noscript>
 	<!-- DO NOT MODIFY -->
