@@ -1171,6 +1171,21 @@ address.site-info {
   display: flex; }
   .select-fields .red-input {
     height: 100%; }
+  .select-fields select {
+    cursor: pointer; }
+  @media (max-width: 900px) {
+    .select-fields .red-input {
+      padding: 12px 15px; } }
+  @media (max-width: 767px) {
+    .select-fields {
+      display: flex;
+      flex-wrap: wrap; }
+      .select-fields .red-input {
+        padding: 12px 24px; }
+      .select-fields span {
+        width: 100%; }
+      .select-fields select {
+        width: 50%; } }
 
 .birthday-label {
   display: flex;

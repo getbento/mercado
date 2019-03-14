@@ -355,6 +355,27 @@ address.site-info {
   .red-input{
     height: 100%;
   }
+  select{
+    cursor: pointer;
+  }
+  @media (max-width: 900px){
+    .red-input{
+      padding: 12px 15px;
+    }
+  }
+  @media (max-width: 767px){
+    .red-input{
+      padding: 12px 24px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    span{
+      width: 100%;
+    }
+    select{
+      width: 50%;
+    }
+  }
 }
 
 .birthday-label{
