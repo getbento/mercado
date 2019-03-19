@@ -2411,6 +2411,10 @@ address.site-info {
     width: 100%;
     height: auto; }
 
+#bars, #kiosks {
+  padding-top: 125px;
+  margin-top: -125px; }
+
 .blog-landing {
   padding-top: 28px; }
   .blog-landing .mobile-blog-title {

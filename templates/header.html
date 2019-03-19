@@ -19,8 +19,9 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  {% if current.slug == 'home' %}
-    <title>{{ account.site.title }}</title>
+
+  {% if current.fields.SEO.title %}
+    <title>{{current.fields.SEO.title}}</title>
   {% elif current.meta_title %}
     <title>{{current.meta_title}}</title>
   {% else %}
@@ -54,18 +55,20 @@
   <meta property="og:url"                content="{{current.request.absolute_url}}" />
 
 
+
+
   {% if current.fields.SEO.title %}
     <meta property="og:title"              content="{{current.fields.SEO.title}}" />
+    <meta name="twitter:title" content="{{current.fields.SEO.title}}">
+  {% elif current.meta_title %}
+    <meta property="og:title"              content="{{current.meta_title}}}" />
     <meta name="twitter:title" content="{{current.meta_title}}">
   {% else %}
-    {% if current.name == "Home" %}
-      <meta property="og:title"              content="{{account.site.title}}" />
-      <meta name="twitter:title" content="{{account.site.title}}">
-    {% else %}
-      <meta property="og:title"              content="{{current.name}}" />
-      <meta name="twitter:title" content="{{current.name}}">
-    {% endif %}
+    <meta property="og:title"              content="{{current.name}} - {{ account.site.title }}}" />
+    <meta name="twitter:title" content="{{current.name}} - {{ account.site.title }}">
   {% endif %}
+
+
 
   {% if current.fields.SEO.description %}
     <meta property="og:description"        content="{{current.fields.SEO.description}}" />
@@ -186,10 +189,10 @@
                 </li>
 
                 <li class="nav-item child">
-                  <a href="/kiosks">Kiosks</a>
+                  <a href="/kiosks/#kiosks">Kiosks</a>
                 </li>
                 <li class="nav-item child">
-                  <a href="/bars">Bars</a>
+                  <a href="/bars/#bars">Bars</a>
                 </li>
                 <li class="nav-item child">
                   <a href="/kiosks">Map</a>

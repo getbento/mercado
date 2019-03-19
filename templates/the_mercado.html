@@ -22,7 +22,7 @@
 
 
 {% if current.name == "Bars" %}
-<section class="mercado-bars">
+<section class="mercado-bars" id='bars'>
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
@@ -53,7 +53,7 @@
 {% endif %}
 
 
-<section class="mercado-kiosks">
+<section class="mercado-kiosks" id='kiosks'>
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
@@ -82,7 +82,7 @@
 </section>
 
 {% if current.name != "Bars" %}
-<section class="mercado-bars">
+<section class="mercado-bars" id='bars'>
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
