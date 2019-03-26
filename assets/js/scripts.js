@@ -304,6 +304,47 @@ setTimeout(function(){
 
         }
 
+        $('.mercado-map-cont svg .svg-stalls g.svg-stall-cont').hover(
+          function(){
+            let $this = $(this);
+            $('.mercado-map-hover-box img').attr('src', $this.attr('img'));
+            $('.mercado-map-hover-box span').html($this.attr('text'));
+
+
+            // console.log($this);
+            $('.mercado-map-hover-box').addClass('active');
+            let container = $('.mercado-map-cont svg');
+
+            if($this.attr('type') == 'restaurant'){
+              $('.mercado-map-hover-box').addClass('rest');
+            }else{
+              $('.mercado-map-hover-box').removeClass('rest');
+            }
+
+            $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() + 10);
+
+            let leftOffset = $this[0].getBoundingClientRect().width/2 - $('.mercado-map-hover-box').width()/2 - 10 ;
+
+            // console.log(leftOffset);
+
+            $('.mercado-map-hover-box').css('left', $this.offset().left - container.position().left + leftOffset + 'px');
+
+
+          },
+          function(){
+            $('.mercado-map-hover-box').removeClass('active');
+          }
+        );
+
+        $('.mercado-map-cont svg a').click(function(){
+          let id = $(this).find('g.svg-stall-cont').attr('id');
+          console.log(id);
+          $(".mercado-map-more-info-boxes").addClass('active');
+          $('.map-more-info-box').css('display', 'none');
+          $('#map-more-info-' + id).css('display', 'block');
+
+        });
+
 }); // document ready end
 
 /*
