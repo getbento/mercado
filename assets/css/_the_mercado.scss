@@ -189,6 +189,13 @@
   }
 }
 
+.current-the-mercado{
+  .full-width-header-content{
+    position: relative;
+    z-index: 2;
+  }
+}
+
 .mls-mercado-map-img{
   margin-bottom: 30px;
   img{
@@ -203,6 +210,12 @@
   margin-top: -125px;
 }
 
+#mercado-map{
+  @media(max-width: 767px){
+    position: relative;
+  }
+}
+
 .mercado-map-box{
   overflow-x: scroll;
   overflow-y: hidden;
@@ -210,14 +223,86 @@
 
 .mercado-map-cont{
   position: relative;
-  width: 100%;
   padding-top: 50px;
-  overflow-x: scroll;
-  overflow-y: visible;
-  min-width: 1024px;
-  svg{
-    min-width: 1024px;
+  width: 1024px;
+  margin: auto;
+  @media (max-width: 767px){
+    position: initial;
   }
+  svg{
+    // width: 1024px;
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  svg[type="shop"]{
+    .svg-stall-cont:not([type='shop']){
+      text{
+        pointer-events: none;
+      }
+      rect.st0,polygon.st0{
+        fill: #fdf16f24;
+        pointer-events: none;
+
+      }
+    }
+  }
+  svg[type="bar"]{
+    .svg-stall-cont:not([type='bar']){
+      text{
+        pointer-events: none;
+      }
+      rect.st0,polygon.st0{
+        fill: #fdf16f24;
+        pointer-events: none;
+
+      }
+    }
+  }
+  svg[type="sweet"]{
+    .svg-stall-cont:not([type='sweet ']){
+      text{
+        pointer-events: none;
+      }
+      rect.st0,polygon.st0{
+        fill: #fdf16f24;
+        pointer-events: none;
+
+      }
+    }
+    .svg-stall-cont[type='sweet savory ']{
+      rect.st0,polygon.st0{
+        fill: #FDF16F;
+        pointer-events: auto;
+      }
+      text{
+        pointer-events: auto;
+      }
+    }
+  }
+  svg[type="savory"]{
+    .svg-stall-cont:not([type='savory ']){
+      text{
+        pointer-events: none;
+      }
+      rect.st0,polygon.st0{
+        fill: #fdf16f24;
+        pointer-events: none;
+
+      }
+    }
+    .svg-stall-cont[type='sweet savory ']{
+      rect.st0,polygon.st0{
+        fill: #FDF16F;
+        pointer-events: auto;
+
+      }
+      text{
+        pointer-events: auto;
+      }
+    }
+  }
+
 }
 
 .mercado-map-hover-box{
@@ -279,12 +364,45 @@
   opacity: 0;
   transition: ease 300ms all;
   pointer-events: none;
+  @media (max-width: 767px){
+    width: 100%;
+    height: calc(100% - 125px);
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-fade{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    background-color: white;
+    @media (max-width: 767px){
+      display: block;
+    }
+  }
   &.active{
     opacity: 1;
     pointer-events: auto;
+    @media (max-width: 767px){
+
+      .bg-fade{
+        opacity: 0.65;
+        z-index: -1;
+      }
+    }
+
   }
   .map-more-info-box{
     display: none;
+    background-color: white;
     &:first-child{
       // display: block;
     }
@@ -365,6 +483,131 @@
           }
         }
       }
+    }
+  }
+}
+
+
+.mercado-map-filter{
+  text-transform: uppercase;
+  color: $toro_red;
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: 600px){
+    flex-direction: column;
+  }
+  h4{
+    text-transform: uppercase;
+    color: $toro_red;
+    font-family: $knockout-feather;
+    font-size:50px;
+    @media(max-width: 600px){
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  .map-filter-box{
+    border: 2px solid $toro_red;
+    flex-grow: 1;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    font-family: $knockout-feather;
+    background-color: white;
+    @media(max-width: 600px){
+      border-bottom: 0px;
+      margin-left: 0px;
+      &:last-child{
+        border-bottom: 2px solid $toro_red;
+      }
+    }
+    &.filter-with-dropdown{
+      display: block;
+      @media(max-width: 600px){
+        .map-filter-select{
+          position: initial;
+          outline: none;
+          .filter-selection{
+            border-bottom: 0px;
+          }
+        }
+      }
+    }
+    .map-filter-select{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      background-color: white;
+      @media(max-width: 600px){
+        position: initial;
+      }
+    }
+
+    a{
+      color: $toro_red;
+    }
+    .selected-filter{
+
+      cursor: pointer;
+      transition: ease 250ms all;
+      padding: 15px;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      &:hover, &.active{
+        color: white;
+        background-color: $toro_red;
+      }
+    }
+    .map-filter-select{
+      display: none;
+      outline: 2px solid $toro_red;
+    }
+    .map-filter-select-inner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      a{
+        padding: 15px;
+        width: 100%;
+        border-bottom: 2px solid $toro_red;
+        text-align: center;
+        color: $toro_red;
+        transition: ease 250ms all;
+        &:hover{
+          color: white;
+          background-color: $toro_red;
+        }
+        &:last-child{
+          border-bottom: 0px;
+        }
+      }
+    }
+  }
+
+}
+
+.mercado-map-box-cont{
+  position: relative;
+  .mercado-map-more-info-close{
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 5px);
+    font-size: 30px;
+    color: $toro_red;
+    cursor: pointer;
+    @media (max-width: 767px){
+      display: block;
     }
   }
 }

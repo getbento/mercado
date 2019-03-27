@@ -363,13 +363,25 @@ $(document).ready(function () {
       $('.mercado-map-hover-box').removeClass('rest');
     }
 
-    $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() + 10);
+    if ($(window).width() >= 767) {
+      // desktop
+      $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() + 10);
 
-    let leftOffset = $this[0].getBoundingClientRect().width / 2 - $('.mercado-map-hover-box').width() / 2 - 10;
+      let leftOffset = $this[0].getBoundingClientRect().width / 2 - $('.mercado-map-hover-box').width() / 2 - 10;
 
-    // console.log(leftOffset);
+      // console.log(leftOffset);
 
-    $('.mercado-map-hover-box').css('left', $this.offset().left - container.position().left + leftOffset + 'px');
+      $('.mercado-map-hover-box').css('left', $this.offset().left - container.position().left + leftOffset + 'px');
+    } else {
+      // mobile
+      $('.mercado-map-hover-box').css('top', $this.offset().top - $('#mercado-map').offset().top - $('.mercado-map-hover-box').height() - 40);
+
+      let leftOffset = $this[0].getBoundingClientRect().width / 2 - $('.mercado-map-hover-box').width() / 2 - 10;
+
+      // console.log(leftOffset);
+
+      $('.mercado-map-hover-box').css('left', $this.offset().left - $('.mercado-map-cont').scrollLeft() + leftOffset + 'px');
+    }
   }, function () {
     $('.mercado-map-hover-box').removeClass('active');
   });
@@ -380,6 +392,54 @@ $(document).ready(function () {
     $(".mercado-map-more-info-boxes").addClass('active');
     $('.map-more-info-box').css('display', 'none');
     $('#map-more-info-' + id).css('display', 'block');
+  });
+
+  $('.map-filter-box .selected-filter').click(function (e) {
+    let $this = $(this);
+    e.preventDefault();
+
+    if ($this.hasClass('active') && $this.attr('type') != 'kiosks') {
+      // if click same box
+      $('.map-filter-box .selected-filter').removeClass('active');
+      $('.mercado-map-cont svg').attr('type', '');
+    } else {
+      if ($this.parent().find('.map-filter-select').length > 0) {
+        console.log('toggle');
+        $this.parent().find('.map-filter-select').slideToggle();
+      } else {
+        $('.map-filter-box .selected-filter').removeClass('active');
+        $(this).addClass('active');
+        console.log($this.attr('type'));
+        $('.selected-filter[type="kiosks"]').html("Kiosks");
+        $('.filter-selection').removeClass('active');
+        $('.mercado-map-cont svg').attr('type', $this.attr('type'));
+      }
+    }
+  });
+
+  $('.filter-selection').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+      $(this).parent().find('.filter-selection').removeClass('active');
+      $('.map-filter-box .selected-filter').removeClass('active');
+      $('.mercado-map-cont svg').attr('type', '');
+      $('.selected-filter[type="kiosks"]').html("Kiosks");
+      $('.map-filter-select').slideUp();
+    } else {
+      $('.map-filter-box .selected-filter').removeClass('active');
+
+      $(this).parent().find('.filter-selection').removeClass('active');
+      $(this).addClass('active');
+      $('.map-filter-select').slideUp();
+      $(this).parent().parent().parent().find('.selected-filter').addClass('active');
+      $(this).parent().parent().parent().find('.selected-filter').html('Kiosks (' + $(this).html() + ')');
+      $('.mercado-map-cont svg').attr('type', $(this).attr('type'));
+    }
+  });
+
+  $('.mercado-map-more-info-close').click(function (e) {
+    e.preventDefault();
+    $('.mercado-map-more-info-boxes').removeClass('active');
   });
 }); // document ready end
 

@@ -26,7 +26,7 @@
 		}
 
 		.svg-stalls g:hover polygon, .svg-stalls g:hover rect{
-			fill: #EB0029;
+			fill: #EB0029 !important;
 		}
 		.svg-stalls g:hover text{
 			fill: #FEF16F;
@@ -50,7 +50,7 @@
 		<g id='paellas-al-plato' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['paellas-al-plato'].fields.global_icon.url}}"
 			text="{{boxes.kiosks.by_slug['paellas-al-plato'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['paellas-al-plato'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="192.9,393.6 192.9,393.6 89.3,393.6 89.3,445.6 206.3,445.6 206.3,407 "/>
 			<text transform="matrix(1 0 0 1 137.1862 414.1079)"><tspan x="0" y="0" class="st2 st3 st4">Paella </tspan><tspan x="-3.7" y="13" class="st2 st3 st4">Al Plato</tspan></text>
@@ -61,7 +61,7 @@
 		<g id='churros' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['churros'].fields.global_icon.url}}"
 			text="{{boxes.kiosks.by_slug['churros'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['churros'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="563.6,304.6 550.3,317.9 550.3,355.8 601.5,355.8 601.5,304.6 "/>
 			<text transform="matrix(1 0 0 1 556.3158 335.5366)" class="st2 st3 st4">Churros</text>
@@ -72,7 +72,7 @@
 		<g id='pasteles' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['pasteles'].fields.global_icon.url}}"
 			text="{{boxes.kiosks.by_slug['pasteles'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['pasteles'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="414.6,51.5 414.6,77.3 428,90.6 511.2,90.6 550.3,51.5 "/>
 			<text transform="matrix(1 0 0 1 459.6593 75.635)" class="st2 st3 st4">Pasteles</text>
@@ -92,7 +92,7 @@
 	<a href="javascript:void(0)">
 		<g id='helados' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['helados'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['helados'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['helados'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="511.2,90.6 511.2,131.1 524.5,144.5 524.5,144.5 550.3,144.5 550.3,51.5 "/>
 			<text transform="matrix(0 -1 1 0 536.4342 123.4124)" class="st2 st3 st4">Helados</text>
@@ -124,7 +124,7 @@
 	<a  href="javascript:void(0)">
 		<g id='pescados' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['pescados'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['pescados'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['pescados'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<rect x="225.6" y="217.5" class="st0" width="30.7" height="58.7"/>
 			<text transform="matrix(0 -1 1 0 244.0965 270.8626)" class="st2 st3 st4">Pescados</text>
@@ -134,7 +134,7 @@
 	<a  href="javascript:void(0)">
 		<g id='huevos' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['huevos'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['huevos'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['huevos'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="159.6,276.0 159.6,324.6 173,338 173,338 256.3,338 256.3,276.0 225.6,276.0 	"/>
 			<text transform="matrix(1 0 0 1 167.4874 305.105)"><tspan x="0" y="0" class="st2 st3 st4">Huevos &amp; Lacón </tspan><tspan x="11.2" y="13" class="st2 st3 st4">con Patatas</tspan></text>
@@ -144,7 +144,7 @@
 	<a href="javascript:void(0)">
 		<g id='bravas' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['bravas'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['bravas'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['bravas'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="550.3,393 563.6,406.4 601.5,406.4 601.5,355.2 550.3,355.2 	"/>
 			<text transform="matrix(1 0 0 1 559.0597 384.5146)" class="st2 st3 st4">Bravas</text>
@@ -154,7 +154,7 @@
 	<a href="javascript:void(0)">
 		<g id='jamon-queso' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['jamon-queso'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['jamon-queso'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['jamon-queso'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="454.7,426.8 441.9,439.6 390.3,439.6 376.9,453 376.9,453 376.9,501.8 498.8,501.8 498.8,426.8 "/>
 			<text transform="matrix(1 0 0 1 397.989 474.9395)" class="st2 st3 st4">Jamón &amp; Queso</text>
@@ -164,7 +164,7 @@
 	<a href="javascript:void(0)">
 		<g id='vinos' class='svg-stall-cont'
 			img="{{boxes.bar.by_slug['vinos'].fields.global_icon.url}}" text="{{boxes.bar.by_slug['vinos'].fields.hover_text}}"
-			type='kiosk'
+			type='bar'
 			>
 			<polygon class="st0" points="370.9,181.4 357.5,168 305.3,168 292,181.4 292,181.4 292,181.4 292,258.9 370.9,258.9 370.9,181.4
 				370.9,181.4 "/>
@@ -185,7 +185,7 @@
 	<a href="javascript:void(0)">
 		<g id='la-barra-1' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['la-barra-1'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['la-barra-1'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['la-barra-1'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="292,356.5 305.3,369.9 357.5,369.9 370.9,356.5 370.9,356.5 370.9,356.5 370.9,279 292,279 292,356.5
 				292,356.5 "/>
@@ -196,7 +196,7 @@
 	<a href="javascript:void(0)">
 		<g id='colmado' class='svg-stall-cont'
 			img="{{boxes.shop.by_slug['colmado'].fields.global_icon.url}}" text="{{boxes.shop.by_slug['colmado'].fields.hover_text}}"
-			type='kiosk'
+			type='shop'
 			>
 			<polygon class="st0" points="324.4,439.6 258.8,439.6 245.4,453 245.4,453 245.4,501.8 324.4,501.8 "/>
 			<text transform="matrix(1 0 0 1 263.214 474.9399)" class="st2 st3 st4">Colmado</text>
@@ -206,7 +206,7 @@
 	<a href="javascript:void(0)">
 		<g id='bar-celona' class='svg-stall-cont'
 			img="{{boxes.bar.by_slug['bar-celona'].fields.global_icon.url}}" text="{{boxes.bar.by_slug['bar-celona'].fields.hover_text}}"
-			type='kiosk'
+			type='bar'
 			>
 			<polygon class="st0" points="435.3,538.1 278.1,538.1 264.8,551.5 264.8,551.5 264.8,621.3 435.3,621.3 "/>
 			<text transform="matrix(1 0 0 1 322.7952 589.0453)" class="st2 st3 st4">Bar Celona</text>
@@ -226,7 +226,7 @@
 	<a href="javascript:void(0)">
 		<g id='bocatas-empanadas' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['bocatas-empanadas'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['bocatas-empanadas'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['bocatas-empanadas'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="500.2,202.2 418,202.2 404.6,215.6 404.6,215.6 404.6,275.1 513.5,275.1 513.5,215.6 "/>
 
@@ -237,7 +237,7 @@
 	<a href="javascript:void(0)">
 		<g id='granja' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['granja'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['granja'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['granja'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<rect x="594.6" y="455.9" class="st0" width="51.8" height="110.8"/>
 			<text transform="matrix(1 0 0 1 604.0618 515.4443)" class="st2 st3 st4">Granja</text>
@@ -258,7 +258,7 @@
 	<a href="javascript:void(0)">
 		<g id='kiosko' class='svg-stall-cont'
 			img="{{boxes.shop.by_slug['kiosko'].fields.global_icon.url}}" text="{{boxes.shop.by_slug['kiosko'].fields.hover_text}}"
-			type='kiosk'
+			type='shop'
 			>
 			<rect x="996.6" y="470.8" class="st0" width="66" height="33.8"/>
 			<text transform="matrix(1 0 0 1 1012.7479 492.4392)" class="st2 st3 st4">Kiosko</text>
@@ -268,7 +268,7 @@
 	<a href="javascript:void(0)">
 		<g id='cocas' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['cocas'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['cocas'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['cocas'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="550.3,260.3 550.3,260.3 601.5,260.3 601.5,162 550.3,162 "/>
 			<text transform="matrix(0 -1 1 0 580.8693 226.472)" class="st2 st3 st4">Cocas</text>
@@ -278,7 +278,7 @@
 	<a href="javascript:void(0)">
 		<g id='frutas-verduras' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['frutas-verduras'].fields.global_icon.url}}" text="{{boxes.kiosks.by_slug['frutas-verduras'].fields.hover_text}}"
-			type='kiosk'
+			type="{% for cat in boxes.kiosks.by_slug['frutas-verduras'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="500.2,306 500.2,306 404.6,306 404.6,369.5 418,382.9 500.2,382.9 500.2,382.9 513.5,369.5
 				513.5,319.3 "/>
@@ -292,7 +292,7 @@
 <a href="javascript:void(0)">
 	<g id='flores' class='svg-stall-cont'
 		img="{{boxes.shop.by_slug['flores'].fields.global_icon.url}}" text="{{boxes.shop.by_slug['flores'].fields.hover_text}}"
-		type='kiosk'
+		type='shop'
 		>
 		<rect x="1092.3" y="470.8" class="st0" width="40" height="78.7"/>
 		<text transform="matrix(0 -1 1 0 1116.873 525.428)" class="st2 st3 st4">Flores</text>
@@ -302,7 +302,7 @@
 	<a href="javascript:void(0)">
 		<g id='diner-bar' class='svg-stall-cont'
 			img="{{boxes.bar.by_slug['diner-bar'].fields.global_icon.url}}" text="{{boxes.bar.by_slug['diner-bar'].fields.hover_text}}"
-			type='kiosk'
+			type='bar'
 
 			>
 			<polygon class="st0" points="966.9,455.9 966.9,504.5 872.1,504.5 872.1,470.1 855.6,470.1 855.6,504.5 708.6,504.5 708.6,455.9 "/>
@@ -328,7 +328,9 @@
 			<text transform="matrix(1 0 0 1 798.0174 571.1172)" class="st2 st3 st4">Spanish Diner </text>
 		</g>
 	</a>
-
+</g>
+<g class='svg-stall-cont' type='empty'>
+	<rect x="159.6" y="217.5" class="st0"  style='transition:ease 300ms all;' width="66" height="58.7"/>
 </g>
 
 <g id='online-pickup'>
@@ -336,9 +338,7 @@
 	<text transform="matrix(1 0 0 1 446.9804 287.9591)" class="st2 st5 st6">Online Pickup</text>
 </g>
 
-<g>
-	<rect x="159.6" y="217.5" class="st0" width="66" height="58.7"/>
-</g>
+
 
 
 
