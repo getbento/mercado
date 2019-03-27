@@ -58,8 +58,9 @@
           <div class="bg-fade"></div>
 <div class="mercado-map-box-cont">
   <a href="" class="mercado-map-more-info-close">×</a>
+
   {% for restaurant in boxes.restaurant.all%}
-    <div class="map-more-info-box" id='map-more-info-{{restaurant.slug}}'>
+    <div class="map-more-info-box" id='map-more-info-{{restaurant.slug}}' tabindex="0">
       <div class="map-more-info-banner">
         <img src="{{static('img/restaurant-landing/Left.png')}}" alt="">
         <h6>{{restaurant.name}}</h6>
