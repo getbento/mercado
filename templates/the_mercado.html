@@ -25,7 +25,7 @@
     <div class="mercado-map-filter">
       <h4>Filter By</h4>
       <div class="map-filter-box filter-with-dropdown">
-        <div class="selected-filter" type='kiosks'>Kiosks</div>
+        <a href='' class="selected-filter" type='kiosks'>Kiosks</a>
         <div class="map-filter-select">
           <div class="map-filter-select-inner">
             {% for cats in boxes.kiosks.categories %}
@@ -84,7 +84,7 @@
   {% endfor %}
 
   {% for kiosk in boxes.kiosks.all %}
-    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}'>
+    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
       <div class="map-more-info-banner">
         <img src="{{kiosk.fields.global_icon.url}}" alt="{{kiosk.fields.global_icon.alt}}">
         <h6>{{kiosk.name}}</h6>

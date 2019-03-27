@@ -392,6 +392,7 @@ $(document).ready(function () {
     $(".mercado-map-more-info-boxes").addClass('active');
     $('.map-more-info-box').css('display', 'none');
     $('#map-more-info-' + id).css('display', 'block');
+    $('#map-more-info-' + id).focus();
   });
 
   $('.map-filter-box .selected-filter').click(function (e) {

@@ -2664,6 +2664,8 @@ address.site-info {
           border-bottom: 2px solid #e4002b; } }
     .mercado-map-filter .map-filter-box.filter-with-dropdown {
       display: block; }
+      .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter {
+        display: block; }
       @media (max-width: 600px) {
         .mercado-map-filter .map-filter-box.filter-with-dropdown .map-filter-select {
           position: initial;
