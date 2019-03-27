@@ -111,7 +111,7 @@
   {% endfor %}
 
   {% for kiosk in boxes.bar.all %}
-    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}'>
+    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
       <div class="map-more-info-banner">
         <img src="{{kiosk.fields.global_icon.url}}" alt="{{kiosk.fields.global_icon.alt}}">
         <h6>{{kiosk.name}}</h6>
@@ -137,7 +137,7 @@
     </div>
   {% endfor %}
   {% for kiosk in boxes.shop.all %}
-    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}'>
+    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
       <div class="map-more-info-banner">
         <img src="{{kiosk.fields.global_icon.url}}" alt="{{kiosk.fields.global_icon.alt}}">
         <h6>{{kiosk.name}}</h6>
