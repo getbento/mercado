@@ -2529,6 +2529,9 @@ address.site-info {
     left: 0;
     right: 0;
     margin: auto; }
+  @media (max-width: 767px) {
+    .mercado-map-hover-box {
+      display: none; } }
 
 .mercado-map-more-info-boxes {
   position: absolute;

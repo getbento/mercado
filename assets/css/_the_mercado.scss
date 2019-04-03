@@ -366,7 +366,9 @@
     right: 0;
     margin: auto;
   }
-
+  @media (max-width: 767px){
+    display: none;
+  }
 }
 
 .mercado-map-more-info-boxes{
