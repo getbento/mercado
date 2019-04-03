@@ -247,6 +247,18 @@
       }
     }
   }
+  svg[type="restaurant"]{
+    .svg-stall-cont:not([type='restaurant']){
+      text{
+        pointer-events: none;
+      }
+      rect.st0,polygon.st0{
+        fill: #fdf16f24;
+        pointer-events: none;
+
+      }
+    }
+  }
   svg[type="bar"]{
     .svg-stall-cont:not([type='bar']){
       text{
@@ -322,7 +334,7 @@
   img{
     height:auto;
     width: 50px;
-    border: 1px solid $toro_red;
+    // border: 1px solid $toro_red;
   }
   &.rest{
     img{
@@ -408,6 +420,16 @@
     }
     width: 350px;
     border: 2px solid $toro_red;
+    &.rest-more-info{
+      .map-more-info-banner{
+        padding: 0px;
+        img{
+          border: 0px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
   .map-more-info-banner{
     display: flex;
@@ -426,7 +448,7 @@
     img{
       width: 50px;
       height: 50px;
-      border: 1px solid $toro_red;
+      // border: 1px solid $toro_red;
 
     }
     .map-more-info-banner-right{
@@ -448,6 +470,7 @@
     // padding-bottom: 30px;
     display: flex;
     // align-items: flex-start;
+    color: #474746;
     .map-more-info-img{
       width: 35%;
       min-width: 35%;

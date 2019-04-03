@@ -2460,6 +2460,11 @@ address.site-info {
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
     fill: #fdf16f24;
     pointer-events: none; }
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect.st0, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) text {
     pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect.st0, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon.st0 {
@@ -2500,8 +2505,7 @@ address.site-info {
   pointer-events: none; }
   .mercado-map-hover-box img {
     height: auto;
-    width: 50px;
-    border: 1px solid #e4002b; }
+    width: 50px; }
   .mercado-map-hover-box.rest img {
     border: 0px; }
   .mercado-map-hover-box span {
@@ -2568,6 +2572,12 @@ address.site-info {
     background-color: white;
     width: 350px;
     border: 2px solid #e4002b; }
+    .mercado-map-more-info-boxes .map-more-info-box.rest-more-info .map-more-info-banner {
+      padding: 0px; }
+      .mercado-map-more-info-boxes .map-more-info-box.rest-more-info .map-more-info-banner img {
+        border: 0px;
+        width: 100%;
+        height: auto; }
   .mercado-map-more-info-boxes .map-more-info-banner {
     display: flex;
     justify-content: space-between;
@@ -2581,8 +2591,7 @@ address.site-info {
       font-family: "Knockout 67 A", "Knockout 67 B"; }
     .mercado-map-more-info-boxes .map-more-info-banner img {
       width: 50px;
-      height: 50px;
-      border: 1px solid #e4002b; }
+      height: 50px; }
     .mercado-map-more-info-boxes .map-more-info-banner .map-more-info-banner-right {
       width: 50px;
       text-align: center;
@@ -2596,7 +2605,8 @@ address.site-info {
       font-family: "Knockout 67 A", "Knockout 67 B";
       font-size: 12px; }
   .mercado-map-more-info-boxes .map-more-info-box-desc {
-    display: flex; }
+    display: flex;
+    color: #474746; }
     .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-img {
       width: 35%;
       min-width: 35%;

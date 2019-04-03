@@ -348,6 +348,11 @@ setTimeout(function(){
           }
         );
 
+
+        if($(window).width() < 1024){
+          $('.mercado-map-box').scrollLeft(1024/2 - $(window).width()/2);
+        }
+
         $('.mercado-map-cont svg a').click(function(){
           let id = $(this).find('g.svg-stall-cont').attr('id');
           console.log(id);

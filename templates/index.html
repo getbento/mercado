@@ -219,7 +219,7 @@
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
-      <h2>Restaurants</h2>
+      <a href="{{pages.by_slug.restaurants.url}}"><h2>Restaurants</h2></a>
     </div>
     <div class="home-restaurants">
       {% for rest in boxes.restaurant.all %}
@@ -255,7 +255,7 @@
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
-      <h2>The Mercado</h2>
+      <a href="{{pages.by_slug['the-mercado'].url}}"><h2>The Mercado</h2></a>
     </div>
 
     <div class="home-mercado-kiosks">
@@ -317,7 +317,7 @@
   <div class="content-margins">
     <div class="section-title-container">
       <img src="{{ static('img/yellow_triangle.png')}}" alt="">
-      <h2>Shop</h2>
+      <a href="{{pages.by_slug.shop.url}}"><h2>Shop</h2></a>
     </div>
 
     <div class="home-shop-cont">
