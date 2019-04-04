@@ -2460,7 +2460,7 @@ address.site-info {
     display: block; }
     .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
-    .mercado-map-cont svg text .st5, .mercado-map-cont svg text.st5 {
+    .mercado-map-cont svg text .st7, .mercado-map-cont svg text.st7 {
       font-family: "Knockout 50 A", "Knockout 50 B"; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
     pointer-events: none; }
