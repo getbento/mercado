@@ -2460,6 +2460,8 @@ address.site-info {
     display: block; }
     .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
+    .mercado-map-cont svg text .st5, .mercado-map-cont svg text.st5 {
+      font-family: "Knockout 50 A", "Knockout 50 B"; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
     pointer-events: none; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
