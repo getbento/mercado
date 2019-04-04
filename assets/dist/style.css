@@ -2458,6 +2458,8 @@ address.site-info {
     width: 1024px;
     margin: auto;
     display: block; }
+    .mercado-map-cont svg text .st3 {
+      font-family: "Knockout 30 A", "Knockout 30 B"; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
     pointer-events: none; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
@@ -2730,8 +2732,10 @@ address.site-info {
           cursor: pointer; }
     .mercado-map-filter .map-filter-box a {
       color: #e4002b; }
-    .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter:before {
-      display: none; }
+    .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter.active {
+      padding-left: 15px; }
+      .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter.active:before {
+        display: none; }
     .mercado-map-filter .map-filter-box .selected-filter {
       cursor: pointer;
       transition: ease 250ms all;
@@ -2748,7 +2752,7 @@ address.site-info {
         position: relative; }
         @media (min-width: 600px) {
           .mercado-map-filter .map-filter-box .selected-filter.active {
-            padding-left: 40px; } }
+            padding-left: 30px; } }
         .mercado-map-filter .map-filter-box .selected-filter.active:before {
           content: "\D7";
           position: absolute;

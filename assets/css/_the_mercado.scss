@@ -244,6 +244,11 @@
     // width: 100%;
     margin: auto;
     display: block;
+    text{
+      .st3{
+        font-family: $knockout;
+      }
+    }
   }
   svg[type="shop"]{
     .svg-stall-cont:not([type='shop']){
@@ -640,7 +645,8 @@
     }
 
     &.filter-with-dropdown{
-      .selected-filter{
+      .selected-filter.active{
+        padding-left: 15px;
         &:before{
           display: none;
         }
@@ -664,7 +670,7 @@
         background-color: $toro_red;
         position: relative;
         @media(min-width: 600px){
-          padding-left: 40px;
+          padding-left: 30px;
         }
         &:before{
           content: "×";
