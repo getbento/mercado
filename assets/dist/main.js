@@ -365,7 +365,7 @@ $(document).ready(function () {
 
     if ($(window).width() >= 767) {
       // desktop
-      $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() + 10);
+      $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() - 40);
 
       let leftOffset = $this[0].getBoundingClientRect().width / 2 - $('.mercado-map-hover-box').width() / 2 - 10;
 
@@ -387,18 +387,29 @@ $(document).ready(function () {
   });
 
   if ($(window).width() < 1024) {
-    $('.mercado-map-box').scrollLeft(1024 / 2 - $(window).width() / 2);
+    $('.mercado-map-cont').scrollLeft(1024 / 2 - $(window).width() / 2);
   }
 
-  $('.mercado-map-cont svg a').click(function () {
+  $('.mercado-map-cont svg a').bind('mousedown touchend', function (e) {
+    e.preventDefault();
     let id = $(this).find('g.svg-stall-cont').attr('id');
     console.log(id);
     $(".mercado-map-more-info-boxes").addClass('active');
     $('.map-more-info-box').css('display', 'none');
     $('#map-more-info-' + id).css('display', 'block');
     $('#map-more-info-' + id).focus();
+
+    if ($(window).width() < 767) {
+      $('.mercado-map-cont').css('overflow', 'hidden');
+    }
+    if ($(window).width() < 767) {
+      $('.mercado-map-more-info-boxes').css('padding-top', $('.mercado-map-cont').position().top * 2 / 3 + 'px');
+    } else {
+      $('.mercado-map-more-info-boxes').css('padding-top', '0');
+    }
   });
 
+  // $('.map-filter-box .selected-filter').unbind('touchstart mousedown');
   $('.map-filter-box .selected-filter').click(function (e) {
     let $this = $(this);
     e.preventDefault();
@@ -445,6 +456,12 @@ $(document).ready(function () {
   $('.mercado-map-more-info-close').click(function (e) {
     e.preventDefault();
     $('.mercado-map-more-info-boxes').removeClass('active');
+    $('.mercado-map-cont').css('overflow', 'scroll');
+  });
+
+  $('.mercado-map-more-info-boxes .bg-fade').click(function () {
+    $('.mercado-map-more-info-boxes').removeClass('active');
+    $('.mercado-map-cont').css('overflow', 'scroll');
   });
 }); // document ready end
 

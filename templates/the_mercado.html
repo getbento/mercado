@@ -31,6 +31,7 @@
         <a href='' class="selected-filter" type='kiosks'>Kiosks</a>
         <div class="map-filter-select">
           <div class="map-filter-select-inner">
+            <a href='' class="filter-selection" type='kiosk'>All</a>
             {% for cats in boxes.kiosks.categories %}
               {% if cats.slug != 'uncategorized' %}
               <a href='' class="filter-selection" type='{{cats.slug}}'>{{cats.name}}</a>
@@ -46,27 +47,30 @@
       <div class="map-filter-box">
         <a href="" class="selected-filter" type='bar'>Bar</a>
       </div>
+
     </div>
   </div>
 
-    <div class="mercado-map-box">
-      <div class="mercado-map-cont">
+
+    <div class="mercado-map-cont">
+      <div class="mercado-map-inner">
         {% include 'MLS_map.svg' %}
         <div class="mercado-map-hover-box">
           <img src="" alt="">
           <span></span>
         </div>
+
         <div class="mercado-map-more-info-boxes">
           <div class="bg-fade"></div>
-<div class="mercado-map-box-cont">
-  <a href="" class="mercado-map-more-info-close">×</a>
+        <div class="mercado-map-box-cont">
+        <a href="" class="mercado-map-more-info-close">×</a>
 
-  {% for restaurant in boxes.restaurant.all%}
-    <div class="map-more-info-box rest-more-info" id='map-more-info-{{restaurant.slug}}' tabindex="0">
-      <div class="map-more-info-banner">
+        {% for restaurant in boxes.restaurant.all%}
+        <div class="map-more-info-box rest-more-info" id='map-more-info-{{restaurant.slug}}' tabindex="0">
+        <div class="map-more-info-banner">
         <img src="{{restaurant.fields.banner_image.url}}" alt="{{restaurant.name}}">
-      </div>
-      <div class="map-more-info-box-desc">
+        </div>
+        <div class="map-more-info-box-desc">
         <div class="map-more-info-img">
           <img src="{{restaurant.fields.gallery[0].image_url}}" alt="" class="">
         </div>
@@ -80,20 +84,20 @@
             </svg>
           </a>
         </div>
-      </div>
-    </div>
-  {% endfor %}
+        </div>
+        </div>
+        {% endfor %}
 
-  {% for kiosk in boxes.kiosks.all %}
-    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
-      <div class="map-more-info-banner">
+        {% for kiosk in boxes.kiosks.all %}
+        <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
+        <div class="map-more-info-banner">
         <img src="{{kiosk.fields.page_icon.url}}" alt="{{kiosk.fields.page_icon.alt}}">
         <h6>{{kiosk.name}}</h6>
         <div class="map-more-info-banner-right">
           {{kiosk.fields.hover_text}}
         </div>
-      </div>
-      <div class="map-more-info-box-desc">
+        </div>
+        <div class="map-more-info-box-desc">
         <div class="map-more-info-img">
           <img src="{{kiosk.fields.gallery[0].image_url}}" alt="" class="">
         </div>
@@ -107,20 +111,20 @@
             </svg>
           </a>
         </div>
-      </div>
-    </div>
-  {% endfor %}
+        </div>
+        </div>
+        {% endfor %}
 
-  {% for kiosk in boxes.bar.all %}
-    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
-      <div class="map-more-info-banner">
+        {% for kiosk in boxes.bar.all %}
+        <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
+        <div class="map-more-info-banner">
         <img src="{{kiosk.fields.page_icon.url}}" alt="{{kiosk.fields.page_icon.alt}}">
         <h6>{{kiosk.name}}</h6>
         <div class="map-more-info-banner-right">
           {{kiosk.fields.hover_text}}
         </div>
-      </div>
-      <div class="map-more-info-box-desc">
+        </div>
+        <div class="map-more-info-box-desc">
         <div class="map-more-info-img">
           <img src="{{kiosk.fields.gallery[0].image_url}}" alt="" class="">
         </div>
@@ -134,19 +138,19 @@
             </svg>
           </a>
         </div>
-      </div>
-    </div>
-  {% endfor %}
-  {% for kiosk in boxes.shop.all %}
-    <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
-      <div class="map-more-info-banner">
+        </div>
+        </div>
+        {% endfor %}
+        {% for kiosk in boxes.shop.all %}
+        <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
+        <div class="map-more-info-banner">
         <img src="{{kiosk.fields.page_icon.url}}" alt="{{kiosk.fields.page_icon.alt}}">
         <h6>{{kiosk.name}}</h6>
         <div class="map-more-info-banner-right">
           {{kiosk.fields.hover_text}}
         </div>
-      </div>
-      <div class="map-more-info-box-desc">
+        </div>
+        <div class="map-more-info-box-desc">
         <div class="map-more-info-img">
           <img src="{{kiosk.fields.gallery[0].image_url}}" alt="" class="">
         </div>
@@ -160,14 +164,18 @@
             </svg>
           </a>
         </div>
-      </div>
-    </div>
-  {% endfor %}</div>
+        </div>
+        </div>
+        {% endfor %}</div>
 
 
         </div>
+
       </div>
-    </div>
+      </div>
+
+
+
 
 </section>
 
