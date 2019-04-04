@@ -245,7 +245,7 @@
     margin: auto;
     display: block;
     text{
-      .st3{
+      .st3, &.st3{
         font-family: $knockout;
       }
     }
