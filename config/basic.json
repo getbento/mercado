@@ -51,6 +51,15 @@
                   	}
 									}
 								},
+								"blockquote": {
+									"type": "section",
+									"items": {
+										"quote": "text",
+										"display_logic": {
+											"section_type": "Blockquote"
+										}
+									}
+								},
                 "featured_boxes": {
                 	"type": "section",
                 	"items": {

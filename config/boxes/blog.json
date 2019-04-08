@@ -15,9 +15,9 @@
 					"items": {
 								"section_type": {
 									"type": "dropdown",
-									"options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image"]
+									"options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image", "Blockquote"]
 								},
-						"content_box": {
+								"content_box": {
 									"type": "section",
 									"items": {
 										"content": "wysiwyg",
@@ -53,6 +53,15 @@
 										"caption": "text",
 										"display_logic": {
 											"section_type": "Full Screen Image"
+										}
+									}
+								},
+								"blockquote": {
+									"type": "section",
+									"items": {
+										"quote": "text",
+										"display_logic": {
+											"section_type": "Blockquote"
 										}
 									}
 								},
