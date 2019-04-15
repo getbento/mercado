@@ -33,8 +33,8 @@
 
             <div class="rest-landing-rest-info-buttons">
               <a href="{{rest.url}}" class="rest-landing-learn-more more-info">Learn More</a>
-              {% if reservation_link %}
-                <a href="" class="rest-landing-reserve more-info">Reserve</a>
+              {% if rest.fields.reservation_link %}
+              <a href="{{rest.fields.reservation_link}}" target="_blank" class='more-info'>Reserve</a>
               {% else %}
                 <a class="rest-landing-reserve more-info coming-soon">¡Coming soon!</a>
               {% endif %}
