@@ -110,19 +110,19 @@ $(document).ready(function(){
    * Single Blog
    ***************************/
    $('.single-blog-scroll').click(function(){
-     $('.single-blog').animate({
-       scrollTop: $('.single-blog').height() + 'px',
+     $('body, html').animate({
+       scrollTop: $('.single-blog-content').position().top - $('#masthead').height(),
      }, 500);
    });
 
-   $('.single-blog').scroll(function(){
-     // console.log($('.single-blog').scrollTop());
-     if($('.single-blog').scrollTop() > 50){
-       $('.article-info-slide').addClass('active');
-     }else{
-       $('.article-info-slide').removeClass('active');
-     }
-   });
+   // $('.single-blog').scroll(function(){
+   //   // console.log($('.single-blog').scrollTop());
+   //   if($('.single-blog').scrollTop() > 50){
+   //     $('.article-info-slide').addClass('active');
+   //   }else{
+   //     $('.article-info-slide').removeClass('active');
+   //   }
+   // });
 
    /*
     * Single Restaurant

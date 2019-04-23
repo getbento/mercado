@@ -2613,51 +2613,44 @@ address.site-info {
   .blog-landing .page-landing-header {
     display: none; } }
 
-.single-blog {
+.single-blog .single-blog-header-content {
   display: flex;
-  margin-bottom: 50px;
-  height: calc(100vh - 106px);
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch; }
+  height: calc(100vh - 106px); }
   @media (max-width: 985px) {
-    .single-blog {
+    .single-blog .single-blog-header-content {
       flex-direction: column;
       overflow: initial;
       height: auto;
       margin-bottom: 30px; } }
-  .single-blog .single-blog-img {
-    position: sticky;
-    position: -webkit-sticky;
-    z-index: 0;
-    top: 0;
+  .single-blog .single-blog-header-content .single-blog-img {
     width: 57%; }
     @media (max-width: 1200px) {
-      .single-blog .single-blog-img {
+      .single-blog .single-blog-header-content .single-blog-img {
         width: 50%; } }
     @media (max-width: 985px) {
-      .single-blog .single-blog-img {
+      .single-blog .single-blog-header-content .single-blog-img {
         width: 100%;
         position: relative;
         height: 70vw;
         max-height: 45vh; } }
-    .single-blog .single-blog-img img {
+    .single-blog .single-blog-header-content .single-blog-img img {
       height: 100%;
       width: 100%;
       object-fit: cover; }
-  .single-blog .single-blog-info {
+  .single-blog .single-blog-header-content .single-blog-info {
     width: 43%; }
-    .single-blog .single-blog-info h4 {
+    .single-blog .single-blog-header-content .single-blog-info h4 {
       font-size: 4rem;
       line-height: 0.9em; }
-    .single-blog .single-blog-info h6 {
+    .single-blog .single-blog-header-content .single-blog-info h6 {
       font-size: 22px; }
     @media (max-width: 1200px) {
-      .single-blog .single-blog-info {
+      .single-blog .single-blog-header-content .single-blog-info {
         width: 50%; } }
     @media (max-width: 985px) {
-      .single-blog .single-blog-info {
+      .single-blog .single-blog-header-content .single-blog-info {
         width: 100%; } }
-    .single-blog .single-blog-info .single-blog-info-header {
+    .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header {
       background-color: #e4002b;
       min-height: 100%;
       width: 100%;
@@ -2666,42 +2659,45 @@ address.site-info {
       flex-direction: column;
       justify-content: space-between; }
       @media (max-width: 985px) {
-        .single-blog .single-blog-info .single-blog-info-header {
+        .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header {
           height: auto;
           padding: 40px 32px; } }
-      .single-blog .single-blog-info .single-blog-info-header span {
+      .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header span {
         font-size: 18px;
         color: white;
         font-family: "Domaine", Georgia, Times, Times New Roman, serif;
         font-weight: 400;
         margin-bottom: 20px;
         display: block; }
-      .single-blog .single-blog-info .single-blog-info-header h1 {
+      .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header h1 {
         text-transform: uppercase;
         color: #fff166;
         font-family: "Knockout 67 A", "Knockout 67 B";
         font-weight: initial;
         margin-bottom: 30px; }
-      .single-blog .single-blog-info .single-blog-info-header h4 {
+      .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header h4 {
         text-transform: uppercase;
         font-family: "Knockout 67 A", "Knockout 67 B";
         font-weight: initial;
         color: white;
         margin-bottom: 30px; }
-      .single-blog .single-blog-info .single-blog-info-header h6 {
+      .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header h6 {
         font-family: "Domaine", Georgia, Times, Times New Roman, serif;
         color: white;
         font-size: 25px;
         font-weight: 600; }
-    .single-blog .single-blog-info .single-blog-content {
+    .single-blog .single-blog-header-content .single-blog-info .single-blog-content {
       max-width: 350px;
       margin: 40px auto; }
-      .single-blog .single-blog-info .single-blog-content a {
+      .single-blog .single-blog-header-content .single-blog-info .single-blog-content a {
         text-decoration: underline; }
       @media (max-width: 985px) {
-        .single-blog .single-blog-info .single-blog-content {
+        .single-blog .single-blog-header-content .single-blog-info .single-blog-content {
           max-width: 1024px;
           margin: 40px 32px; } }
+
+.single-blog-content {
+  padding: 50px 0; }
 
 .hay-mas .hay-mas-header {
   display: flex;
