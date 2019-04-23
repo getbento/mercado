@@ -3003,8 +3003,7 @@ address.site-info {
     display: none; } }
 
 .single-blog .single-blog-header-content {
-  display: flex;
-  height: calc(100vh - 106px); }
+  display: flex; }
   @media (max-width: 985px) {
     .single-blog .single-blog-header-content {
       flex-direction: column;
