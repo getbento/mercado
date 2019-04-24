@@ -3113,7 +3113,8 @@ address.site-info {
     position: -webkit-sticky;
     max-width: 175px;
     min-width: 175px;
-    top: 350px; }
+    top: 350px;
+    margin-bottom: 30px; }
     .single-blog-content-cont .single-blog-sticky-container h5 {
       text-transform: uppercase;
       font-family: "Knockout 48 A", "Knockout 48 B";
