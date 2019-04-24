@@ -4213,4 +4213,15 @@ address.site-info {
     .gallery-image-holder img {
       position: relative !important; } }
 
+.single-blog-content .content-gallery {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media screen and (max-width: 767px) {
+    .single-blog-content .content-gallery {
+      max-width: auto;
+      width: 100%;
+      margin: 0px auto 50px auto;
+      padding: 0px 0px; } }
+
 /*# sourceMappingURL=style.css.map*/
