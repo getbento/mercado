@@ -2652,7 +2652,7 @@ address.site-info {
         width: 100%; } }
     .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header {
       background-color: #e4002b;
-      min-height: 100%;
+      height: 100%;
       width: 100%;
       padding: 40px 10%;
       display: flex;
