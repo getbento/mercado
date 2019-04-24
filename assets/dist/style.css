@@ -3004,7 +3004,7 @@ address.site-info {
 
 .single-blog .single-blog-header-content {
   display: flex;
-  height: calc(100vh - 106px); }
+  min-height: calc(100vh - 106px); }
   @media (max-width: 985px) {
     .single-blog .single-blog-header-content {
       flex-direction: column;

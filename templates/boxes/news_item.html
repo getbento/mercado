@@ -40,7 +40,9 @@
           <span>{{boxes.blog.by_slug[current.slug].categories[0].name}}</span>
           <h1>{{current.name}}</h1>
           <h4>{{current.fields.dek}}</h4>
-          <h6>By {{current.fields.author}} {{current.fields.byline}}</h6>
+          {% if current.fields.author %}
+            <h6>By {{current.fields.author}} {{current.fields.byline}}</h6>
+          {% endif %}
         </div>
         <!-- <div class="single-blog-social">
           <div class="single-blog-social-container">
