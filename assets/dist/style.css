@@ -111,10 +111,11 @@ body, html {
   font-family: "Knockout 30 A", "Knockout 30 B";
   box-sizing: border-box;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch !important; }
+  -webkit-overflow-scrolling: touch !important;
+  position: relative; }
 
 body * {
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 h1 {
   color: #474746;
@@ -3085,7 +3086,63 @@ address.site-info {
           margin: 40px 32px; } }
 
 .single-blog-content {
-  padding: 50px 0; }
+  padding: 50px 0;
+  position: relative;
+  min-height: 200vh; }
+
+.single-blog-content-cont {
+  display: flex; }
+  .single-blog-content-cont .single-blog-sticky-container {
+    position: sticky;
+    position: -webkit-sticky;
+    max-width: 175px;
+    top: 350px; }
+    .single-blog-content-cont .single-blog-sticky-container h5 {
+      text-transform: uppercase;
+      font-family: "Knockout 48 A", "Knockout 48 B";
+      margin-bottom: 10px; }
+    .single-blog-content-cont .single-blog-sticky-container .single-blog-social-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; }
+      .single-blog-content-cont .single-blog-sticky-container .single-blog-social-container img {
+        height: 20px;
+        width: auto; }
+      .single-blog-content-cont .single-blog-sticky-container .single-blog-social-container .social-twitter img {
+        height: 17px; }
+      .single-blog-content-cont .single-blog-sticky-container .single-blog-social-container .social-email img {
+        height: 17px; }
+
+.single-blog-sticky-upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #e4002b;
+  border-left: 0px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%; }
+
+.single-blog-sticky-lower {
+  text-align: left;
+  padding: 15px;
+  border: 2px solid #e4002b;
+  border-top: 0px;
+  border-left: 0px; }
+  .single-blog-sticky-lower h4 {
+    font-family: "Knockout 50 A", "Knockout 50 B";
+    color: #e4002b;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 10px; }
+  .single-blog-sticky-lower h6 {
+    text-transform: uppercase;
+    font-family: "Knockout 50 A", "Knockout 50 B"; }
 
 .hay-mas .hay-mas-header {
   display: flex;
@@ -3203,21 +3260,6 @@ address.site-info {
   display: flex;
   align-items: center;
   margin-top: 50px; }
-  .single-blog-social .single-blog-social-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid white;
-    padding: 5px; }
-    .single-blog-social .single-blog-social-container div {
-      margin: 10px 25px; }
-    .single-blog-social .single-blog-social-container img {
-      height: 20px;
-      width: auto; }
-    .single-blog-social .single-blog-social-container .social-twitter img {
-      height: 17px; }
-    .single-blog-social .single-blog-social-container .social-email img {
-      height: 17px; }
   .single-blog-social .single-blog-scroll {
     margin-left: 50px;
     cursor: pointer; }
@@ -3305,6 +3347,23 @@ address.site-info {
         height: 16px; }
       .article-info-slide .single-blog-social-container div.social-email img {
         height: 16px; }
+
+.single-blog-content-title {
+  text-align: center; }
+  .single-blog-content-title h2 {
+    font-size: 5rem;
+    line-height: 4.3rem;
+    letter-spacing: 0.083rem;
+    text-transform: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #e4002b;
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: "Knockout 68 A", "Knockout 68 B"; }
+  .single-blog-content-title h4 {
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+    font-size: 22px; }
 
 .shop-landing {
   padding-top: 40px; }
@@ -4228,7 +4287,8 @@ address.site-info {
   display: inline-block; }
 
 .fr-dib {
-  display: block; }
+  display: block;
+  text-align: right; }
 
 .fr-fil {
   float: left;

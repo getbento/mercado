@@ -43,7 +43,7 @@
           <h6>By {{current.fields.author}}</h6>
         </div>
         <div class="single-blog-social">
-          <div class="single-blog-social-container">
+          <!-- <div class="single-blog-social-container">
             <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
               <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
                 <img src="{{ static('img/Facebook.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
@@ -60,7 +60,7 @@
             <div class="social-email">
               <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email.png') }}" alt="Email Icon"></a>
             </div>
-          </div>
+          </div> -->
           <div class="single-blog-scroll">
             <span>Scroll</span>
           </div>
@@ -70,96 +70,139 @@
     </div>
   </div>
 
-  <div class="single-blog-content">
-    {% for field in current.fields.flexible.content %}
+  <div class="single-blog-content-cont">
 
-      {% if field.section_type == "Standard Content" %}
-        <div class='standard-content'>
+    <div class="single-blog-sticky">
+      <div class="single-blog-sticky-container">
+        <div class="single-blog-sticky-upper">
+          <h5>Share Article</h5>
+          <div class="single-blog-social-container">
+            <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
+                <img src="{{ static('img/Facebook_gray.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
+              </a>
+            </div>
 
-          <div class="content-margins">
-            {{field.content_box.content}}
+            <div class="social-twitter">
+              <a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}" onclick="window.open('https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}'&text={{current.title.absolute_url|urlencode}},width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" title="Tweet this!" class='twitter-share-button'>
+                <img src="{{ static('img/Twitter_gray.png') }}" alt="Twitter Icon">
+              </a>
+            </div>
+
+
+            <div class="social-email">
+              <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email_gray.png') }}" alt="Email Icon"></a>
+            </div>
           </div>
         </div>
-        {% endif %}
+        <div class="single-blog-sticky-lower">
+          <h4>{{current.name}}</h4>
+          <h6>{{current.fields.author}}</h6>
+        </div>
+      </div>
+    </div>
 
 
-        {% if field.section_type == "Full Width Header Container" %}
-          <section class="full-width-header">
-            <div class="full-width-header-content">
-              <div class="full-width-header-content-inner">
-                {{field.full_width_header_box.content}}
-              </div>
-            </div>
-            <div class="full-width-header-img">
-              <img src="{{field.full_width_header_box.image.url}}" alt="{{field.full_width_header_box.image.alt_text}}">
-            </div>
-          </section>
-        {% endif %}
+    <div class="single-blog-content">
+      <div class="single-blog-content-title">
+        <div class="content-margins">
+          <h2>{{current.name}}</h2>
+          <h4>{{current.fields.author}}</h4>
+        </div>
+      </div>
 
 
-        {% if field.section_type == "Gallery Container" %}
-          <section class="content-gallery">
+      {% for field in current.fields.flexible.content %}
+
+        {% if field.section_type == "Standard Content" %}
+          <div class='standard-content'>
+
             <div class="content-margins">
-              <div class="content-gallery-inner">
-                {% for image in field.gallery_box.gallery %}
-                <div class="rest-single-gallery-img-cont">
-                  <div class="rest-single-gallery-img">
-                    <img src="{{image.image_url}}" alt="{{image.alt_text}}" class='rest-single-img'>
-                    <div class="rest-single-gallery-controls home-slide-controls">
-                      <button class="rest-slide-prev home-slide-prev" role='button'>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                           viewBox="0 0 25.9 45.2" style="enable-background:new 0 0 25.9 45.2;" xml:space="preserve">
+              {{field.content_box.content}}
+            </div>
+          </div>
+          {% endif %}
 
-                        <polyline class="st0" points="4.1,1.7 21.9,22.7 4.1,43.6 "/>
-                        </svg>
-                      </button>
-                      <button class="rest-slide-next" role='button'>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                           viewBox="0 0 25.9 45.2" style="enable-background:new 0 0 25.9 45.2;" xml:space="preserve">
-                        <polyline class="st0" points="4.1,1.7 21.9,22.7 4.1,43.6 "/>
-                        </svg>
-                      </button>
-                      <div class="rest-slide-current">
-                        {{loop.index}}/{{field.gallery_box.gallery|length}}
-                        {% if image.alt_text %}
-                          <span>{{image.alt_text}}</span>
-                        {% endif %}
+
+          {% if field.section_type == "Full Width Header Container" %}
+            <section class="full-width-header">
+              <div class="full-width-header-content">
+                <div class="full-width-header-content-inner">
+                  {{field.full_width_header_box.content}}
+                </div>
+              </div>
+              <div class="full-width-header-img">
+                <img src="{{field.full_width_header_box.image.url}}" alt="{{field.full_width_header_box.image.alt_text}}">
+              </div>
+            </section>
+          {% endif %}
+
+
+          {% if field.section_type == "Gallery Container" %}
+            <section class="content-gallery">
+              <div class="content-margins">
+                <div class="content-gallery-inner">
+                  {% for image in field.gallery_box.gallery %}
+                  <div class="rest-single-gallery-img-cont">
+                    <div class="rest-single-gallery-img">
+                      <img src="{{image.image_url}}" alt="{{image.alt_text}}" class='rest-single-img'>
+                      <div class="rest-single-gallery-controls home-slide-controls">
+                        <button class="rest-slide-prev home-slide-prev" role='button'>
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 25.9 45.2" style="enable-background:new 0 0 25.9 45.2;" xml:space="preserve">
+
+                          <polyline class="st0" points="4.1,1.7 21.9,22.7 4.1,43.6 "/>
+                          </svg>
+                        </button>
+                        <button class="rest-slide-next" role='button'>
+                          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 25.9 45.2" style="enable-background:new 0 0 25.9 45.2;" xml:space="preserve">
+                          <polyline class="st0" points="4.1,1.7 21.9,22.7 4.1,43.6 "/>
+                          </svg>
+                        </button>
+                        <div class="rest-slide-current">
+                          {{loop.index}}/{{field.gallery_box.gallery|length}}
+                          {% if image.alt_text %}
+                            <span>{{image.alt_text}}</span>
+                          {% endif %}
+                        </div>
                       </div>
                     </div>
                   </div>
+                  {% endfor %}
                 </div>
-                {% endfor %}
               </div>
+            </section>
+
+          {% endif %}
+
+
+          {% if field.section_type == "Full Screen Image" %}
+            <div class='wide-content'>
+
+              <figure>
+                <img src="{{field.wide_image.image.url}}" alt={% if field.wide_image.image.alt == "" %}"{{field.wide_image.caption}}"{% else %} "{{field.wide_image.image.alt}}" {% endif %} />
+                <figcaption>{{field.wide_image.caption}}</figcaption>
+              </figure>
+
             </div>
-          </section>
 
-        {% endif %}
+          {% endif %}
 
+          {% if field.section_type == "Featured Boxes" %}
 
-        {% if field.section_type == "Full Screen Image" %}
-          <div class='wide-content'>
+            {{field.section_type}}
 
-            <figure>
-              <img src="{{field.wide_image.image.url}}" alt={% if field.wide_image.image.alt == "" %}"{{field.wide_image.caption}}"{% else %} "{{field.wide_image.image.alt}}" {% endif %} />
-              <figcaption>{{field.wide_image.caption}}</figcaption>
-            </figure>
+          {% endif %}
 
-          </div>
-
-        {% endif %}
-
-        {% if field.section_type == "Featured Boxes" %}
-
-          {{field.section_type}}
-
-        {% endif %}
-        
-    {% endfor %}
+      {% endfor %}
 
 
 
 
+    </div>
   </div>
+
 
 </article>
 
