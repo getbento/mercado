@@ -1,4 +1,12 @@
-.fr-dii{
+.fr-dil{
+  display: inline-block;
+}
+
+.fr-dib{
+  display: block;
+}
+
+.fr-fil{
   float: left;
   max-width: 50%;
   margin-right: 20px;
@@ -10,12 +18,11 @@
   margin-left: 20px;
   text-align: right;
   .fr-inner{
-    padding-right: 16px;
     display: inline-block;
   }
 }
 
-.fr-img-caption{
+.single-blog-content .standard-content .fr-img-caption{
   box-sizing: border-box;
   padding: 16px 16px 5px 16px;
   border: 2px solid #e4002b;
