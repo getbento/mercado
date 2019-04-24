@@ -3144,6 +3144,8 @@ address.site-info {
   left: 0;
   bottom: 100%;
   width: 100%; }
+  .single-blog-sticky-upper .single-blog-social-container {
+    padding: 0 20px; }
 
 .single-blog-social-container {
   display: flex;

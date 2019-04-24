@@ -198,35 +198,36 @@
       {% endfor %}
 
 
-
-
-    </div>
-
-    <div class="single-end-share">
-      <div class="content-margins">
-        <div class="single-end-share-inner">
-          <h5>Share Article </h5>
-              <div class="single-blog-social-container">
-          <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
-              <img src="{{ static('img/Facebook_gray.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
-            </a>
-          </div>
-
-          <div class="social-twitter">
-
-            <a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}" onclick="window.open('https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}'&text={{current.title.absolute_url|urlencode}},width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" title="Tweet this!" class='twitter-share-button'>
-              <img src="{{ static('img/Twitter_gray.png') }}" alt="Twitter Icon">
-            </a>
-          </div>
-
-          <div class="social-email">
-            <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email_gray.png') }}" alt="Email Icon"></a>
-          </div>
+      <div class="single-end-share">
+        <div class="content-margins">
+          <div class="single-end-share-inner">
+            <h5>Share Article </h5>
+            <div class="single-blog-social-container">
+              <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
+                  <img src="{{ static('img/Facebook_gray.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
+                </a>
               </div>
+
+              <div class="social-twitter">
+
+                <a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}" onclick="window.open('https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}'&text={{current.title.absolute_url|urlencode}},width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" title="Tweet this!" class='twitter-share-button'>
+                  <img src="{{ static('img/Twitter_gray.png') }}" alt="Twitter Icon">
+                </a>
+              </div>
+
+              <div class="social-email">
+                <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email_gray.png') }}" alt="Email Icon"></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+
     </div>
+
+
 
 
   </div>
