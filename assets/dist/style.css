@@ -2621,7 +2621,8 @@ address.site-info {
       flex-direction: column;
       overflow: initial;
       height: auto;
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      min-height: unset; } }
   .single-blog .single-blog-header-content .single-blog-img {
     width: 57%; }
     @media (max-width: 1200px) {
