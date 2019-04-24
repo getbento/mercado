@@ -4224,4 +4224,32 @@ address.site-info {
       margin: 0px auto 50px auto;
       padding: 0px 0px; } }
 
+.fr-dii {
+  float: left;
+  max-width: 50%;
+  margin-right: 20px; }
+
+.fr-fir {
+  float: right;
+  max-width: 50%;
+  margin-left: 20px;
+  text-align: right; }
+  .fr-fir .fr-inner {
+    padding-right: 16px;
+    display: inline-block; }
+
+.fr-img-caption {
+  box-sizing: border-box;
+  padding: 16px 16px 5px 16px;
+  border: 2px solid #e4002b; }
+  .fr-img-caption img {
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    border: 0px; }
+  .fr-img-caption .fr-inner {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900; }
+
 /*# sourceMappingURL=style.css.map*/
