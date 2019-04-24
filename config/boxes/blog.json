@@ -6,7 +6,7 @@
 		"author": "text",
 		"dek": "text",
 		"hover_text": "text",
-		"by_line": "wysiwyg",
+		"byline": "wysiwyg",
 		"flexible": {
 			"title": "Flexible Content",
 			"type": "section",
