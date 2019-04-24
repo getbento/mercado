@@ -110,7 +110,6 @@ body, html {
   font-size: 62.5%;
   font-family: "Knockout 30 A", "Knockout 30 B";
   box-sizing: border-box;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch !important;
   position: relative; }
 
@@ -3091,11 +3090,17 @@ address.site-info {
   min-height: 200vh; }
 
 .single-blog-content-cont {
-  display: flex; }
+  position: relative; }
+  .single-blog-content-cont .single-blog-sticky {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%; }
   .single-blog-content-cont .single-blog-sticky-container {
     position: sticky;
     position: -webkit-sticky;
     max-width: 175px;
+    min-width: 175px;
     top: 350px; }
     .single-blog-content-cont .single-blog-sticky-container h5 {
       text-transform: uppercase;

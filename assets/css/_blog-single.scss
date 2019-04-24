@@ -115,14 +115,22 @@
 }
 
 .single-blog-content-cont{
-  display: flex;
+  // display: flex;
   // align-items: flex-start;
+  position: relative;
 
+  .single-blog-sticky{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
   .single-blog-sticky-container{
     position: sticky;
     position: -webkit-sticky;
     // border: 2px solid $toro_red;
     max-width: 175px;
+    min-width: 175px;
     top: 350px;
     h5{
       text-transform: uppercase;
