@@ -3944,26 +3944,6 @@ address.site-info {
     .gallery-image-holder img {
       position: relative !important; } }
 
-.fr-dil {
-  display: inline-block; }
-
-.fr-dib {
-  display: block;
-  text-align: right; }
-
-.fr-fil {
-  float: left;
-  max-width: 50%;
-  margin-right: 20px; }
-
-.fr-fir {
-  float: right;
-  max-width: 50%;
-  margin-left: 20px;
-  text-align: right; }
-  .fr-fir .fr-inner {
-    display: inline-block; }
-
 .single-blog-content .standard-content .fr-img-caption {
   max-width: 100%;
   box-sizing: border-box;
@@ -3978,5 +3958,25 @@ address.site-info {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 900; }
+
+.single-blog-content .standard-content .fr-dil {
+  display: inline-block; }
+
+.single-blog-content .standard-content .fr-dib {
+  display: block;
+  text-align: right; }
+
+.single-blog-content .standard-content .fr-fil {
+  float: left;
+  max-width: 50%;
+  margin-right: 20px; }
+
+.single-blog-content .standard-content .fr-fir {
+  float: right;
+  max-width: 50%;
+  margin-left: 20px;
+  text-align: right; }
+  .single-blog-content .standard-content .fr-fir .fr-inner {
+    display: inline-block; }
 
 /*# sourceMappingURL=style.css.map*/
