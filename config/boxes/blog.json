@@ -16,7 +16,7 @@
 					"items": {
 								"section_type": {
 									"type": "dropdown",
-									"options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image"]
+									"options": ["Standard Content", "Gallery Container", "Full Screen Image", "About Author"]
 								},
 								"content_box": {
 									"type": "section",
@@ -25,16 +25,6 @@
 										"content": "wysiwyg",
 										"display_logic": {
 											"section_type": "Standard Content"
-										}
-									}
-								},
-								"full_width_header_box": {
-									"type": "section",
-									"items": {
-										"image": "image",
-										"content": "wysiwyg",
-										"display_logic": {
-											"section_type": "Full Width Header Container"
 										}
 									}
 								},
@@ -57,19 +47,17 @@
 										}
 									}
 								},
-
-								"featured_boxes": {
+								"about_author": {
 									"type": "section",
 									"items": {
-										"box": {
-											"type": "dropdown",
-											"options": ["Location", "Menus", "Blog", "Events", "Private Events", "Stalls"]
-										},
+										"title": "text",
+										"content": "wysiwyg",
 										"display_logic": {
-											"section_type": "Featured Boxes"
+											"section_type": "About Author"
 										}
 									}
 								}
+
 					}
 
 				}
