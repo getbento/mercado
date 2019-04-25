@@ -114,7 +114,7 @@
       </div>
 
 
-      {% for key, field in current.fields.flexible.content %}
+      {% for key, field in current.fields.flexible.content.iteritems() %}
 
         {% if field.section_type == "Standard Content" %}
           <div class='standard-content' key="{{key}}">
