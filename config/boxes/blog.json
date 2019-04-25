@@ -16,11 +16,7 @@
 					"items": {
 								"section_type": {
 									"type": "dropdown",
-<<<<<<< HEAD
-									"options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image", "Blockquote"]
-=======
 									"options": ["Standard Content", "Gallery Container", "Full Screen Image", "About Author"]
->>>>>>> 87684251a28d2d3978f114a6fd89490538ae3f02
 								},
 								"content_box": {
 									"type": "section",
