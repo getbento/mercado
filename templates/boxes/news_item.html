@@ -143,6 +143,15 @@
             </section>
           {% endif %}
 
+          {% if field.section_type == "About Author" %}
+          <div class='standard-content about-author'>
+            <div class="content-margins">
+              <div class="about-author-title">{{field.about_author.title}}</div>
+              {{field.about_author.content}}
+            </div>
+          </div>
+          {% endif %}
+
 
           {% if field.section_type == "Gallery Container" %}
             <section class="content-gallery">
