@@ -114,10 +114,10 @@
       </div>
 
 
-      {% for key, field in current.fields.flexible.content %}
+      {% for field in current.fields.flexible.content %}
 
         {% if field.section_type == "Standard Content" %}
-          <div class='standard-content' key="{{key}}">
+          <div class='standard-content'>
 
             <div class="content-margins">
               {% if field.content_box.subheader %}
@@ -131,7 +131,7 @@
 
 
           {% if field.section_type == "Full Width Header Container" %}
-            <section class="full-width-header" key="{{key}}">
+            <section class="full-width-header">
               <div class="full-width-header-content">
                 <div class="full-width-header-content-inner">
                   {{field.full_width_header_box.content}}
@@ -144,7 +144,7 @@
           {% endif %}
 
           {% if field.section_type == "About Author" %}
-          <div class='standard-content about-author' key="{{key}}">
+          <div class='standard-content about-author'>
             <div class="content-margins">
               <div class="about-author-title">{{field.about_author.title}}</div>
               {{field.about_author.content}}
@@ -154,7 +154,7 @@
 
 
           {% if field.section_type == "Gallery Container" %}
-            <section class="content-gallery" key="{{key}}">
+            <section class="content-gallery">
               <div class="content-margins">
                 <div class="content-gallery-inner">
                   {% for image in field.gallery_box.gallery %}
@@ -193,7 +193,7 @@
 
 
           {% if field.section_type == "Full Screen Image" %}
-            <div class='wide-content' key="{{key}}">
+            <div class='wide-content'>
 
               <figure>
                 <img src="{{field.wide_image.image.url}}" alt={% if field.wide_image.image.alt == "" %}"{{field.wide_image.caption}}"{% else %} "{{field.wide_image.image.alt}}" {% endif %} />
