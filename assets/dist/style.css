@@ -3560,7 +3560,7 @@ address.site-info {
   .content-gallery .rest-single-gallery-controls button:hover .st0 {
     stroke: white; }
 
-.standard-content .content-gallery {
+.single-blog-content .content-gallery {
   max-width: 1024px;
   margin: 15px auto 80px auto;
   padding: 0px 155px; }
