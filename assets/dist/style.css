@@ -3330,6 +3330,15 @@ address.site-info {
   overflow: hidden;
   height: 100vh; }
 
+.single-blog-content .standard-content:nth-child(2) p:nth-child(1)::first-letter {
+  font-size: 200%;
+  color: #e4002b;
+  border: 2px solid #e4002b;
+  padding: 0px 12px;
+  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+  vertical-align: 8px;
+  margin-right: 5px; }
+
 .contact-us-page-container {
   margin-bottom: 80px; }
   .contact-us-page-container .content-margins {

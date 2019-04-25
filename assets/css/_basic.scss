@@ -254,3 +254,15 @@
 	overflow: hidden;
 	height: 100vh;
 }
+
+
+
+.single-blog-content .standard-content:nth-child(2) p:nth-child(1)::first-letter {
+  font-size: 200%;
+  color: $toro_red;
+	border: 2px solid $toro_red;
+	padding: 0px 12px;
+	font-family: $domaine;
+	vertical-align: 8px;
+	margin-right: 5px;
+}
