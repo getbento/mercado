@@ -220,22 +220,24 @@ $(document).ready(function () {
 
   if ($('.ig-feed').length) {
     console.log($('.ig-feed').length);
-    $.ajax({
-      method: "GET",
-      dataType: "jsonp",
-      jsonp: "callback",
-      jsonpCallback: "jsonpcallback",
-      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.026aedc91bd040fe82e74b3d218a8e7a&count=8'
-    }).done(function (data) {
-      if (data) {
-        // console.log(data.data);
-        data.data.forEach(function (elem) {
-          console.log(elem);
-          var igPost = '<div class="ig-box"><a href="' + elem.link + '" target="_blank" class="ig-box-link"><img src="' + elem.images.standard_resolution.url + '" alt="' + elem.caption.text + '"/> </a></div>';
-          $(igPost).insertBefore('.edge-box-tail');
-        });
-      }
-    });
+    // $.ajax({
+    //   method: "GET",
+    //   dataType: "jsonp",
+    //   jsonp: "callback",
+    //   jsonpCallback: "jsonpcallback",
+    //     url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.026aedc91bd040fe82e74b3d218a8e7a&count=8'
+    // }).done(function(data){
+    //   if(data){
+    //     console.log(data);
+    //     // console.log(data.data);
+    //     data.data.forEach(function(elem){
+    //       console.log(elem);
+    //       var igPost = '<div class="ig-box"><a href="' + elem.link + '" target="_blank" class="ig-box-link"><img src="' + elem.images.standard_resolution.url + '" alt="' + elem.caption.text + '"/> </a></div>';
+    //       $(igPost).insertBefore('.edge-box-tail');
+    //     });
+    //   }
+    //
+    // });
   }
 
   /*

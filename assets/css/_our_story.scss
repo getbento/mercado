@@ -46,6 +46,8 @@ align-items: center;
 
 }
 
+
+
 .content-gallery{
 	margin-bottom: 30px;
 	.content-gallery-inner{
@@ -72,6 +74,12 @@ align-items: center;
 			}
 		}
 	}
+}
+
+.standard-content .content-gallery{
+	max-width: 1024px;
+	margin: 15px auto 80px auto;
+	padding: 0px 155px;
 }
 
 #featured_press{

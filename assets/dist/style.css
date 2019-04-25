@@ -3152,8 +3152,6 @@ address.site-info {
       width: 100%;
       margin: 0px auto 50px auto;
       padding: 0px 0px; } }
-  .standard-page .standard-content a, .single-blog-content .standard-content a {
-    text-decoration: underline; }
   .standard-page .standard-content p, .single-blog-content .standard-content p {
     margin-bottom: 20px;
     letter-spacing: .5px;
@@ -3197,7 +3195,7 @@ address.site-info {
         padding: 0;
         margin: 30px 0; } }
   .standard-page .standard-content b, .standard-page .standard-content strong, .single-blog-content .standard-content b, .single-blog-content .standard-content strong {
-    font-family: "Knockout 67 A", "Knockout 67 B";
+    font-family: "Knockout 50 A", "Knockout 50 B";
     font-weight: 900; }
   .standard-page .standard-content em, .single-blog-content .standard-content em {
     font-style: italic; }
@@ -3561,6 +3559,11 @@ address.site-info {
     transition: ease 250ms all; }
   .content-gallery .rest-single-gallery-controls button:hover .st0 {
     stroke: white; }
+
+.standard-content .content-gallery {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
 
 #featured_press {
   padding-top: 120px;
