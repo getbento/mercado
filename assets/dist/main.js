@@ -220,22 +220,24 @@ $(document).ready(function () {
 
   if ($('.ig-feed').length) {
     console.log($('.ig-feed').length);
-    $.ajax({
-      method: "GET",
-      dataType: "jsonp",
-      jsonp: "callback",
-      jsonpCallback: "jsonpcallback",
-      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.026aedc91bd040fe82e74b3d218a8e7a&count=8'
-    }).done(function (data) {
-      if (data) {
-        // console.log(data.data);
-        data.data.forEach(function (elem) {
-          console.log(elem);
-          var igPost = '<div class="ig-box"><a href="' + elem.link + '" target="_blank" class="ig-box-link"><img src="' + elem.images.standard_resolution.url + '" alt="' + elem.caption.text + '"/> </a></div>';
-          $(igPost).insertBefore('.edge-box-tail');
-        });
-      }
-    });
+    // $.ajax({
+    //   method: "GET",
+    //   dataType: "jsonp",
+    //   jsonp: "callback",
+    //   jsonpCallback: "jsonpcallback",
+    //     url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.026aedc91bd040fe82e74b3d218a8e7a&count=8'
+    // }).done(function(data){
+    //   if(data){
+    //     console.log(data);
+    //     // console.log(data.data);
+    //     data.data.forEach(function(elem){
+    //       console.log(elem);
+    //       var igPost = '<div class="ig-box"><a href="' + elem.link + '" target="_blank" class="ig-box-link"><img src="' + elem.images.standard_resolution.url + '" alt="' + elem.caption.text + '"/> </a></div>';
+    //       $(igPost).insertBefore('.edge-box-tail');
+    //     });
+    //   }
+    //
+    // });
   }
 
   /*
@@ -583,7 +585,7 @@ function setCookie(cname, cvalue, exdays) {
 /* 2 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n}\n^\n      Invalid CSS after \"}\": expected 1 selector or at-rule, was \"<<<<<<< HEAD\"\n      in /Users/pavaris/bentodev/sites/mercado/assets/css/_blog-single.scss (line 552, column 2)\n    at runLoaders (/Users/pavaris/bentodev/sites/mercado/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at context.callback (/Users/pavaris/bentodev/sites/mercado/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/pavaris/bentodev/sites/mercado/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Users/pavaris/bentodev/sites/mercado/node_modules/neo-async/async.js:8077:18)\n    at options.error (/Users/pavaris/bentodev/sites/mercado/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);
