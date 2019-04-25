@@ -3152,6 +3152,15 @@ address.site-info {
       width: 100%;
       margin: 0px auto 50px auto;
       padding: 0px 0px; } }
+  .standard-page .standard-content .content-subheader, .single-blog-content .standard-content .content-subheader {
+    margin-bottom: 20px; }
+    .standard-page .standard-content .content-subheader h5, .single-blog-content .standard-content .content-subheader h5 {
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #474746;
+      max-width: 80%;
+      margin: auto;
+      text-align: center; }
   .standard-page .standard-content p, .single-blog-content .standard-content p {
     margin-bottom: 20px;
     letter-spacing: .5px;
@@ -3273,6 +3282,28 @@ address.site-info {
     height: auto;
     box-sizing: border-box;
     border: 2px #e4002b solid; } }
+
+.standard-page .blockquote-block, .single-blog-content .blockquote-block {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media (max-width: 767px) {
+    .standard-page .blockquote-block, .single-blog-content .blockquote-block {
+      padding: 0px;
+      margin: 15px auto 60px auto; } }
+  .standard-page .blockquote-block blockquote, .single-blog-content .blockquote-block blockquote {
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 24px;
+    color: #e4002b;
+    margin: auto;
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    @media (max-width: 767px) {
+      .standard-page .blockquote-block blockquote, .single-blog-content .blockquote-block blockquote {
+        max-width: unset;
+        width: 100%;
+        font-size: 20px; } }
 
 .overflow-hide {
   overflow: hidden;
@@ -3564,6 +3595,10 @@ address.site-info {
   max-width: 1024px;
   margin: 15px auto 80px auto;
   padding: 0px 155px; }
+  @media (max-width: 920px) {
+    .single-blog-content .content-gallery {
+      padding: 0px;
+      margin: 15px auto 60px auto; } }
 
 #featured_press {
   padding-top: 120px;
@@ -3960,24 +3995,24 @@ address.site-info {
     font-weight: 900; }
 
 .single-blog-content .standard-content .fr-dil {
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 20px; }
 
 .single-blog-content .standard-content .fr-dib {
   display: block;
-  text-align: right; }
+  text-align: right;
+  margin-bottom: 20px; }
 
 .single-blog-content .standard-content .fr-fil {
   float: left;
   max-width: 50%;
-  margin-right: 20px;
-  margin-bottom: 20px; }
+  margin-right: 20px; }
 
 .single-blog-content .standard-content .fr-fir {
   float: right;
   max-width: 50%;
   margin-left: 20px;
-  text-align: right;
-  margin-bottom: 20px; }
+  text-align: right; }
   .single-blog-content .standard-content .fr-fir .fr-inner {
     display: inline-block; }
 

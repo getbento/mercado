@@ -120,10 +120,14 @@
           <div class='standard-content'>
 
             <div class="content-margins">
+              {% if field.content_box.subheader %}
+                <div class="content-subheader"><h5>{{field.content_box.subheader}}</h5></div>
+              {% endif %}
               {{field.content_box.content}}
             </div>
           </div>
           {% endif %}
+
 
 
           {% if field.section_type == "Full Width Header Container" %}

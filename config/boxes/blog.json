@@ -16,13 +16,13 @@
 					"items": {
 								"section_type": {
 									"type": "dropdown",
-									"options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image", "Blockquote"]
+									"options": ["Standard Content","Featured Boxes", "Full Width Header Container", "Gallery Container", "Full Screen Image"]
 								},
 								"content_box": {
 									"type": "section",
 									"items": {
-										"content": "wysiwyg",
 										"subheader": "text",
+										"content": "wysiwyg",
 										"display_logic": {
 											"section_type": "Standard Content"
 										}
@@ -57,15 +57,7 @@
 										}
 									}
 								},
-								"blockquote": {
-									"type": "section",
-									"items": {
-										"quote": "text",
-										"display_logic": {
-											"section_type": "Blockquote"
-										}
-									}
-								},
+
 								"featured_boxes": {
 									"type": "section",
 									"items": {

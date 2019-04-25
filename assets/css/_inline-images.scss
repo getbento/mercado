@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 16px 16px 5px 16px;
   border: 2px solid #e4002b;
+
   img{
     box-sizing: border-box;
     padding: 0;
@@ -19,18 +20,20 @@
 .single-blog-content .standard-content {
   .fr-dil{
     display: inline-block;
+    margin-bottom: 20px;
   }
 
   .fr-dib{
     display: block;
     text-align: right;
+    margin-bottom: 20px;
   }
 
   .fr-fil{
     float: left;
     max-width: 50%;
     margin-right: 20px;
-    margin-bottom: 20px;
+
   }
 
   .fr-fir{
@@ -38,7 +41,7 @@
     max-width: 50%;
     margin-left: 20px;
     text-align: right;
-    margin-bottom: 20px;
+
     .fr-inner{
       display: inline-block;
     }
