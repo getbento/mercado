@@ -550,3 +550,19 @@
     font-size: 22px;
   }
 }
+
+
+.about-author{
+  .about-author-title{
+    border-top: 2px solid $toro_red;
+    padding: 25px 0;
+    font-family: $knockout-feather;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: $toro_red;
+
+    @media (max-width: 767px){
+      font-size: 50px;
+    }
+  }
+}

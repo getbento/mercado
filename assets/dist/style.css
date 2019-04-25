@@ -3034,6 +3034,17 @@ address.site-info {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 22px; }
 
+.about-author .about-author-title {
+  border-top: 2px solid #e4002b;
+  padding: 25px 0;
+  font-family: "Knockout 68 A", "Knockout 68 B";
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #e4002b; }
+  @media (max-width: 767px) {
+    .about-author .about-author-title {
+      font-size: 50px; } }
+
 .shop-landing {
   padding-top: 40px; }
 
@@ -3145,7 +3156,7 @@ address.site-info {
 
 .standard-page .standard-content, .single-blog-content .standard-content {
   max-width: 1024px;
-  margin: 15px auto 80px auto;
+  margin: 15px auto 40px auto;
   padding: 0px 155px; }
   @media screen and (max-width: 767px) {
     .standard-page .standard-content, .single-blog-content .standard-content {
@@ -3223,15 +3234,18 @@ address.site-info {
     border: 0px;
     outline: 0px;
     height: 4px; }
-  .standard-page .standard-content ul, .single-blog-content .standard-content ul {
+  .standard-page .standard-content ul, .standard-page .standard-content ol, .single-blog-content .standard-content ul, .single-blog-content .standard-content ol {
     margin: 30px auto;
     width: 50%; }
-    .standard-page .standard-content ul li, .single-blog-content .standard-content ul li {
+    .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
       font-size: 19px;
       line-height: 24px;
       padding-bottom: 19px;
       list-style: none; }
-    .standard-page .standard-content ul li::before, .single-blog-content .standard-content ul li::before {
+      @media (max-width: 767px) {
+        .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
+          font-size: 1.5rem; } }
+    .standard-page .standard-content ul li::before, .standard-page .standard-content ol li::before, .single-blog-content .standard-content ul li::before, .single-blog-content .standard-content ol li::before {
       content: "\2022";
       color: #e4002b;
       margin-left: -1em;

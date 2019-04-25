@@ -26,7 +26,7 @@
 
 	.standard-content{
 		max-width:1024px;
-		margin:15px auto 80px auto;
+		margin:15px auto 40px auto;
 		padding:0px 155px;
 		@media screen and (max-width: $mobile_max) {
 			max-width:auto;
@@ -114,7 +114,7 @@
 			outline:0px;
 			height:4px;
 		}
-		ul{
+		ul, ol{
 			margin:30px auto;
 			width:50%;
 			li{
@@ -122,6 +122,9 @@
 				line-height:24px;
 				padding-bottom:19px;
 				list-style:none;
+				@media(max-width: 767px){
+			    font-size: 1.5rem;
+				}
 			}
 			li::before {
 				content: "•";
