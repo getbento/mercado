@@ -3969,13 +3969,15 @@ address.site-info {
 .single-blog-content .standard-content .fr-fil {
   float: left;
   max-width: 50%;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 20px; }
 
 .single-blog-content .standard-content .fr-fir {
   float: right;
   max-width: 50%;
   margin-left: 20px;
-  text-align: right; }
+  text-align: right;
+  margin-bottom: 20px; }
   .single-blog-content .standard-content .fr-fir .fr-inner {
     display: inline-block; }
 
