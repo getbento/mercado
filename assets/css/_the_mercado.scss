@@ -253,6 +253,11 @@
       }
     }
   }
+  svg[type]{
+    .svg-stall-cont[disabled='true'] polygon, .svg-stall-cont[disabled='true'] rect{
+      fill: #fdf16f24 !important;
+    }
+  }
   svg[type="shop"]{
     .svg-stall-cont:not([type='shop']){
       text{
@@ -273,7 +278,9 @@
       rect.st0,polygon.st0{
         fill: #fdf16f24;
         pointer-events: none;
-
+      }
+      g{
+        pointer-events: none;
       }
     }
   }
@@ -285,7 +292,9 @@
       rect.st0,polygon.st0{
         fill: #fdf16f24;
         pointer-events: none;
-
+      }
+      g{
+        pointer-events: none;
       }
     }
   }
@@ -297,7 +306,9 @@
       rect.st0,polygon.st0{
         fill: #fdf16f24;
         pointer-events: none;
-
+      }
+      g{
+        pointer-events: none;
       }
     }
     .svg-stall-cont[type='kiosk']{
@@ -307,7 +318,6 @@
       rect.st0,polygon.st0{
         fill: #FDF16F;
         pointer-events: auto;
-
       }
     }
   }
@@ -319,7 +329,9 @@
       rect.st0,polygon.st0{
         fill: #fdf16f24;
         pointer-events: none;
-
+      }
+      g{
+        pointer-events: none;
       }
     }
     .svg-stall-cont[cat='sweet savory ']{
@@ -340,7 +352,9 @@
       rect.st0,polygon.st0{
         fill: #fdf16f24;
         pointer-events: none;
-
+      }
+      g{
+        pointer-events: none;
       }
     }
     .svg-stall-cont[cat='sweet savory ']{
@@ -735,5 +749,18 @@
     @media (max-width: 767px){
       display: block;
     }
+  }
+}
+
+.svg-stalls g[disabled='true'], g[disabled='true']{
+  pointer-events: none;
+  text{
+    display: none;
+  }
+  &:hover polygon, &:hover rect{
+    fill: $oro_yellow !important;
+  }
+  circle, path, line, .st9{
+    display: none;
   }
 }

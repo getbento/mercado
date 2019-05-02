@@ -65,7 +65,8 @@
 		<g id='churros' class='svg-stall-cont'
 			img="{{boxes.kiosks.by_slug['churros'].fields.page_icon.url}}"
 			text="{{boxes.kiosks.by_slug['churros'].fields.hover_text}}"
-			type="{% for cat in boxes.kiosks.by_slug['churros'].categories %}{{cat.slug}} {% endfor %}"
+			type="kiosk"
+			cat="{% for cat in boxes.kiosks.by_slug['churros'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="563.6,304.6 550.3,317.9 550.3,355.8 601.5,355.8 601.5,304.6 "/>
 			<text transform="matrix(1 0 0 1 556.3158 335.5366)" class="st2 st3 st4">Churros</text>
@@ -110,6 +111,8 @@
 			img="{{boxes.restaurant.by_slug.lena.fields.logo.url}}"
 			text='Leña'
 			type='restaurant'
+			disabled='true'
+
 			>
 			<polygon class="st0" points="173,534 89.3,534 89.3,687.7 215.7,687.7 215.7,534 "/>
 			<text transform="matrix(1 0 0 1 139.0202 608.7438)" class="st2 st3 st4">LEÑA</text>
@@ -145,7 +148,7 @@
 			cat ='{% for cat in boxes.kiosks.by_slug['huevos'].categories %}{{cat.slug}} {% endfor %}'
 			>
 			<polygon class="st0" points="159.6,276.0 159.6,324.6 173,338 173,338 256.3,338 256.3,276.0 225.6,276.0 	"/>
-			<text transform="matrix(1 0 0 1 167.4874 305.105)"><tspan x="0" y="0" class="st2 st3 st4">Huevos &amp; Lacón </tspan><tspan x="11.2" y="13" class="st2 st3 st4">con Patatas</tspan></text>
+			<text transform="matrix(1 0 0 1 167.4874 305.105)"><tspan x="-2" y="0" class="st2 st3 st4" style='font-size: 12px;'>Tortilla de Patatas &amp; </tspan><tspan x="0" y="13" class="st2 st3 st4" style='font-size: 12px;'>Lacón con Patatas</tspan></text>
 		</g>
 	</a>
 
@@ -175,6 +178,7 @@
 		<g id='vinos' class='svg-stall-cont'
 			img="{{boxes.bar.by_slug['vinos'].fields.page_icon.url}}" text="{{boxes.bar.by_slug['vinos'].fields.hover_text}}"
 			type='bar'
+			disabled = 'true'
 			>
 			<polygon class="st0" points="370.9,181.4 357.5,168 305.3,168 292,181.4 292,181.4 292,181.4 292,258.9 370.9,258.9 370.9,181.4
 				370.9,181.4 "/>
@@ -218,6 +222,7 @@
 		<g id='bar-celona' class='svg-stall-cont'
 			img="{{boxes.bar.by_slug['bar-celona'].fields.page_icon.url}}" text="{{boxes.bar.by_slug['bar-celona'].fields.hover_text}}"
 			type='bar'
+			disabled = 'true'
 			>
 			<polygon class="st0" points="435.3,538.1 278.1,538.1 264.8,551.5 264.8,551.5 264.8,621.3 435.3,621.3 "/>
 			<text transform="matrix(1 0 0 1 322.7952 589.0453)" class="st2 st3 st4">Bar Celona</text>
@@ -251,6 +256,7 @@
 			img="{{boxes.kiosks.by_slug['granja'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['granja'].fields.hover_text}}"
 			type="kiosk"
 			cat="{% for cat in boxes.kiosks.by_slug['granja'].categories %}{{cat.slug}} {% endfor %}"
+			disabled = 'true'
 			>
 			<rect x="594.6" y="455.9" class="st0" width="51.8" height="110.8"/>
 			<text transform="matrix(1 0 0 1 604.0618 515.4443)" class="st2 st3 st4">Granja</text>
@@ -283,6 +289,7 @@
 			img="{{boxes.kiosks.by_slug['cocas'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['cocas'].fields.hover_text}}"
 			type="kiosk"
 			cat="{% for cat in boxes.kiosks.by_slug['cocas'].categories %}{{cat.slug}} {% endfor %}"
+			disabled= 'true'
 			>
 			<polygon class="st0" points="550.3,260.3 550.3,260.3 601.5,260.3 601.5,162 550.3,162 "/>
 			<text transform="matrix(0 -1 1 0 580.8693 226.472)" class="st2 st3 st4">Cocas</text>
@@ -308,6 +315,7 @@
 	<g id='flores' class='svg-stall-cont'
 		img="{{boxes.shop.by_slug['flores'].fields.page_icon.url}}" text="{{boxes.shop.by_slug['flores'].fields.hover_text}}"
 		type='shop'
+		disabled = 'true'
 		>
 		<rect x="1092.3" y="470.8" class="st0" width="40" height="78.7"/>
 		<text transform="matrix(0 -1 1 0 1116.873 525.428)" class="st2 st3 st4">Flores</text>
@@ -348,7 +356,10 @@
 	<rect x="159.6" y="217.5" class="st0"  style='transition:ease 300ms all;' width="66" height="58.7"/>
 </g>
 
-<g id='online-pickup'>
+<g
+	id='online-pickup'
+	disabled = 'true'
+	>
 	<rect x="441.9" y="280.5" class="st1" width="70.6" height="7.9"/>
 	<text transform="matrix(1 0 0 1 450.9804 287.9591)" class="st2 st5 st6">Online Pickup</text>
 </g>
@@ -408,7 +419,7 @@
 	<circle class="st2" cx="181.8" cy="127.3" r="13.6"/>
 	<g>
 		<rect x="164.3" y="123.7" class="st1" width="35" height="11.2"/>
-		<text transform="matrix(1 0 0 1 171.4783 131.6785)" class="st10 st7 st11">WC</text>
+		<text transform="matrix(1 0 0 1 174.4783 131.6785)" class="st10 st7 st11">WC</text>
 	</g>
 </g>
 

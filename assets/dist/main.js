@@ -352,6 +352,12 @@ $(document).ready(function () {
 
   $('.mercado-map-cont svg .svg-stalls g.svg-stall-cont').hover(function () {
     let $this = $(this);
+    console.log($this.attr('disabled'));
+    if ($this.attr('disabled') == 'disabled') {
+      console.log('nothin');
+      return false;
+    }
+
     $('.mercado-map-hover-box img').attr('src', $this.attr('img'));
     $('.mercado-map-hover-box span').html($this.attr('text'));
 
@@ -415,6 +421,8 @@ $(document).ready(function () {
   $('.map-filter-box .selected-filter').click(function (e) {
     let $this = $(this);
     e.preventDefault();
+
+    $('.mercado-map-more-info-boxes').removeClass('active');
 
     if ($this.hasClass('active') && $this.attr('type') != 'kiosks') {
       // if click same box

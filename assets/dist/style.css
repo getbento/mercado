@@ -2464,6 +2464,8 @@ address.site-info {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
     .mercado-map-cont svg text .st7, .mercado-map-cont svg text.st7 {
       font-family: "Knockout 50 A", "Knockout 50 B"; }
+  .mercado-map-cont svg[type] .svg-stall-cont[disabled='true'] polygon, .mercado-map-cont svg[type] .svg-stall-cont[disabled='true'] rect {
+    fill: #fdf16f24 !important; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
     pointer-events: none; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
@@ -2474,15 +2476,21 @@ address.site-info {
   .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect.st0, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon.st0 {
     fill: #fdf16f24;
     pointer-events: none; }
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) g {
+    pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) text {
     pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect.st0, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon.st0 {
     fill: #fdf16f24;
     pointer-events: none; }
+  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) g {
+    pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont text {
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont polygon.st0 {
     fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont g {
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] text {
     pointer-events: auto; }
@@ -2494,6 +2502,8 @@ address.site-info {
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) polygon.st0 {
     fill: #fdf16f24;
     pointer-events: none; }
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) g {
+    pointer-events: none; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
     fill: #FDF16F;
     pointer-events: auto; }
@@ -2503,6 +2513,8 @@ address.site-info {
     pointer-events: none; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) polygon.st0 {
     fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) g {
     pointer-events: none; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
     fill: #FDF16F;
@@ -2805,6 +2817,15 @@ address.site-info {
     @media (max-width: 767px) {
       .mercado-map-box-cont .mercado-map-more-info-close {
         display: block; } }
+
+.svg-stalls g[disabled='true'], g[disabled='true'] {
+  pointer-events: none; }
+  .svg-stalls g[disabled='true'] text, g[disabled='true'] text {
+    display: none; }
+  .svg-stalls g[disabled='true']:hover polygon, .svg-stalls g[disabled='true']:hover rect, g[disabled='true']:hover polygon, g[disabled='true']:hover rect {
+    fill: #fff166 !important; }
+  .svg-stalls g[disabled='true'] circle, .svg-stalls g[disabled='true'] path, .svg-stalls g[disabled='true'] line, .svg-stalls g[disabled='true'] .st9, g[disabled='true'] circle, g[disabled='true'] path, g[disabled='true'] line, g[disabled='true'] .st9 {
+    display: none; }
 
 .blog-landing {
   padding-top: 28px; }
