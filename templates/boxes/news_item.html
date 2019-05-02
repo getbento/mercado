@@ -120,10 +120,14 @@
           <div class='standard-content'>
 
             <div class="content-margins">
+              {% if field.content_box.subheader %}
+                <div class="content-subheader"><h5>{{field.content_box.subheader}}</h5></div>
+              {% endif %}
               {{field.content_box.content}}
             </div>
           </div>
           {% endif %}
+
 
 
           {% if field.section_type == "Full Width Header Container" %}
@@ -137,6 +141,15 @@
                 <img src="{{field.full_width_header_box.image.url}}" alt="{{field.full_width_header_box.image.alt_text}}">
               </div>
             </section>
+          {% endif %}
+
+          {% if field.section_type == "About Author" %}
+          <div class='standard-content about-author'>
+            <div class="content-margins">
+              <div class="about-author-title">{{field.about_author.title}}</div>
+              {{field.about_author.content}}
+            </div>
+          </div>
           {% endif %}
 
 

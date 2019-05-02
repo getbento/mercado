@@ -214,7 +214,10 @@ p {
       letter-spacing: normal;
       text-transform: none; } }
   p a {
-    text-decoration: underline; }
+    text-decoration: none;
+    border-bottom: 2px solid #e4002b;
+    font-weight: 900;
+    color: #474746; }
 
 ul, ol {
   list-style: none;
@@ -2621,7 +2624,8 @@ address.site-info {
       flex-direction: column;
       overflow: initial;
       height: auto;
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      min-height: unset; } }
   .single-blog .single-blog-header-content .single-blog-img {
     width: 57%; }
     @media (max-width: 1200px) {
@@ -2652,7 +2656,7 @@ address.site-info {
         width: 100%; } }
     .single-blog .single-blog-header-content .single-blog-info .single-blog-info-header {
       background-color: #e4002b;
-      min-height: 100%;
+      height: 100%;
       width: 100%;
       padding: 40px 10%;
       display: flex;
@@ -2715,7 +2719,8 @@ address.site-info {
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%; }
+    height: 100%;
+    z-index: 2; }
     @media (max-width: 1090px) {
       .single-blog-content-cont .single-blog-sticky {
         display: none; } }
@@ -3030,6 +3035,17 @@ address.site-info {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 22px; }
 
+.about-author .about-author-title {
+  border-top: 2px solid #e4002b;
+  padding: 25px 0;
+  font-family: "Knockout 68 A", "Knockout 68 B";
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #e4002b; }
+  @media (max-width: 767px) {
+    .about-author .about-author-title {
+      font-size: 50px; } }
+
 .shop-landing {
   padding-top: 40px; }
 
@@ -3134,33 +3150,46 @@ address.site-info {
     border: 2px solid #e4002b; }
 
 @media screen and (max-width: 767px) {
-  .standard-page .full-width-header h1 {
+  .standard-page .full-width-header h1, .single-blog-content .full-width-header h1 {
     font-size: 90px; }
-  .standard-page .full-width-header h2 {
+  .standard-page .full-width-header h2, .single-blog-content .full-width-header h2 {
     font-size: 4rem !important; } }
 
-.standard-page .standard-content {
+.standard-page .standard-content, .single-blog-content .standard-content {
   max-width: 1024px;
-  margin: 15px auto 80px auto;
+  margin: 15px auto 40px auto;
   padding: 0px 155px; }
   @media screen and (max-width: 767px) {
-    .standard-page .standard-content {
+    .standard-page .standard-content, .single-blog-content .standard-content {
       max-width: auto;
       width: 100%;
       margin: 0px auto 50px auto;
       padding: 0px 0px; } }
-  .standard-page .standard-content a {
-    text-decoration: underline; }
-  .standard-page .standard-content p {
+  .standard-page .standard-content .content-subheader, .single-blog-content .standard-content .content-subheader {
+    margin-bottom: 30px; }
+    .standard-page .standard-content .content-subheader h5, .single-blog-content .standard-content .content-subheader h5 {
+      text-transform: uppercase;
+      font-size: 55px;
+      color: #474746;
+      max-width: 80%;
+      margin: auto;
+      text-align: center;
+      font-family: "Knockout 48 A", "Knockout 48 B";
+      line-height: 0.9em; }
+      @media (max-width: 767px) {
+        .standard-page .standard-content .content-subheader h5, .single-blog-content .standard-content .content-subheader h5 {
+          width: 100%;
+          max-width: unset; } }
+  .standard-page .standard-content p, .single-blog-content .standard-content p {
     margin-bottom: 20px;
     letter-spacing: .5px;
     -webkit-font-smoothing: antialiased; }
-  .standard-page .standard-content h1 {
+  .standard-page .standard-content h1, .single-blog-content .standard-content h1 {
     font-family: "Knockout 67 A", "Knockout 67 B";
     text-transform: uppercase;
     color: #e4002b;
     margin-bottom: 20px; }
-  .standard-page .standard-content h2 {
+  .standard-page .standard-content h2, .single-blog-content .standard-content h2 {
     font-family: "Knockout 48 A", "Knockout 48 B";
     text-transform: uppercase;
     color: #e4002b;
@@ -3168,18 +3197,18 @@ address.site-info {
     letter-spacing: 0.83px;
     line-height: 43px;
     margin-bottom: 20px; }
-  .standard-page .standard-content h2.bioHeader {
+  .standard-page .standard-content h2.bioHeader, .single-blog-content .standard-content h2.bioHeader {
     font-family: "Knockout 67 A", "Knockout 67 B";
     font-size: 9rem !important;
     line-height: 9rem !important; }
-  .standard-page .standard-content h3 {
+  .standard-page .standard-content h3, .single-blog-content .standard-content h3 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 34px;
     font-weight: bold;
     line-height: 50px;
     margin-bottom: 20px;
     color: #e4002b; }
-  .standard-page .standard-content h4 {
+  .standard-page .standard-content h4, .single-blog-content .standard-content h4 {
     font-family: "Domaine", Georgia, Times, Times New Roman, serif;
     font-size: 25px;
     margin-bottom: 20px;
@@ -3190,14 +3219,15 @@ address.site-info {
     padding: 0 120px;
     margin: 56px 0; }
     @media screen and (max-width: 767px) {
-      .standard-page .standard-content h4 {
+      .standard-page .standard-content h4, .single-blog-content .standard-content h4 {
         padding: 0;
         margin: 30px 0; } }
-  .standard-page .standard-content b, .standard-page .standard-content strong {
-    font-family: "Knockout 48 A", "Knockout 48 B"; }
-  .standard-page .standard-content em {
+  .standard-page .standard-content b, .standard-page .standard-content strong, .single-blog-content .standard-content b, .single-blog-content .standard-content strong {
+    font-family: "Knockout 30 A", "Knockout 30 B";
+    font-weight: 900; }
+  .standard-page .standard-content em, .single-blog-content .standard-content em {
     font-style: italic; }
-  .standard-page .standard-content hr {
+  .standard-page .standard-content hr, .single-blog-content .standard-content hr {
     background-color: #e4002b;
     width: 100%;
     margin: 60px 0px;
@@ -3205,57 +3235,61 @@ address.site-info {
     border: 0px;
     outline: 0px;
     height: 4px; }
-  .standard-page .standard-content ul {
+  .standard-page .standard-content ul, .standard-page .standard-content ol, .single-blog-content .standard-content ul, .single-blog-content .standard-content ol {
     margin: 30px auto;
     width: 50%; }
-    .standard-page .standard-content ul li {
+    .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
+      color: #474746;
       font-size: 19px;
       line-height: 24px;
       padding-bottom: 19px;
       list-style: none; }
-    .standard-page .standard-content ul li::before {
+      @media (max-width: 767px) {
+        .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
+          font-size: 1.5rem; } }
+    .standard-page .standard-content ul li::before, .standard-page .standard-content ol li::before, .single-blog-content .standard-content ul li::before, .single-blog-content .standard-content ol li::before {
       content: "\2022";
       color: #e4002b;
       margin-left: -1em;
       width: 1em;
       display: inline-block; }
-  .standard-page .standard-content img {
+  .standard-page .standard-content img, .single-blog-content .standard-content img {
     text-align: center;
     box-sizing: border-box;
     padding: 16px;
     width: 100%;
     border: 2px solid #e4002b; }
-    .standard-page .standard-content img.fr-fil, .standard-page .standard-content img.fr-fir {
+    .standard-page .standard-content img.fr-fil, .standard-page .standard-content img.fr-fir, .single-blog-content .standard-content img.fr-fil, .single-blog-content .standard-content img.fr-fir {
       width: 48% !important;
       margin: 10px;
       margin-top: 0px;
       padding: 12px !important; }
-  .standard-page .standard-content img.fr-fil {
+  .standard-page .standard-content img.fr-fil, .single-blog-content .standard-content img.fr-fil {
     float: left;
     margin-left: 0px; }
-  .standard-page .standard-content img.fr-fir {
+  .standard-page .standard-content img.fr-fir, .single-blog-content .standard-content img.fr-fir {
     float: right;
     margin-right: 0px; }
   @media screen and (max-width: 767px) {
-    .standard-page .standard-content h1 {
+    .standard-page .standard-content h1, .single-blog-content .standard-content h1 {
       font-size: 90px; }
-    .standard-page .standard-content h2 {
+    .standard-page .standard-content h2, .single-blog-content .standard-content h2 {
       font-size: 8rem !important; }
-    .standard-page .standard-content h3 {
+    .standard-page .standard-content h3, .single-blog-content .standard-content h3 {
       font-size: 2.9rem !important;
       line-height: 4.5rem !important; } }
 
-.standard-page .wide-content figure {
+.standard-page .wide-content figure, .single-blog-content .wide-content figure {
   margin: 20px;
   width: calc(100%-40px);
   height: auto;
   box-sizing: border-box;
   border: 2px #e4002b solid; }
-  .standard-page .wide-content figure img {
+  .standard-page .wide-content figure img, .single-blog-content .wide-content figure img {
     width: 100%;
     padding: 20px 20px 5px 20px;
     box-sizing: border-box; }
-  .standard-page .wide-content figure figcaption {
+  .standard-page .wide-content figure figcaption, .single-blog-content .wide-content figure figcaption {
     text-align: right;
     right: 0px;
     position: relative;
@@ -3265,16 +3299,47 @@ address.site-info {
     padding-bottom: 5px; }
 
 @media screen and (max-width: 767px) {
-  .standard-page .wide-content figure {
+  .standard-page .wide-content figure, .single-blog-content .wide-content figure {
     margin: 20px -2px;
     width: calc(100%-40px);
     height: auto;
     box-sizing: border-box;
     border: 2px #e4002b solid; } }
 
+.standard-page .blockquote-block, .single-blog-content .blockquote-block {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media (max-width: 767px) {
+    .standard-page .blockquote-block, .single-blog-content .blockquote-block {
+      padding: 0px;
+      margin: 15px auto 60px auto; } }
+  .standard-page .blockquote-block blockquote, .single-blog-content .blockquote-block blockquote {
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 24px;
+    color: #e4002b;
+    margin: auto;
+    font-family: "Domaine", Georgia, Times, Times New Roman, serif; }
+    @media (max-width: 767px) {
+      .standard-page .blockquote-block blockquote, .single-blog-content .blockquote-block blockquote {
+        max-width: unset;
+        width: 100%;
+        font-size: 20px; } }
+
 .overflow-hide {
   overflow: hidden;
   height: 100vh; }
+
+.single-blog-content .standard-content:nth-child(2) p:nth-child(1)::first-letter {
+  font-size: 200%;
+  color: #e4002b;
+  border: 2px solid #e4002b;
+  padding: 0px 12px;
+  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+  vertical-align: 8px;
+  margin-right: 5px; }
 
 .contact-us-page-container {
   margin-bottom: 80px; }
@@ -3557,6 +3622,15 @@ address.site-info {
     transition: ease 250ms all; }
   .content-gallery .rest-single-gallery-controls button:hover .st0 {
     stroke: white; }
+
+.single-blog-content .content-gallery {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media (max-width: 920px) {
+    .single-blog-content .content-gallery {
+      padding: 0px;
+      margin: 15px auto 60px auto; } }
 
 #featured_press {
   padding-top: 120px;
@@ -3937,26 +4011,6 @@ address.site-info {
     .gallery-image-holder img {
       position: relative !important; } }
 
-.fr-dil {
-  display: inline-block; }
-
-.fr-dib {
-  display: block;
-  text-align: right; }
-
-.fr-fil {
-  float: left;
-  max-width: 50%;
-  margin-right: 20px; }
-
-.fr-fir {
-  float: right;
-  max-width: 50%;
-  margin-left: 20px;
-  text-align: right; }
-  .fr-fir .fr-inner {
-    display: inline-block; }
-
 .single-blog-content .standard-content .fr-img-caption {
   max-width: 100%;
   box-sizing: border-box;
@@ -3971,5 +4025,27 @@ address.site-info {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 900; }
+
+.single-blog-content .standard-content .fr-dil {
+  display: inline-block;
+  margin-bottom: 20px; }
+
+.single-blog-content .standard-content .fr-dib {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px; }
+
+.single-blog-content .standard-content .fr-fil {
+  float: left;
+  max-width: 50%;
+  margin-right: 20px; }
+
+.single-blog-content .standard-content .fr-fir {
+  float: right;
+  max-width: 50%;
+  margin-left: 20px;
+  text-align: right; }
+  .single-blog-content .standard-content .fr-fir .fr-inner {
+    display: inline-block; }
 
 /*# sourceMappingURL=style.css.map*/
