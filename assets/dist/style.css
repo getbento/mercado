@@ -216,7 +216,8 @@ p {
   p a {
     text-decoration: none;
     border-bottom: 2px solid #e4002b;
-    font-weight: 900; }
+    font-weight: 900;
+    color: #474746; }
 
 ul, ol {
   list-style: none;
@@ -3222,7 +3223,7 @@ address.site-info {
         padding: 0;
         margin: 30px 0; } }
   .standard-page .standard-content b, .standard-page .standard-content strong, .single-blog-content .standard-content b, .single-blog-content .standard-content strong {
-    font-family: "Knockout 50 A", "Knockout 50 B";
+    font-family: "Knockout 30 A", "Knockout 30 B";
     font-weight: 900; }
   .standard-page .standard-content em, .single-blog-content .standard-content em {
     font-style: italic; }
@@ -3238,6 +3239,7 @@ address.site-info {
     margin: 30px auto;
     width: 50%; }
     .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
+      color: #474746;
       font-size: 19px;
       line-height: 24px;
       padding-bottom: 19px;

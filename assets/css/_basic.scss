@@ -99,7 +99,7 @@
 		}
 
 		b, strong{
-			font-family: $knockout-welter;
+			font-family: $knockout;
 			font-weight: 900;
 		}
 		em{
@@ -118,6 +118,7 @@
 			margin:30px auto;
 			width:50%;
 			li{
+				color: #474746;
 				font-size: 19px;
 				line-height:24px;
 				padding-bottom:19px;
