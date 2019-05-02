@@ -6,6 +6,63 @@
 		"author": "text",
 		"dek": "text",
 		"hover_text": "text",
+		"byline": "wysiwyg",
+		"flexible": {
+			"title": "Flexible Content",
+			"type": "section",
+			"items": {
+				"content": {
+					"type": "repeater",
+					"items": {
+								"section_type": {
+									"type": "dropdown",
+									"options": ["Standard Content", "Gallery Container", "Full Screen Image", "About Author"]
+								},
+								"content_box": {
+									"type": "section",
+									"items": {
+										"subheader": "text",
+										"content": "wysiwyg",
+										"display_logic": {
+											"section_type": "Standard Content"
+										}
+									}
+								},
+								"gallery_box": {
+									"type": "section",
+									"items": {
+										"gallery": "gallery",
+										"display_logic": {
+											"section_type": "Gallery Container"
+										}
+									}
+								},
+								"wide_image": {
+									"type": "section",
+									"items": {
+										"image": "image",
+										"caption": "text",
+										"display_logic": {
+											"section_type": "Full Screen Image"
+										}
+									}
+								},
+								"about_author": {
+									"type": "section",
+									"items": {
+										"title": "text",
+										"content": "wysiwyg",
+										"display_logic": {
+											"section_type": "About Author"
+										}
+									}
+								}
+
+					}
+
+				}
+			}
+		},
 		"SEO": {
 			"type": "section",
 			"items": {
