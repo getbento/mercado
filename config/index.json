@@ -1,13 +1,6 @@
 {
   "name": "Homepage",
   "fields":{
-    "home-hero-image":{
-      "title": "Hero Image",
-      "type": "section",
-      "items":{
-        "image": "image",
-      }
-    },
     "home-gallery":{
       "title": "Carousel",
       "type": "section",
@@ -95,7 +88,6 @@
     },
   },
   "wireframe":[
-    "section-home-hero-image",
     "section-home-gallery",
     "section-home-desc"
   ]
