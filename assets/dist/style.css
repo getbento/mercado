@@ -2456,6 +2456,7 @@ address.site-info {
 .mercado-map-cont {
   padding-top: 50px;
   overflow: scroll;
+  overflow-y: hidden;
   margin: auto; }
   .mercado-map-cont svg {
     width: 1024px;

@@ -235,6 +235,7 @@
   // position: relative;
   padding-top: 50px;
   overflow: scroll;
+  overflow-y: hidden;
   margin: auto;
   @media (max-width: 767px){
     // position: initial;
