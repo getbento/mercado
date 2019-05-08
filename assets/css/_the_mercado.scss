@@ -474,6 +474,7 @@
   .map-more-info-box{
     display: none;
     background-color: white;
+    outline: none;
     &:first-child{
       // display: block;
     }
@@ -583,10 +584,12 @@
     color: $toro_red;
     font-family: $knockout-feather;
     font-size:50px;
+    line-height: unset;
     @media(max-width: 600px){
       width: 100%;
       text-align: center;
       margin-bottom: 15px;
+
     }
   }
   .map-filter-box{

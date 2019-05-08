@@ -2606,6 +2606,7 @@ address.site-info {
   .mercado-map-more-info-boxes .map-more-info-box {
     display: none;
     background-color: white;
+    outline: none;
     width: 350px;
     border: 2px solid #e4002b; }
     .mercado-map-more-info-boxes .map-more-info-box.rest-more-info .map-more-info-banner {
@@ -2685,7 +2686,8 @@ address.site-info {
     text-transform: uppercase;
     color: #e4002b;
     font-family: "Knockout 68 A", "Knockout 68 B";
-    font-size: 50px; }
+    font-size: 50px;
+    line-height: unset; }
     @media (max-width: 600px) {
       .mercado-map-filter h4 {
         width: 100%;

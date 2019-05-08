@@ -68,7 +68,7 @@
           {% for restaurant in boxes.restaurant.all%}
             <div class="map-more-info-box rest-more-info" id='map-more-info-{{restaurant.slug}}' tabindex="0">
               <div class="map-more-info-banner">
-                <img src="{{restaurant.fields.banner_image.url}}" alt="{{restaurant.name}}">
+                <a href="{{restaurant.url}}"><img src="{{restaurant.fields.banner_image.url}}" alt="{{restaurant.name}}"></a>
               </div>
               <div class="map-more-info-box-desc">
                 <div class="map-more-info-img">
@@ -92,7 +92,7 @@
           <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
             <div class="map-more-info-banner">
               <img src="{{kiosk.fields.page_icon.url}}" alt="{{kiosk.fields.page_icon.alt}}">
-              <h6>{{kiosk.name}}</h6>
+              <a href="{{kiosk.url}}"><h6>{{kiosk.name}}</h6></a>
               <div class="map-more-info-banner-right">
                 {{kiosk.fields.hover_text}}
               </div>
@@ -119,7 +119,7 @@
           <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
             <div class="map-more-info-banner">
               <img src="{{kiosk.fields.page_icon.url}}" alt="{{kiosk.fields.page_icon.alt}}">
-              <h6>{{kiosk.name}}</h6>
+              <a href="{{kiosk.url}}"><h6>{{kiosk.name}}</h6></a>
               <div class="map-more-info-banner-right">
                 {{kiosk.fields.hover_text}}
               </div>
@@ -145,7 +145,7 @@
           <div class="map-more-info-box" id='map-more-info-{{kiosk.slug}}' tabindex="0">
             <div class="map-more-info-banner">
               <img src="{{kiosk.fields.page_icon.url}}" alt="{{kiosk.fields.page_icon.alt}}">
-              <h6>{{kiosk.name}}</h6>
+              <a href="{{kiosk.url}}"><h6>{{kiosk.name}}</h6></a>
               <div class="map-more-info-banner-right">
                 {{kiosk.fields.hover_text}}
               </div>
