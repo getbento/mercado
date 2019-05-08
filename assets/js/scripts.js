@@ -162,7 +162,7 @@ $(document).ready(function(){
         dataType: "jsonp",
         jsonp: "callback",
         jsonpCallback: "jsonpcallback",
-          url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.a6c699bd9f5a4f518abe53062a811881&count=8'
+          url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.c1906d73b0844dd4b82821404538aa98&count=8'
       }).done(function(data){
         if(data){
           console.log(data);
