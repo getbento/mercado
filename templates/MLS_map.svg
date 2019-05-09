@@ -196,10 +196,10 @@
 	</a>
 
 	<a href="javascript:void(0)">
-		<g id='la-barra-1' class='svg-stall-cont'
-			img="{{boxes.kiosks.by_slug['la-barra-1'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['la-barra-1'].fields.hover_text}}"
+		<g id='la-barra' class='svg-stall-cont'
+			img="{{boxes.kiosks.by_slug['la-barra'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['la-barra'].fields.hover_text}}"
 			type="kiosk"
-			cat="{% for cat in boxes.kiosks.by_slug['la-barra-1'].categories %}{{cat.slug}} {% endfor %}"
+			cat="{% for cat in boxes.kiosks.by_slug['la-barra'].categories %}{{cat.slug}} {% endfor %}"
 			>
 			<polygon class="st0" points="292,356.5 305.3,369.9 357.5,369.9 370.9,356.5 370.9,356.5 370.9,356.5 370.9,279 292,279 292,356.5
 				292,356.5 "/>
