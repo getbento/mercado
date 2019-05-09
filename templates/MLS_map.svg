@@ -43,9 +43,9 @@
 
 <g class="svg-stalls">
 	<a href="javascript:void(0)">
-		<g id='carnes' class='svg-stall-cont'>
+		<g id='carnes' class='svg-stall-cont' disabled='true'>
 			<polygon class="st0" points="89.3,534 173,534 173,501.8 206.3,501.8 206.3,445.6 89.3,445.6 "/>
-			<text transform="matrix(1 0 0 1 155.8675 475.9246)" class="st2 st3 st4">Carnes</text>
+			<!-- <text transform="matrix(1 0 0 1 155.8675 475.9246)" class="st2 st3 st4">Carnes</text> -->
 		</g>
 	</a>
 
