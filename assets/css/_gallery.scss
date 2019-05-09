@@ -1,6 +1,6 @@
 .gallery-page{
   padding-top: 28px;
-  
+
 }
 
 .gallery-header{
@@ -85,6 +85,20 @@
     padding-bottom: 0px !important;
     img{
       position: relative !important;
+    }
+  }
+}
+
+.single-blog-content{
+  .content-gallery{
+    max-width:1024px;
+    margin:15px auto 80px auto;
+    padding:0px 155px;
+    @media screen and (max-width: $mobile_max) {
+      max-width:auto;
+      width:100%;
+      margin:0px auto 50px auto;
+      padding:0px 0px;
     }
   }
 }

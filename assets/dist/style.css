@@ -1665,6 +1665,22 @@ address.site-info {
       object-fit: cover;
       display: block; }
 
+.home-hero #home-video-img, .home-hero #home-video-img-mobile {
+  width: 100vw;
+  height: auto; }
+
+@media (max-width: 767px) {
+  .home-hero #home-video-img {
+    display: none; }
+  .home-hero #home-video-img-mobile {
+    display: block; } }
+
+@media (min-width: 768px) {
+  .home-hero #home-video-img {
+    display: block; }
+  .home-hero #home-video-img-mobile {
+    display: none; } }
+
 .home-hero-image {
   margin-top: -2px; }
 
@@ -2408,6 +2424,10 @@ address.site-info {
           border-top: 2px solid #e4002b;
           border-bottom: 2px solid #e4002b; } }
 
+.current-the-mercado .full-width-header-content {
+  position: relative;
+  z-index: 2; }
+
 .mls-mercado-map-img {
   margin-bottom: 30px; }
   .mls-mercado-map-img img {
@@ -2417,6 +2437,399 @@ address.site-info {
 #bars, #kiosks, #mercado-map {
   padding-top: 125px;
   margin-top: -125px; }
+
+#mercado-map {
+  position: relative; }
+
+.mercado-map-box {
+  overflow-x: scroll;
+  overflow-y: hidden; }
+
+.mercado-map-inner {
+  position: relative;
+  width: 1024px;
+  margin: auto; }
+  @media (max-width: 767px) {
+    .mercado-map-inner {
+      position: initial; } }
+
+.mercado-map-cont {
+  padding-top: 50px;
+  overflow: scroll;
+  overflow-y: hidden;
+  margin: auto; }
+  .mercado-map-cont svg {
+    width: 1024px;
+    margin: auto;
+    display: block; }
+    .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
+      font-family: "Knockout 30 A", "Knockout 30 B"; }
+    .mercado-map-cont svg text .st7, .mercado-map-cont svg text.st7 {
+      font-family: "Knockout 50 A", "Knockout 50 B"; }
+  .mercado-map-cont svg[type] .svg-stall-cont[disabled='true'] polygon, .mercado-map-cont svg[type] .svg-stall-cont[disabled='true'] rect {
+    fill: #fdf16f24 !important; }
+  .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect.st0, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) g {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect.st0, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) g {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont g {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] text {
+    pointer-events: auto; }
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] polygon.st0 {
+    fill: #FDF16F;
+    pointer-events: auto; }
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) g {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
+    fill: #FDF16F;
+    pointer-events: auto; }
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] text {
+    pointer-events: auto; }
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) text {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) polygon.st0 {
+    fill: #fdf16f24;
+    pointer-events: none; }
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) g {
+    pointer-events: none; }
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
+    fill: #FDF16F;
+    pointer-events: auto; }
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] text {
+    pointer-events: auto; }
+
+.mercado-map-hover-box {
+  opacity: 0;
+  transition: ease 300ms all;
+  position: absolute;
+  border: 2px solid #e4002b;
+  max-width: 155px;
+  background-color: white;
+  z-index: 2;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  pointer-events: none; }
+  .mercado-map-hover-box img {
+    height: auto;
+    width: 50px; }
+  .mercado-map-hover-box.rest img {
+    border: 0px; }
+  .mercado-map-hover-box span {
+    font-size: 12px;
+    padding-left: 10px; }
+  .mercado-map-hover-box.active {
+    opacity: 1; }
+  .mercado-map-hover-box:before {
+    content: '';
+    border-bottom: 2px solid #e4002b;
+    border-right: 2px solid #e4002b;
+    height: 10px;
+    width: 10px;
+    pointer-events: none;
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(100% - 5px);
+    z-index: 2;
+    background-color: white;
+    border-radius: 2px;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  @media (max-width: 767px) {
+    .mercado-map-hover-box {
+      display: none; } }
+
+.mercado-map-more-info-boxes {
+  position: absolute;
+  right: 50px;
+  top: 45px;
+  opacity: 0;
+  transition: ease 300ms opacity;
+  pointer-events: none;
+  display: flex; }
+  @media (max-width: 767px) {
+    .mercado-map-more-info-boxes {
+      width: 100%;
+      height: calc(100% - 125px);
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      top: auto;
+      justify-content: center;
+      align-items: center; } }
+  .mercado-map-more-info-boxes .bg-fade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    background-color: white; }
+    @media (max-width: 767px) {
+      .mercado-map-more-info-boxes .bg-fade {
+        display: block; } }
+  .mercado-map-more-info-boxes.active {
+    opacity: 1;
+    pointer-events: auto; }
+    @media (max-width: 767px) {
+      .mercado-map-more-info-boxes.active .bg-fade {
+        opacity: 0.65;
+        z-index: -1; } }
+  .mercado-map-more-info-boxes .map-more-info-box {
+    display: none;
+    background-color: white;
+    outline: none;
+    width: 350px;
+    border: 2px solid #e4002b; }
+    .mercado-map-more-info-boxes .map-more-info-box.rest-more-info .map-more-info-banner {
+      padding: 0px; }
+      .mercado-map-more-info-boxes .map-more-info-box.rest-more-info .map-more-info-banner img {
+        border: 0px;
+        width: 100%;
+        height: auto; }
+  .mercado-map-more-info-boxes .map-more-info-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 2px solid #e4002b; }
+    .mercado-map-more-info-boxes .map-more-info-banner h6 {
+      font-size: 30px;
+      text-transform: uppercase;
+      color: #e4002b;
+      font-family: "Knockout 67 A", "Knockout 67 B"; }
+    .mercado-map-more-info-boxes .map-more-info-banner img {
+      width: 50px;
+      height: 50px; }
+    .mercado-map-more-info-boxes .map-more-info-banner .map-more-info-banner-right {
+      width: 50px;
+      text-align: center;
+      color: #474746;
+      border: 1px solid #474746;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      text-transform: uppercase;
+      font-family: "Knockout 67 A", "Knockout 67 B";
+      font-size: 12px; }
+  .mercado-map-more-info-boxes .map-more-info-box-desc {
+    display: flex;
+    color: #474746; }
+    .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-img {
+      width: 35%;
+      min-width: 35%;
+      padding: 5px; }
+    .mercado-map-more-info-boxes .map-more-info-box-desc img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content {
+      border-left: 2px solid #e4002b;
+      padding: 10px;
+      padding-bottom: 25px;
+      position: relative;
+      font-size: 18px; }
+      .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #e4002b;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a svg {
+          width: 15px;
+          min-width: unset; }
+          .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a svg path {
+            fill: white; }
+
+.mercado-map-filter {
+  text-transform: uppercase;
+  color: #e4002b;
+  display: flex;
+  justify-content: space-between; }
+  @media (max-width: 600px) {
+    .mercado-map-filter {
+      flex-direction: column; } }
+  .mercado-map-filter h4 {
+    text-transform: uppercase;
+    color: #e4002b;
+    font-family: "Knockout 68 A", "Knockout 68 B";
+    font-size: 50px;
+    line-height: unset; }
+    @media (max-width: 600px) {
+      .mercado-map-filter h4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px; } }
+  .mercado-map-filter .map-filter-box {
+    border: 2px solid #e4002b;
+    flex-grow: 1;
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    font-family: "Knockout 68 A", "Knockout 68 B";
+    background-color: white; }
+    @media (max-width: 600px) {
+      .mercado-map-filter .map-filter-box {
+        border-bottom: 0px;
+        margin-left: 0px; }
+        .mercado-map-filter .map-filter-box:last-child {
+          border-bottom: 2px solid #e4002b; } }
+    .mercado-map-filter .map-filter-box.filter-with-dropdown {
+      display: block; }
+      .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter {
+        display: block; }
+      @media (max-width: 600px) {
+        .mercado-map-filter .map-filter-box.filter-with-dropdown .map-filter-select {
+          position: initial;
+          outline: none; }
+          .mercado-map-filter .map-filter-box.filter-with-dropdown .map-filter-select .filter-selection {
+            border-bottom: 0px; } }
+    .mercado-map-filter .map-filter-box .map-filter-select {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      background-color: white; }
+      @media (max-width: 600px) {
+        .mercado-map-filter .map-filter-box .map-filter-select {
+          position: initial; } }
+      .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active {
+        color: white;
+        background-color: #e4002b;
+        position: relative; }
+        @media (min-width: 600px) {
+          .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active {
+            padding-left: 40px; } }
+        .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active:before {
+          content: "\D7";
+          position: absolute;
+          height: 20px;
+          width: 20px;
+          background-color: white;
+          color: #e4002b;
+          left: 10px;
+          top: 0px;
+          bottom: 0;
+          margin: auto;
+          line-height: 18px;
+          cursor: pointer; }
+    .mercado-map-filter .map-filter-box a {
+      color: #e4002b; }
+    .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter.active {
+      padding-left: 15px; }
+      .mercado-map-filter .map-filter-box.filter-with-dropdown .selected-filter.active:before {
+        display: none; }
+    .mercado-map-filter .map-filter-box .selected-filter {
+      cursor: pointer;
+      transition: ease 250ms all;
+      padding: 15px;
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      .mercado-map-filter .map-filter-box .selected-filter:hover {
+        color: white;
+        background-color: #e4002b; }
+      .mercado-map-filter .map-filter-box .selected-filter.active {
+        color: white;
+        background-color: #e4002b;
+        position: relative; }
+        @media (min-width: 600px) {
+          .mercado-map-filter .map-filter-box .selected-filter.active {
+            padding-left: 30px; } }
+        .mercado-map-filter .map-filter-box .selected-filter.active:before {
+          content: "\D7";
+          position: absolute;
+          height: 20px;
+          width: 20px;
+          background-color: white;
+          color: #e4002b;
+          left: 10px;
+          top: 0px;
+          bottom: 0;
+          margin: auto;
+          line-height: 18px;
+          cursor: pointer; }
+    .mercado-map-filter .map-filter-box .map-filter-select {
+      display: none;
+      outline: 2px solid #e4002b; }
+    .mercado-map-filter .map-filter-box .map-filter-select-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .mercado-map-filter .map-filter-box .map-filter-select-inner a {
+        padding: 15px;
+        width: 100%;
+        border-bottom: 2px solid #e4002b;
+        text-align: center;
+        color: #e4002b;
+        transition: ease 250ms all; }
+        .mercado-map-filter .map-filter-box .map-filter-select-inner a:hover {
+          color: white;
+          background-color: #e4002b; }
+        .mercado-map-filter .map-filter-box .map-filter-select-inner a:last-child {
+          border-bottom: 0px; }
+
+.mercado-map-box-cont {
+  position: relative; }
+  .mercado-map-box-cont .mercado-map-more-info-close {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 5px);
+    font-size: 40px;
+    color: #e4002b;
+    cursor: pointer; }
+    @media (max-width: 767px) {
+      .mercado-map-box-cont .mercado-map-more-info-close {
+        display: block; } }
+
+.svg-stalls g[disabled='true'], g[disabled='true'] {
+  pointer-events: none; }
+  .svg-stalls g[disabled='true'] text, g[disabled='true'] text {
+    display: none; }
+  .svg-stalls g[disabled='true']:hover polygon, .svg-stalls g[disabled='true']:hover rect, g[disabled='true']:hover polygon, g[disabled='true']:hover rect {
+    fill: #fff166 !important; }
+  .svg-stalls g[disabled='true'] circle, .svg-stalls g[disabled='true'] path, .svg-stalls g[disabled='true'] line, .svg-stalls g[disabled='true'] .st9, g[disabled='true'] circle, g[disabled='true'] path, g[disabled='true'] line, g[disabled='true'] .st9 {
+    display: none; }
 
 .blog-landing {
   padding-top: 28px; }
@@ -4010,6 +4423,17 @@ address.site-info {
     padding-bottom: 0px !important; }
     .gallery-image-holder img {
       position: relative !important; } }
+
+.single-blog-content .content-gallery {
+  max-width: 1024px;
+  margin: 15px auto 80px auto;
+  padding: 0px 155px; }
+  @media screen and (max-width: 767px) {
+    .single-blog-content .content-gallery {
+      max-width: auto;
+      width: 100%;
+      margin: 0px auto 50px auto;
+      padding: 0px 0px; } }
 
 .single-blog-content .standard-content .fr-img-caption {
   max-width: 100%;
