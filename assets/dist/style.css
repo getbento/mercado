@@ -3248,7 +3248,7 @@ address.site-info {
         .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
           font-size: 1.5rem; } }
     .standard-page .standard-content ul li::before, .standard-page .standard-content ol li::before, .single-blog-content .standard-content ul li::before, .single-blog-content .standard-content ol li::before {
-      content: "\2022";
+      content: "•";
       color: #e4002b;
       margin-left: -1em;
       width: 1em;
