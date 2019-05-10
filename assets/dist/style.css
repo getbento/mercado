@@ -2738,7 +2738,7 @@ address.site-info {
           .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active {
             padding-left: 40px; } }
         .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active:before {
-          content: "\D7";
+          content: "×";
           position: absolute;
           height: 20px;
           width: 20px;
@@ -2774,7 +2774,7 @@ address.site-info {
           .mercado-map-filter .map-filter-box .selected-filter.active {
             padding-left: 30px; } }
         .mercado-map-filter .map-filter-box .selected-filter.active:before {
-          content: "\D7";
+          content: "×";
           position: absolute;
           height: 20px;
           width: 20px;
@@ -3661,7 +3661,7 @@ address.site-info {
         .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
           font-size: 1.5rem; } }
     .standard-page .standard-content ul li::before, .standard-page .standard-content ol li::before, .single-blog-content .standard-content ul li::before, .single-blog-content .standard-content ol li::before {
-      content: "\2022";
+      content: "•";
       color: #e4002b;
       margin-left: -1em;
       width: 1em;
