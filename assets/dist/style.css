@@ -3226,6 +3226,39 @@ address.site-info {
     text-transform: uppercase;
     font-family: "Knockout 50 A", "Knockout 50 B"; }
 
+.single-block-back-link {
+  border: 2px solid #e4002b;
+  border-top: 0px;
+  border-left: 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #e4002b;
+  transition: ease 250ms all; }
+  .single-block-back-link .single-blog-arrow.back-to-blog {
+    display: inline-flex;
+    right: unset;
+    bottom: unset;
+    position: static;
+    transform: scaleX(-1);
+    background-color: transparent;
+    border-left: 2px solid #e4002b;
+    transition: ease 250ms all; }
+    .single-block-back-link .single-blog-arrow.back-to-blog svg path {
+      fill: #e4002b;
+      transition: ease 250ms all; }
+  .single-block-back-link h6 {
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    flex: 1 0 0; }
+  .single-block-back-link:hover {
+    background: #e4002b;
+    color: white; }
+    .single-block-back-link:hover .single-blog-arrow.back-to-blog svg path {
+      fill: white; }
+
 .hay-mas .hay-mas-header {
   display: flex;
   justify-content: center;

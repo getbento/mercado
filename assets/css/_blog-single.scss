@@ -271,6 +271,45 @@
   }
 }
 
+.single-block-back-link {
+  border: 2px solid $toro_red;
+  border-top: 0px;
+  border-left: 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $toro_red;
+  transition: ease 250ms all;
+  .single-blog-arrow.back-to-blog {
+    display: inline-flex;
+    right: unset;
+    bottom: unset;
+    position: static;
+    transform: scaleX(-1);
+    background-color: transparent;
+    border-left: 2px solid $toro_red;
+    transition: ease 250ms all;
+    svg path {
+      fill: $toro_red;
+      transition: ease 250ms all;
+    }
+  } h6 {
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    flex: 1 0 0;
+  } &:hover {
+    background: $toro_red;
+    color: white;
+    .single-blog-arrow.back-to-blog {
+      svg path {
+        fill: white;
+      }
+    }
+  }
+}
+
 
 .hay-mas{
   .hay-mas-header{
