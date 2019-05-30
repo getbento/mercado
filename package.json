@@ -27,7 +27,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
     "browser-sync": "^2.26.5",
     "npm": "^6.9.0",
     "svg-loader": "0.0.2",
