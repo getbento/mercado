@@ -3226,6 +3226,39 @@ address.site-info {
     text-transform: uppercase;
     font-family: "Knockout 50 A", "Knockout 50 B"; }
 
+.single-block-back-link {
+  border: 2px solid #e4002b;
+  border-top: 0px;
+  border-left: 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #e4002b;
+  transition: ease 250ms all; }
+  .single-block-back-link .single-blog-arrow.back-to-blog {
+    display: inline-flex;
+    right: unset;
+    bottom: unset;
+    position: static;
+    transform: scaleX(-1);
+    background-color: transparent;
+    border-left: 2px solid #e4002b;
+    transition: ease 250ms all; }
+    .single-block-back-link .single-blog-arrow.back-to-blog svg path {
+      fill: #e4002b;
+      transition: ease 250ms all; }
+  .single-block-back-link h6 {
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    flex: 1 0 0; }
+  .single-block-back-link:hover {
+    background: #e4002b;
+    color: white; }
+    .single-block-back-link:hover .single-blog-arrow.back-to-blog svg path {
+      fill: white; }
+
 .hay-mas .hay-mas-header {
   display: flex;
   justify-content: center;
@@ -4178,28 +4211,56 @@ address.site-info {
     padding: 1%;
     margin: 1%; } }
 
-.single-event.single-blog .single-blog-info .single-blog-info-header .event-date {
-  margin-bottom: 0px; }
-
-.single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper span {
-  font-family: "Knockout 67 A", "Knockout 67 B";
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  font-size: 40px; }
-
-.single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper h4 {
-  font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-  text-transform: none;
-  font-size: 25px;
-  line-height: 1.3em; }
-
-.single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
-  color: #e4002b;
-  background-color: white;
-  transition: ease 250ms all; }
-  .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a:hover {
-    background-color: #e4002b;
-    color: white; }
+.single-event {
+  display: flex;
+  height: 100vh; }
+  @media (max-width: 985px) {
+    .single-event {
+      height: auto; }
+      .single-event .single-blog-scroll {
+        display: none; } }
+  .single-event.single-blog .single-blog-header-content {
+    max-height: calc(100vh - 106px);
+    overflow: scroll; }
+    @media (max-width: 985px) {
+      .single-event.single-blog .single-blog-header-content {
+        overflow: initial;
+        max-height: unset; } }
+    @media (max-width: 767px) {
+      .single-event.single-blog .single-blog-header-content .more-info {
+        width: 100%;
+        text-align: center; }
+      .single-event.single-blog .single-blog-header-content .single-blog-social-container {
+        width: 100%;
+        justify-content: space-around; } }
+    .single-event.single-blog .single-blog-header-content .single-blog-img {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0; }
+      @media (max-width: 985px) {
+        .single-event.single-blog .single-blog-header-content .single-blog-img {
+          position: initial; } }
+  .single-event.single-blog .single-blog-info .single-blog-info-header {
+    height: auto; }
+    .single-event.single-blog .single-blog-info .single-blog-info-header .event-date {
+      margin-bottom: 0px; }
+    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper span {
+      font-family: "Knockout 67 A", "Knockout 67 B";
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 40px; }
+    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper h4 {
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      text-transform: none;
+      font-size: 25px;
+      line-height: 1.3em; }
+    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
+      color: #e4002b;
+      background-color: white;
+      transition: ease 250ms all; }
+      .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a:hover {
+        background-color: #e4002b;
+        color: white; }
 
 #newsletter-popup {
   outline: none;

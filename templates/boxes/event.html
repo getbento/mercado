@@ -1,70 +1,73 @@
 {% include "header.html" %}
 
 <article class="single-blog single-event">
-  <div class="single-blog-img">
-    <img src="{{current.images[0].url}}" alt="{{current.images[0].alt_text}}">
-    <div class="article-info-slide">
-      <h6>{{current.name}}</h6>
-      <span>Share Article: </span>
-      <div class="single-blog-social-container">
-        <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
-          <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
-            <img src="{{ static('img/Facebook_gray.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
-          </a>
-        </div>
-
-        <div class="social-twitter">
-
-          <a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}" onclick="window.open('https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}'&text={{current.title.absolute_url|urlencode}},width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" title="Tweet this!" class='twitter-share-button'>
-            <img src="{{ static('img/Twitter_gray.png') }}" alt="Twitter Icon">
-          </a>
-        </div>
-
-        <div class="social-email">
-          <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email_gray.png') }}" alt="Email Icon"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="single-blog-info">
-    <div class="single-blog-info-header">
-      <div class="single-event-upper">
-        <span class='event-date'>{{boxes.events.by_slug[current.slug].starts|date('%B %-m')}} </span>
-        <span>{{boxes.events.by_slug[current.slug].starts|date('%-I:%M %p')}} - {{boxes.events.by_slug[current.slug].ends|date('%-I:%M %p')}}</span>
-        <h1>{{current.name}}</h1>
-        <h4>{{current.fields.dek}}</h4>
-        {% if current.external_url %}
-          <a href="{{current.external_url}}" class="more-info">Tickets</a>
-        {% endif %}
-      </div>
-      <div class="single-blog-social">
+  <div class="single-blog-header-content">
+    <div class="single-blog-img">
+      <img src="{{current.images[0].url}}" alt="{{current.images[0].alt_text}}">
+      <div class="article-info-slide">
+        <h6>{{current.name}}</h6>
+        <span>Share Article: </span>
         <div class="single-blog-social-container">
           <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
-              <img src="{{ static('img/Facebook.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
+              <img src="{{ static('img/Facebook_gray.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
             </a>
           </div>
 
           <div class="social-twitter">
+
             <a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}" onclick="window.open('https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}'&text={{current.title.absolute_url|urlencode}},width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" title="Tweet this!" class='twitter-share-button'>
-              <img src="{{ static('img/Twitter.png') }}" alt="Twitter Icon">
+              <img src="{{ static('img/Twitter_gray.png') }}" alt="Twitter Icon">
             </a>
           </div>
 
-
           <div class="social-email">
-            <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email.png') }}" alt="Email Icon"></a>
+            <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email_gray.png') }}" alt="Email Icon"></a>
           </div>
-        </div>
-        <div class="single-blog-scroll">
-          <span>Scroll</span>
         </div>
       </div>
     </div>
-    <div class="single-blog-content">
-      {{current.description}}
+    <div class="single-blog-info">
+      <div class="single-blog-info-header">
+        <div class="single-event-upper">
+          <span class='event-date'>{{boxes.events.by_slug[current.slug].starts|date('%B %-m')}} </span>
+          <span>{{boxes.events.by_slug[current.slug].starts|date('%-I:%M %p')}} - {{boxes.events.by_slug[current.slug].ends|date('%-I:%M %p')}}</span>
+          <h1>{{current.name}}</h1>
+          <h4>{{current.fields.dek}}</h4>
+          {% if current.external_url %}
+            <a href="{{current.external_url}}" class="more-info">Tickets</a>
+          {% endif %}
+        </div>
+        <div class="single-blog-social">
+          <div class="single-blog-social-container">
+            <div class='social-fb fb-share-button' data-href="{{current.request.absolute_url}}" data-layout="button_count">
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{current.request.absolute_url|urlencode}}" target="_blank">
+                <img src="{{ static('img/Facebook.png') }}" class='fb-xfbml-parse-ignore' alt="Facebook Icon" />
+              </a>
+            </div>
+
+            <div class="social-twitter">
+              <a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}" onclick="window.open('https://twitter.com/intent/tweet?url={{current.request.absolute_url|urlencode}}'&text={{current.title.absolute_url|urlencode}},width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" title="Tweet this!" class='twitter-share-button'>
+                <img src="{{ static('img/Twitter.png') }}" alt="Twitter Icon">
+              </a>
+            </div>
+
+
+            <div class="social-email">
+              <a href="mailto:?&body={{current.request.absolute_url}}"><img src="{{ static('img/Email.png') }}" alt="Email Icon"></a>
+            </div>
+          </div>
+          <div class="single-blog-scroll">
+            <span>Scroll</span>
+          </div>
+        </div>
+      </div>
+      <div class="single-blog-content">
+        {{current.description}}
+      </div>
     </div>
   </div>
+
 </article>
 
 <section class="hay-mas">

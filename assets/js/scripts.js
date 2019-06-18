@@ -110,9 +110,16 @@ $(document).ready(function(){
    * Single Blog
    ***************************/
    $('.single-blog-scroll').click(function(){
-     $('body, html').animate({
-       scrollTop: $('.single-blog-content').position().top - $('#masthead').height(),
-     }, 500);
+     if($('article').hasClass('single-event')){
+       $('.single-blog-header-content').animate({
+         scrollTop: $('.single-blog-content').position().top ,
+       }, 500);
+     }else{
+       $('body, html').animate({
+         scrollTop: $('.single-blog-content').position().top - $('#masthead').height(),
+       }, 500);
+     }
+
    });
 
    // $('.single-blog').scroll(function(){
@@ -162,7 +169,7 @@ $(document).ready(function(){
         dataType: "jsonp",
         jsonp: "callback",
         jsonpCallback: "jsonpcallback",
-          url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.c1906d73b0844dd4b82821404538aa98&count=8'
+          url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.04288af9d50447108b16f6448c2f0a4e&count=8'
       }).done(function(data){
         if(data){
           console.log(data);
