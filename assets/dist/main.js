@@ -182,9 +182,15 @@ $(document).ready(function () {
    * Single Blog
    ***************************/
   $('.single-blog-scroll').click(function () {
-    $('body, html').animate({
-      scrollTop: $('.single-blog-content').position().top - $('#masthead').height()
-    }, 500);
+    if ($('article').hasClass('single-event')) {
+      $('.single-blog-header-content').animate({
+        scrollTop: $('.single-blog-content').position().top
+      }, 500);
+    } else {
+      $('body, html').animate({
+        scrollTop: $('.single-blog-content').position().top - $('#masthead').height()
+      }, 500);
+    }
   });
 
   // $('.single-blog').scroll(function(){

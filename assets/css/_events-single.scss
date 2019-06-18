@@ -1,5 +1,45 @@
 .single-event{
+  display: flex;
+  height: 100vh;
+  @media (max-width: 985px){
+    height: auto;
+
+    .single-blog-scroll{
+      display: none;
+    }
+  }
+  &.single-blog{
+    .single-blog-header-content{
+      max-height: calc(100vh - 106px);
+      overflow: scroll;
+      @media (max-width: 985px){
+        overflow: initial;
+        max-height: unset;
+      }
+      @media (max-width: 767px){
+        .more-info{
+          width: 100%;
+          text-align: center;
+        }
+        .single-blog-social-container{
+          width: 100%;
+          justify-content: space-around;
+
+        }
+      }
+      .single-blog-img{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        @media (max-width: 985px){
+          position: initial;
+        }
+      }
+    }
+  }
+
   &.single-blog .single-blog-info .single-blog-info-header{
+    height: auto;
     .event-date{
       margin-bottom: 0px;
     }
