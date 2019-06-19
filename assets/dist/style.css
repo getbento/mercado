@@ -1097,7 +1097,8 @@ address.site-info {
         #footer-navigation .footer-menu .footer-social-menu {
           width: auto;
           display: flex;
-          flex-wrap: wrap; } }
+          flex-wrap: wrap;
+          margin-top: 0px; } }
 
 #tramp-stamp {
   flex: 0 0 100%;
