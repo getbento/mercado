@@ -265,6 +265,11 @@ address.site-info {
       align-items: space-between;
       max-height: 150px;
       overflow: hidden;
+      .footer-social-menu{
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   }
 }
