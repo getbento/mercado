@@ -184,7 +184,7 @@ $(document).ready(function () {
   $('.single-blog-scroll').click(function () {
     if ($('article').hasClass('single-event')) {
       $('.single-blog-header-content').animate({
-        scrollTop: $('.single-blog-content').position().top
+        scrollTop: $('.single-blog-content').position().top + $('.single-blog-header-content').scrollTop()
       }, 500);
     } else {
       $('body, html').animate({

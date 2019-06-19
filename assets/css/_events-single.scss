@@ -9,9 +9,24 @@
     }
   }
   &.single-blog{
+    .single-blog-content{
+      padding: 0px;
+
+      p:nth-child(1)::first-letter {
+        font-size: 200%;
+        color: $toro_red;
+      	border: 2px solid $toro_red;
+      	padding: 0px 12px;
+      	font-family: $domaine;
+      	vertical-align: 8px;
+      	margin-right: 5px;
+      }
+
+    }
     .single-blog-header-content{
       max-height: calc(100vh - 106px);
       overflow: scroll;
+      width: 100%;
       @media (max-width: 985px){
         overflow: initial;
         max-height: unset;
@@ -44,6 +59,7 @@
       margin-bottom: 0px;
     }
     .single-event-upper{
+      margin-bottom: 20px;
       span{
         font-family: $knockout-bantam;
         letter-spacing: 0.03em;
@@ -64,6 +80,67 @@
           background-color: $toro_red;
           color: white;
         }
+      }
+    }
+  }
+}
+
+.single-event-social{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  .tickets-and-social{
+    width: 70%;
+    @media (max-width: 767px){
+      width: 100%;
+    }
+    .event-tickets{
+      width: 100%;
+      margin-bottom: 40px;
+      a{
+        width: 100%;
+        text-align: center;
+        transition: ease 250ms all;
+        &:hover{
+          color: $toro_red;
+          background-color: white;
+        }
+      }
+    }
+    .single-blog-social-container{
+      padding: 10px 30px;
+      border: 2px solid white;
+      justify-content: space-around;
+    }
+
+  }
+
+}
+
+.event-scroll{
+  .single-blog-scroll{
+    margin-left: 50px;
+    cursor: pointer;
+    span{
+      text-transform: uppercase;
+      font-family: $knockout !important;
+      font-weight: 100;
+      display: block;
+      position: relative;
+      text-align: center;
+      &:before{
+        content: '';
+        height: 15px;
+        width: 15px;
+        top: calc(100%);
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+        position: absolute;
+        transform: rotate(45deg);
+        animation: smolpop 2s infinite;
       }
     }
   }

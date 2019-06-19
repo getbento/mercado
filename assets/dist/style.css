@@ -1933,10 +1933,11 @@ address.site-info {
 
 .happenings-events {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px; }
+  justify-content: flex-start;
+  flex-wrap: wrap; }
   .happenings-events .happenings-event {
     width: 24%;
+    margin-bottom: 20px;
     padding: 10px;
     border: 2px solid #e4002b;
     display: flex;
@@ -1944,7 +1945,10 @@ address.site-info {
     justify-content: space-between;
     text-decoration: none;
     color: black;
-    transition: 250ms ease background-color, 250ms ease color; }
+    transition: 250ms ease background-color, 250ms ease color;
+    margin-right: 1.33%; }
+    .happenings-events .happenings-event:nth-child(4n) {
+      margin-right: 0px; }
     .happenings-events .happenings-event .happenings-upper {
       margin-bottom: 20px; }
     .happenings-events .happenings-event h6 {
@@ -1992,16 +1996,16 @@ address.site-info {
 
 @media (max-width: 1200px) {
   .home-happenings .happenings-events .happenings-event {
-    width: 32%; }
-    .home-happenings .happenings-events .happenings-event:last-child {
-      display: none; } }
+    width: 32%;
+    margin-right: 3%; }
+    .home-happenings .happenings-events .happenings-event:nth-child(3n) {
+      margin-right: 0px; } }
 
 @media (max-width: 667px) {
   .home-happenings .happenings-events .happenings-event {
     width: 100%;
-    margin-bottom: 30px; }
-    .home-happenings .happenings-events .happenings-event:last-child {
-      display: block; } }
+    margin-bottom: 30px;
+    margin-right: 0px; } }
 
 .home-shop .kiosk-grid article.kiosk-box h6 {
   font-family: "Knockout 48 A", "Knockout 48 B";
@@ -4225,9 +4229,20 @@ address.site-info {
       height: auto; }
       .single-event .single-blog-scroll {
         display: none; } }
+  .single-event.single-blog .single-blog-content {
+    padding: 0px; }
+    .single-event.single-blog .single-blog-content p:nth-child(1)::first-letter {
+      font-size: 200%;
+      color: #e4002b;
+      border: 2px solid #e4002b;
+      padding: 0px 12px;
+      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+      vertical-align: 8px;
+      margin-right: 5px; }
   .single-event.single-blog .single-blog-header-content {
     max-height: calc(100vh - 106px);
-    overflow: scroll; }
+    overflow: scroll;
+    width: 100%; }
     @media (max-width: 985px) {
       .single-event.single-blog .single-blog-header-content {
         overflow: initial;
@@ -4250,23 +4265,73 @@ address.site-info {
     height: auto; }
     .single-event.single-blog .single-blog-info .single-blog-info-header .event-date {
       margin-bottom: 0px; }
-    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper span {
-      font-family: "Knockout 67 A", "Knockout 67 B";
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      font-size: 40px; }
-    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper h4 {
-      font-family: "Domaine", Georgia, Times, Times New Roman, serif;
-      text-transform: none;
-      font-size: 25px;
-      line-height: 1.3em; }
-    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
-      color: #e4002b;
-      background-color: white;
-      transition: ease 250ms all; }
-      .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a:hover {
-        background-color: #e4002b;
-        color: white; }
+    .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper {
+      margin-bottom: 20px; }
+      .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper span {
+        font-family: "Knockout 67 A", "Knockout 67 B";
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        font-size: 40px; }
+      .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper h4 {
+        font-family: "Domaine", Georgia, Times, Times New Roman, serif;
+        text-transform: none;
+        font-size: 25px;
+        line-height: 1.3em; }
+      .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a {
+        color: #e4002b;
+        background-color: white;
+        transition: ease 250ms all; }
+        .single-event.single-blog .single-blog-info .single-blog-info-header .single-event-upper a:hover {
+          background-color: #e4002b;
+          color: white; }
+
+.single-event-social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between; }
+  .single-event-social .tickets-and-social {
+    width: 70%; }
+    @media (max-width: 767px) {
+      .single-event-social .tickets-and-social {
+        width: 100%; } }
+    .single-event-social .tickets-and-social .event-tickets {
+      width: 100%;
+      margin-bottom: 40px; }
+      .single-event-social .tickets-and-social .event-tickets a {
+        width: 100%;
+        text-align: center;
+        transition: ease 250ms all; }
+        .single-event-social .tickets-and-social .event-tickets a:hover {
+          color: #e4002b;
+          background-color: white; }
+    .single-event-social .tickets-and-social .single-blog-social-container {
+      padding: 10px 30px;
+      border: 2px solid white;
+      justify-content: space-around; }
+
+.event-scroll .single-blog-scroll {
+  margin-left: 50px;
+  cursor: pointer; }
+  .event-scroll .single-blog-scroll span {
+    text-transform: uppercase;
+    font-family: "Knockout 30 A", "Knockout 30 B" !important;
+    font-weight: 100;
+    display: block;
+    position: relative;
+    text-align: center; }
+    .event-scroll .single-blog-scroll span:before {
+      content: '';
+      height: 15px;
+      width: 15px;
+      top: calc(100%);
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-right: 1px solid white;
+      border-bottom: 1px solid white;
+      position: absolute;
+      transform: rotate(45deg);
+      animation: smolpop 2s infinite; }
 
 #newsletter-popup {
   outline: none;
