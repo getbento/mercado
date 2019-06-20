@@ -15,7 +15,7 @@
         },
         "blog":{
           "type": "relationship",
-          "box": "news_item",
+          "box": "blog",
         },
         "shop":{
           "type": "relationship",
