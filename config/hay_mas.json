@@ -5,19 +5,19 @@
       "title": "Grid Fields",
       "type": "section",
       "items":{
-        "kiosk":{
+        "kiosk_box":{
           "type": "relationship",
           "box": "kiosks",
         },
-        "happenings":{
+        "happenings_box":{
           "type": "relationship",
           "box": "events",
         },
-        "blog":{
+        "blog_box":{
           "type": "relationship",
           "box": "blog",
         },
-        "shop":{
+        "shop_box":{
           "type": "relationship",
           "box": "shop",
         }
