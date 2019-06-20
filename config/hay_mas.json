@@ -1,0 +1,33 @@
+{
+  "name": "Hay Mas",
+  "fields": {
+    "kiosk":{
+      "type": "relationship",
+      "box": "kiosk",
+    },
+    "happenings":{
+      "type": "relationship",
+      "box": "event",
+    },
+    "blog":{
+      "type": "relationship",
+      "box": "news_item",
+    },
+    "shop":{
+      "type": "relationship",
+      "box": "shop",
+    },
+		"SEO":{
+			"title": "SEO",
+			"type": "section",
+			"items": {
+				"keywords": "text",
+				"image": "image"
+			}
+		}
+  },
+  "wireframe": [
+		"section-gallery_fields",
+		"section-SEO"
+	]
+}
