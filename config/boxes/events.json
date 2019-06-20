@@ -3,6 +3,7 @@
 	"has_categories": true,
 	"fields":{
 		"dek": "text",
+		"hover_text": "text",
 		"SEO": {
 			"type": "section",
 			"items": {
