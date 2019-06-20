@@ -18,14 +18,6 @@
         "type": "relationship",
         "box": "shop",
       },
-  		"SEO":{
-  			"title": "SEO",
-  			"type": "section",
-  			"items": {
-  				"keywords": "text",
-  				"image": "image"
-  			}
-  		}
     }
   },
   "wireframe": [
