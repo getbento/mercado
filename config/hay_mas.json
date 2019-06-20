@@ -2,25 +2,21 @@
   "name": "Hay Mas",
   "fields": {
     "grid":{
-      "title": "Grid Fields",
-      "type": "section",
-      "items":{
-        "kiosk":{
-          "type": "relationship",
-          "box": "kiosks",
-        },
-        "happenings":{
-          "type": "relationship",
-          "box": "events",
-        },
-        "blog":{
-          "type": "relationship",
-          "box": "blog",
-        },
-        "shop":{
-          "type": "relationship",
-          "box": "shop",
-        }
+      "kiosk":{
+        "type": "relationship",
+        "box": "kiosks",
+      },
+      "happenings":{
+        "type": "relationship",
+        "box": "events",
+      },
+      "blog":{
+        "type": "relationship",
+        "box": "blog",
+      },
+      "shop":{
+        "type": "relationship",
+        "box": "shop",
       }
     }
   },
