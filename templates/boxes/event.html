@@ -80,7 +80,7 @@
 
 </article>
 
-<!-- <section class="hay-mas">
+<section class="hay-mas">
   <div class="content-margins">
     <div class="hay-mas-header">
       <h6>¡Hay Más!</h6><span>Check out everything the Mercado has to offer.</span>
@@ -113,7 +113,7 @@
           <h6>El Blog</h6>
           <div class="hay-mas-link-icon with-padding">
             <img src="{{boxes.blog.all[0].image.url}}" alt="{{boxes.blog.all[0].image.alt_text}}">
-            <span></span>
+            <span>{{boxes.blog.all[0].fields.hover_text}}</span>
           </div>
           <h4>{{boxes.blog.all[0].name}}</h4>
         </a>
@@ -123,14 +123,14 @@
         <a href="{{pages.by_slug.shop.url}}">
           <h6>Shop</h6>
           <div class="hay-mas-link-icon">
-            <img src="{{boxes.shop.all[0].fields.global_icon.url}}" alt="{{boxes.shop.all[0].fields.global_icon.alt}}">
-            <span>{{boxes.shop.all[0].fields.hover_text}}</span>
+            <img src="{{pages.by_slug.shop.fields['online-products'].products[0].image.url}}" alt="{{pages.by_slug.shop.fields['online-products'].products[0].image.alt_text}}">
+            <span>{{pages.by_slug.shop.fields['online-products'].products[0].hover_text}}</span>
           </div>
-          <h4>{{boxes.shop.all[0].name}}</h4>
+          <h4>{{pages.by_slug.shop.fields['online-products'].products[0].name}}</h4>
         </a>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 {% include "footer.html" %}
