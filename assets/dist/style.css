@@ -3050,7 +3050,8 @@ address.site-info {
       margin-bottom: 30px;
       min-height: unset; } }
   .single-blog .single-blog-header-content .single-blog-img {
-    width: 57%; }
+    width: 57%;
+    position: relative; }
     @media (max-width: 1200px) {
       .single-blog .single-blog-header-content .single-blog-img {
         width: 50%; } }
@@ -3063,7 +3064,10 @@ address.site-info {
     .single-blog .single-blog-header-content .single-blog-img img {
       height: 100%;
       width: 100%;
-      object-fit: cover; }
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0; }
   .single-blog .single-blog-header-content .single-blog-info {
     width: 43%; }
     .single-blog .single-blog-header-content .single-blog-info h4 {

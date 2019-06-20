@@ -17,6 +17,7 @@
     // z-index: 0;
     // top: 0;
     width: 57%;
+    position: relative;
 
     @media (max-width: 1200px){
       width: 50%;
@@ -31,6 +32,9 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
   }
 
