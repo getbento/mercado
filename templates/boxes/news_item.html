@@ -302,14 +302,17 @@
         </a>
       </div>
 
+
+
+{% set key =  (range(1, boxes.shop.all|length) | random) - 1 %}
       <div class="hay-mas-link">
-        <a href="{{pages.by_slug['hay-mas'].fields.grid.shop_box.url}}">
+        <a href="{{boxes.shop.all[key].url}}">
           <h6>Shop</h6>
-          <div class="hay-mas-link-icon with-padding">
-            <img src="{{pages.by_slug['hay-mas'].fields.grid.shop_box.fields.global_icon.url}}" alt="{{pages.by_slug['hay-mas'].fields.grid.shop_box.fields.global_icon.alt_text}}">
-            <span>{{pages.by_slug['hay-mas'].fields.grid.shop_box.fields.hover_text}}</span>
+          <div class="hay-mas-link-icon">
+            <img src="{{boxes.shop.all[key].fields.global_icon.url}}" alt="{{boxes.shop.all[key].fields.global_icon.alt_text}}">
+            <span>{{boxes.shop.all[key].fields.hover_text}}</span>
           </div>
-          <h4>{{pages.by_slug['hay-mas'].fields.grid.shop_box.name}}</h4>
+          <h4>{{boxes.shop.all[key].name}}</h4>
         </a>
       </div>
     </div>

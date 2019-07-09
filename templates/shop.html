@@ -15,6 +15,39 @@
   </div>
 </section>
 
+<section class="shop-little-spain-online" id="shop-online">
+  <div class="content-margins">
+    <div class="section-title-container">
+      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
+      <h2>Shop Online</h2>
+    </div>
+
+
+
+    <div class="shop-little-spain-shops kiosk-grid">
+
+{% for shop in current.fields['online-products'].products %}
+      <article class="kiosk-box">
+          <a href="{{shop.link}}" target='_blank'>
+            <div class="kiosk-box-img kiosk-bordered-img">
+              <img src="{{shop.image.url}}" alt="{{shop.image.alt_text}}">
+              <h4>{{shop.hover_text}}</h4>
+            </div>
+            <h6>{{shop.name}}</h6>
+          </a>
+        </article>
+{% endfor %}
+
+    </div>
+
+    <div class="see-all-shops">
+      <a class="more-info" href="https://shop.littlespain.com/" target='_blank'>See More</a>
+    </div>
+
+  </div>
+</section>
+
+
 <section class="shop-little-spain" id="shop-little-spain">
   <div class="content-margins">
     <div class="section-title-container">
@@ -47,32 +80,7 @@
 </section>
 
 
-<!-- <section class="shop-little-spain-online" id="shop-online">
-  <div class="content-margins">
-    <div class="section-title-container">
-      <img src="{{ static('img/yellow_triangle.png')}}" alt="">
-      <h2>Shop Online</h2>
-    </div>
 
-
-
-    <div class="shop-little-spain-shops kiosk-grid">
-
-{% for shop in current.fields['online-products'].products %}
-      <article class="kiosk-box">
-          <a href="">
-            <div class="kiosk-box-img kiosk-bordered-img">
-              <img src="{{shop.image.url}}" alt="{{shop.image.alt_text}}">
-              <h4>{{shop.hover_text}}</h4>
-            </div>
-            <h6>{{shop.name}}</h6>
-          </a>
-        </article>
-{% endfor %}
-
-    </div>
-  </div>
-</section> -->
 
 
 <section class="shop-little-gift-cards" id="gift-cards">
