@@ -121,7 +121,7 @@
 
 
 
-{% set key =  (range(1, boxes.shop.all|length) | random) - 1 %}
+{% set key =  (range(0, boxes.shop.all|length) | random) %}
       <div class="hay-mas-link">
         <a href="{{boxes.shop.all[key].url}}">
           <h6>Shop</h6>
