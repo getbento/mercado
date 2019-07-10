@@ -117,18 +117,20 @@
         </a>
       </div>
 
-      <div class="hay-mas-link">
-        <a href="{{boxes.events.all[0].url}}">
-          <h6>Happenings</h6>
-          <div class="hay-mas-link-icon">
-            <img src="{{boxes.events.all[0].image.url}}" alt="{{boxes.events.all[0].image.alt_text}}">
-            {% if boxes.events.all[0].fields.hover_text %}
-              <span>{{boxes.events.all[0].fields.hover_text}}</span>
-            {% endif %}
-          </div>
-          <h4>{{boxes.events.all[0].name}}</h4>
-        </a>
-      </div>
+      {% if boxes.events.all %}
+            <div class="hay-mas-link">
+              <a href="{{boxes.events.all[0].url}}">
+                <h6>Happenings</h6>
+                <div class="hay-mas-link-icon">
+                  <img src="{{boxes.events.all[0].image.url}}" alt="{{boxes.events.all[0].image.alt_text}}">
+                  {% if boxes.events.all[0].fields.hover_text %}
+                    <span>{{boxes.events.all[0].fields.hover_text}}</span>
+                  {% endif %}
+                </div>
+                <h4>{{boxes.events.all[0].name}}</h4>
+              </a>
+            </div>
+      {% endif %}
 
 
 {% set blogKey =  (range(0, boxes.blog.all|length) | random) %}

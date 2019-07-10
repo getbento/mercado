@@ -104,6 +104,8 @@
         </a>
       </div>
 
+
+{% if boxes.events.all %}
       <div class="hay-mas-link">
         <a href="{{boxes.events.all[0].url}}">
           <h6>Happenings</h6>
@@ -116,7 +118,7 @@
           <h4>{{boxes.events.all[0].name}}</h4>
         </a>
       </div>
-
+{% endif %}
 
 {% set blogKey =  (range(0, boxes.blog.all|length) | random) %}
       <div class="hay-mas-link">
