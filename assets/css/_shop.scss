@@ -117,9 +117,35 @@
     }
 
     &.kiosk-bordered-img{
+      position: relative;
       img{
-        padding: 10px;
+        // padding: 10px;
         border: 2px solid $toro_red;
+      }
+      h4{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $oro_yellow;
+        color: $toro_red;
+        opacity: 0;
+        z-index: 5;
+        text-align: center;
+        transition: ease 250ms all;
+        font-size: 25px;
+        font-family: $domaine;
+        @media (max-width: 820px){
+          font-size: 20px;
+        }
+        @media (max-width: 767px){
+          font-size: 30px;
+        }
+        &:hover{
+          opacity: 1;
+        }
       }
     }
   }
@@ -155,3 +181,18 @@
 //     }
 //   }
 // }
+
+
+.see-all-shops{
+  text-align: center;
+  margin-bottom: 30px;
+  a{
+    color: $toro_red;
+    border-color: $toro_red;
+    transition: ease 250ms all;
+    &:hover{
+      background-color: $toro_red;
+      color: white;
+    }
+  }
+}
