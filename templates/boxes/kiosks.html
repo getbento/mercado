@@ -102,7 +102,7 @@
       <h6>¡Hay Más!</h6><span>Check out everything the Mercado has to offer.</span>
     </div>
     <div class="hay-mas-links">
-
+{{date}}
 {% set kioskKey =  (range(0, boxes.kiosks.all|length) | random) %}
       <div class="hay-mas-link">
         <a href="{{boxes.kiosks.all[kioskKey].url}}">
@@ -117,24 +117,19 @@
         </a>
       </div>
 
-      <!-- <div class="hay-mas-link">
-        <a href="{{pages.by_slug['hay-mas'].fields.grid.happenings_box.url}}">
+      <div class="hay-mas-link">
+        <a href="{{boxes.events.all[0].url}}">
           <h6>Happenings</h6>
-          <div class="hay-mas-link-icon with-padding">
-            <img src="{{pages.by_slug['hay-mas'].fields.grid.happenings_box.fields.global_icon.url}}" alt="{{pages.by_slug['hay-mas'].fields.grid.happenings_box.fields.global_icon.alt_text}}">
-            <span>{{pages.by_slug['hay-mas'].fields.grid.happenings_box.fields.hover_text}}</span>
+          <div class="hay-mas-link-icon">
+            <img src="{{boxes.events.all[0].image.url}}" alt="{{boxes.events.all[0].image.alt_text}}">
+            {% if boxes.events.all[0].fields.hover_text %}
+              <span>{{boxes.events.all[0].fields.hover_text}}</span>
+            {% endif %}
           </div>
-          <h4>{{pages.by_slug['hay-mas'].fields.grid.happenings_box.name}}</h4>
+          <h4>{{boxes.events.all[0].name}}</h4>
         </a>
-      </div> -->
+      </div>
 
-
-
-      {% for event in boxes.events.all %}
-        {{event.starts}}
-
-
-      {% endfor %}
 
 {% set blogKey =  (range(0, boxes.blog.all|length) | random) %}
       <div class="hay-mas-link">
