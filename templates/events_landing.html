@@ -41,6 +41,9 @@
     <a href="{{event.url}}" class="home-happenings-event">
       <div class='home-happenings-upper'>
         <h6>{{event.starts|date('%B %d')}}</h6>
+        {% if event.starts|date('%B %d') != event.ends|date('%B %d') %}
+          diff day
+        {% endif %}
         <h3>{{event.name}}</h3>
         <p>{{event.fields.dek}}</p>
       </div>
