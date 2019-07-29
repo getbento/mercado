@@ -40,11 +40,15 @@
   {% for event in boxes.events.all %}
     <a href="{{event.url}}" class="home-happenings-event">
       <div class='home-happenings-upper'>
-        <h6>{{event.starts|date('%B %d')}}
-
-        {% if event.starts|date('%B %d') != event.ends|date('%B %d') %}
-          - {{event.ends|date('%B %d')}}
-        {% endif %}
+        <h6>
+          {{event.starts|date('%B %-d')}}
+          {% if event.starts|date('%B %d') != event.ends|date('%B %d') %}
+            {% if event.starts_month != event.ends_month %}
+              - {{event.ends|date('%B %-d')}}
+            {% else %}
+              - {{event.ends|date('%-d')}}
+            {% endif %}
+          {% endif %}
         </h6>
         <!-- {{event.ends|date('%B %d')}} -->
         <h3>{{event.name}}</h3>
