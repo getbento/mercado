@@ -43,7 +43,7 @@
         <h6>{{event.starts|date('%B %d')}}
 
         {% if event.starts|date('%B %d') != event.ends|date('%B %d') %}
-          - {{event.starts|date('%B %d')}}
+          - {{event.ends|date('%B %d')}}
         {% endif %}
         </h6>
         <!-- {{event.ends|date('%B %d')}} -->
