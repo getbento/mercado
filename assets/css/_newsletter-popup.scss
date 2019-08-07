@@ -13,7 +13,8 @@
   pointer-events: none;
   @include transform(translateY(100%));
   transition: transform 0.4s, opacity 0.4s;
-
+  max-height: 100vh;
+  overflow: scroll;
   &.opened, &:target {
     opacity: 1;
     pointer-events: auto;
@@ -155,5 +156,15 @@
     right: 10px;
     top: 10px;
     font-size: 30px;
+  }
+}
+
+.requiredInfo{
+  float: none !important;
+  div{
+    margin: 10px;
+    color: white;
+    font-family: $knockout-lite;
+    font-size: 20px;
   }
 }

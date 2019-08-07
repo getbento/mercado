@@ -32,8 +32,25 @@
     <div class="single-blog-info">
       <div class="single-blog-info-header">
         <div class="single-event-upper">
-          <span class='event-date'>{{boxes.events.by_slug[current.slug].starts|date('%B %-m')}} </span>
-          <span>{{boxes.events.by_slug[current.slug].starts|date('%-I:%M %p')}} - {{boxes.events.by_slug[current.slug].ends|date('%-I:%M %p')}}</span>
+          <span class='event-date'>
+            {{current.starts|date('%B %-d')}}
+            {% if current.starts|date('%B %-d') != current.ends|date('%B %-d') %}
+              {% if current.starts_month != current.ends_month %}
+                - {{current.ends|date('%B %-d')}}
+              {% else %}
+                - {{current.ends|date('%-d')}}
+              {% endif %}
+
+            {% endif %}
+          </span>
+
+          <span>
+            {{current.starts|date('%-I:%M %p')}}
+            {% if current.has_end_date %}
+              - {{current.ends|date('%-I:%M %p')}}
+            {% endif %}
+          </span>
+
           <h1>{{current.name}}</h1>
           <h4>{{current.fields.dek}}</h4>
 
