@@ -161,6 +161,9 @@ $(document).ready(function () {
   $('#newsletter-popup-close').click(function () {
     $('#newsletter-popup').removeClass('opened');
     $('body').removeClass('overflow-hide');
+    setTimeout(function () {
+      $('#newsletter-popup').html('');
+    }, 1000);
   }).keyHook();
 
   //
@@ -510,7 +513,7 @@ $(document).ready(function () {
         }).keyHook();
       } else {
         console.log('remove popup');
-        // $('#newsletter-popup').remove();
+        $('#newsletter-popup').html('');
       }
 
       clearInterval(formInterval);

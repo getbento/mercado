@@ -721,6 +721,8 @@ a {
     @media screen and (max-width: 767px) {
       #newsletter-capture > div {
         padding: 56px 24px; } }
+  #newsletter-capture .requiredInfo div {
+    color: #e4002b; }
 
 .newsletter-capture-title {
   color: #474746;

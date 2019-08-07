@@ -10,6 +10,11 @@
       padding: 56px 24px;
     }
   }
+  .requiredInfo{
+    div{
+      color: $toro_red;
+    }
+  }
 }
 
 .newsletter-capture-title {
