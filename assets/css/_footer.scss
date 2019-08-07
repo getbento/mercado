@@ -17,7 +17,7 @@
   text-transform: uppercase;
   color: $toro_red;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   font-family: $knockout-feather;
   @media screen and (max-width: $mobile_max) {
     margin-bottom: 40px;
@@ -269,7 +269,7 @@ address.site-info {
         width: auto;
         display: flex;
         flex-wrap: wrap;
-        margin-top: 0px; 
+        margin-top: 0px;
       }
     }
   }
@@ -412,6 +412,120 @@ address.site-info {
     }
     select{
       font-size: 20px;
+    }
+  }
+}
+
+
+.clickdform{
+  float: none !important;
+  height: auto !important;
+  overflow-x: unset !important;
+  padding: 0px !important;
+  #clickdimensionsForm{
+    display: flex;
+    flex-wrap: wrap;
+    .responsiveRow{
+      width: 100%;
+      margin-bottom: 15px;
+      .responsiveCell{
+        width: 100%;
+        text-align: initial !important;
+        min-width: unset;
+        .alignBottom{
+          span{
+            font-size: 20px;
+            font-family: $domaine !important;
+            margin-bottom: 10px;
+            color: $toro_red !important;
+          }
+        }
+
+        .alignTop{
+          width: 100%;
+          display: block;
+          min-width: unset;
+          input{
+            width: 100%;
+            max-width: unset;
+            text-transform: none;
+            letter-spacing: 0.04em;
+            background: $toro-red;
+            color: $oro_yellow;
+            font-family: $domaine !important;
+            padding: 12px 24px;
+            width: 100%;
+            font-size: 20px !important;
+            font-weight: 400;
+            border: 0px;
+            line-height: 5rem;
+            @include placeholder {
+              @include h3-style;
+
+              color: $oro_yellow;
+              font-family: $domaine;
+              font-size:20px;
+              @media screen and (max-width: 767px) {
+                font-size:18px !important;
+
+              }
+            }
+
+          }
+        }
+        .buttonContainer{
+          display: flex !important;
+          justify-content: center;
+          input[type='button']{
+            font-family: $knockout-lite !important;
+            font-weight: 100 !important;
+            font-size: 2rem !important;
+            line-height: 2.7rem;
+            letter-spacing: 0.062rem;
+            text-transform: uppercase;
+            color: $toro_red !important;
+            border: 2px solid !important;
+            padding: 12px 64px;
+            text-decoration: none;
+            display: inline-block;
+            transition: ease 250ms all;
+            cursor: pointer;
+            font-weight: 100;
+            outline: 0px !important;
+            &:hover{
+              background-color: $toro_red;
+              color: white !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.newsletter-sign-up-form{
+  .clickdform #clickdimensionsForm .responsiveRow .responsiveCell{
+    .alignBottom, .alignTop{
+      input{
+        color: $oro_yellow;
+        background-color: transparent;
+        border: 2px solid white !important;
+        padding: 5px 24px !important;
+      }
+      [contactfield="address1_postalcode"]{
+
+      }
+    }
+    .alignBottom span{
+      color: white !important;
+    }
+    .buttonContainer input[type='button']{
+      color: white !important;
+      background-color: transparent;
+      border: 2px solid white;
+      &:hover{
+        color: $toro_red !important;
+        background-color: white !important;
+      }
     }
   }
 }
