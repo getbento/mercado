@@ -4701,6 +4701,14 @@ address.site-info {
       top: 10px;
       font-size: 30px; } }
 
+.requiredInfo {
+  float: none !important; }
+  .requiredInfo div {
+    margin: 10px;
+    color: white;
+    font-family: "Knockout 48 A", "Knockout 48 B";
+    font-size: 20px; }
+
 .gallery-page {
   padding-top: 28px; }
 

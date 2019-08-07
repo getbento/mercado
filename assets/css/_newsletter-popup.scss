@@ -158,3 +158,13 @@
     font-size: 30px;
   }
 }
+
+.requiredInfo{
+  float: none !important;
+  div{
+    margin: 10px;
+    color: white;
+    font-family: $knockout-lite;
+    font-size: 20px;
+  }
+}

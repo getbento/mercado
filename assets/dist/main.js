@@ -485,9 +485,16 @@ $(document).ready(function () {
   // check if inputs are there
   let formInterval = setInterval(function () {
     if ($('.responsiveCell').length > 0) {
+      console.log('test');
       $('.responsiveCell').each(function () {
-        let text = $(this).find('span').html();
-        $(this).find('input[type="text"]').attr('placeholder', text);
+        $('.requiredStar').remove();
+        let text = $(this).find('span').html() + '*';
+
+        let newText = text.split(' ').filter(x => {
+          return x != '';
+        });
+
+        $(this).find('input[type="text"]').attr('placeholder', newText.join(' '));
         $(this).find('span').hide();
       });
 
