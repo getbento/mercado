@@ -513,7 +513,7 @@ $(document).ready(function () {
         }).keyHook();
       } else {
         console.log('remove popup');
-        $('#newsletter-popup').html('');
+        $('#newsletter-popup #clickdimensions-form').html('');
       }
 
       clearInterval(formInterval);
