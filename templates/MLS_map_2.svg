@@ -272,7 +272,7 @@
 
 
     <a  href="javascript:void(0)">
-      <g id='pulpo' class='svg-stall-cont'
+      <g id='pulpo-y-mejillones-a-la-gallega' class='svg-stall-cont'
         img="{{boxes.kiosks.by_slug['pulpo-y-mejillones-a-la-gallega'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['pulpo-y-mejillones-a-la-gallega'].fields.hover_text}}"
         type="kiosk"
         cat ="{% for cat in boxes.kiosks.by_slug['pulpo-y-mejillones-a-la-gallega'].categories %}{{cat.slug}} {% endfor %}"
