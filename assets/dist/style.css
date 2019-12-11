@@ -2657,55 +2657,55 @@ address.site-info {
     fill: #fdf16f24 !important; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
+  .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect.st0, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon.st0 {
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) g {
     pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect.st0, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon.st0 {
+  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) g {
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont polygon.st0 {
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont rect, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont g {
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] text {
     pointer-events: auto; }
-  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] polygon.st0 {
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] rect, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] polygon {
     fill: #FDF16F;
     pointer-events: auto; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) polygon.st0 {
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) rect, .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) g {
     pointer-events: none; }
-  .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] rect, .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] polygon {
     fill: #FDF16F;
     pointer-events: auto; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] text {
     pointer-events: auto; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) polygon.st0 {
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) rect, .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) g {
     pointer-events: none; }
-  .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] rect, .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] polygon {
     fill: #FDF16F;
     pointer-events: auto; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] text {
