@@ -2633,19 +2633,21 @@ address.site-info {
 .mercado-map-inner {
   position: relative;
   width: 1024px;
-  margin: auto; }
+  margin: auto;
+  padding: 0 30px; }
   @media (max-width: 767px) {
     .mercado-map-inner {
       position: initial; } }
 
 .mercado-map-cont {
-  padding-top: 50px;
+  padding-top: 80px;
   overflow: scroll;
   overflow-y: hidden;
   margin: auto; }
   .mercado-map-cont svg {
-    width: 1024px;
+    width: 970px;
     margin: auto;
+    margin-bottom: 20px;
     display: block; }
     .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
@@ -2855,7 +2857,8 @@ address.site-info {
         align-items: center; }
         .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a svg {
           width: 15px;
-          min-width: unset; }
+          min-width: unset;
+          margin-bottom: auto; }
           .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a svg path {
             fill: white; }
 

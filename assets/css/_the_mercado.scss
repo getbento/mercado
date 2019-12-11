@@ -226,6 +226,7 @@
     position: relative;
     width: 1024px;
     margin: auto;
+    padding: 0 30px;
     @media (max-width: 767px){
       position: initial;
     }
@@ -233,7 +234,7 @@
 
 .mercado-map-cont{
   // position: relative;
-  padding-top: 50px;
+  padding-top: 80px;
   overflow: scroll;
   overflow-y: hidden;
   margin: auto;
@@ -241,9 +242,10 @@
     // position: initial;
   }
   svg{
-    width: 1024px;
+    width: 970px;
     // width: 100%;
     margin: auto;
+    margin-bottom: 20px;
     display: block;
     text{
       .st3, &.st3{
@@ -561,6 +563,7 @@
         svg{
           width: 15px;
           min-width: unset;
+          margin-bottom: auto;
           path{
             fill: white;
           }

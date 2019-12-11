@@ -343,7 +343,7 @@ setTimeout(function(){
               // desktop
               $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() - 40);
 
-              let leftOffset = $this[0].getBoundingClientRect().width/2 - $('.mercado-map-hover-box').width()/2 - 10 ;
+              let leftOffset = $this[0].getBoundingClientRect().width/2 - $('.mercado-map-hover-box').width()/2 + 20 ;
 
               // console.log(leftOffset);
 
