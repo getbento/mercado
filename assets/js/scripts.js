@@ -341,7 +341,7 @@ setTimeout(function(){
 
             if($(window).width() >= 767){
               // desktop
-              $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() - 40);
+              $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() );
 
               let leftOffset = $this[0].getBoundingClientRect().width/2 - $('.mercado-map-hover-box').width()/2 - 10 ;
 

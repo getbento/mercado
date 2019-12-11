@@ -41,9 +41,13 @@ $desktop_mid : 900px;
       transition: ease 250ms all;
       border-bottom: 2px solid transparent;
       #skip-to-navigation-link{
-        width: calc(25% + 8px);
+        // width: calc(15% + 8px);
+        // padding-bottom: calc(15% + 8px);
+
+        width: 70px;
+        padding-bottom: 70px;
+
         height: 0;
-        padding-bottom: calc(25% + 8px);
         position: relative;
         transition: ease 250ms all;
         svg{

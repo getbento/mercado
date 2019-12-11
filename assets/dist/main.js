@@ -236,7 +236,7 @@ $(document).ready(function () {
       dataType: "jsonp",
       jsonp: "callback",
       jsonpCallback: "jsonpcallback",
-      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.04288af9d50447108b16f6448c2f0a4e&count=8'
+      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.a54ecc0747504cd3b68615d3c58d6e05&count=8'
     }).done(function (data) {
       if (data) {
         console.log(data);
@@ -383,7 +383,7 @@ $(document).ready(function () {
 
     if ($(window).width() >= 767) {
       // desktop
-      $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height() - 40);
+      $('.mercado-map-hover-box').css('top', $this.offset().top - container.position().top - $('.mercado-map-hover-box').height());
 
       let leftOffset = $this[0].getBoundingClientRect().width / 2 - $('.mercado-map-hover-box').width() / 2 - 10;
 

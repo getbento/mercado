@@ -386,9 +386,9 @@ a {
     transition: ease 250ms all;
     border-bottom: 2px solid transparent; }
     .current-home #masthead #skip-to-navigation-link {
-      width: calc(25% + 8px);
+      width: 70px;
+      padding-bottom: 70px;
       height: 0;
-      padding-bottom: calc(25% + 8px);
       position: relative;
       transition: ease 250ms all; }
       .current-home #masthead #skip-to-navigation-link svg {
@@ -2633,7 +2633,8 @@ address.site-info {
 .mercado-map-inner {
   position: relative;
   width: 1024px;
-  margin: auto; }
+  margin: auto;
+  padding: 40px 0; }
   @media (max-width: 767px) {
     .mercado-map-inner {
       position: initial; } }
@@ -2644,8 +2645,7 @@ address.site-info {
   overflow-y: hidden;
   margin: auto; }
   .mercado-map-cont svg {
-    width: 1024px;
-    margin: auto;
+    width: 1000px;
     display: block; }
     .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
