@@ -355,15 +355,7 @@
         type='bar'
         >
         <polygon class="cls-1" points="351.23 500.24 194.09 500.24 180.72 513.61 180.72 513.61 180.72 583.42 351.23 583.42 351.23 500.24"/>
-        <text class="cls-4" transform="translate(238.76 565.16)">Bar Celona</text>
-        <g>
-          <circle class="cls-13" cx="265.97" cy="531.04" r="13.64"/>
-          <g>
-            <polygon class="cls-14" points="259.71 524.45 265.97 533.96 272.23 524.45 259.71 524.45"/>
-            <line class="cls-14" x1="265.97" y1="533.96" x2="265.97" y2="538.62"/>
-            <line class="cls-14" x1="261.93" y1="538.62" x2="270.02" y2="538.62"/>
-          </g>
-        </g>
+        <text class="cls-4" transform="translate(238.76 545.16)">Bar Celona</text>
       </g>
     </a>
 
@@ -381,23 +373,15 @@
     </a>
 
     <a href="javascript:void(0)">
-      <g id='granja' class='svg-stall-cont'
-        img="{{boxes.kiosks.by_slug['granja'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['granja'].fields.hover_text}}"
+      <g id='bar-manolo' class='svg-stall-cont'
+        img="{{boxes.kiosks.by_slug['bar-manolo'].fields.page_icon.url}}" text="{{boxes.kiosks.by_slug['bar-manolo'].fields.hover_text}}"
         type="kiosk"
-        cat="{% for cat in boxes.kiosks.by_slug['granja'].categories %}{{cat.slug}} {% endfor %}"
+        cat="{% for cat in boxes.kiosks.by_slug['bar-manolo'].categories %}{{cat.slug}} {% endfor %}"
 
         >
         <rect class="cls-1" x="510.56" y="418.03" width="51.8" height="110.77"/>
-        <text class="cls-4" transform="translate(527.27 489.56)">Bar <tspan x="-9.83" y="13">Manolo</tspan></text>
+        <text class="cls-4" transform="translate(527.27 469.56)">Bar <tspan x="-9.83" y="13">Manolo</tspan></text>
 
-        <g>
-          <circle class="cls-13" cx="535.27" cy="455.64" r="13.64"/>
-          <g>
-            <polygon class="cls-14" points="529.01 449.05 535.27 458.56 541.53 449.05 529.01 449.05"/>
-            <line class="cls-14" x1="535.27" y1="458.56" x2="535.27" y2="463.22"/>
-            <line class="cls-14" x1="531.23" y1="463.22" x2="539.32" y2="463.22"/>
-          </g>
-        </g>
       </g>
     </a>
 
@@ -503,15 +487,8 @@
 
     		>
     		<polygon class="cls-1" points="882.83 418.03 882.83 466.66 788.07 466.66 788.07 432.18 771.57 432.18 771.57 466.66 624.57 466.66 624.57 418.03 882.83 418.03"/>
-    		<text class="cls-4" transform="translate(686.16 447.09)">Diner Bar</text>
-        <g>
-          <circle class="cls-13" cx="663.57" cy="442.77" r="13.64"/>
-          <g>
-            <polygon class="cls-14" points="657.31 436.18 663.57 445.69 669.83 436.18 657.31 436.18"/>
-            <line class="cls-14" x1="663.57" y1="445.69" x2="663.57" y2="450.36"/>
-            <line class="cls-14" x1="659.52" y1="450.36" x2="667.61" y2="450.36"/>
-          </g>
-        </g>
+    		<text class="cls-4" transform="translate(676.16 447.09)">Diner Bar</text>
+
     	</g>
     </a>
 
