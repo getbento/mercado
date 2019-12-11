@@ -236,7 +236,7 @@ $(document).ready(function () {
       dataType: "jsonp",
       jsonp: "callback",
       jsonpCallback: "jsonpcallback",
-      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.04288af9d50447108b16f6448c2f0a4e&count=8'
+      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6864564308.0a3b8e2.a54ecc0747504cd3b68615d3c58d6e05&count=8'
     }).done(function (data) {
       if (data) {
         console.log(data);
