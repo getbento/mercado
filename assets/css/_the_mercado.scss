@@ -226,7 +226,7 @@
     position: relative;
     width: 1024px;
     margin: auto;
-    padding: 40px 0;
+    padding: 0 30px;
     @media (max-width: 767px){
       position: initial;
     }
@@ -235,7 +235,7 @@
 
 .mercado-map-cont{
   // position: relative;
-  padding-top: 50px;
+  padding-top: 80px;
   overflow: scroll;
   overflow-y: hidden;
   margin: auto;
@@ -243,9 +243,10 @@
     // position: initial;
   }
   svg{
-    width: 1000px;
+    width: 970px;
     // width: 100%;
-    // margin: 30px auto;
+    margin: auto;
+    margin-bottom: 20px;
     display: block;
     text{
       .st3, &.st3{
@@ -266,7 +267,7 @@
       text{
         pointer-events: none;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #fdf16f24;
         pointer-events: none;
 
@@ -278,7 +279,7 @@
       text{
         pointer-events: none;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #fdf16f24;
         pointer-events: none;
       }
@@ -292,7 +293,7 @@
       text{
         pointer-events: none;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #fdf16f24;
         pointer-events: none;
       }
@@ -306,7 +307,7 @@
       text{
         pointer-events: none;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #fdf16f24;
         pointer-events: none;
       }
@@ -318,7 +319,7 @@
       text{
         pointer-events: auto;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #FDF16F;
         pointer-events: auto;
       }
@@ -329,7 +330,7 @@
       text{
         pointer-events: none;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #fdf16f24;
         pointer-events: none;
       }
@@ -338,7 +339,7 @@
       }
     }
     .svg-stall-cont[cat='sweet savory ']{
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #FDF16F;
         pointer-events: auto;
       }
@@ -352,7 +353,7 @@
       text{
         pointer-events: none;
       }
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #fdf16f24;
         pointer-events: none;
       }
@@ -361,7 +362,7 @@
       }
     }
     .svg-stall-cont[cat='sweet savory ']{
-      rect.st0,polygon.st0{
+      rect,polygon{
         fill: #FDF16F;
         pointer-events: auto;
 
@@ -563,6 +564,7 @@
         svg{
           width: 15px;
           min-width: unset;
+          margin-bottom: auto;
           path{
             fill: white;
           }

@@ -2634,18 +2634,28 @@ address.site-info {
   position: relative;
   width: 1024px;
   margin: auto;
+<<<<<<< HEAD
   padding: 40px 0; }
+=======
+  padding: 0 30px; }
+>>>>>>> ff5386c69a3f2967958422367b65d56975c2d478
   @media (max-width: 767px) {
     .mercado-map-inner {
       position: initial; } }
 
 .mercado-map-cont {
-  padding-top: 50px;
+  padding-top: 80px;
   overflow: scroll;
   overflow-y: hidden;
   margin: auto; }
   .mercado-map-cont svg {
+<<<<<<< HEAD
     width: 1000px;
+=======
+    width: 970px;
+    margin: auto;
+    margin-bottom: 20px;
+>>>>>>> ff5386c69a3f2967958422367b65d56975c2d478
     display: block; }
     .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
@@ -2655,55 +2665,55 @@ address.site-info {
     fill: #fdf16f24 !important; }
   .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect.st0, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon.st0 {
+  .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) rect, .mercado-map-cont svg[type="shop"] .svg-stall-cont:not([type='shop']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect.st0, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon.st0 {
+  .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) rect, .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="restaurant"] .svg-stall-cont:not([type='restaurant']) g {
     pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect.st0, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon.st0 {
+  .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) rect, .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="bar"] .svg-stall-cont:not([type='bar']) g {
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont polygon.st0 {
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont rect, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont g {
     pointer-events: none; }
   .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] text {
     pointer-events: auto; }
-  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] rect.st0, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] polygon.st0 {
+  .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] rect, .mercado-map-cont svg[type="kiosk"] .svg-stall-cont[type='kiosk'] polygon {
     fill: #FDF16F;
     pointer-events: auto; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) polygon.st0 {
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) rect, .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont:not([cat='sweet ']) g {
     pointer-events: none; }
-  .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
+  .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] rect, .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] polygon {
     fill: #FDF16F;
     pointer-events: auto; }
   .mercado-map-cont svg[type="sweet"] .svg-stall-cont[cat='sweet savory '] text {
     pointer-events: auto; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) text {
     pointer-events: none; }
-  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) polygon.st0 {
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) rect, .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) polygon {
     fill: #fdf16f24;
     pointer-events: none; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont:not([cat='savory ']) g {
     pointer-events: none; }
-  .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] rect.st0, .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] polygon.st0 {
+  .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] rect, .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] polygon {
     fill: #FDF16F;
     pointer-events: auto; }
   .mercado-map-cont svg[type="savory"] .svg-stall-cont[cat='sweet savory '] text {
@@ -2855,7 +2865,8 @@ address.site-info {
         align-items: center; }
         .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a svg {
           width: 15px;
-          min-width: unset; }
+          min-width: unset;
+          margin-bottom: auto; }
           .mercado-map-more-info-boxes .map-more-info-box-desc .map-more-info-content a svg path {
             fill: white; }
 
