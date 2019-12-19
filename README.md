@@ -1,13 +1,17 @@
 #MLS Git and Push
 
 Push to bitbucket
+
 Push to GitHub for bento:
+
   * master for live
   * staging branch for staging (http://littlespain-staging.getbento.com/)
 
 
 To develop:
+
 developers.getbento.com
+
 (pip install bentodev for new install)
 
 ```
