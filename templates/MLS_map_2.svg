@@ -52,7 +52,7 @@
       }
 
       .cls-10, .cls-15 {
-        font-family: Knockout-HTF52-Cruiserweight, Knockout HTF52-Cruiserweight;
+        font-family: "Knockout 52 A", "Knockout 52 B", Knockout-HTF52-Cruiserweight, Knockout HTF52-Cruiserweight;
       }
 
       .cls-11 {
