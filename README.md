@@ -4,13 +4,17 @@ Version 1.4
 Map changes from February 2020
 ```
 Push to bitbucket
+
 Push to GitHub for bento:
+
   * master for live
   * staging branch for staging (http://littlespain-staging.getbento.com/)
 
 
 To develop:
+
 developers.getbento.com
+
 (pip install bentodev for new install)
 
 ```
