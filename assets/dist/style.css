@@ -2634,11 +2634,7 @@ address.site-info {
   position: relative;
   width: 1024px;
   margin: auto;
-<<<<<<< HEAD
-  padding: 40px 0; }
-=======
   padding: 0 30px; }
->>>>>>> ff5386c69a3f2967958422367b65d56975c2d478
   @media (max-width: 767px) {
     .mercado-map-inner {
       position: initial; } }
@@ -2649,13 +2645,9 @@ address.site-info {
   overflow-y: hidden;
   margin: auto; }
   .mercado-map-cont svg {
-<<<<<<< HEAD
-    width: 1000px;
-=======
     width: 970px;
     margin: auto;
     margin-bottom: 20px;
->>>>>>> ff5386c69a3f2967958422367b65d56975c2d478
     display: block; }
     .mercado-map-cont svg text .st3, .mercado-map-cont svg text.st3 {
       font-family: "Knockout 30 A", "Knockout 30 B"; }
@@ -2934,7 +2926,7 @@ address.site-info {
           .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active {
             padding-left: 40px; } }
         .mercado-map-filter .map-filter-box .map-filter-select .filter-selection.active:before {
-          content: "×";
+          content: "\D7";
           position: absolute;
           height: 20px;
           width: 20px;
@@ -2970,7 +2962,7 @@ address.site-info {
           .mercado-map-filter .map-filter-box .selected-filter.active {
             padding-left: 30px; } }
         .mercado-map-filter .map-filter-box .selected-filter.active:before {
-          content: "×";
+          content: "\D7";
           position: absolute;
           height: 20px;
           width: 20px;
@@ -3929,7 +3921,7 @@ address.site-info {
         .standard-page .standard-content ul li, .standard-page .standard-content ol li, .single-blog-content .standard-content ul li, .single-blog-content .standard-content ol li {
           font-size: 1.5rem; } }
     .standard-page .standard-content ul li::before, .standard-page .standard-content ol li::before, .single-blog-content .standard-content ul li::before, .single-blog-content .standard-content ol li::before {
-      content: "•";
+      content: "\2022";
       color: #e4002b;
       margin-left: -1em;
       width: 1em;

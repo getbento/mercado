@@ -501,20 +501,21 @@ $(document).ready(function () {
         $(this).find('span').hide();
       });
 
-      if (getCookie('popupseen') === "") {
-        console.log('popup!');
-        $('#newsletter-popup').addClass('opened');
-        $('body').addClass('overflow-hide');
-        // window.location.href = "#newsletter-popup";
-        setCookie('popupseen', 'true', 30);
+      // if ( getCookie('popupseen') === "" ) {
+      //   console.log('popup!');
+      //   $('#newsletter-popup').addClass('opened');
+      //   $('body').addClass('overflow-hide');
+      //   // window.location.href = "#newsletter-popup";
+      //   setCookie('popupseen', 'true', 30);
+      //
+      //   $('#newsletter-popup-close').click(function(){
+      //     $('#newsletter-popup').removeClass('opened');
+      //   }).keyHook();
+      // } else {
+      //   console.log('remove popup');
+      //   $('#newsletter-popup #clickdimensions-form').html('');
+      // }
 
-        $('#newsletter-popup-close').click(function () {
-          $('#newsletter-popup').removeClass('opened');
-        }).keyHook();
-      } else {
-        console.log('remove popup');
-        $('#newsletter-popup #clickdimensions-form').html('');
-      }
 
       clearInterval(formInterval);
     }
