@@ -149,6 +149,13 @@
 </style>
 {% endif %}
 
+<!-- Custom Javascript -->
+{% if theme.options.custom_styles.JavaScript %}
+  <script type="text/javascript">
+    {{ theme.options.custom_styles.JavaScript }}
+  </script>
+{% endif %}
+
 </head>
 
 <body class="current-{{current.slug}}">
