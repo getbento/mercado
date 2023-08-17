@@ -1,7 +1,7 @@
 {
-  "name": "Restaurants",
-  "fields": {
-		"SEO":{
+	"name": "Restaurants",
+	"fields": {
+		"SEO": {
 			"title": "SEO",
 			"type": "section",
 			"items": {
@@ -9,8 +9,8 @@
 				"image": "image"
 			}
 		}
-  },
-  "wireframe": [
+	},
+	"wireframe": [
 		"section-SEO"
 	]
 }

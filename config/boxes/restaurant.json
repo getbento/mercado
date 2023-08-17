@@ -19,11 +19,11 @@
 		"secondary_color": "color",
 		"menus": {
 			"type": "repeater",
-			"items":{
-				"menu":{
-		      "type": "relationship",
-		      "box": "menu",
-		    }
+			"items": {
+				"menu": {
+					"type": "relationship",
+					"box": "menu"
+				}
 			}
 		},
 		"SEO": {

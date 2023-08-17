@@ -7,19 +7,19 @@
       "items":{
         "kiosk_box":{
           "type": "relationship",
-          "box": "kiosks",
+          "box": "kiosks"
         },
         "happenings_box":{
           "type": "relationship",
-          "box": "events",
+          "box": "events"
         },
         "blog_box":{
           "type": "relationship",
-          "box": "blog",
+          "box": "blog"
         },
         "shop_box":{
           "type": "relationship",
-          "box": "shop",
+          "box": "shop"
         }
       }
     }

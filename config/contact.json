@@ -1,23 +1,23 @@
 {
 	"name": "Contact",
-  "fields":{
-    "contact":{
+	"fields": {
+		"contact": {
 			"title": "Contact Fields",
 			"type": "section",
-			"items":{
+			"items": {
 				"address": "wysiwyg",
-		    "phone_numer": "text",
-		    "email_address": "text",
-		    "hours": {
-		      "type": "repeater",
-		      "items":{
-		        "hours": "text",
-		        "day": "text"
-		      }
-		    }
+				"phone_numer": "text",
+				"email_address": "text",
+				"hours": {
+					"type": "repeater",
+					"items": {
+						"hours": "text",
+						"day": "text"
+					}
+				}
 			}
 		},
-		"SEO":{
+		"SEO": {
 			"title": "SEO",
 			"type": "section",
 			"items": {
@@ -25,9 +25,9 @@
 				"image": "image"
 			}
 		}
-  },
+	},
 	"wireframe": [
 		"section-contact",
-		"section-SEO",
+		"section-SEO"
 	]
 }

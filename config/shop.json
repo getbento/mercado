@@ -1,46 +1,46 @@
 {
 	"name": "Shop",
-  "fields":{
-		"shop-products":{
+	"fields": {
+		"shop-products": {
 			"title": "Shop Little Spain",
 			"type": "section",
-			"items":{
-        "products": {
-          "type": "repeater",
-          "items":{
-            "name": "text",
-            "image": "image",
-            "hover_text": "text",
-            "link": "text"
-          }
-        }
+			"items": {
+				"products": {
+					"type": "repeater",
+					"items": {
+						"name": "text",
+						"image": "image",
+						"hover_text": "text",
+						"link": "text"
+					}
+				}
 			}
 		},
-		"online-products":{
+		"online-products": {
 			"title": "Online Products",
 			"type": "section",
-			"items":{
-        "products": {
-          "type": "repeater",
-          "items":{
-            "name": "text",
-            "image": "image",
-            "hover_text": "text",
-            "link": "text"
-          }
-        }
+			"items": {
+				"products": {
+					"type": "repeater",
+					"items": {
+						"name": "text",
+						"image": "image",
+						"hover_text": "text",
+						"link": "text"
+					}
+				}
 			}
 		},
-    "gift-card":{
+		"gift-card": {
 			"title": "Gift Card Fields",
 			"type": "section",
-			"items":{
+			"items": {
 				"image": "image",
-        "content_box": "wysiwyg",
-				"link": "text",
+				"content_box": "wysiwyg",
+				"link": "text"
 			}
 		},
-		"SEO":{
+		"SEO": {
 			"title": "SEO",
 			"type": "section",
 			"items": {
@@ -52,7 +52,7 @@
 	"wireframe": [
 		"section-shop-products",
 		"section-online-products",
-    "section-gift-card",
-    "section-SEO"
+		"section-gift-card",
+		"section-SEO"
 	]
 }

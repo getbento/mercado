@@ -1,94 +1,94 @@
 {
-  "name": "Homepage",
-  "fields":{
-    "home-gallery":{
-      "title": "Carousel",
-      "type": "section",
-      "items":{
-        "slides": {
-          "type": "repeater",
-          "items":{
-            "section_type":{
-              "type": "dropdown",
-              "options": ["Blog", "Event","Kiosk","Restaurant", "Custom Slide"],
-            },
-            "blog":{
-              "type": "section",
-              "items":{
-                "blog_box":{
-                  "type": "relationship",
-                  "box": "blog",
-                  "display_logic":{
-                    "section_type": "Blog"
-                  }
-                }
-              }
-            },
-            "events":{
-              "type": "section",
-              "items":{
-                "event_box":{
-                  "type": "relationship",
-                  "box": "events",
-                  "display_logic":{
-                    "section_type": "Event"
-                  }
-                }
-              }
-            },
-            "kiosk":{
-              "type": "section",
-              "items":{
-                "kiosk_box":{
-                  "type": "relationship",
-                  "box": "kiosks",
-                  "display_logic":{
-                    "section_type": "Kiosk"
-                  }
-                }
-              }
-            },
-            "restaurant":{
-              "type": "section",
-              "items":{
-                "restaurant_box":{
-                  "type": "relationship",
-                  "box": "restaurant",
-                  "display_logic":{
-                    "section_type": "Restaurant"
-                  }
-                }
-              }
-            },
-            "custom_slide":{
-              "type": "section",
-              "items":{
-                "title": "text",
-                "image": "image",
-                "description": "wysiwyg",
-                "call_to_action": "text",
-                "link": "text",
-                "display_logic": {
-                  "section_type" : "Custom Slide"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "home-desc":{
-      "title": "Description",
-      "type": "section",
-      "items":{
-        "description": "wysiwyg",
-        "call_to_action": "text",
-        "link": "text"
-      }
-    },
-  },
-  "wireframe":[
-    "section-home-gallery",
-    "section-home-desc"
-  ]
+	"name": "Homepage",
+	"fields": {
+		"home-gallery": {
+			"title": "Carousel",
+			"type": "section",
+			"items": {
+				"slides": {
+					"type": "repeater",
+					"items": {
+						"section_type": {
+							"type": "dropdown",
+							"options": ["Blog", "Event", "Kiosk", "Restaurant", "Custom Slide"]
+						},
+						"blog": {
+							"type": "section",
+							"items": {
+								"blog_box": {
+									"type": "relationship",
+									"box": "blog",
+									"display_logic": {
+										"section_type": "Blog"
+									}
+								}
+							}
+						},
+						"events": {
+							"type": "section",
+							"items": {
+								"event_box": {
+									"type": "relationship",
+									"box": "events",
+									"display_logic": {
+										"section_type": "Event"
+									}
+								}
+							}
+						},
+						"kiosk": {
+							"type": "section",
+							"items": {
+								"kiosk_box": {
+									"type": "relationship",
+									"box": "kiosks",
+									"display_logic": {
+										"section_type": "Kiosk"
+									}
+								}
+							}
+						},
+						"restaurant": {
+							"type": "section",
+							"items": {
+								"restaurant_box": {
+									"type": "relationship",
+									"box": "restaurant",
+									"display_logic": {
+										"section_type": "Restaurant"
+									}
+								}
+							}
+						},
+						"custom_slide": {
+							"type": "section",
+							"items": {
+								"title": "text",
+								"image": "image",
+								"description": "wysiwyg",
+								"call_to_action": "text",
+								"link": "text",
+								"display_logic": {
+									"section_type": "Custom Slide"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"home-desc": {
+			"title": "Description",
+			"type": "section",
+			"items": {
+				"description": "wysiwyg",
+				"call_to_action": "text",
+				"link": "text"
+			}
+		}
+	},
+	"wireframe": [
+		"section-home-gallery",
+		"section-home-desc"
+	]
 }
