@@ -1,6 +1,6 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const DEV = process.env.NODE_ENV === 'development';
 // Remove old hashed files
@@ -44,25 +44,26 @@ module.exports = {
           },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: false,
-                sourceMap: true,
-                importLoaders: 1
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-                sourceMapContents: true
-              }
-            }]
-        })
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: false,
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sourceMapContents: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -72,7 +73,7 @@ module.exports = {
       path: path.resolve(__dirname, 'assets/dist'),
       filename: 'assets.json',
     }),
-    new ExtractTextPlugin(DEV ? 'style.css' : 'style-[hash:6].css'),
+    new MiniCssExtractPlugin({ filename: DEV ? 'style.css' : 'style-[hash:6].css'}),
     new BrowserSyncPlugin(
       // BrowserSync options
       {
