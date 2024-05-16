@@ -59,8 +59,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
-              sourceMapContents: true
+              sourceMap: true
             }
           }
         ]
@@ -73,29 +72,6 @@ module.exports = {
       path: path.resolve(__dirname, 'assets/dist'),
       filename: 'assets.json',
     }),
-    new MiniCssExtractPlugin({ filename: DEV ? 'style.css' : 'style-[hash:6].css'}),
-    new BrowserSyncPlugin(
-      // BrowserSync options
-      {
-        // browse to http://localhost:3000/ during development
-        host: 'localhost',
-        port: 3000,
-        // proxy the Webpack Dev Server endpoint
-        // (which should be serving on http://localhost:3100/)
-        // through BrowserSync
-        proxy: 'http://127.0.0.1:5000',
-        files: [
-          '**/*.html',
-          '**/*.css',
-          './assets/dist/main.js'
-        ],
-      },
-      // plugin options
-      {
-        // prevent BrowserSync from reloading the page
-        // and let Webpack Dev Server take care of this
-        reload: false
-      }
-    )
+    new MiniCssExtractPlugin({ filename: DEV ? 'style.css' : 'style-[hash:6].css'})
   ]
 }

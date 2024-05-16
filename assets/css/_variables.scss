@@ -5,7 +5,7 @@
     $content_width_desktop : 1024px;
     $col_no_desktop : 12;
     $gutter_width_desktop : 20px;
-    $col_width_desktop : ( $content_width_desktop - ( ( $col_no_desktop - 1 ) * $gutter_width_desktop ) ) / $col_no_desktop;
+    $col_width_desktop : calc(($content_width_desktop - (($col_no_desktop - 1) * $gutter_width_desktop)) / $col_no_desktop);
 
   /* Mobile */
     $content_width_mobile : 100%;
