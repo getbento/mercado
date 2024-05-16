@@ -31,16 +31,8 @@ cd _sensei_src/
 nvm use
 ```
 
-Check if bower is installed. If not:
-
-```bash
-# install bower
-npm install bower -g
-```
-
 ```bash
 # install dependencies
-bower install
 npm install
 ```
 ## Developing Locally
