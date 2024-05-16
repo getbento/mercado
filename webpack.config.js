@@ -72,6 +72,26 @@ module.exports = {
       path: path.resolve(__dirname, 'assets/dist'),
       filename: 'assets.json',
     }),
-    new MiniCssExtractPlugin({ filename: DEV ? 'style.css' : 'style-[hash:6].css'})
+    new MiniCssExtractPlugin({ filename: DEV ? 'style.css' : 'style-[hash:6].css'}),
+    new BrowserSyncPlugin(
+      // BrowserSync options
+      {
+        // proxy the Webpack Dev Server endpoint
+        // (which should be serving on http://localhost:3100/)
+        // through BrowserSync
+        proxy: 'https://littlespain.localtest.me:8000/',
+        files: [
+          '**/*.html',
+          '**/*.css',
+          './assets/dist/main.js'
+        ],
+      },
+      // plugin options
+      {
+        // prevent BrowserSync from reloading the page
+        // and let Webpack Dev Server take care of this
+        reload: false
+      }
+    )
   ]
 }
