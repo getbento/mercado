@@ -191,7 +191,7 @@
 	.wide-content{
 		figure{
 			margin:20px;
-			width:calc(100%-40px);
+			width:calc(100% - 40px);
 			height:auto;
 			box-sizing: border-box;
 			border:2px $toro-red solid;
@@ -216,7 +216,7 @@
 		@media screen and (max-width: $mobile_max) {
 			figure{
 				margin:20px -2px;
-				width:calc(100%-40px);
+				width:calc(100% - 40px);
 				height:auto;
 				box-sizing: border-box;
 				border:2px $toro-red solid;

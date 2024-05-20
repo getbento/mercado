@@ -59,8 +59,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
-              sourceMapContents: true
+              sourceMap: true
             }
           }
         ]
@@ -77,13 +76,10 @@ module.exports = {
     new BrowserSyncPlugin(
       // BrowserSync options
       {
-        // browse to http://localhost:3000/ during development
-        host: 'localhost',
-        port: 3000,
         // proxy the Webpack Dev Server endpoint
         // (which should be serving on http://localhost:3100/)
         // through BrowserSync
-        proxy: 'http://127.0.0.1:5000',
+        proxy: 'https://littlespain.localtest.me:8000/',
         files: [
           '**/*.html',
           '**/*.css',
