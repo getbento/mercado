@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {# Ada and Springtime Widget #}
-	{# audioeye script needs to live at the top of the head because it needs to block cookies #}
-  {% set account_has_ada_widget = account.accessibility.ada_widget_enabled %}
-  {% set account_has_springtime_widget = account.services.audioeye.has_springtime %}
-  {% set account_has_audioeye_widget = account_has_ada_widget or account_has_springtime_widget %}
-  
-	{% if account_has_audioeye_widget %}
-  {# if springtime is not turned on - we don't need to block cookies and the rendering of the page #}
-	<script src="https://wsv3cdn.audioeye.com/bootstrap.js?h={{account.accessibility.audioeye_site_hash}}" {{ 'async' if not
-		account_has_springtime_widget }}></script>
-	{% endif %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{account.services.google_analytics.tracking_code}}"></script>
   <script>
