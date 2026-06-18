@@ -8,7 +8,7 @@ Push to bitbucket
 Push to GitHub for bento:
 
   * master for live
-  * staging branch for staging (http://littlespain-staging.getbento.com/)
+  * staging branch for staging (https://littlespain.bentosandbox.com/)
 
 
 To develop:
